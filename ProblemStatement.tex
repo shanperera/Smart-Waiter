@@ -3,7 +3,7 @@
 \usepackage{xcolor} % for different colour comments
 
 %% Comments
-\newif\ifcomments\commentsfalse
+\newif\ifcomments\commentstrue
 
 \ifcomments
 \newcommand{\authornote}[3]{\textcolor{#1}{[#3 ---#2]}}
@@ -14,7 +14,7 @@
 \fi
 
 \newcommand{\wss}[1]{\authornote{magenta}{SS}{#1}}
-\newcommand{\ds}[1]{\authornote{blue}{ND}{#1}}
+\newcommand{\ds}[1]{\authornote{blue}{DS}{#1}}
 
 \begin{document}
 \pagenumbering{gobble}
@@ -26,15 +26,15 @@
 
 	Many restaurants are starting to incorporate new technology into their dining experience. Specifically, restaurants are moving towards an app based system to allow users to make orders. Some of the ``All You Can Eat'' sushi restaurants have introduced tablets with their own application that allow users to order from their menu. This approach has many limitations. For instance, it is tedious to pass a singular device around the table to make your order. \\
 	
-	Some of the large food chains have come up with a more diverse solution which allows users to download an app for their restaurant onto their personal smartphone devices. This solution is available for everyone to use from the comfort of their own device. However, the user must learn how to use and interact with every single restaurant's app on an individual basis.  For users who are not tech savvy, this solution is still tedious.\\
+	Some of the large food chains have come up with a more diverse solution which allows users to download an app for their restaurant onto their personal smartphone devices. This solution is available for everyone to use from the comfort of their own device. However, the user must learn how to use and interact with every single restaurant's app on an individual basis.  For users who are not tech savvy, this solution is still tedious.\ds{Are those your stakeholders (non-tech savvy customers)?}\\
 	
-	Third party applications have attempted to create a singular solution for all restaurants, which is a step in the right direction. For instance, OpenTable is an application which allows you to scroll through many restaurant menus through a singular app. However, there are major limitations to this solution as well. Most importantly, The application does not allow users to make orders and payments.\\
-	
-	Therefore, there are few point of sales products on the market that offer a universal solution for multiple restaurants.  The market requires a singular app which allows customers to order and make payments at any restaurant of their choice. Moreover, the app should have a singular UI which will work for all restaurants that the customer visits. Similarly, the user is only required to create a single account which will work for all restaurants.
+	Third party applications have attempted to create a singular solution for all restaurants, which is a step in the right direction. For instance, OpenTable is an application which allows you to scroll through many restaurant menus through a singular app. However, there are major limitations to this solution as well. Most importantly, The application does not allow users to make orders and payments.
 
+	\ds{The transition between these paragraphs could use work}
 
-\wss{This is an example comment.  You can turn comments off by replacing
-  commentstrue by commentsfalse.}
+	Therefore, there are few point of sales products on the market that offer a universal solution for multiple restaurants.\ds{So there are universal solutions that already exist?}  The market requires a singular app which allows customers to order and make payments at any restaurant of their choice. Moreover, the app should have a singular UI which will work for all restaurants that the customer visits. Similarly, the user is only required to create a single account which will work for all restaurants.
+
+\ds{Who are your stakeholders? Customers? Businesses? And why should they care about this?}
 
 \end{document}
 
