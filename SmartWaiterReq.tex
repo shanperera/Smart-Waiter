@@ -258,6 +258,28 @@ An android application is required to allow customers to walk into a restaurant 
 \subsection{Business Data Model and Data Dictionary}
 \subsubsection{Business Data Model}
 \subsubsection{Data Dictionary}
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+\hline
+Name & Content & Type \\
+\hline
+Restaurant & Restaurant Identifier & Class \\
+User & User Identifier & Class \\
+Waiter & Waiter Identifier & Class \\
+Table & Table Identifier & Class \\
+Order & Order Identifier & Class \\
+Menu & Menu & Class \\
+QR Code & QR Code & Class \\
+User Identifier & Username + Password + Credit Card Info & Attribute/Element \\
+Waiter Identifier & Employee Name + Employee Number & Attribute/Element \\
+Table Identifier & Table Number + Waiter Assigned & Attribute/Element \\
+Order Identifier & Table Number + User Identifier & Attribute/Element \\
+
+
+
+\hline
+\end{tabular}
+\end{center}
 \subsection{The Scope of the Product}
 \subsubsection{Product Boundary}
 \includegraphics{ProductBoundary.png}
