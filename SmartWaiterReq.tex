@@ -1,4 +1,5 @@
 \documentclass[12pt, titlepage]{article}
+\usepackage{xcolor} % for different colour comments
 
 %% Comments
 \newif\ifcomments\commentstrue
@@ -15,13 +16,15 @@
 \newcommand{\ds}[1]{\authornote{blue}{DS}{#1}}
 
 %% Graphics
+\usepackage{float}
+\usepackage{caption}
 \usepackage{graphicx}
 \graphicspath{ {Images/} }
 
 \begin{document}
 
 \title{Smart Waiter Software Requirements} 
-\author{Meraj Patel (1137491)\\ Pavneet Jaual (1149311)\\ Shan Perera (1150394)}
+\author{Meraj Patel (1137491)\\ Pavneet Jauhal (1149311)\\ Shan Perera (1150394)}
 \date{\today}
 \maketitle
 
@@ -31,6 +34,7 @@
 
 \listoftables
 
+\begin{table}[H]
 \section*{Revision History}
 \begin{tabular}{|c|c|}
 \hline
@@ -38,10 +42,12 @@
 October 9, 2015 & Created first draft. \\ 
 \hline
 \end{tabular}
+\caption{Revision History Table}
+\end{table}
 
 \section*{Template}
 This document makes use of the Volere Template for all of its organization.
-
+\pagebreak
 
 \section{Project Drivers}
 
@@ -89,7 +95,7 @@ There are some basic characteristics that the user should have, to qualify to us
   \item 	Users who generally frequent restaurants at least once a month
 \end{itemize}
 
-\textbf{\textit{Group - Restaurant Owners}}\newline
+\noindent\textbf{\textit{Group - Restaurant Owners}}\newline
 Restaurant managers who have Smart Waiter solutions implemented \newline
 \newline
 \textit{User Role}\newline
@@ -107,7 +113,7 @@ There are some basic characteristics that the user should have, to qualify to us
   \item 	These users will pay attention to details. They will generally critique the UI and other aspects of the application to see how it fits their specific business needs.
 \end{itemize}
 
-\textbf{\textit{Group – Testers/Developers}}\newline
+\noindent\textbf{\textit{Group – Testers/Developers}}\newline
 Testers and developers of Smart Waiter \newline
 \newline
 \textit{User Role}\newline
@@ -162,7 +168,7 @@ Provide a simple solution, which supports multiple restaurants. \newline\newline
 \textit{Fit criterion}\newline
 Must be approved by tester and developer. They must confirm that complete information about the restaurant’s menu has been pulled from the server onto the user’s device.\newline\newline
 
-\textbf{\textit{Constraint 2}}
+\noindent\textbf{\textit{Constraint 2}}
 \newline
 \textit{Description}\newline
 The barcode scan by user shall send table and other user information to the server.\newline\newline
@@ -171,7 +177,7 @@ Provide the restaurant with client’s information and table number to serve foo
 \textit{Fit criterion}\newline
 Must be approved by tester and developer. They must confirm that complete information about the user has been pushed to the server onto the user’s device.\newline\newline
 
-\textbf{\textit{Constraint 3}}
+\noindent\textbf{\textit{Constraint 3}}
 \newline
 \textit{Description}\newline
 The application must run on Android operating system. \newline\newline
@@ -180,7 +186,8 @@ We are catering to the entire android platform users. \newline\newline
 \textit{Fit criterion}\newline
 The application must be approved complaint from the developers and testers. This will involve thorough testing on the Android platform.\newline\newline
 
-\textbf{\textit{Constraint 4}}
+\pagebreak
+\noindent\textbf{\textit{Constraint 4}}
 \newline
 \textit{Description}\newline
 The application shall support credit card payments. \newline\newline
@@ -189,7 +196,7 @@ This will transfer money to the restaurant account. \newline\newline
 \textit{Fit criterion}\newline
 The functionality must be approved complaint by the developer and testers. This will require approving the code base and the end-to-end functionality.\newline\newline
 
-\textbf{\textit{Constraint 5}}
+\noindent\textbf{\textit{Constraint 5}}
 \newline
 \textit{Description}\newline
 The payment information for the client must be stored safely \newline\newline
@@ -254,14 +261,22 @@ SSL connection used for socket programming is secure and cannot be sniffed.
 
 \subsection{The Scope of the Work}
 \subsubsection{The Current Situation}
-An android application is required to allow customers to walk into a restaurant and use their smart device to view a menu, place an order and pay for there meal. This will be a singular solution extended to multiple restaurants so users only have to use one mobile application to serve these functions.   
-\subsubsection{The Context of the Work} 
+An android application is required to allow customers to walk into a restaurant and use their smart device to view a menu, place an order and pay for there meal. This will be a singular solution extended to multiple restaurants so users only have to use one mobile application to serve these functions.
+\subsubsection{The Context of the Work}
+\begin{figure}[H]
+  \centering
 \includegraphics{Context.png}
+\caption{Context of the work figure.}
+\end{figure}
 \subsection{Business Data Model and Data Dictionary}
 \subsubsection{Business Data Model}
 \subsubsection{Data Dictionary}
 \begin{center}
+
+\begin{table}[H]
+  \centering
 \begin{tabular}{ |c|c|c| }
+
 \hline
 Name & Content & Type \\
 \hline
@@ -278,17 +293,26 @@ Table Identifier & Table Number + Waiter Assigned & Attribute/Element \\
 Order Identifier & Table Number + User Identifier & Attribute/Element \\
 
 
-
 \hline
 \end{tabular}
+\caption{Data Dictionary Table}
+\end{table}
 \end{center}
 \subsection{The Scope of the Product}
-\subsubsection{Product Boundary}
-\includegraphics{ProductBoundary.png}
-\subsubsection{Product Use Case Table}
-\includegraphics{PUC.png}
-\subsection{Functional Requirements}
 
+\subsubsection{Product Boundary}
+\begin{figure}[H]
+\includegraphics{ProductBoundary.png}
+\caption{Product boundary figure.}
+\end{figure}
+
+\subsubsection{Product Use Case Table}
+\begin{table}[H]
+  \centering
+\includegraphics{PUC.png}
+\caption{Product Use Case Table.}
+\end{table}
+\subsection{Functional Requirements}
 \subsubsection{Functional Requirements}
 
 \textbf{\textit{Requirement 1}}\newline
@@ -298,124 +322,124 @@ The product shall scan a QR code to access the restaurant's menu.\newline\newlin
 The product should access the camera application on the respective device to take a picture of the QR code and it will bring up the restaurant menu or display an error.
 \newline
 
-\textbf{\textit{Requirement 2}}\newline
+\noindent\textbf{\textit{Requirement 2}}\newline
 \textit{Description:}\newline
 The product shall allow the user to register an account for complete access to the products payment services. \newline\newline
 \textit{Fit Criterion:}\newline 
 The product will ask the user if they would like to register an account, if the user agrees: the product will bring them to the registration page asking the user to provide a username, password, and credit card information. If the user declines, the product will bring them back to the main menu of the application.
 \newline
 
-\textbf{\textit{Requirement 3}}\newline
+\noindent\textbf{\textit{Requirement 3}}\newline
 \textit{Description:}\newline
 The product will allow users to register using Google or Facebook accounts. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user downloads the app and is asked to register an account, they decide they do not want to go through the trouble of creating a new account so they login with their Google account.
 \newline
 
-\textbf{\textit{Requirement 4}}\newline
+\noindent\textbf{\textit{Requirement 4}}\newline
 \textit{Description:}\newline
 The product shall allow the user to report bugs. \newline\newline
 \textit{Fit Criterion:}\newline 
 The product offers a menu to allow the user to report a bug they encountered. The user presses a button to report the bug and a pop-up form with a text entry box allows the user to describe the bug in 400 characters or less and sends the information to the developers through an automated email.
 \newline
 
-\textbf{\textit{Requirement 5}}\newline
+\noindent\textbf{\textit{Requirement 5}}\newline
 \textit{Description:}\newline
 The product shall provide error codes for common errors. \newline\newline
 \textit{Fit Criterion:}\newline 
 The user enters incorrect details when trying to login to their account. The product reports the error code 1, with the following message: Incorrect login information. i.e., Error Code 1: Incorrect login information.
 \newline
 
-\textbf{\textit{Requirement 6}}\newline
+\noindent\textbf{\textit{Requirement 6}}\newline
 \textit{Description:}\newline
 The product will display the menu in a similar fashion to the hard copy menu offered at the restaurant. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user accesses the menu using the product, it looks similar, if not identical to the paper menu offered at the restaurant.
 \newline
 
-\textbf{\textit{Requirement 7}}\newline
+\noindent\textbf{\textit{Requirement 7}}\newline
 \textit{Description:}\newline
 The product will provide detailed information on a menu item when selected. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user is browsing the menu and selects a hamburger, a new screen is brought up on the users device which details the ingredients of the hamburger and any extra ingredients they may add to the hamburger.
 \newline
 
-\textbf{\textit{Requirement 8}}\newline
+\noindent\textbf{\textit{Requirement 8}}\newline
 \textit{Description:}\newline
 The product will allow a user to request special instructions for food items they have ordered. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user is browsing the menu and selects a steak, the user decides to add the hamburger to his order, a new screen is brought up on the users device with a text entry box that allows the user to give special cooking instructions to the chef. The user types “medium rare” into the text box and confirms the order.
 \newline
 
-\textbf{\textit{Requirement 9}}\newline
+\noindent\textbf{\textit{Requirement 9}}\newline
 \textit{Description:}\newline
 The product will allow the user to view their current order. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user is browsing the menu and adds a chicken entree and a beer to her order. Afterwards she adds a side dish to her order. She wants to see the subtotal of her order, she views her order through the interface.
 \newline
 
-\textbf{\textit{Requirement 10}}\newline
+\noindent\textbf{\textit{Requirement 10}}\newline
 \textit{Description:}\newline
 The product will update the total amount owed for the order in real time. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user is browsing the menu and adds an entree to his order, the total is calculated immediately afterwards. The user then adds a drink to his order, the total of the order updated immediately afterwards.
 \newline
 
-\textbf{\textit{Requirement 11}}\newline
+\noindent\textbf{\textit{Requirement 11}}\newline
 \textit{Description:}\newline
 The product will allow users to rate menu items \newline\newline
 \textit{Fit Criterion:}\newline 
 A user orders a meal and enjoys it so much he decides to post a review using the products.
 \newline
 
-\textbf{\textit{Requirement 12}}\newline
+\noindent\textbf{\textit{Requirement 12}}\newline
 \textit{Description:}\newline
 The product will allow users to view other user's ratings of menu items. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user is browsing the menu and cannot decide between two items, she decides to view a review of an item and decides to order after reading a good review.
 \newline
 
-\textbf{\textit{Requirement 13}}\newline
+\noindent\textbf{\textit{Requirement 13}}\newline
 \textit{Description:}\newline
 The product will allow users to pay for their order using a credit card. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user is finishing his meal and all the waiters are busy with other tables. The user is in a rush, he pays for his order using the credit card info registered to his account associated with the product
 \newline
 
-\textbf{\textit{Requirement 14}}\newline
+\noindent\textbf{\textit{Requirement 14}}\newline
 \textit{Description:}\newline
 The product must be Payment Card Industry (PCI) compliant.
 \newline
 
-\textbf{\textit{Requirement 15}}\newline
+\noindent\textbf{\textit{Requirement 15}}\newline
 \textit{Description:}\newline
 The product will allow users to place their order. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user adds a hamburger, fries and a drink to her order. She is really hungry and doesn't want to wait for a waiter to take her order. She places the order through the application.
 \newline
 
-\textbf{\textit{Requirement 16}}\newline
+\noindent\textbf{\textit{Requirement 16}}\newline
 \textit{Description:}\newline
 The product will show a summary of the user's order before they place it. \newline\newline
 \textit{Fit Criterion:}\newline 
 A users adds a hamburger, fries and a drink to her order. She is ready to place her order, a screen is brought up on her device which shows her what she is about to order.
 \newline
 
-\textbf{\textit{Requirement 17}}\newline
+\noindent\textbf{\textit{Requirement 17}}\newline
 \textit{Description:}\newline
 The product will allow users to leave employee feedback. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user places an order, during her stay at the establishment she encounters a very indifferent and apathetic waiter. She decides to leave feedback on the waiter after she pays for her order.
 \newline
 
-\textbf{\textit{Requirement 18}}\newline
+\noindent\textbf{\textit{Requirement 18}}\newline
 \textit{Description:}\newline
 The product will allow users to remove items from their order before it has been placed. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user adds a hamburger, fries and a milkshake to their order. The user then decides they no longer want a milkshake and remove it from their order before he place the order.
 \newline
 
-\textbf{\textit{Requirement 19}}\newline
+\noindent\textbf{\textit{Requirement 19}}\newline
 \textit{Description:}\newline
 The product will allow the menu to be viewed on a smart phone. \newline\newline
 \textit{Fit Criterion:}\newline 
