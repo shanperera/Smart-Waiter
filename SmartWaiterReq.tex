@@ -21,12 +21,14 @@
 \begin{document}
 
 \title{Smart Waiter Software Requirements} 
-\author{Meraj Patel (1137491)\\ Pavneet Jaual ()\\ Shan Perera ()}
+\author{Meraj Patel (1137491)\\ Pavneet Jaual (1149311)\\ Shan Perera (1150394)}
 \date{\today}
 \maketitle
 
 \tableofcontents 
+
 \listoffigures
+
 \listoftables
 
 \section*{Revision History}
@@ -44,7 +46,7 @@ This document makes use of the Volere Template for all of its organization.
 \section{Project Drivers}
 
 \subsection{The Purpose of the Project}
-This project aims to provide a solution that will allow users to order and pay through a mobile application at restaurants. This opportunity arose from the lack of a universal application in the market, which allows users to visit multiple restaurants, and order and pay at each restaurant, through the singular application. Once complete, the Android users will be able to walk into any restaurant which offers our solution, and have the ability to order and pay for their meal through the singular application.
+This project aims to provide a solution that will allow users to order and pay through a mobile application at restaurants. This opportunity arose from the lack of a universal application in the market that allows; users to walk into a restaurant, scan a code to view the menu, and proceed to order and pay through the use of a singular app. Once the product is complete, Android users will be able to walk into any restaurant which offers our solution, and have the ability to use these services.
 \subsubsection{Project Goal}
 The delivered application will allow an Android user to use the application at any restaurant, which offers the Smart Waiter solution.  More importantly, the client should be able to view restaurants complete menu, order selected items and pay for their meal through the application. 
 \subsection{The Client, the Customer, and Other Stakeholders}
@@ -284,6 +286,7 @@ Order Identifier & Table Number + User Identifier & Attribute/Element \\
 \subsubsection{Product Boundary}
 \includegraphics{ProductBoundary.png}
 \subsubsection{Product Use Case Table}
+\includegraphics{PUC.png}
 \subsection{Functional Requirements}
 
 \subsubsection{Functional Requirements}
@@ -516,12 +519,19 @@ N/A
   \item 	Work on revisions
 \end{itemize}
 \subsection{Migration to New Product}
-
+N/A
 \subsection{Risks}
+\begin{itemize}
+  \item Dependency on third party API Stripe. If company happen to shut down, unable to process credit card payments until alternative solution is found
+  \item Network threats. If new threats are discovered (e.g., heartbleed), may comprise data integrity. 
+\end{itemize}
 \subsection{Costs}
 N/A
 \subsection{User Documentation and Training}
+Work in progress
 \subsection{Waiting Room}
+Work in progress
 \subsection{Ideas for Solutions}
+Work in progress
 
 \end{document}
