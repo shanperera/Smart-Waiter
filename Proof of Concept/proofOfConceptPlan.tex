@@ -24,8 +24,6 @@
 
 \maketitle
 
-\textbf{Will a part of the implementation be difficult?}
-
 For the proof of concept plan, we want tackle one of the challenging components of our application. We would like to demonstrate the menu component of smart waiter application. 
 
 To summarize, our initial implementation involved the use of parse cloud storage on the backend. We planned on designing the application in a way which allowed us to store restaurant menus on the cloud. Thus, each time the application wanted to access the restaurant’s menu, it would pull data from the cloud. However, through further research we have found that Parse API has many limitations. 
@@ -34,6 +32,6 @@ Specifically, we have found that parse only supports relational database. This i
 
 We are currently looking at implementing one of the two alternative approaches. One approach is to use document oriented database. This type of database will store data in JSON format. Therefore, only one query is required to pull the restaurant’s entire menu from the cloud. There are potential challenges to this approach as well because there are not many cloud services which offer document storage and hook into Android.  On the other hand, we can eliminate the cloud service and package a file containing JSON data, which holds restaurant menu with the apk. This approach has limitations as well, such as the restaurant menus cannot be updated without an application update, which will not only be tedious but can lead to inconsistencies between a user's old application and a restaurants menu. 
 
-We still need to prototype the feasible solutions and see which best fits our application in this case. Therefore, we would like to solve address this issue and demonstrate it during our proof of concept, as it is a integral component of our app.
+We still need to prototype the feasible solutions and see which best fits our application in this case. Therefore, we would like to solve this issue and demonstrate it during our proof of concept, as it is a integral component of our app.
 
 \end{document}
