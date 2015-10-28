@@ -1,39 +1,16 @@
 \documentclass[12pt]{article}
 
-\usepackage{bm}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{colortbl}
-\usepackage{xr}
-\usepackage{hyperref}
-\usepackage{longtable}
-\usepackage{xfrac}
-\usepackage{tabularx}
-\usepackage{float}
-\usepackage{siunitx}
-\usepackage{booktabs}
+
 
 %\usepackage{refcheck}
 
-\hypersetup{
-    bookmarks=true,         % show bookmarks bar?
-      colorlinks=true,       % false: boxed links; true: colored links
-    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
-    citecolor=green,        % color of links to bibliography
-    filecolor=magenta,      % color of file links
-    urlcolor=cyan           % color of external links
-}
+
 \newcommand{\wss}[1]{\authornote{magenta}{SS}{#1}}
 \newcommand{\ds}[1]{\authornote{blue}{DS}{#1}}
 
+\usepackage{graphicx}
+\graphicspath{ {Images/} }
 
-\newcommand{\tclad}{T_\text{CL}}
-\newcommand{\degree}{\ensuremath{^\circ}}
-\newcommand{\progname}{SWHS}
-
-\usepackage{fullpage}
 
 \begin{document}
 
@@ -53,16 +30,13 @@ Phase Change Material}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{General Information}
-The following section provides an overview of the Verification and Validation (V\&V) Plan 
-for a solar water heating systems incorporating phase change material simulator.
- This section explains the purpose of this document, the scope of the system,
-  common definitions, acronyms and abbreviations that are used in the document,
-   and an overview of the following sections
+The following section provides an overview of the Test Plan 
+for Smart Waiter Solutions.
+ This section explains the purpose of this document, the scope of the system, and an overview of the following sections
 
 %1.1 Purpose
 \subsection{Purpose}
-The main purpose of this document is to describe the verification and validation 
-process that will be used to test a simulation for solar water heating systems incorporating PCM.
+The purpose of this document is to describe the various test cases and procedures used  Smart Waiter.
 This document is indented to be used as a reference for all future testing and will
 be used to increase confidence in the software implementation.  
 
@@ -75,26 +49,7 @@ determine if the software is implemented correctly.
 \subsection{Scope}
 
 
-%1.3  Definitions, Acronyms, and abbreviations 
-\subsection{Acronyms, Abbreviations, and Symbols }
 
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{l l} 
-  \toprule		
-  \textbf{symbol} & \textbf{description}\\
-  \midrule 
-  QA		&Quality assurance\\
-  SRS		&Software requirements specification\\
-  V\&V		& Verification and validation\\
-  V\&VP 	& Verification and validation plan\\
-  V\&VR 	& Verification and validation report\\
-  PCM		& Phase change material\\
-  SWHS		& Solar Water Heating System\\
-  $\epsilon$& $10^{-2}$\\
-  \bottomrule
-\end{tabular}\\
-
-%1.4 Overview of Document
 \subsection{Overview of Document }
 The following sections provide more detail about the V\&V of a solar water heating
  simulator. Information about the testing process is provided, and the software specifications
@@ -140,24 +95,6 @@ will be performing the testing is McMaster University.
 
 %2.3.1 Dates and Deadlines
 \subsubsection{Dates and Deadlines}
-Test Case:
-~\newline
-The creation of the test cases for both system testing and unit testing is 
-scheduled to begin June $1^\text{st}$ 2015.
-The deadline for the creation of the test cases is June 15th 2015. 
-~\newline
-~\newline
-Test Case Implementation:
-~\newline
-Implementing code for the automation of the unit testing is scheduled to being 
-June 15th 2015. The implementation period
-is expected to last approximately two weeks and has a deadline of June 30th 2015.
-~\newline
-~\newline
-Verification and Validation Report:
-~\newline
-The writting of the V\&VR is scheduled to begin July 1st 2015 and end on July 15th 2015. 
-
 %2.4 Budget
 \subsection{Budget}
 The budget for the testing of this system is being funded by McMaster University and NSERC.
@@ -230,6 +167,7 @@ move from one test to the next, and how to determine if the test was successful.
 \subsubsection{Manual and Automatic Testing}
 
 \subsubsection{Static and Dynamic Testing}
+Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-though through will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. On the contrary, dynamic testing refers to executing the program while running test cases to view expected behaviour. This is done to find and fix defects in the program. This will be performed after implementation phase. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -237,28 +175,65 @@ move from one test to the next, and how to determine if the test was successful.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{System Test Description}
+\section{POC System Test Description}
 
 
-%5.x Test identifier 
-\subsection{POC Test}
+\subsection{Barcode Scanning}
+Smart-Waiter needs to ensure users are able to scan a barcode with minimal attempts. The number of expected attempts will be presented in the final SRS document. Various forms of testing will be performed to evaluate this criteria.
 
-% 5.x.2 Input
-\subsubsection{Barcode Scanning}
+\subsubsection{Test Factors}
 
-\subsubsection{Database Querying}
+\subsubsection{Methods of testing}
+\begin{itemize}
+  \item Static testing is used to ensure pre and post conditions are met syntactically. That is, implementing the ability to scan a barcode and use it to query a menu from the database.
+  \item Dynamic testing is used to guarantee validity, and record number of successful attempts given a sample size of attempts performed.
+\end{itemize}
 
-\subsection{Remaining Test}
+\subsubsection{Test Cases}
+\includegraphics{Barcode.png}
 
-\subsubsection{Account Login}
+\subsection{Database Querying}
 
-\subsubsection{Order Transaction}
+\subsubsection{Test Factors}
+\subsubsection{Inputs}
+\subsubsection{Outputs}
+\subsubsection{Initial State}
+\subsubsection{Methods of Testing}
+\subsubsection{Test Cases}
 
-\subsubsection{Usability Testing}
+\section{Final Demonstration System Test Description}
 
-\subsubsection{Performance Testing}
+\subsection{Account Login}
+\subsubsection{Test Factors}
+\subsubsection{Inputs}
+\subsubsection{Outputs}
+\subsubsection{Initial State}
+\subsubsection{Methods of testing}
+\subsubsection{Test Cases}
 
-\section{Testing Schedules}
+\subsection{Order Transaction}
+\subsubsection{Test Factors}
+\subsubsection{Inputs}
+\subsubsection{Outputs}
+\subsubsection{Initial State}
+\subsubsection{Methods of testing}
+\subsubsection{Test Cases}
+
+\subsection{Usability Testing}
+\subsubsection{Test Factors}
+\subsubsection{Inputs}
+\subsubsection{Outputs}
+\subsubsection{Initial State}
+\subsubsection{Methods of testing}
+\subsubsection{Test Cases}
+
+\subsection{Performance Testing}
+\subsubsection{Test Factors}
+\subsubsection{Inputs}
+\subsubsection{Outputs}
+\subsubsection{Initial State}
+\subsubsection{Methods of testing}
+\subsubsection{Test Cases}
 
 \section{Automated Testing Plan}
 
