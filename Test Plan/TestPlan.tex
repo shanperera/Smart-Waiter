@@ -1,0 +1,266 @@
+\documentclass[12pt]{article}
+
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{xfrac}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{booktabs}
+
+%\usepackage{refcheck}
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+      colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+\newcommand{\wss}[1]{\authornote{magenta}{SS}{#1}}
+\newcommand{\ds}[1]{\authornote{blue}{DS}{#1}}
+
+
+\newcommand{\tclad}{T_\text{CL}}
+\newcommand{\degree}{\ensuremath{^\circ}}
+\newcommand{\progname}{SWHS}
+
+\usepackage{fullpage}
+
+\begin{document}
+
+\title{Verification and Validation Plan for Solar Water Heating Systems Incorporating 
+Phase Change Material} 
+\author{Maya Grab}
+\date{\today}
+	
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	1.) General Information 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{General Information}
+The following section provides an overview of the Verification and Validation (V\&V) Plan 
+for a solar water heating systems incorporating phase change material simulator.
+ This section explains the purpose of this document, the scope of the system,
+  common definitions, acronyms and abbreviations that are used in the document,
+   and an overview of the following sections
+
+%1.1 Purpose
+\subsection{Purpose}
+The main purpose of this document is to describe the verification and validation 
+process that will be used to test a simulation for solar water heating systems incorporating PCM.
+This document is indented to be used as a reference for all future testing and will
+be used to increase confidence in the software implementation.  
+
+This document will be used as a starting point for the verification and validation report. The 
+test cases presented within this document will be executed and the output will be analyzed to 
+determine if the software is implemented correctly.  
+
+
+%1.2 Scope
+\subsection{Scope}
+
+
+%1.3  Definitions, Acronyms, and abbreviations 
+\subsection{Acronyms, Abbreviations, and Symbols }
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l l} 
+  \toprule		
+  \textbf{symbol} & \textbf{description}\\
+  \midrule 
+  QA		&Quality assurance\\
+  SRS		&Software requirements specification\\
+  V\&V		& Verification and validation\\
+  V\&VP 	& Verification and validation plan\\
+  V\&VR 	& Verification and validation report\\
+  PCM		& Phase change material\\
+  SWHS		& Solar Water Heating System\\
+  $\epsilon$& $10^{-2}$\\
+  \bottomrule
+\end{tabular}\\
+
+%1.4 Overview of Document
+\subsection{Overview of Document }
+The following sections provide more detail about the V\&V of a solar water heating
+ simulator. Information about the testing process is provided, and the software specifications
+that were discussed in the SRS document are stated.  The evaluation process that will be followed during 
+testing is outlined, and test cases for both the system testing and unit testing are provided 
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	2.) Plan
+%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Plan}
+This section provides a description of the software that is being tested, the team that will
+perform the testing, the milestones for the testing phase, and the budget allocated to the testing. 
+
+%2.1 Software Description
+\subsection{Software Description}
+The software being tested is a simulator for a SWHS
+incorporating PCM. Given the physical parameters of the system,
+ including dimensions, properties of the water and PCM,and relevant physical constants,
+  the simulator calculates the changes in temperature and energy of the water and PCM 
+  over time.
+
+%2.2 Test Team
+\subsection{Test Team} 
+The team that will execute the test cases, write and review the V\&VR consists of:
+
+\begin{itemize}
+ \item Maya Grab 
+ \item Dr.\ Spencer Smith
+ \item Thulasi Jegatheesan 
+\end{itemize}  
+
+%2.3 Milestones
+\subsection{Milestones}
+
+%2.3.1 Location
+\subsubsection{Location}
+The location where the testing will be performed is Hamilton Ontario. The institution that
+will be performing the testing is McMaster University. 
+
+
+%2.3.1 Dates and Deadlines
+\subsubsection{Dates and Deadlines}
+Test Case:
+~\newline
+The creation of the test cases for both system testing and unit testing is 
+scheduled to begin June $1^\text{st}$ 2015.
+The deadline for the creation of the test cases is June 15th 2015. 
+~\newline
+~\newline
+Test Case Implementation:
+~\newline
+Implementing code for the automation of the unit testing is scheduled to being 
+June 15th 2015. The implementation period
+is expected to last approximately two weeks and has a deadline of June 30th 2015.
+~\newline
+~\newline
+Verification and Validation Report:
+~\newline
+The writting of the V\&VR is scheduled to begin July 1st 2015 and end on July 15th 2015. 
+
+%2.4 Budget
+\subsection{Budget}
+The budget for the testing of this system is being funded by McMaster University and NSERC.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	3.) Software Specification
+%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{ Software Specification}
+This section provides the functional requirements, the business tasks that the
+software is expected to complete, and the nonfunctional requirements, the
+qualities that the software is expected to exhibit.
+
+%3.1 Functional Requirements
+\subsection{Functional Requirements}
+
+\noindent
+\begin{itemize}
+\item Input the physical constants, properties and initial temperatures of water
+ and PCM, and dimensions of the tank  
+\item Verify that the inputs satisfy the required physical constraints 
+\item Compute the calculated values required to solve the governing differential equations
+\item Calculate the temperatures and energy of water and PCM over time.
+\end{itemize} 
+
+%3.2 Nonfunctional Requirements
+\subsection{Nonfunctional Requirements}
+Priority nonfunctional requirements are correctness, understandability,
+reliability, and maintainability.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	4.) Test Types
+%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Evaluation}
+This section first presents the methods and constraints that are to be used
+during the evaluation process. This is followed by how the data obtained by the
+testing will be evaluated, which includes: how the data will be recorded, how to
+move from one test to the next, and how to determine if the test was successful.
+
+%4.1 Methods and Constraints
+\subsection{ Methods and Constraints} 
+
+%4.1.1 Methodology
+\subsubsection{Methodology} 
+
+% 4.1.2 Extent of Testing
+\subsubsection{Extent of Testing}
+
+% 4.1.3 Test Tools
+\subsubsection{Test Tools}
+
+
+% 4.1.4 Testing Constraints
+\subsubsection{ Testing Constraints}
+
+\subsection{Types of Tests}
+
+\subsubsection{Functional Testing}
+
+\subsubsection{Structural Testing}
+
+\subsubsection{Unit Testing}
+
+\subsubsection{Manual and Automatic Testing}
+
+\subsubsection{Static and Dynamic Testing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	5.) System Test Description
+%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{System Test Description}
+
+
+%5.x Test identifier 
+\subsection{POC Test}
+
+% 5.x.2 Input
+\subsubsection{Barcode Scanning}
+
+\subsubsection{Database Querying}
+
+\subsection{Remaining Test}
+
+\subsubsection{Account Login}
+
+\subsubsection{Order Transaction}
+
+\subsubsection{Usability Testing}
+
+\subsubsection{Performance Testing}
+
+\section{Testing Schedules}
+
+\section{Automated Testing Plan}
+
+
+\end{document}
