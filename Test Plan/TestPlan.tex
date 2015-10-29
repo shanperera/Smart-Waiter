@@ -8,6 +8,7 @@
 \newcommand{\wss}[1]{\authornote{magenta}{SS}{#1}}
 \newcommand{\ds}[1]{\authornote{blue}{DS}{#1}}
 
+\usepackage{hyperref}
 \usepackage{graphicx}
 \graphicspath{ {Images/} }
 
@@ -212,12 +213,26 @@ Smart-Waiter needs to ensure users are able to scan a barcode with minimal attem
 \subsubsection{Test Cases}
 
 \subsection{Order Transaction}
+Smart-Waiter needs to ensure that a user can send in their order, and pay for their order easily and securely. Order transaction will be vigorously tested to ensure complete customer satisfaction.  
+\subsubsection{Test Type}
+Manual, functional dynamic test 
 \subsubsection{Test Factors}
+Correctness, reliability, data integrity, data security, ease of use, 
 \subsubsection{Inputs}
+A valid credit card: vcc
+An expired credit card: ecc
+A fake credit card: fcc
+A VISA debit card: dcc
+A VISA gift card: gcc
 \subsubsection{Outputs}
+An order summary \texorpdfstring{O\textsubscript{i}}{Oi}, where i corresponds to the \texorpdfstring{i\textsuperscript{th}}{ith} order from the set of orders \texorpdfstring{n\textsubscript{i}}{ni}. \\
+A message M, containing either a success or failure message, depending on the card type used. 
 \subsubsection{Initial State}
+A set \texorpdfstring{n\textsubscript{i}}{ni} of 10 random orders consisting of different menu items, created manually, where i = 0, 1, 2.. 10, where i = 0..4 are invalid orders with respect to the restaurants policies and where i = 5..9 are valid orders.
 \subsubsection{Methods of testing}
+Dynamic testing is used to ensure validity, record the number of successful tests given a sample.
 \subsubsection{Test Cases}
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{orderTransactionTC.png}
 
 \subsection{Usability Testing}
 \subsubsection{Test Factors}
