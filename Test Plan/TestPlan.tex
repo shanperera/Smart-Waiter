@@ -205,12 +205,27 @@ Smart-Waiter needs to ensure users are able to scan a barcode with minimal attem
 \section{Final Demonstration System Test Description}
 
 \subsection{Account Login}
+Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 
+\subsubsection{Test Type}
+Manual, functional dynamic test
 \subsubsection{Test Factors}
+Correctness, data integrity
 \subsubsection{Inputs}
+A new user's credentials, with valid information: username, first name, last name, date of birth, email, address, credit card \\
+A new user's credentials, with valid information but a fake credit card \\
+A Google account \\
+A Facebook account \\
 \subsubsection{Outputs}
+A message M, containing either a success of failure message, depending on the account information given. \\
+My Account menu \\
+Add Credit Card menu \\
 \subsubsection{Initial State}
+Create account menu, empty
 \subsubsection{Methods of testing}
+Dynamic testing is used to ensure correctness and data integrity, and to observe the application behaviour when given incorrect information.
 \subsubsection{Test Cases}
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{accountTC.png}
+
 
 \subsection{Order Transaction}
 Smart-Waiter needs to ensure that a user can send in their order, and pay for their order easily and securely. Order transaction will be vigorously tested to ensure complete customer satisfaction.  
@@ -219,16 +234,18 @@ Manual, functional dynamic test
 \subsubsection{Test Factors}
 Correctness, reliability, data integrity, data security, ease of use, 
 \subsubsection{Inputs}
-A valid credit card: vcc
-An expired credit card: ecc
-A fake credit card: fcc
-A VISA debit card: dcc
-A VISA gift card: gcc
+A set \texorpdfstring{n\textsubscript{i}}{ni} of 10 random orders consisting of different menu items, created manually, where i = 0, 1, 2 .. 9, where i = 0..4 are invalid orders with respect to the restaurant's policies and where i = 5..9 are valid orders. \\
+A valid credit card \\
+An expired credit card \\
+A fake credit card \\
+A VISA debit card \\
+A VISA gift card \\
 \subsubsection{Outputs}
 An order summary \texorpdfstring{O\textsubscript{i}}{Oi}, where i corresponds to the \texorpdfstring{i\textsuperscript{th}}{ith} order from the set of orders \texorpdfstring{n\textsubscript{i}}{ni}. \\
 A message M, containing either a success or failure message, depending on the card type used. 
 \subsubsection{Initial State}
-A set \texorpdfstring{n\textsubscript{i}}{ni} of 10 random orders consisting of different menu items, created manually, where i = 0, 1, 2.. 10, where i = 0..4 are invalid orders with respect to the restaurants policies and where i = 5..9 are valid orders.
+Order Test Cases: Restaurant menu module
+Credit Card Test Cases: Payment confirmation menu
 \subsubsection{Methods of testing}
 Dynamic testing is used to ensure validity, record the number of successful tests given a sample.
 \subsubsection{Test Cases}
