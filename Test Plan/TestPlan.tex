@@ -180,8 +180,23 @@ Unit testing refers to providing specific input to a system and verifying it eva
 \subsubsection{Manual and Automatic Testing}
 Manual testing is done by people while automatic is processed through scripts. 
 
-\subsubsection{Static and Dynamic Testing}
-Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-though through will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. On the contrary, dynamic testing refers to executing the program while running test cases to view expected behaviour. This is done to find and fix defects in the program. This will be performed after implementation phase. 
+\subsubsection{Static Testing}
+Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-though through will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. \\
+Static testing will be enforced through out the development process. A code review process will be put into place to strictly manage the quality of the code. Specifically, developers will have to sign off on the quality of the code before it gets checked into the production repo. The tool used for code reviews be Codereviewer. \\\\
+Below we have highlighted the code review process;\\
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{review_process.png}\\\\
+The reviewers will assess the code quality and critique the code in following criteria;\\
+\begin{itemize}
+ \item General Unit Testing performed. Did it pass?
+ \item Comment and Coding Conventions followed consistently? \item Error Handling done correctly? \item Resource Leaks within the code? \item Is the code thread safe? \item Is the code up to standard with performance? \item Does code provide correct functionality? \item Is the code secure?
+ \end{itemize}
+The reviewers will assess the code and mark issues found with severity. If any of the high severity issues found, then developer must fix code. For medium severity issues, developer can provide reasoning and try to convince reviewers. Low severity issues can possibly be dropped if they are nits. The reviewers will mark severity as follows;
+\begin{itemize}
+\item Naming Conventions and Coding style considered low severity\item Control flow and Logical issues considered medium or high severity\item Redundant Code considered medium or high severity\item Performance Issues considered high severity\item Security Issues considered high severity\item Scalability Issues considered medium or high severity\item Functional Issues considered high severity\item Error Handling considered high severity\item Reusability considered medium severity
+\end{itemize}
+
+\subsection{Dynamic Testing}
+On the contrary, dynamic testing refers to executing the program while running test cases to view expected behaviour. This is done to find and fix defects in the program. This will be performed after implementation phase. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
