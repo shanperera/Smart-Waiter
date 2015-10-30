@@ -16,15 +16,28 @@
 
 \begin{document}
 
-\title{Verification and Validation Plan for Solar Water Heating Systems Incorporating 
-Phase Change Material} 
-\author{Maya Grab}
+\title{Smart Waiter Test Plan} 
+\author{Meraj Patel \#1137491 \\ Pavneet Jauhal \#1149311\\ Shan Perera \#1150394}
 \date{\today}
-	
 \maketitle
+\pagebreak
 
 \tableofcontents
 
+\listoftables
+
+\begin{table}[H]
+\section*{Revision History}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Date}  & \textbf{Comments} \\ \hline
+October 30, 2015 &  first draft. \\ 
+\hline
+\end{tabular}
+\caption{Revision History Table}
+\end{table}
+
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
 %	1.) General Information 
@@ -61,20 +74,17 @@ perform the testing, the milestones for the testing phase, and the budget alloca
 
 %2.1 Software Description
 \subsection{Software Description}
-The software being tested is a simulator for a SWHS
-incorporating PCM. Given the physical parameters of the system,
- including dimensions, properties of the water and PCM,and relevant physical constants,
-  the simulator calculates the changes in temperature and energy of the water and PCM 
-  over time.
+The software being tested is for Smart Waiter Solutions. The project aims to provide a solution that will allow users to order and pay through a mobile application at restaurants. 
 
 %2.2 Test Team
 \subsection{Test Team} 
-The team that will execute the test cases, write and review the V\&VR consists of:
+The team that will execute the test cases, write and review Smart Waiter consists of:
 
 \begin{itemize}
- \item Maya Grab 
- \item Dr.\ Spencer Smith
- \item Thulasi Jegatheesan 
+ \item Pavneet Jauhal
+ \item Shan Perera
+ \item Meraj Patel
+ \item Dr.\ Rong Zheng
 \end{itemize}  
 
 %2.3 Milestones
@@ -82,15 +92,24 @@ The team that will execute the test cases, write and review the V\&VR consists o
 
 %2.3.1 Location
 \subsubsection{Location}
-The location where the testing will be performed is Hamilton Ontario. The institution that
-will be performing the testing is McMaster University. 
+The location where the testing will be performed is Hamilton Ontario. Specifically, we will be performing the testing is McMaster University. 
 
 
 %2.3.1 Dates and Deadlines
 \subsubsection{Dates and Deadlines}
-%2.4 Budget
+
+Test Case Creation:
+The creation of test cases is scheduled to begin October 19th, 2015. The deadline for creation of test cases for POC November 16, 2015. The deadline for final demonstration is February 1st, 2016.
+\newline
+\newline
+Test Case Implementation:
+Implementing test cases for POC system test is scheduled to begin November 15, 2015 The implementation period is expected to last approximately one week. 
+\newline
+\newline
+Implementing test cases for Final Demonstration system test is scheduled to begin February 1, 2016 The implementation period is expected to last approximately three weeks. 
+
 \subsection{Budget}
-The budget for the testing of this system is being funded by McMaster University and NSERC.
+N/A
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -99,26 +118,24 @@ The budget for the testing of this system is being funded by McMaster University
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{ Software Specification}
-This section provides the functional requirements, the business tasks that the
-software is expected to complete, and the nonfunctional requirements, the
-qualities that the software is expected to exhibit.
+This section provides the functional requirements, the 
+software is expected to complete, and the non-functional requirements, the software is expected to exhibit.
 
 %3.1 Functional Requirements
 \subsection{Functional Requirements}
 
 \noindent
 \begin{itemize}
-\item Input the physical constants, properties and initial temperatures of water
- and PCM, and dimensions of the tank  
-\item Verify that the inputs satisfy the required physical constraints 
-\item Compute the calculated values required to solve the governing differential equations
-\item Calculate the temperatures and energy of water and PCM over time.
+\item The product shall scan a bar code to access the restaurant's menu from a database
+\item The product shall allow the user to register an account for complete access to the products payment services
+\item The product shall allow the user to report bugs
+\item The product will allow users to place their order
+\item The product will allow users to pay for their order using a credit card
 \end{itemize} 
 
 %3.2 Nonfunctional Requirements
 \subsection{Nonfunctional Requirements}
-Priority nonfunctional requirements are correctness, understandability,
-reliability, and maintainability.
+Priority nonfunctional requirements are performance, ease of use, reliability, security and maintainability.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -128,26 +145,26 @@ reliability, and maintainability.
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Evaluation}
-This section first presents the methods and constraints that are to be used
-during the evaluation process. This is followed by how the data obtained by the
-testing will be evaluated, which includes: how the data will be recorded, how to
-move from one test to the next, and how to determine if the test was successful.
+
+The following section first presents methods and constraints used during the evaluation process. This is followed by extent of testing and test tools to be used.
 
 %4.1 Methods and Constraints
 \subsection{ Methods and Constraints} 
 
 %4.1.1 Methodology
 \subsubsection{Methodology} 
+Testing of Smart Waiter will consist of various types of tests explained in the next section. Manual testing will be conducted for the most part, some automation testing will be in place.
 
 % 4.1.2 Extent of Testing
 \subsubsection{Extent of Testing}
+The extent of testing will be end to end for the final demonstration. For POC, specific system tests will be conducted.
 
 % 4.1.3 Test Tools
 \subsubsection{Test Tools}
 
-
 % 4.1.4 Testing Constraints
 \subsubsection{ Testing Constraints}
+N/A
 
 \subsection{Types of Tests}
 
@@ -185,13 +202,14 @@ Smart-Waiter needs to insure users are able to scan a barcode with minimal attem
   \item Unit test
 \end{itemize}
 
-\subsubsection{Test Factors}
+\subsubsection{Nonfunctional Test Factors}
 \begin{itemize}
   \item Performance
   \item 	Correctness
   \item 	Ease of use
 \end{itemize}
 
+\begin{comment}
 \subsubsection{Inputs}
 \begin{itemize}
   \item Barcode to be scanned
@@ -204,26 +222,22 @@ Smart-Waiter needs to insure users are able to scan a barcode with minimal attem
 \begin{itemize}
   \item Barcode scanning page in empty state
 \end{itemize}
+\end{comment}
 
 \subsubsection{Methods of testing}
-\begin{itemize}
-  \item Dynamic test
-  \item Static test
-\end{itemize}
+Dynamic testing is used to ensure correctness and data integrity, and to observe the application behaviour when given incorrect information.
 
 \subsubsection{Test Cases}
 \textbf{\textit{Functional Unit Test}}\newline
 \newline
 \textit{Summary}\newline
-Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts for our knowledge. Performing the
+Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate performance.
 \newline
 \includegraphics{Barcode.png}\newline
 
-\textbf{\textit{Structural Test}}\newline
-
 \subsection{Database Querying}
 
-\subsubsection{Test Factors}
+\subsubsection{Nonfunctional Test Factors}
 \subsubsection{Inputs}
 \subsubsection{Outputs}
 \subsubsection{Initial State}
@@ -232,24 +246,38 @@ Manual black box tests will be performed to assess barcode scanning. This test w
 
 \section{Final Demonstration System Test Description}
 
-
 \subsection{Account Login}
 Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 
 \subsubsection{Test Type}
-Manual, functional dynamic test
-\subsubsection{Test Factors}
-Correctness, data integrity
+\begin{itemize}
+  \item Manual
+  \item functional dynamic test
+\end{itemize}
+\subsubsection{Nonfunctional Test Factors}
+\begin{itemize}
+  \item Correctness
+  \item data integrity
+\end{itemize}
+
+\begin{comment}
 \subsubsection{Inputs}
-A new user's credentials, with valid information: username, first name, last name, date of birth, email, address, credit card \\
-A new user's credentials, with valid information but a fake credit card \\
-A Google account \\
-A Facebook account \\
+\begin{itemize}
+  \item A new user's credentials, with valid information: username, first name, last name, date of birth, email, address, credit card
+  \item A new user's credentials, with valid information but a fake credit card
+  \item A Google account
+  \item A Facebook account
+\end{itemize}
 \subsubsection{Outputs}
-A message M, containing either a success of failure message, depending on the account information given. \\
-My Account menu \\
-Add Credit Card menu \\
+\begin{itemize}
+  \item A message M, containing either a success of failure message, depending on the account information given. 
+  \item A new user's credentials, with valid information but a fake credit card
+  \item My Account menu
+  \item Add Credit Card menu
+  \end{itemize}
 \subsubsection{Initial State}
 Create account menu, empty
+\end{comment}
+
 \subsubsection{Methods of testing}
 Dynamic testing is used to ensure correctness and data integrity, and to observe the application behaviour when given incorrect information.
 \subsubsection{Test Cases}
@@ -259,9 +287,18 @@ Dynamic testing is used to ensure correctness and data integrity, and to observe
 \subsection{Order Transaction}
 Smart-Waiter needs to ensure that a user can send in their order, and pay for their order easily and securely. Order transaction will be vigorously tested to ensure complete customer satisfaction.  
 \subsubsection{Test Type}
-Manual, functional dynamic test 
-\subsubsection{Test Factors}
-Correctness, reliability, data integrity, data security, ease of use
+\begin{itemize}
+  \item Manual 
+  \item functional dynamic test 
+ \end{itemize} 
+\subsubsection{Nonfunctional Test Factors}
+\begin{itemize}
+  \item Correctness 
+  \item Reliability 
+  \item Data integrity 
+  \item Data security 
+  \item Ease of use
+ \end{itemize} 
 
 \begin{comment}
 \subsubsection{Inputs}
@@ -274,11 +311,12 @@ A VISA gift card \\
 \subsubsection{Outputs}
 An order summary \texorpdfstring{O\textsubscript{i}}{Oi}, where i corresponds to the \texorpdfstring{i\textsuperscript{th}}{ith} order from the set of orders \texorpdfstring{n\textsubscript{i}}{ni}. \\
 A message M, containing either a success or failure message, depending on the card type used. 
-\end{comment}
 
 \subsubsection{Initial State}
 Order Test Cases: Restaurant menu module
 Credit Card Test Cases: Payment confirmation menu
+\end{comment}
+
 \subsubsection{Methods of testing}
 Dynamic testing is used to ensure validity, record the number of successful tests given a sample.
 \subsubsection{Test Cases}
@@ -286,13 +324,15 @@ Dynamic testing is used to ensure validity, record the number of successful test
 
 \subsection{Usability Testing}
 The goal of usability testing is to verify if a user can successfully use all functionalities of the application from start to finish in a timely manner. This type of testing aids in evaluating if functional requirements are met. As well it provides scope for evaluating non functional requirements.
-\subsubsection{Test Factors}
+\subsubsection{Nonfunctional Test Factors}
 \begin{itemize}
   \item Reliability 
   \item Performance
   \item 	Correctness
   \item 	Ease of use
 \end{itemize}
+
+\begin{comment}
 \subsubsection{Inputs}
 Input will consist of user input for entire app:
 \begin{itemize}
@@ -313,10 +353,10 @@ Output will consist of a response for each user input:
 \begin{itemize}
   \item User starts at the beginning of the process; account login page
 \end{itemize}
+\end{comment}
+
 \subsubsection{Methods of testing}
-\begin{itemize}
-  \item Functional unit test
-\end{itemize}
+Dynamic testing is used to evaluate end to end system testing. This effectively evaluates functional non functional requirements entirely of the system. 
 \subsubsection{Test Cases}
 \textbf{\textit{Functional Unit Test}}\newline
 \newline
@@ -324,10 +364,10 @@ Output will consist of a response for each user input:
 Manual black box tests will be performed to assess usability of the application. This test will be in the form of unit testing. Ten participants will be selected to evaluate this test. At least five will have some experience with using android applications. The remaining will have little to no experience. Each participant will be asked to conduct a walk through of the application. Number of errors made will be counted and recorded to further evaluate functional requirements and improve test cases. As well, qualitative feedback from participants will be taken in the end. For example, participants will be asked to comment on things they liked and things they didn't like. Also, they will be asked to provide a rating out of 10 in terms of experience; 1 being a poor experience and 10 being a wonderful experience. This feedback will help evaluate non function requirements; user interface appearance, learning requirements and accessibility. 
 \newline
 
-\section{Automated Testing Plan}
-
 \section{Testing Schedule}
-Active testing is necessary to build Smart-Waiter into a successful app. Therefore, testing will be performed on numerous occasions throughout the development of this application. Individual testing will be performed before any code is committed to the repository. Futhermore, as newer features and functions are being added and the development of Smart-Waiter progresses, the testing team and developers will be changing the test cases accordingly. 
+Active testing is necessary to build Smart-Waiter into a successful app. Therefore, testing will be performed on numerous occasions throughout the development of this application. Individual testing will be performed before any code is committed to the repository. Furthermore, as newer features and functions are being added and the development of Smart-Waiter progresses, the testing team and developers will be changing the test cases accordingly. 
+\newline
+\newline
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{TestingSchedule.png}
 
 \end{document}

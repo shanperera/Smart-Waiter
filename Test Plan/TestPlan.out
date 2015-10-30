@@ -27,39 +27,29 @@
 \BOOKMARK [1][-]{section.5}{POC System Test Description}{}% 27
 \BOOKMARK [2][-]{subsection.5.1}{Barcode Scanning}{section.5}% 28
 \BOOKMARK [3][-]{subsubsection.5.1.1}{Test Type}{subsection.5.1}% 29
-\BOOKMARK [3][-]{subsubsection.5.1.2}{Test Factors}{subsection.5.1}% 30
-\BOOKMARK [3][-]{subsubsection.5.1.3}{Inputs}{subsection.5.1}% 31
-\BOOKMARK [3][-]{subsubsection.5.1.4}{Outputs}{subsection.5.1}% 32
-\BOOKMARK [3][-]{subsubsection.5.1.5}{Initial State}{subsection.5.1}% 33
-\BOOKMARK [3][-]{subsubsection.5.1.6}{Methods of testing}{subsection.5.1}% 34
-\BOOKMARK [3][-]{subsubsection.5.1.7}{Test Cases}{subsection.5.1}% 35
-\BOOKMARK [2][-]{subsection.5.2}{Database Querying}{section.5}% 36
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Test Factors}{subsection.5.2}% 37
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Inputs}{subsection.5.2}% 38
-\BOOKMARK [3][-]{subsubsection.5.2.3}{Outputs}{subsection.5.2}% 39
-\BOOKMARK [3][-]{subsubsection.5.2.4}{Initial State}{subsection.5.2}% 40
-\BOOKMARK [3][-]{subsubsection.5.2.5}{Methods of Testing}{subsection.5.2}% 41
-\BOOKMARK [3][-]{subsubsection.5.2.6}{Test Cases}{subsection.5.2}% 42
-\BOOKMARK [1][-]{section.6}{Final Demonstration System Test Description}{}% 43
-\BOOKMARK [2][-]{subsection.6.1}{Account Login}{section.6}% 44
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Test Type}{subsection.6.1}% 45
-\BOOKMARK [3][-]{subsubsection.6.1.2}{Test Factors}{subsection.6.1}% 46
-\BOOKMARK [3][-]{subsubsection.6.1.3}{Inputs}{subsection.6.1}% 47
-\BOOKMARK [3][-]{subsubsection.6.1.4}{Outputs}{subsection.6.1}% 48
-\BOOKMARK [3][-]{subsubsection.6.1.5}{Initial State}{subsection.6.1}% 49
-\BOOKMARK [3][-]{subsubsection.6.1.6}{Methods of testing}{subsection.6.1}% 50
-\BOOKMARK [3][-]{subsubsection.6.1.7}{Test Cases}{subsection.6.1}% 51
-\BOOKMARK [2][-]{subsection.6.2}{Order Transaction}{section.6}% 52
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Test Type}{subsection.6.2}% 53
-\BOOKMARK [3][-]{subsubsection.6.2.2}{Test Factors}{subsection.6.2}% 54
-\BOOKMARK [3][-]{subsubsection.6.2.3}{Initial State}{subsection.6.2}% 55
-\BOOKMARK [3][-]{subsubsection.6.2.4}{Methods of testing}{subsection.6.2}% 56
-\BOOKMARK [3][-]{subsubsection.6.2.5}{Test Cases}{subsection.6.2}% 57
-\BOOKMARK [2][-]{subsection.6.3}{Usability Testing}{section.6}% 58
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Test Factors}{subsection.6.3}% 59
-\BOOKMARK [3][-]{subsubsection.6.3.2}{Inputs}{subsection.6.3}% 60
-\BOOKMARK [3][-]{subsubsection.6.3.3}{Outputs}{subsection.6.3}% 61
-\BOOKMARK [3][-]{subsubsection.6.3.4}{Initial State}{subsection.6.3}% 62
-\BOOKMARK [3][-]{subsubsection.6.3.5}{Methods of testing}{subsection.6.3}% 63
-\BOOKMARK [3][-]{subsubsection.6.3.6}{Test Cases}{subsection.6.3}% 64
-\BOOKMARK [1][-]{section.7}{Automated Testing Plan}{}% 65
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Nonfunctional Test Factors}{subsection.5.1}% 30
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Methods of testing}{subsection.5.1}% 31
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Test Cases}{subsection.5.1}% 32
+\BOOKMARK [2][-]{subsection.5.2}{Database Querying}{section.5}% 33
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Nonfunctional Test Factors}{subsection.5.2}% 34
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Inputs}{subsection.5.2}% 35
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Outputs}{subsection.5.2}% 36
+\BOOKMARK [3][-]{subsubsection.5.2.4}{Initial State}{subsection.5.2}% 37
+\BOOKMARK [3][-]{subsubsection.5.2.5}{Methods of Testing}{subsection.5.2}% 38
+\BOOKMARK [3][-]{subsubsection.5.2.6}{Test Cases}{subsection.5.2}% 39
+\BOOKMARK [1][-]{section.6}{Final Demonstration System Test Description}{}% 40
+\BOOKMARK [2][-]{subsection.6.1}{Account Login}{section.6}% 41
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Test Type}{subsection.6.1}% 42
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Nonfunctional Test Factors}{subsection.6.1}% 43
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Methods of testing}{subsection.6.1}% 44
+\BOOKMARK [3][-]{subsubsection.6.1.4}{Test Cases}{subsection.6.1}% 45
+\BOOKMARK [2][-]{subsection.6.2}{Order Transaction}{section.6}% 46
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Test Type}{subsection.6.2}% 47
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Nonfunctional Test Factors}{subsection.6.2}% 48
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Methods of testing}{subsection.6.2}% 49
+\BOOKMARK [3][-]{subsubsection.6.2.4}{Test Cases}{subsection.6.2}% 50
+\BOOKMARK [2][-]{subsection.6.3}{Usability Testing}{section.6}% 51
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Nonfunctional Test Factors}{subsection.6.3}% 52
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Methods of testing}{subsection.6.3}% 53
+\BOOKMARK [3][-]{subsubsection.6.3.3}{Test Cases}{subsection.6.3}% 54
+\BOOKMARK [1][-]{section.7}{Testing Schedule}{}% 55

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 OCT 2015 23:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  30 OCT 2015 02:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -235,10 +235,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 25.
+(Font)              <14.4> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 25.
+(Font)              <7> on input line 23.
 
+[1
+
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./TestPlan.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 2.
@@ -246,114 +249,122 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
- [1
-
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2])
+ [2])
 \tf@toc=\write4
 \openout4 = `TestPlan.toc'.
 
- [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 75.
+ (./TestPlan.lot)
+\tf@lot=\write5
+\openout5 = `TestPlan.lot'.
+
+ [3] [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 84.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
- [4] [5]
-Overfull \hbox (1.4626pt too wide) in paragraph at lines 164--165
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--110
+
+ []
+
+[5] [6]
+Overfull \hbox (1.4626pt too wide) in paragraph at lines 181--182
 \OT1/cmr/m/n/12 Manual test-ing is done by peo-ple while au-to-matic is pro-ces
 sed through scripts. 
  []
 
-[6] [7] <Images/Barcode.png, id=366, 491.8375pt x 333.245pt>
+[7] <Images/Barcode.png, id=319, 491.8375pt x 333.245pt>
 File: Images/Barcode.png Graphic file (type png)
 
 <use Images/Barcode.png>
-Package pdftex.def Info: Images/Barcode.png used on input line 220.
+Package pdftex.def Info: Images/Barcode.png used on input line 236.
 (pdftex.def)             Requested size: 491.83629pt x 333.24417pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--221
+Underfull \hbox (badness 10000) in paragraph at lines 231--237
 
  []
 
 
-Overfull \hbox (101.83629pt too wide) in paragraph at lines 215--221
+Overfull \hbox (101.83629pt too wide) in paragraph at lines 231--237
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--221
+Underfull \hbox (badness 10000) in paragraph at lines 231--237
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
-
- []
-
-[9 <./Images/Barcode.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 243--247
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--251
-
- []
-
-[10] <Images/accountTC.png, id=381, 834.11626pt x 517.935pt>
+[8] [9 <./Images/Barcode.png>]
+<Images/accountTC.png, id=330, 834.11626pt x 517.935pt>
 File: Images/accountTC.png Graphic file (type png)
 
 <use Images/accountTC.png>
-Package pdftex.def Info: Images/accountTC.png used on input line 256.
+Package pdftex.def Info: Images/accountTC.png used on input line 284.
 (pdftex.def)             Requested size: 389.99829pt x 242.16498pt.
- [11 <./Images/accountTC.png>]
-<Images/orderTransactionTC.png, id=388, 834.11626pt x 766.865pt>
+ [10] [11 <./Images/accountTC.png>]
+<Images/orderTransactionTC.png, id=341, 834.11626pt x 766.865pt>
 File: Images/orderTransactionTC.png Graphic file (type png)
 
 <use Images/orderTransactionTC.png>
-Package pdftex.def Info: Images/orderTransactionTC.png used on input line 285.
+Package pdftex.def Info: Images/orderTransactionTC.png used on input line 323.
 (pdftex.def)             Requested size: 389.99829pt x 358.55438pt.
- [12] [13 <./Images/orderTransactionTC.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 321--326
+ [12 <./Images/orderTransactionTC.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 361--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--326
+Underfull \hbox (badness 10000) in paragraph at lines 361--366
 
  []
 
-[14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
- [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
+[13] <Images/TestingSchedule.png, id=352, 834.11626pt x 323.2075pt>
+File: Images/TestingSchedule.png Graphic file (type png)
+
+<use Images/TestingSchedule.png>
+Package pdftex.def Info: Images/TestingSchedule.png used on input line 371.
+(pdftex.def)             Requested size: 389.99829pt x 151.11847pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--372
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
+[14 <./Images/TestingSchedule.png>] [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
  (./TestPlan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 373.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 373.
 Package rerunfilecheck Info: File `TestPlan.out' has not changed.
-(rerunfilecheck)             Checksum: 8C9965DD7A5BC2CEE7F08D44A7870394;4487.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
+(rerunfilecheck)             Checksum: 1A2D9230C9FDDE792DE665E5FA2C25CC;3860.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 373.
  ) 
 Here is how much of TeX's memory you used:
- 5270 strings out of 493315
- 79032 string characters out of 6137904
- 161530 words of memory out of 5000000
- 8618 multiletter control sequences out of 15000+600000
+ 5263 strings out of 493315
+ 78848 string characters out of 6137904
+ 160530 words of memory out of 5000000
+ 8614 multiletter control sequences out of 15000+600000
  9514 words of font info for 33 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 29i,6n,28p,963b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,7n,28p,963b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on TestPlan.pdf (15 pages, 202643 bytes).
+Output written on TestPlan.pdf (15 pages, 213612 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 417 compressed objects within 5 object streams
- 82 named destinations out of 1000 (max. 500000)
- 536 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 370 compressed objects within 4 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 461 words of extra memory for PDF output out of 10000 (max. 10000000)
 
