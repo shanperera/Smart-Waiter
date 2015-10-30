@@ -10,6 +10,7 @@
 
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{verbatim} 
 \graphicspath{ {Images/} }
 
 
@@ -31,31 +32,22 @@ Phase Change Material}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{General Information}
-The following section provides an overview of the Test Plan 
+The following section provides an overview of the test plan 
 for Smart Waiter Solutions.
  This section explains the purpose of this document, the scope of the system, and an overview of the following sections
 
 %1.1 Purpose
 \subsection{Purpose}
-The purpose of this document is to describe the various test cases and procedures used  Smart Waiter.
-This document is indented to be used as a reference for all future testing and will
-be used to increase confidence in the software implementation.  
-
-This document will be used as a starting point for the verification and validation report. The 
-test cases presented within this document will be executed and the output will be analyzed to 
-determine if the software is implemented correctly.  
-
+The purpose of this document is to describe  various test cases and procedures to evaluate functionality of Smart Waiter.
+This document is indented to be used as a reference for all future testing. 
 
 %1.2 Scope
 \subsection{Scope}
-
-
+This test plan is used to evaluate Smart Waiter functionality. Various plans are described in detail to test expected functional and non function requirements are met.  
 
 \subsection{Overview of Document }
-The following sections provide more detail about the V\&V of a solar water heating
- simulator. Information about the testing process is provided, and the software specifications
-that were discussed in the SRS document are stated.  The evaluation process that will be followed during 
-testing is outlined, and test cases for both the system testing and unit testing are provided 
+The following sections provide more detail about types of test that will be used. Information about the testing process is provided, and the software specifications
+that were discussed in the SRS document are stated. Testing processes is split up between system test for POC and the final demonstration. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -160,12 +152,16 @@ move from one test to the next, and how to determine if the test was successful.
 \subsection{Types of Tests}
 
 \subsubsection{Functional Testing}
+Functional testing is in place to uncover errors that occur in implementing requirements or design specifications. Concentration is on results rather then the internals functions of the program. This type of testing is very effective to evaluate functional requirements.
 
 \subsubsection{Structural Testing}
-Structural testing, also known as white box testing, focuses on the testing of a program's internal structure. It tests the program's non functional requirements and is more concerned about abnormal or extreme behaviour that the program exhibits when given unexpected or even expected inputs.
+Structural testing is in place to uncover errors during implementation of the application. Concentration is on evaluating structure of the application. This type of testing focuses on non functional requirements.  
+
 \subsubsection{Unit Testing}
+Unit testing refers to providing specific input to a system and verifying it evaluates to expected output.This process can be done manually or automated.
 
 \subsubsection{Manual and Automatic Testing}
+Manual testing is done by people while automatic is processed through scripts. 
 
 \subsubsection{Static and Dynamic Testing}
 Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-though through will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. On the contrary, dynamic testing refers to executing the program while running test cases to view expected behaviour. This is done to find and fix defects in the program. This will be performed after implementation phase. 
@@ -180,18 +176,50 @@ Static testing refers to testing techniques that simulate a dynamic environment.
 
 
 \subsection{Barcode Scanning}
-Smart-Waiter needs to ensure users are able to scan a barcode with minimal attempts. The number of expected attempts will be presented in the final SRS document. Various forms of testing will be performed to evaluate this criteria.
+Smart-Waiter needs to insure users are able to scan a barcode with minimal attempts. The number of expected attempts will be presented in the final SRS document.
+
+\subsubsection{Test Type}
+\begin{itemize}
+  \item Manual
+  \item Functional test
+  \item Unit test
+\end{itemize}
 
 \subsubsection{Test Factors}
+\begin{itemize}
+  \item Performance
+  \item 	Correctness
+  \item 	Ease of use
+\end{itemize}
+
+\subsubsection{Inputs}
+\begin{itemize}
+  \item Barcode to be scanned
+\end{itemize}
+\subsubsection{Outputs}
+\begin{itemize}
+  \item Restaurant menu queried from database
+\end{itemize}
+\subsubsection{Initial State}
+\begin{itemize}
+  \item Barcode scanning page in empty state
+\end{itemize}
 
 \subsubsection{Methods of testing}
 \begin{itemize}
-  \item Static testing is used to ensure pre and post conditions are met syntactically. That is, implementing the ability to scan a barcode and use it to query a menu from the database.
-  \item Dynamic testing is used to guarantee validity, and record number of successful attempts given a sample size of attempts performed.
+  \item Dynamic test
+  \item Static test
 \end{itemize}
 
 \subsubsection{Test Cases}
-\includegraphics{Barcode.png}
+\textbf{\textit{Functional Unit Test}}\newline
+\newline
+\textit{Summary}\newline
+Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts for our knowledge. Performing the
+\newline
+\includegraphics{Barcode.png}\newline
+
+\textbf{\textit{Structural Test}}\newline
 
 \subsection{Database Querying}
 
@@ -203,6 +231,7 @@ Smart-Waiter needs to ensure users are able to scan a barcode with minimal attem
 \subsubsection{Test Cases}
 
 \section{Final Demonstration System Test Description}
+
 
 \subsection{Account Login}
 Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 
@@ -232,7 +261,9 @@ Smart-Waiter needs to ensure that a user can send in their order, and pay for th
 \subsubsection{Test Type}
 Manual, functional dynamic test 
 \subsubsection{Test Factors}
-Correctness, reliability, data integrity, data security, ease of use, 
+Correctness, reliability, data integrity, data security, ease of use
+
+\begin{comment}
 \subsubsection{Inputs}
 A set \texorpdfstring{n\textsubscript{i}}{ni} of 10 random orders consisting of different menu items, created manually, where i = 0, 1, 2 .. 9, where i = 0..4 are invalid orders with respect to the restaurant's policies and where i = 5..9 are valid orders. \\
 A valid credit card \\
@@ -243,6 +274,8 @@ A VISA gift card \\
 \subsubsection{Outputs}
 An order summary \texorpdfstring{O\textsubscript{i}}{Oi}, where i corresponds to the \texorpdfstring{i\textsuperscript{th}}{ith} order from the set of orders \texorpdfstring{n\textsubscript{i}}{ni}. \\
 A message M, containing either a success or failure message, depending on the card type used. 
+\end{comment}
+
 \subsubsection{Initial State}
 Order Test Cases: Restaurant menu module
 Credit Card Test Cases: Payment confirmation menu
@@ -252,20 +285,44 @@ Dynamic testing is used to ensure validity, record the number of successful test
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{orderTransactionTC.png}
 
 \subsection{Usability Testing}
+The goal of usability testing is to verify if a user can successfully use all functionalities of the application from start to finish in a timely manner. This type of testing aids in evaluating if functional requirements are met. As well it provides scope for evaluating non functional requirements.
 \subsubsection{Test Factors}
+\begin{itemize}
+  \item Reliability 
+  \item Performance
+  \item 	Correctness
+  \item 	Ease of use
+\end{itemize}
 \subsubsection{Inputs}
+Input will consist of user input for entire app:
+\begin{itemize}
+  \item Account login
+  \item Barcode
+  \item Menu items selected
+  \item Credit card details
+\end{itemize}
 \subsubsection{Outputs}
+Output will consist of a response for each user input:
+\begin{itemize}
+  \item Successful login in response to account login
+  \item Restaurant menu in response to barcode scan
+  \item Order confirmation in response to menu items selected
+  \item Transaction confirmation in response to credit card transaction
+\end{itemize}
 \subsubsection{Initial State}
+\begin{itemize}
+  \item User starts at the beginning of the process; account login page
+\end{itemize}
 \subsubsection{Methods of testing}
+\begin{itemize}
+  \item Functional unit test
+\end{itemize}
 \subsubsection{Test Cases}
-
-\subsection{Performance Testing}
-\subsubsection{Test Factors}
-\subsubsection{Inputs}
-\subsubsection{Outputs}
-\subsubsection{Initial State}
-\subsubsection{Methods of testing}
-\subsubsection{Test Cases}
+\textbf{\textit{Functional Unit Test}}\newline
+\newline
+\textit{Summary}\newline
+Manual black box tests will be performed to assess usability of the application. This test will be in the form of unit testing. Ten participants will be selected to evaluate this test. At least five will have some experience with using android applications. The remaining will have little to no experience. Each participant will be asked to conduct a walk through of the application. Number of errors made will be counted and recorded to further evaluate functional requirements and improve test cases. As well, qualitative feedback from participants will be taken in the end. For example, participants will be asked to comment on things they liked and things they didn't like. Also, they will be asked to provide a rating out of 10 in terms of experience; 1 being a poor experience and 10 being a wonderful experience. This feedback will help evaluate non function requirements; user interface appearance, learning requirements and accessibility. 
+\newline
 
 \section{Automated Testing Plan}
 
