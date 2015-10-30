@@ -196,7 +196,7 @@ The reviewers will assess the code and mark issues found with severity. If any o
 \end{itemize}
 
 \subsection{Dynamic Testing}
-On the contrary, dynamic testing refers to executing the program while running test cases to view expected behaviour. This is done to find and fix defects in the program. This will be performed after implementation phase. 
+On the contrary, dynamic testing refers to executing the program while running test cases to view expected behaviour. This is done to find and fix defects in the program. This will be performed after implementation phase. All of the tests performed in the following sections are dynamic. Specifically, different techniques are used to perform this testing such as automated and manual test cases. However, due to the nature of the application all other testing will be dynamic since the values are all dynamic.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -210,7 +210,7 @@ On the contrary, dynamic testing refers to executing the program while running t
 						%database design %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Database Testing}
-Database testing is exclusively performed from structural point of view. The goal of this component of testing is to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database will be created for testing purposes, because any failed test case should not affect the state of the original database. 
+Database testing is exclusively performed from structural testing point of view. The goal of this component of testing is to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database will be created for testing purposes, because any failed test case should not affect the state of the original database. 
 \subsubsection{Test Factors}
 For database testing, the following test factors will be considered;
 \begin{itemize}
@@ -239,6 +239,8 @@ In this section of database query testing, tester must verify that database allo
 In this section of database testing, we will test the robustness and reliability of the database.  This type of testing is essential the health of the database system. There should be no failures or downtimes on the backend side. 
 \subsubsection{Database Reliability Automated Tests }
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{reliability_tests.png}
+
+\section{Final Demonstration System Test Description}
 
 \subsection{Barcode Scanning}
 Smart-Waiter needs to insure users are able to scan a barcode with minimal attempts. The number of expected attempts will be presented in the final SRS document.
@@ -282,9 +284,6 @@ Dynamic testing is used to ensure correctness and data integrity, and to observe
 Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate performance.
 \newline
 \includegraphics{Barcode.png}\newline
-
-
-\section{Final Demonstration System Test Description}
 
 \subsection{Account Login}
 Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 

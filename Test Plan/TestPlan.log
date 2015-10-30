@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 OCT 2015 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 OCT 2015 14:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -335,20 +335,20 @@ Package pdftex.def Info: Images/reliability_tests.png used on input line 255.
 <Images/Barcode.png, id=377, 491.8375pt x 333.245pt>
 File: Images/Barcode.png Graphic file (type png)
  <use Images/Barcode.png>
-Package pdftex.def Info: Images/Barcode.png used on input line 298.
+Package pdftex.def Info: Images/Barcode.png used on input line 300.
 (pdftex.def)             Requested size: 491.83629pt x 333.24417pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--299
+Underfull \hbox (badness 10000) in paragraph at lines 295--301
 
  []
 
 
-Overfull \hbox (101.83629pt too wide) in paragraph at lines 293--299
+Overfull \hbox (101.83629pt too wide) in paragraph at lines 295--301
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--299
+Underfull \hbox (badness 10000) in paragraph at lines 295--301
 
  []
 
@@ -357,10 +357,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 293--299
 File: Images/accountTC.png Graphic file (type png)
 
 <use Images/accountTC.png>
-Package pdftex.def Info: Images/accountTC.png used on input line 343.
+Package pdftex.def Info: Images/accountTC.png used on input line 342.
 (pdftex.def)             Requested size: 389.99829pt x 242.16498pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--344
+Underfull \hbox (badness 10000) in paragraph at lines 337--343
 
  []
 
@@ -369,62 +369,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--344
 File: Images/orderTransactionTC.png Graphic file (type png)
 
 <use Images/orderTransactionTC.png>
-Package pdftex.def Info: Images/orderTransactionTC.png used on input line 387.
+Package pdftex.def Info: Images/orderTransactionTC.png used on input line 386.
 (pdftex.def)             Requested size: 389.99829pt x 358.55438pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--388
+Underfull \hbox (badness 10000) in paragraph at lines 381--387
 
  []
 
 [18] [19 <./Images/orderTransactionTC.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 425--430
+Underfull \hbox (badness 10000) in paragraph at lines 424--429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--430
+Underfull \hbox (badness 10000) in paragraph at lines 424--429
 
  []
 
-<Images/TestingSchedule.png, id=405, 834.11626pt x 323.2075pt>
+<Images/TestingSchedule.png, id=408, 834.11626pt x 323.2075pt>
 File: Images/TestingSchedule.png Graphic file (type png)
 
 <use Images/TestingSchedule.png>
-Package pdftex.def Info: Images/TestingSchedule.png used on input line 435.
+Package pdftex.def Info: Images/TestingSchedule.png used on input line 434.
 (pdftex.def)             Requested size: 389.99829pt x 151.11847pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 432--436
+Underfull \hbox (badness 10000) in paragraph at lines 431--435
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 437.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
 [20] [21 <./Images/TestingSchedule.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 437.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
  (./TestPlan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 437.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 437.
-Package rerunfilecheck Info: File `TestPlan.out' has not changed.
-(rerunfilecheck)             Checksum: E854D223DFC0CD19862334421914CC6F;4210.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 437.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 436.
+
+
+Package rerunfilecheck Warning: File `TestPlan.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TestPlan.out':
+(rerunfilecheck)             Before: E854D223DFC0CD19862334421914CC6F;4210
+(rerunfilecheck)             After:  CB5F7058BE320774912D73FC546FFD12;4210.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
  ) 
 Here is how much of TeX's memory you used:
- 5297 strings out of 493089
- 79720 string characters out of 6134842
+ 5302 strings out of 493089
+ 79810 string characters out of 6134842
  161602 words of memory out of 5000000
  8668 multiletter control sequences out of 15000+600000
  9514 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,6n,28p,963b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on TestPlan.pdf (21 pages, 414636 bytes).
+pdfTeX warning (dest): name{subsubsection.5.2.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.2.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.2.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.2.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on TestPlan.pdf (21 pages, 414983 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 407 compressed objects within 5 object streams
- 83 named destinations out of 1000 (max. 500000)
+ 464 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 88 named destinations out of 1000 (max. 500000)
  518 words of extra memory for PDF output out of 10000 (max. 10000000)
 
