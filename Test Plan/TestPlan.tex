@@ -17,7 +17,7 @@
 \begin{document}
 
 \title{Smart Waiter Test Plan} 
-\author{Meraj Patel \#1137491 \\ Pavneet Jauhal \#1149311\\ Shan Perera \#1150394}
+\author{Meraj Patel (patelmu2) \\ Pavneet Jauhal (jauhalps)\\ Shan Perera (pererali)}
 \date{\today}
 \maketitle
 \pagebreak
@@ -25,6 +25,10 @@
 \tableofcontents
 
 \listoftables
+
+\section*{Revision History}
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{revision.png}
+
 
 %\begin{table}[H]
 %\section*{Revision History}
@@ -46,7 +50,7 @@
 
 \section{General Information}
 The following section provides an overview of the test plan 
-for Smart Waiter Solutions.
+for Smart-Waiter.
  This section explains the purpose of this document, the scope of the system, and an overview of the following sections
 
 %1.1 Purpose
@@ -56,7 +60,7 @@ This document is indented to be used as a reference for all future testing.
 
 %1.2 Scope
 \subsection{Scope}
-This test plan is used to evaluate Smart Waiter functionality. Various plans are described in detail to test expected functional and non function requirements are met.  
+This test plan is used to evaluate Smart Waiter functionality. Various plans are described in detail to test expected functional and non function requirements.  
 
 \subsection{Overview of Document }
 The following sections provide more detail about types of test that will be used. Information about the testing process is provided, and the software specifications
@@ -92,21 +96,22 @@ The team that will execute the test cases, write and review Smart Waiter consist
 
 %2.3.1 Location
 \subsubsection{Location}
-The location where the testing will be performed is Hamilton Ontario. Specifically, we will be performing the testing is McMaster University. 
+The location where the testing will be performed is Hamilton Ontario. Specifically, we will be performing the testing in McMaster University. 
 
 
 %2.3.1 Dates and Deadlines
 \subsubsection{Dates and Deadlines}
 
 Test Case Creation:
-The creation of test cases is scheduled to begin October 19th, 2015. The deadline for creation of test cases for POC November 16, 2015. The deadline for final demonstration is February 1st, 2016.
+The creation of test cases is scheduled to begin October 19, 2015. The deadline for creation of test cases for POC November 16, 2015. The deadline for final demonstration is February 1, 2016.
 \newline
 \newline
 Test Case Implementation:
-Implementing test cases for POC system test is scheduled to begin November 15, 2015 The implementation period is expected to last approximately one week. 
+Implementing test cases for POC system test is scheduled to begin November 15, 2015. The implementation period is expected to last approximately one week. 
 \newline
 \newline
-Implementing test cases for Final Demonstration system test is scheduled to begin February 1, 2016 The implementation period is expected to last approximately three weeks. 
+Implementing test cases for Final Demonstration system test is scheduled to begin February 1, 2016. The implementation period is expected to last approximately three weeks. 
+
 
 \subsection{Budget}
 N/A
@@ -118,20 +123,20 @@ N/A
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{ Software Specification}
-This section provides the functional requirements, the 
-software is expected to complete, and the non-functional requirements, the software is expected to exhibit.
+This section provides; the functional requirements the 
+software is expected to complete, and the non-functional requirements the software is expected to exhibit.
 
 %3.1 Functional Requirements
 \subsection{Functional Requirements}
 
 \noindent
 \begin{itemize}
-\item The product shall scan a bar code to access the restaurant's menu from a database
+\item The product shall scan a bar code to access the restaurant menu from a database
 \item The product shall allow the user to register an account for complete access to the products payment services
 \item The product shall allow the user to report bugs
 \item The product will allow users to place their order
 \item The product will allow users to pay for their order using a credit card
-\end{itemize} 
+\end{itemize}  
 
 %3.2 Nonfunctional Requirements
 \subsection{Nonfunctional Requirements}
@@ -183,7 +188,7 @@ Structural testing is in place to uncover errors during implementation of the ap
 Unit testing refers to providing specific input to a system and verifying it evaluates to expected output.This process can be done manually or automated.
 
 \subsubsection{Manual and Automatic Testing}
-Manual testing is done by people while automatic is processed through scripts. 
+Manual testing is done by people, while automatic is processed through scripts. 
 
 \subsubsection{Static Testing}
 Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-though through will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. \\
@@ -193,11 +198,25 @@ Below we have highlighted the code review process;\\
 The reviewers will assess the code quality and critique the code in following criteria;\\
 \begin{itemize}
  \item General Unit Testing performed. Did it pass?
- \item Comment and Coding Conventions followed consistently? \item Error Handling done correctly? \item Resource Leaks within the code? \item Is the code thread safe? \item Is the code up to standard with performance? \item Does code provide correct functionality? \item Is the code secure?
+ \item Comment and Coding Conventions followed consistently?
+ \item Error Handling done correctly?
+ \item Resource Leaks within the code?
+ \item Is the code thread safe?
+ \item Is the code up to standard with performance?
+ \item Does code provide correct functionality?
+ \item Is the code secure?
  \end{itemize}
 The reviewers will assess the code and mark issues found with severity. If any of the high severity issues found, then developer must fix code. For medium severity issues, developer can provide reasoning and try to convince reviewers. Low severity issues can possibly be dropped if they are nits. The reviewers will mark severity as follows;
 \begin{itemize}
-\item Naming Conventions and Coding style considered low severity\item Control flow and Logical issues considered medium or high severity\item Redundant Code considered medium or high severity\item Performance Issues considered high severity\item Security Issues considered high severity\item Scalability Issues considered medium or high severity\item Functional Issues considered high severity\item Error Handling considered high severity\item Reusability considered medium severity
+\item Naming Conventions and Coding style considered low severity
+\item Control flow and Logical issues considered medium or high severity
+\item Redundant Code considered medium or high severity
+\item Performance Issues considered high severity
+\item Security Issues considered high severity
+\item Scalability Issues considered medium or high severity
+\item Functional Issues considered high severity
+\item Error Handling considered high severity
+\item Reusability considered medium severity
 \end{itemize}
 
 \subsection{Dynamic Testing}
@@ -248,7 +267,7 @@ In this section of database testing, we will test the robustness and reliability
 \section{Final Demonstration System Test Description}
 
 \subsection{Barcode Scanning}
-Smart-Waiter needs to insure users are able to scan a barcode with minimal attempts. The number of expected attempts will be presented in the final SRS document.
+Smart-Waiter needs to ensure users are able to scan a barcode with minimal attempts. The number of expected attempts will be presented in the final SRS document.
 
 \subsubsection{Test Type}
 \begin{itemize}
@@ -286,7 +305,7 @@ Dynamic testing is used to ensure correctness and data integrity, and to observe
 \textbf{\textit{Functional Unit Test}}\newline
 \newline
 \textit{Summary}\newline
-Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate performance.
+Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate nonfunctional test factors.
 \newline
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Barcode.png}\newline
 

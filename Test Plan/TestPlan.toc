@@ -1,59 +1,59 @@
-\contentsline {section}{\numberline {1}General Information}{4}{section.1}
-\contentsline {subsection}{\numberline {1.1}Purpose}{4}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Scope}{4}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Overview of Document }{4}{subsection.1.3}
-\contentsline {section}{\numberline {2}Plan}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}Software Description}{4}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Test Team}{5}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Milestones}{5}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Location}{5}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Dates and Deadlines}{5}{subsubsection.2.3.2}
-\contentsline {subsection}{\numberline {2.4}Budget}{5}{subsection.2.4}
-\contentsline {section}{\numberline {3} Software Specification}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}Functional Requirements}{6}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Nonfunctional Requirements}{6}{subsection.3.2}
-\contentsline {section}{\numberline {4}Evaluation}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1} Methods and Constraints}{6}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Methodology}{6}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Extent of Testing}{7}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}Test Tools}{7}{subsubsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.4} Testing Constraints}{7}{subsubsection.4.1.4}
-\contentsline {subsection}{\numberline {4.2}Types of Tests}{7}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Functional Testing}{7}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Structural Testing}{7}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Unit Testing}{8}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Manual and Automatic Testing}{8}{subsubsection.4.2.4}
-\contentsline {subsubsection}{\numberline {4.2.5}Static Testing}{8}{subsubsection.4.2.5}
-\contentsline {subsection}{\numberline {4.3}Dynamic Testing}{10}{subsection.4.3}
-\contentsline {section}{\numberline {5}POC System Test Description}{10}{section.5}
-\contentsline {subsection}{\numberline {5.1}Database Testing}{10}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Test Factors}{10}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Correctness}{10}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}Database Correctness Automated Tests }{11}{subsubsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.4}Performance}{11}{subsubsection.5.1.4}
-\contentsline {subsubsection}{\numberline {5.1.5}Database Performance Automated Tests }{12}{subsubsection.5.1.5}
-\contentsline {subsubsection}{\numberline {5.1.6}Security}{12}{subsubsection.5.1.6}
-\contentsline {subsubsection}{\numberline {5.1.7}Database Security Automated Tests }{13}{subsubsection.5.1.7}
-\contentsline {subsubsection}{\numberline {5.1.8}Reliability}{13}{subsubsection.5.1.8}
-\contentsline {subsubsection}{\numberline {5.1.9}Database Reliability Automated Tests }{14}{subsubsection.5.1.9}
-\contentsline {section}{\numberline {6}Final Demonstration System Test Description}{15}{section.6}
-\contentsline {subsection}{\numberline {6.1}Barcode Scanning}{15}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Test Type}{15}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}Nonfunctional Test Factors}{15}{subsubsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.3}Methods of testing}{15}{subsubsection.6.1.3}
-\contentsline {subsubsection}{\numberline {6.1.4}Test Cases}{15}{subsubsection.6.1.4}
-\contentsline {subsection}{\numberline {6.2}Account Login}{16}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Test Type}{16}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Nonfunctional Test Factors}{16}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}Methods of testing}{17}{subsubsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.4}Test Cases}{17}{subsubsection.6.2.4}
-\contentsline {subsection}{\numberline {6.3}Order Transaction}{17}{subsection.6.3}
-\contentsline {subsubsection}{\numberline {6.3.1}Test Type}{18}{subsubsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.2}Nonfunctional Test Factors}{18}{subsubsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.3}Methods of testing}{18}{subsubsection.6.3.3}
-\contentsline {subsubsection}{\numberline {6.3.4}Test Cases}{18}{subsubsection.6.3.4}
-\contentsline {subsection}{\numberline {6.4}Usability Testing}{19}{subsection.6.4}
-\contentsline {subsubsection}{\numberline {6.4.1}Nonfunctional Test Factors}{19}{subsubsection.6.4.1}
-\contentsline {subsubsection}{\numberline {6.4.2}Methods of testing}{20}{subsubsection.6.4.2}
-\contentsline {subsubsection}{\numberline {6.4.3}Test Cases}{20}{subsubsection.6.4.3}
-\contentsline {section}{\numberline {7}Testing Schedule}{20}{section.7}
+\contentsline {section}{\numberline {1}General Information}{5}{section.1}
+\contentsline {subsection}{\numberline {1.1}Purpose}{5}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Scope}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Overview of Document }{5}{subsection.1.3}
+\contentsline {section}{\numberline {2}Plan}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Software Description}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Test Team}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Milestones}{6}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Location}{6}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Dates and Deadlines}{6}{subsubsection.2.3.2}
+\contentsline {subsection}{\numberline {2.4}Budget}{6}{subsection.2.4}
+\contentsline {section}{\numberline {3} Software Specification}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Functional Requirements}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Nonfunctional Requirements}{7}{subsection.3.2}
+\contentsline {section}{\numberline {4}Evaluation}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1} Methods and Constraints}{7}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Methodology}{7}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Extent of Testing}{8}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Test Tools}{8}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4} Testing Constraints}{8}{subsubsection.4.1.4}
+\contentsline {subsection}{\numberline {4.2}Types of Tests}{8}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Functional Testing}{8}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Structural Testing}{8}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Unit Testing}{9}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Manual and Automatic Testing}{9}{subsubsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.5}Static Testing}{9}{subsubsection.4.2.5}
+\contentsline {subsection}{\numberline {4.3}Dynamic Testing}{11}{subsection.4.3}
+\contentsline {section}{\numberline {5}POC System Test Description}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}Database Testing}{11}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Test Factors}{11}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Correctness}{11}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Database Correctness Automated Tests }{12}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Performance}{12}{subsubsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.5}Database Performance Automated Tests }{13}{subsubsection.5.1.5}
+\contentsline {subsubsection}{\numberline {5.1.6}Security}{13}{subsubsection.5.1.6}
+\contentsline {subsubsection}{\numberline {5.1.7}Database Security Automated Tests }{14}{subsubsection.5.1.7}
+\contentsline {subsubsection}{\numberline {5.1.8}Reliability}{14}{subsubsection.5.1.8}
+\contentsline {subsubsection}{\numberline {5.1.9}Database Reliability Automated Tests }{15}{subsubsection.5.1.9}
+\contentsline {section}{\numberline {6}Final Demonstration System Test Description}{16}{section.6}
+\contentsline {subsection}{\numberline {6.1}Barcode Scanning}{16}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Test Type}{16}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Nonfunctional Test Factors}{16}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}Methods of testing}{16}{subsubsection.6.1.3}
+\contentsline {subsubsection}{\numberline {6.1.4}Test Cases}{16}{subsubsection.6.1.4}
+\contentsline {subsection}{\numberline {6.2}Account Login}{17}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Test Type}{17}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}Nonfunctional Test Factors}{17}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}Methods of testing}{18}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.4}Test Cases}{18}{subsubsection.6.2.4}
+\contentsline {subsection}{\numberline {6.3}Order Transaction}{18}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Test Type}{19}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Nonfunctional Test Factors}{19}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3}Methods of testing}{19}{subsubsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.4}Test Cases}{19}{subsubsection.6.3.4}
+\contentsline {subsection}{\numberline {6.4}Usability Testing}{20}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Nonfunctional Test Factors}{20}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.2}Methods of testing}{21}{subsubsection.6.4.2}
+\contentsline {subsubsection}{\numberline {6.4.3}Test Cases}{21}{subsubsection.6.4.3}
+\contentsline {section}{\numberline {7}Testing Schedule}{21}{section.7}
