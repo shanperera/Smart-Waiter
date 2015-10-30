@@ -161,6 +161,11 @@ The extent of testing will be end to end for the final demonstration. For POC, s
 
 % 4.1.3 Test Tools
 \subsubsection{Test Tools}
+To avoid regressions and catch bugs quickly two main test tools will be used. Namely the following;
+\begin{itemize}
+\item JUnit \textemdash Junit will be used to build an automation test suite for the application. Specifically, JUnit is a testing framework used to implement unit testing in Java. This tool will easily integrate into the android studio build environment used for application. In addition, it will help developers leverage their Java knowledge used during application development. 
+\item CodeReviewer \textemdash CodeReviewer will be used for code review process mandatory for all developers. This tool helps post code reviews and provides features such as annotations, diff viewers, easy communication and feedback. This tool will be used for static tests to produce high quality code with less defects
+ \end{itemize}
 
 % 4.1.4 Testing Constraints
 \subsubsection{ Testing Constraints}
@@ -283,7 +288,7 @@ Dynamic testing is used to ensure correctness and data integrity, and to observe
 \textit{Summary}\newline
 Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate performance.
 \newline
-\includegraphics{Barcode.png}\newline
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Barcode.png}\newline
 
 \subsection{Account Login}
 Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 
