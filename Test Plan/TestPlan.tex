@@ -26,16 +26,16 @@
 
 \listoftables
 
-\begin{table}[H]
-\section*{Revision History}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Date}  & \textbf{Comments} \\ \hline
-October 30, 2015 &  first draft. \\ 
-\hline
-\end{tabular}
-\caption{Revision History Table}
-\end{table}
+%\begin{table}[H]
+%\section*{Revision History}
+%\begin{tabular}{|c|c|}
+%\hline
+%\textbf{Date}  & \textbf{Comments} \\ \hline
+%October 30, 2015 &  first draft. \\ 
+%\hline
+%\end{tabular}
+%\caption{Revision History Table}
+%\end{table}
 
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -235,14 +235,36 @@ Manual black box tests will be performed to assess barcode scanning. This test w
 \newline
 \includegraphics{Barcode.png}\newline
 
-\subsection{Database Querying}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						%database design %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Database Testing}
+Database testing is exclusively performed from structural point of view. The goal of this component of testing is to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database will be created for testing purposes, because any failed test case should not affect the state of the original database. 
+\subsubsection{Test Factors}
+For database testing, the following test factors will be considered;
+\begin{itemize}
+ \item Correctness \item Performance \item Security \item Reliability
+ \end{itemize}
+ 
+\subsubsection{Correctness}
+In this section of database testing, tester must verify that the application receives complete and correct data from the couchbase server. Automated unit tests will be written using JUnit to perform the following tests.
+\subsubsection{Database Correctness Automated Tests }
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{correctness_tests.png}
 
-\subsubsection{Nonfunctional Test Factors}
-\subsubsection{Inputs}
-\subsubsection{Outputs}
-\subsubsection{Initial State}
-\subsubsection{Methods of Testing}
-\subsubsection{Test Cases}
+\subsubsection{Performance}
+In this section of database testing, tester must verify that the data query is performed in a reasonable amount of time. The application should have a maximum loading period of 5 seconds to complete data queries. Moreover, considering the customer base and size of database our application, none of the following test cases should take more than 5 seconds.
+\subsubsection{Database Performance Automated Tests }
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{performance_tests.png}
+
+\subsubsection{Security}
+In this section of database query testing, tester must verify that database allows correct access control. Database penetration testing is not required because we will leverage couchbase security implementation, testing and certifications.
+\subsubsection{Database Security Automated Tests }
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Security_tests.png}
+
+\subsubsection{Reliability}
+In this section of database testing, we will test the robustness and reliability of the database.  This type of testing is essential the health of the database system. There should be no failures or downtimes on the backend side. 
+\subsubsection{Database Reliability Automated Tests }
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{reliability_tests.png}
 
 \section{Final Demonstration System Test Description}
 
