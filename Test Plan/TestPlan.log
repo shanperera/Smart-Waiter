@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 OCT 2015 04:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 OCT 2015 14:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -282,137 +282,127 @@ Overfull \hbox (1.4626pt too wide) in paragraph at lines 181--182
 sed through scripts. 
  []
 
-[7] <Images/Barcode.png, id=352, 491.8375pt x 333.245pt>
-File: Images/Barcode.png Graphic file (type png)
+[7] <Images/correctness_tests.png, id=332, 450.68375pt x 376.40625pt>
+File: Images/correctness_tests.png Graphic file (type png)
 
-<use Images/Barcode.png>
-Package pdftex.def Info: Images/Barcode.png used on input line 236.
+<use Images/correctness_tests.png>
+Package pdftex.def Info: Images/correctness_tests.png used on input line 211.
+(pdftex.def)             Requested size: 390.02174pt x 325.74199pt.
+ [8]
+<Images/performance_tests.png, id=338, 451.6875pt x 235.88126pt>
+File: Images/performance_tests.png Graphic file (type png)
+
+<use Images/performance_tests.png>
+Package pdftex.def Info: Images/performance_tests.png used on input line 216.
+(pdftex.def)             Requested size: 390.02197pt x 203.67815pt.
+ [9 <./Images/correctness_tests.png>]
+<Images/Security_tests.png, id=344, 451.6875pt x 291.0875pt>
+File: Images/Security_tests.png Graphic file (type png)
+
+<use Images/Security_tests.png>
+Package pdftex.def Info: Images/Security_tests.png used on input line 221.
+(pdftex.def)             Requested size: 390.02197pt x 251.34749pt.
+ [10 <./Images/performance_tests.png>]
+<Images/reliability_tests.png, id=350, 468.75125pt x 560.0925pt>
+File: Images/reliability_tests.png Graphic file (type png)
+
+<use Images/reliability_tests.png>
+Package pdftex.def Info: Images/reliability_tests.png used on input line 226.
+(pdftex.def)             Requested size: 389.99326pt x 465.98767pt.
+ [11 <./Images/Security_tests.png>] [12 <./Images/reliability_tests.png>]
+<Images/Barcode.png, id=361, 491.8375pt x 333.245pt>
+File: Images/Barcode.png Graphic file (type png)
+ <use Images/Barcode.png>
+Package pdftex.def Info: Images/Barcode.png used on input line 269.
 (pdftex.def)             Requested size: 491.83629pt x 333.24417pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--237
+Underfull \hbox (badness 10000) in paragraph at lines 264--270
 
  []
 
 
-Overfull \hbox (101.83629pt too wide) in paragraph at lines 231--237
+Overfull \hbox (101.83629pt too wide) in paragraph at lines 264--270
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--237
+Underfull \hbox (badness 10000) in paragraph at lines 264--270
 
  []
 
-[8] [9 <./Images/Barcode.png>]
-<Images/correctness_tests.png, id=363, 450.68375pt x 376.40625pt>
-File: Images/correctness_tests.png Graphic file (type png)
-
-<use Images/correctness_tests.png>
-Package pdftex.def Info: Images/correctness_tests.png used on input line 255.
-(pdftex.def)             Requested size: 390.02174pt x 325.74199pt.
- [10]
-<Images/performance_tests.png, id=369, 451.6875pt x 235.88126pt>
-File: Images/performance_tests.png Graphic file (type png)
-
-<use Images/performance_tests.png>
-Package pdftex.def Info: Images/performance_tests.png used on input line 260.
-(pdftex.def)             Requested size: 390.02197pt x 203.67815pt.
- [11 <./Images/correctness_tests.png>]
-<Images/Security_tests.png, id=375, 451.6875pt x 291.0875pt>
-File: Images/Security_tests.png Graphic file (type png)
-
-<use Images/Security_tests.png>
-Package pdftex.def Info: Images/Security_tests.png used on input line 265.
-(pdftex.def)             Requested size: 390.02197pt x 251.34749pt.
- [12 <./Images/performance_tests.png>]
-<Images/reliability_tests.png, id=381, 468.75125pt x 560.0925pt>
-File: Images/reliability_tests.png Graphic file (type png)
-
-<use Images/reliability_tests.png>
-Package pdftex.def Info: Images/reliability_tests.png used on input line 270.
-(pdftex.def)             Requested size: 389.99326pt x 465.98767pt.
- [13 <./Images/Security_tests.png>] [14 <./Images/reliability_tests.png>]
-<Images/accountTC.png, id=393, 834.11626pt x 517.935pt>
+[13] [14 <./Images/Barcode.png>]
+<Images/accountTC.png, id=373, 834.11626pt x 517.935pt>
 File: Images/accountTC.png Graphic file (type png)
 
 <use Images/accountTC.png>
-Package pdftex.def Info: Images/accountTC.png used on input line 309.
+Package pdftex.def Info: Images/accountTC.png used on input line 314.
 (pdftex.def)             Requested size: 389.99829pt x 242.16498pt.
- [15] [16 <./Images/accountTC.png>]
-<Images/orderTransactionTC.png, id=403, 834.11626pt x 766.865pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--315
+
+ []
+
+[15 <./Images/accountTC.png>]
+<Images/orderTransactionTC.png, id=379, 834.11626pt x 766.865pt>
 File: Images/orderTransactionTC.png Graphic file (type png)
 
 <use Images/orderTransactionTC.png>
-Package pdftex.def Info: Images/orderTransactionTC.png used on input line 348.
+Package pdftex.def Info: Images/orderTransactionTC.png used on input line 358.
 (pdftex.def)             Requested size: 389.99829pt x 358.55438pt.
- [17 <./Images/orderTransactionTC.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 386--391
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--359
+
+ []
+
+[16] [17 <./Images/orderTransactionTC.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 396--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--391
+Underfull \hbox (badness 10000) in paragraph at lines 396--401
 
  []
 
-[18] <Images/TestingSchedule.png, id=414, 834.11626pt x 323.2075pt>
+<Images/TestingSchedule.png, id=389, 834.11626pt x 323.2075pt>
 File: Images/TestingSchedule.png Graphic file (type png)
 
 <use Images/TestingSchedule.png>
-Package pdftex.def Info: Images/TestingSchedule.png used on input line 396.
+Package pdftex.def Info: Images/TestingSchedule.png used on input line 406.
 (pdftex.def)             Requested size: 389.99829pt x 151.11847pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--397
+Underfull \hbox (badness 10000) in paragraph at lines 403--407
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 398.
-[19 <./Images/TestingSchedule.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 398.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 408.
+[18] [19 <./Images/TestingSchedule.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 408.
  (./TestPlan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 398.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 398.
-
-
-Package rerunfilecheck Warning: File `TestPlan.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `TestPlan.out':
-(rerunfilecheck)             Before: 6387AAB88FCB711D32DE49B0B128A87E;4449
-(rerunfilecheck)             After:  B59D560BDBC7F997E1DF825175D6181F;4157.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 398.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 408.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 408.
+Package rerunfilecheck Info: File `TestPlan.out' has not changed.
+(rerunfilecheck)             Checksum: 2334DF80F0E2CAC579ACC35FCF298915;4157.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 408.
  ) 
 Here is how much of TeX's memory you used:
- 5296 strings out of 493089
- 79707 string characters out of 6134842
- 161603 words of memory out of 5000000
- 8667 multiletter control sequences out of 15000+600000
+ 5288 strings out of 493089
+ 79539 string characters out of 6134842
+ 161602 words of memory out of 5000000
+ 8663 multiletter control sequences out of 15000+600000
  9514 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,6n,28p,963b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsubsection.5.2.13} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.5.2.12} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.5.2.11} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.5.2.10} has been referenced but does 
-not exist, replaced by a fixed one
-
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on TestPlan.pdf (19 pages, 334168 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on TestPlan.pdf (19 pages, 334634 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
- 416 compressed objects within 5 object streams
- 84 named destinations out of 1000 (max. 500000)
- 537 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 442 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 505 words of extra memory for PDF output out of 10000 (max. 10000000)
 
