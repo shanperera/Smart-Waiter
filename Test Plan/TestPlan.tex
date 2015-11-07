@@ -1,12 +1,21 @@
 \documentclass[12pt]{article}
-
+\usepackage{xcolor} % for different colour comments
 
 
 %\usepackage{refcheck}
+\newif\ifcomments\commentstrue
 
+\ifcomments
+\newcommand{\authornote}[3]{\textcolor{#1}{[#3 ---#2]}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\else
+\newcommand{\authornote}[3]{}
+\newcommand{\todo}[1]{}
+\fi
 
 \newcommand{\wss}[1]{\authornote{magenta}{SS}{#1}}
 \newcommand{\ds}[1]{\authornote{blue}{DS}{#1}}
+
 
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -20,6 +29,9 @@
 \author{Meraj Patel (patelmu2) \\ Pavneet Jauhal (jauhalps)\\ Shan Perera (pererali)}
 \date{\today}
 \maketitle
+\ds{Missing Student Numbers.}
+
+\ds{Missing the ability to add comments like these, I had to add it.}
 \pagebreak
 
 \tableofcontents
@@ -66,6 +78,8 @@ This test plan is used to evaluate Smart Waiter functionality. Various plans are
 The following sections provide more detail about types of test that will be used. Information about the testing process is provided, and the software specifications
 that were discussed in the SRS document are stated. Testing processes is split up between system test for POC and the final demonstration. 
 
+\ds{Acronyms should be defined somewhere.}
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
 %	2.) Plan
@@ -103,14 +117,19 @@ The location where the testing will be performed is Hamilton Ontario. Specifical
 \subsubsection{Dates and Deadlines}
 
 Test Case Creation:
-The creation of test cases is scheduled to begin October 19, 2015. The deadline for creation of test cases for POC November 16, 2015. The deadline for final demonstration is February 1, 2016.
+The creation of test cases is scheduled to begin October 19, 2015. The deadline for creation of test cases for POC November 16, 2015. 
+\ds{Grammar}
+The deadline for final demonstration is February 1, 2016.
+\ds{Grammar}
 \newline
 \newline
 Test Case Implementation:
-Implementing test cases for POC system test is scheduled to begin November 15, 2015. The implementation period is expected to last approximately one week. 
+Implementing test cases for POC system test is scheduled to begin November 15, 2015. The implementation period is expected to last approximately one week.
+\ds{Grammar}
 \newline
 \newline
 Implementing test cases for Final Demonstration system test is scheduled to begin February 1, 2016. The implementation period is expected to last approximately three weeks. 
+\ds{Grammar}
 
 
 \subsection{Budget}
@@ -132,7 +151,9 @@ software is expected to complete, and the non-functional requirements the softwa
 \noindent
 \begin{itemize}
 \item The product shall scan a bar code to access the restaurant menu from a database
-\item The product shall allow the user to register an account for complete access to the products payment services
+\item The product shall allow the user to register an account for complete access to the products 
+\ds{Multiple products or one? Should be ``products' " or ``product's" respectively.}
+payment services
 \item The product shall allow the user to report bugs
 \item The product will allow users to place their order
 \item The product will allow users to pay for their order using a credit card
@@ -152,6 +173,7 @@ Priority nonfunctional requirements are performance, ease of use, reliability, s
 \section{Evaluation}
 
 The following section first presents methods and constraints used during the evaluation process. This is followed by extent of testing and test tools to be used.
+\ds{The last line is awkward.}
 
 %4.1 Methods and Constraints
 \subsection{ Methods and Constraints} 
@@ -168,7 +190,12 @@ The extent of testing will be end to end for the final demonstration. For POC, s
 \subsubsection{Test Tools}
 To avoid regressions and catch bugs quickly two main test tools will be used. Namely the following;
 \begin{itemize}
-\item JUnit \textemdash Junit will be used to build an automation test suite for the application. Specifically, JUnit is a testing framework used to implement unit testing in Java. This tool will easily integrate into the android studio build environment used for application. In addition, it will help developers leverage their Java knowledge used during application development. 
+\item JUnit \textemdash Junit 
+\ds{``JUnit"}
+will be used to build an automation test suite for the application. Specifically, JUnit is a testing framework used to implement unit testing in Java. 
+This tool will easily integrate into the android studio build environment used for application.
+\ds{Awkward. I'm not sure what you're saying.}
+In addition, it will help developers leverage their Java knowledge used during application development. 
 \item CodeReviewer \textemdash CodeReviewer will be used for code review process mandatory for all developers. This tool helps post code reviews and provides features such as annotations, diff viewers, easy communication and feedback. This tool will be used for static tests to produce high quality code with less defects
  \end{itemize}
 
@@ -191,10 +218,16 @@ Unit testing refers to providing specific input to a system and verifying it eva
 Manual testing is done by people, while automatic is processed through scripts. 
 
 \subsubsection{Static Testing}
-Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-though through will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. \\
-Static testing will be enforced through out the development process. A code review process will be put into place to strictly manage the quality of the code. Specifically, developers will have to sign off on the quality of the code before it gets checked into the production repo. The tool used for code reviews be Codereviewer. \\\\
+Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-though through
+\ds{Typo}
+will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. \\
+Static testing will be enforced through out the development process. A code review process will be put into place to strictly manage the quality of the code. Specifically, developers will have to sign off on the quality of the code before it gets checked into the production repo.
+\ds{``repository"}
+The tool used for code reviews be Codereviewer. \\\\
 Below we have highlighted the code review process;\\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{review_process.png}\\\\
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{review_process.png}
+\ds{This graphic would make more sense as a flowchart. Also, label your figures}
+\\\\
 The reviewers will assess the code quality and critique the code in following criteria;\\
 \begin{itemize}
  \item General Unit Testing performed. Did it pass?
@@ -245,7 +278,9 @@ For database testing, the following test factors will be considered;
  \end{itemize}
  
 \subsubsection{Correctness}
-In this section of database testing, tester must verify that the application receives complete and correct data from the couchbase server. Automated unit tests will be written using JUnit to perform the following tests.
+In this section of database testing, tester must verify that the application receives complete and correct data from the couchbase server.
+\ds{This is the first time I'm seeing the name ``couchbase" in your project.}
+Automated unit tests will be written using JUnit to perform the following tests.
 \subsubsection{Database Correctness Automated Tests }
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{correctness_tests.png}
 
@@ -253,11 +288,13 @@ In this section of database testing, tester must verify that the application rec
 In this section of database testing, tester must verify that the data query is performed in a reasonable amount of time. The application should have a maximum loading period of 5 seconds to complete data queries. Moreover, considering the customer base and size of database our application, none of the following test cases should take more than 5 seconds.
 \subsubsection{Database Performance Automated Tests }
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{performance_tests.png}
+\ds{5 seconds sounds like a really long time to query one item.}
 
 \subsubsection{Security}
 In this section of database query testing, tester must verify that database allows correct access control. Database penetration testing is not required because we will leverage couchbase security implementation, testing and certifications.
 \subsubsection{Database Security Automated Tests }
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Security_tests.png}
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{security_tests.png}
+\ds{Graphic was not included properly. I've corrected it.}
 
 \subsubsection{Reliability}
 In this section of database testing, we will test the robustness and reliability of the database.  This type of testing is essential the health of the database system. There should be no failures or downtimes on the backend side. 
@@ -307,7 +344,8 @@ Dynamic testing is used to ensure correctness and data integrity, and to observe
 \textit{Summary}\newline
 Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate nonfunctional test factors.
 \newline
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Barcode.png}\newline
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{barcode.png}\newline
+\ds{Graphic was not included properly. I've fixed it}
 
 \subsection{Account Login}
 Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 
@@ -350,7 +388,8 @@ Dynamic testing is used to ensure correctness and data integrity, and to observe
 Manual dynamic tests will be performed to evaluate the account creation module. This test will be in the form of structural testing. The tests being performed on the module are presented below. 
 \newline
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{accountTC.png}
-
+\ds{Test 1 should state it uses a username that is already in use. Why are
+there no tests for invalid Google/Facebook accounts?}
 
 \subsection{Order Transaction}
 Smart-Waiter needs to ensure that a user can send in their order, and pay for their order easily and securely. Order transaction will be vigorously tested to ensure complete customer satisfaction.  
@@ -394,7 +433,7 @@ Dynamic testing is used to ensure validity, record the number of successful test
 Manual dynamic tests will be performed to evaluate the order transaction module. This test will be in the form of structural testing. It will test vigorously for all possible inputs of credit card information and account details. The tests being performed on the module are presented below. 
 \newline
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{orderTransactionTC.png}
-
+\ds{What are these inputs for your test case 1 and 2? Where did the `n's come from?}
 \subsection{Usability Testing}
 The goal of usability testing is to verify if a user can successfully use all functionalities of the application from start to finish in a timely manner. This type of testing aids in evaluating if functional requirements are met. As well it provides scope for evaluating non functional requirements.
 \subsubsection{Nonfunctional Test Factors}
@@ -435,12 +474,28 @@ Dynamic testing is used to evaluate end to end system testing. This effectively 
 \newline
 \textit{Summary}\newline
 Manual black box tests will be performed to assess usability of the application. This test will be in the form of unit testing. Ten participants will be selected to evaluate this test. At least five will have some experience with using android applications. The remaining will have little to no experience. Each participant will be asked to conduct a walk through of the application. Number of errors made will be counted and recorded to further evaluate functional requirements and improve test cases. As well, qualitative feedback from participants will be taken in the end. For example, participants will be asked to comment on things they liked and things they didn't like. Also, they will be asked to provide a rating out of 10 in terms of experience; 1 being a poor experience and 10 being a wonderful experience. This feedback will help evaluate non function requirements; user interface appearance, learning requirements and accessibility. 
+\ds{If you are surveying users, you should include the questions you will be asking.
+This can be in the main document or as an appendix.}
 \newline
 
 \section{Testing Schedule}
-Active testing is necessary to build Smart-Waiter into a successful app. Therefore, testing will be performed on numerous occasions throughout the development of this application. Individual testing will be performed before any code is committed to the repository. Furthermore, as newer features and functions are being added and the development of Smart-Waiter progresses, the testing team and developers will be changing the test cases accordingly. 
+Active testing is necessary to build Smart-Waiter into a successful app.
+\ds{``application"}
+Therefore, testing will be performed on numerous occasions throughout the development of this application. 
+\ds{When specifically? This should be in your schedule.}
+Individual testing will be performed before any code is committed to the repository.
+\ds{That is fine, however, there should be milestones where testing will be performed 
+on a predetermined schedule.}
+Furthermore, as newer features and functions are being added and the development of Smart-Waiter progresses, the testing team and developers will be changing the test cases accordingly. 
+\ds{This last bit is unnecessary, as your test plan will be updated as you
+update your test cases.}
 \newline
+\ds{Who will be testing what and when?}
 \newline
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{TestingSchedule.png}
+
+\ds{I did not mark all of your spelling and grammar mistakes. You should go 
+through the document and find them on your own. There are also many more possibilities
+for test cases that you have not yet considered.}
 
 \end{document}
