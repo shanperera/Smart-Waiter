@@ -1,0 +1,27 @@
+{
+    "log":["CRUD+", "REST+", "Changes+", "Attach+"],
+    "databases": {
+        "couchbaseevents": {
+            "server":"http://127.0.0.1:8091",
+	    "bucket":"myapp",
+            "shadow": {
+
+                      "server": "http://127.0.0.1:8091",
+
+                      "bucket": "couchbaseevents"
+
+                     },		
+	    "import_Docs": true,
+	    "sync":`
+                function (doc) {
+                    channel (doc.channels);
+                }`,
+            "users": {
+                "GUEST": {
+                    "disabled": false,
+                    "admin_channels": ["*"]
+                }
+            }
+        }
+    }
+}
