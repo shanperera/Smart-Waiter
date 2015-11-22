@@ -1,5 +1,6 @@
 package capstone.barcodereader;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -36,7 +38,40 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.menu);
 
         populateMenu();
+
+
+        ListView list = (ListView) findViewById(R.id.menuList);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
+                menu list = menuList.get(position);
+                String switchClass = list.getCategory();
+                Intent appInfo;
+                switch(switchClass){
+                    case "Appetizers":
+                        appInfo = new Intent(MainActivity.this, Appetizers.class);
+                        startActivity(appInfo);
+                        break;
+
+                    case "Sandwiches":
+                        appInfo = new Intent(MainActivity.this, Appetizers.class);
+                        startActivity(appInfo);
+                        break;
+
+                    case "Booze":
+                        appInfo = new Intent(MainActivity.this, Appetizers.class);
+                        startActivity(appInfo);
+                        break;
+                }
+
+             }
+        });
+
+
         popualteListView();
+
+
 
 
         // Created an onClickListener for the "Scan QR code / Barcode" button
@@ -61,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         menuList.add(new menu("Appetizers", R.drawable.appet));
         menuList.add(new menu("Sandwiches", R.drawable.dessert));
         menuList.add(new menu("Booze", R.drawable.dessert));
+
     }
 
     public void popualteListView(){
@@ -102,6 +138,10 @@ public class MainActivity extends AppCompatActivity {
             String re = scanResult.getContents();
             Log.d("code", re);
         }
+
+    }
+
+    public void itemClicked(){
 
     }
 
