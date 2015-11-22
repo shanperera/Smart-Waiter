@@ -1,6 +1,7 @@
 package capstone.barcodereader;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -8,7 +9,15 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -16,6 +25,7 @@ import com.google.zxing.integration.android.IntentResult;
 public class MainActivity extends AppCompatActivity {
 
     private Button scanButton;
+    private List<menu> menuList = new ArrayList<menu>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setContentView(R.layout.menu);
+
+        populateMenu();
+        popualteListView();
 
 
         // Created an onClickListener for the "Scan QR code / Barcode" button
@@ -30,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // defined by the ZXing embedded scanner library to initialise the
         // barcode scanner, initiateScan() brings up the local camera app
         // and prompts the user to take a picture of the QR/barcode
-
+        /*
         scanButton = (Button)findViewById(R.id.scanCodeButton);
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +53,20 @@ public class MainActivity extends AppCompatActivity {
                 integrator.initiateScan();
             }
         });
+        */
 
+    }
+
+    public void populateMenu(){
+        menuList.add(new menu("Appetizers", R.drawable.appet));
+        menuList.add(new menu("Sandwiches", R.drawable.dessert));
+        menuList.add(new menu("Booze", R.drawable.dessert));
+    }
+
+    public void popualteListView(){
+        ArrayAdapter<menu> adapter = new MyListAdapter();
+        ListView list = (ListView) findViewById(R.id.menuList);
+        list.setAdapter(adapter);
     }
 
     @Override
@@ -74,6 +101,35 @@ public class MainActivity extends AppCompatActivity {
         if (scanResult != null) {
             String re = scanResult.getContents();
             Log.d("code", re);
+        }
+
+    }
+
+    private class MyListAdapter extends ArrayAdapter<menu> {
+        public MyListAdapter() {
+            super(MainActivity.this, R.layout.item_view, menuList);
+        }
+
+        public View getView(int position, View convertView, ViewGroup parent){
+            // Make sure we have a view to work with, may have been given null
+            View itemView = convertView;
+            if(itemView == null){
+                itemView = getLayoutInflater().inflate(R.layout.item_view, parent, false);
+            }
+
+            //Find the menu item to work with
+            menu currentItem = menuList.get(position);
+
+            //Fill the view
+            ImageView imageView = (ImageView) itemView.findViewById(R.id.itemIcon);
+            imageView.setImageResource(currentItem.getId());
+
+            //Make text view
+            TextView makeText = (TextView) itemView.findViewById(R.id.txtCategory);
+            makeText.setText(currentItem.getCategory());
+
+            return  itemView;
+            //return super.getView(position, convertView, parent);
         }
 
     }
