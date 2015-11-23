@@ -18,6 +18,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -27,7 +28,7 @@ import java.util.Set;
 public class CouchBaseLite {
     private static final String DB_NAME = "couchbaseevents";
     private static final String TAG = "couchbaseevents";
-    private static final String HOST = "http://192.168.2.12";
+    private static final String HOST = "http://192.168.43.136";
     private static final String PORT = "4984";
     Manager manager = null;
     Database database = null;
@@ -70,8 +71,18 @@ public class CouchBaseLite {
         Log.d(TAG, "###### Restaurant Category = " + category);
         return category;
     }
+    public ArrayList getMenuItems(Document restaurantMenu, String category){
+        ArrayList items = new ArrayList();
+        items = (ArrayList) restaurantMenu.getProperty(category);
+        Log.d(TAG, "###### Restaurant Items = " + items);
+        return items;
+    }
 
-    public ArrayList getCategoryNames(ArrayList categoryItems){
+
+    public List  getCategoryNames(ArrayList categoryItems){
+        List<MenuCategories> menuList = new ArrayList<MenuCategories>();
+        String categoryName = null;
+        String categoryUrl = null;
         ArrayList categoryNamesList = new ArrayList();
         LinkedHashMap categoryNames = new LinkedHashMap();
         for (int i = 0; i < categoryItems.size(); i++) {
@@ -82,15 +93,67 @@ public class CouchBaseLite {
             // Display elements
             while (j.hasNext()) {
                 Map.Entry me = (Map.Entry) j.next();
+
                 if(me.getKey() == "type"){
+                    categoryName = (String) me.getValue();
                     categoryNamesList.add(me.getValue());
+                }
+                if(me.getKey() == "url"){
+                    categoryUrl = (String) me.getValue();
+                    //categoryNamesList.add(me.getValue());
                 }
                // Log.d(TAG, (me.getKey() + ": "));
                // Log.d(TAG, (String) me.getValue());
             }
-            Log.d(TAG, (String) categoryNamesList.get(i));
+            menuList.add(new MenuCategories(categoryName, categoryUrl));
+            //Log.d(TAG, (String) menuList.get(i).getCategory());
+            //Log.d(TAG, (String) categoryNamesList.get(i));
         }
-        return categoryNamesList;
+        for (int x = 0; x < menuList.size(); x++ ){
+            Log.d(TAG, (String) menuList.get(x).getCategory());
+        }
+        return menuList;
+    }
+
+    public List  getItemNames(ArrayList categoryItems){
+        List<MenuItems> itemList = new ArrayList<MenuItems>();
+        String itemName = null;
+        String itemPrice = null;
+        String itemDetail = null;
+        //ArrayList categoryNamesList = new ArrayList();
+        LinkedHashMap categoryItemsHash = new LinkedHashMap();
+        for (int i = 0; i < categoryItems.size(); i++) {
+            categoryItemsHash = (LinkedHashMap) categoryItems.get(i);
+            Set set = categoryItemsHash.entrySet();
+            // Get an iterator
+            Iterator j = set.iterator();
+            // Display elements
+            while (j.hasNext()) {
+                Map.Entry me = (Map.Entry) j.next();
+
+                if(me.getKey() == "name"){
+                    itemName = (String) me.getValue();
+                    //categoryNamesList.add(me.getValue());
+                }
+                if(me.getKey() == "price"){
+                    itemPrice = (String) me.getValue();
+                    //categoryNamesList.add(me.getValue());
+                }
+                if(me.getKey() == "details"){
+                    itemDetail = (String) me.getValue();
+                    //categoryNamesList.add(me.getValue());
+                }
+                // Log.d(TAG, (me.getKey() + ": "));
+                // Log.d(TAG, (String) me.getValue());
+            }
+            itemList.add(new MenuItems(itemName, itemPrice, itemDetail));
+            //Log.d(TAG, (String) menuList.get(i).getCategory());
+            //Log.d(TAG, (String) categoryNamesList.get(i));
+        }
+        for (int x = 0; x < itemList.size(); x++ ){
+            Log.d(TAG, (String) itemList.get(x).getItemName());
+        }
+        return itemList;
     }
 
     public void getCategoryItems2(Document restaurantMenu, String categoryName){
