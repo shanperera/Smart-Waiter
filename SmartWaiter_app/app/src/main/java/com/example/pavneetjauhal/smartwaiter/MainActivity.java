@@ -8,13 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.couchbase.lite.CouchbaseLiteException;
@@ -33,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     CouchBaseLite local_database;
     static List<MenuCategories> menuCategoryList = new ArrayList<MenuCategories>();
     static List<MenuItems> menuItemList = new ArrayList<MenuItems>();
+    static String restarauntName = "";
     private Button scanButton;
 
     @Override
@@ -41,6 +36,23 @@ public class MainActivity extends AppCompatActivity {
         //actionBar.setHomeButtonEnabled(true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        try {
+            local_database = new CouchBaseLite(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (CouchbaseLiteException e) {
+            e.printStackTrace();
+        }
+
+        if (local_database != null){
+            try {
+                local_database.startReplications();
+            } catch (CouchbaseLiteException e) {
+                e.printStackTrace();
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
 
         //setContentView(R.layout.categorylist);
 
@@ -69,23 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void onPopulateMenu(String qrCode){
 
-        CouchBaseLite local_database = null;
-        try {
-            local_database = new CouchBaseLite(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (CouchbaseLiteException e) {
-            e.printStackTrace();
-        }
-        if (local_database != null){
-            try {
-                local_database.startReplications();
-            } catch (CouchbaseLiteException e) {
-                e.printStackTrace();
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
-        }
 
         /* variables to test parsing */
         ArrayList category = new ArrayList();
@@ -98,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             Document testRestaurantMenu = local_database.getRestaurantByBarcode(qrCode);
             local_database.outputContent(testRestaurantMenu);
-            local_database.getRestaurantName(testRestaurantMenu);
+            restarauntName = local_database.getRestaurantName(testRestaurantMenu);
 
             //Populate Category Names
             category = local_database.getCategoriesItems(testRestaurantMenu);

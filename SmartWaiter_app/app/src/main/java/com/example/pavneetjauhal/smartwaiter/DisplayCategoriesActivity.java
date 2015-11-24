@@ -26,7 +26,7 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mActionBarToolbar = (Toolbar) findViewById(R.id.toolbarCategories);
         setSupportActionBar(mActionBarToolbar);
-        getSupportActionBar().setTitle("Menu Categories");
+        getSupportActionBar().setTitle(mainObject.restarauntName + " Menu Categories");
         onDisplayCategoryList();
 
 

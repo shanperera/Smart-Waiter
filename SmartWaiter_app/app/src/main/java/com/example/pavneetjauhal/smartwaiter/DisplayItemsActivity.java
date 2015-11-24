@@ -24,7 +24,7 @@ public class DisplayItemsActivity extends AppCompatActivity {
 
         mActionBarToolbar = (Toolbar) findViewById(R.id.toolbarItems);
         setSupportActionBar(mActionBarToolbar);
-        getSupportActionBar().setTitle("Category Items");
+        getSupportActionBar().setTitle(" Category Items");
 
         popualteItemsListView();
     }

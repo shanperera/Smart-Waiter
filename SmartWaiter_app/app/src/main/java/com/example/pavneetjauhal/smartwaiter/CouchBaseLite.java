@@ -60,9 +60,10 @@ public class CouchBaseLite {
         Log.d(TAG, "###### Restaurant Menu Content ######" + restaurantMenu.getProperties());
     }
 
-    public void getRestaurantName(Document restaurantMenu){
+    public String getRestaurantName(Document restaurantMenu){
         String restaurantName = (String) restaurantMenu.getProperty(this.NAME);
         Log.d(TAG, "###### Restaurant Name = " + restaurantName);
+        return restaurantName;
     }
 
     public ArrayList getCategoriesItems(Document restaurantMenu){
