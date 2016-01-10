@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Purpose}{3}
+\contentsline {subsection}{\numberline {1.2}Description}{3}
+\contentsline {subsection}{\numberline {1.3}Scope}{3}
+\contentsline {section}{\numberline {2}Overview}{3}
+\contentsline {section}{\numberline {3}System Architecture}{3}
+\contentsline {section}{\numberline {4}User Interface Design}{3}
+\contentsline {subsection}{\numberline {4.1}User Interface Design Overview}{3}
+\contentsline {subsubsection}{\numberline {4.1.1}Menu Categories}{3}
+\contentsline {subsubsection}{\numberline {4.1.2}Menu Items}{4}
+\contentsline {subsubsection}{\numberline {4.1.3}Confirm Order}{5}
+\contentsline {subsection}{\numberline {4.2}User Interface Navigation Flow}{6}
+\contentsline {subsection}{\numberline {4.3}Use Cases}{6}
+\contentsline {subsubsection}{\numberline {4.3.1}Sign In Page}{6}
+\contentsline {subsubsection}{\numberline {4.3.2}Barcode Scan Page}{7}
+\contentsline {subsubsection}{\numberline {4.3.3}Menu Categories Page}{7}
+\contentsline {subsubsection}{\numberline {4.3.4}Category Items Page}{7}
+\contentsline {subsubsection}{\numberline {4.3.5}Customize Item Page}{7}
+\contentsline {subsubsection}{\numberline {4.3.6}Cart Page}{8}
+\contentsline {subsubsection}{\numberline {4.3.7}Payment Page}{8}
