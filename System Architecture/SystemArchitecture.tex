@@ -61,6 +61,52 @@ This document uses Volere Template for its organization.
 
 \section{System Architecture}
 
+\section{Orders}
+
+\subsection{Overview}
+Below are key details of ordering component for Smart Waiter application. Detailed architecture review is provided.
+
+\subsection{Ordering Structure}
+There are three primary classes used to hold all vital information regarding ordering. These are: MenuCategories, MenuItems and User. Each class purpose and its correlation with each other is explained below.
+
+\subsubsection{MenuCategories Class}
+This class purpose is to store menu category information of a restaurant menu. This entails category name, picture and a reference to category items. To do so, there are three main variables used within this class to hold this information: 
+
+\begin{description}
+  \item[categoryName:] Stores category name in the form of String
+  \item[picURL:] Stores URL of category picture
+  \item[categoryItems:] Stores an array of objects that reference MenuItems class
+\end{description}
+
+
+This class is instantiated and called upon when a user successfully scans a barcode. The JSON response acquired from the database is parsed, and information related to menu categories is stored appropriately within this class. The application uses this class to display category information when "Menu Categories" page is spawned (please see section 5.1.1 to view picture).
+
+\subsubsection{MenuItems Class}
+This class purpose is to store menu item information of a restaurant menu. This means, item name, price and description. Thee main variables are used within this class to hold this information.
+
+\begin{description}
+  \item[itemName:] Stores item name
+  \item[itemPrice:] Stores item price
+  \item[itemDetail:] Stores description of item
+\end{description}
+
+Objects of this class are instantiated from the MenuCategories class. By successfully scanning the barcode and parsing the JSON response, MenuItem objects are instantiated and used to save item details. These objects are held within categoryItems list seen in Menu Categories class. This application uses this class to display item information of a category when "Menu Items" page is spawned (please see section 5.1.2 to view picture). These objects are also used in reference to items the user would like to order. This is thoroughly discussed in the proceeding section.  
+
+\subsubsection{User Class}
+User class is used to store menu item a user would like to order. For now, there is only one important variable to consider: 
+
+ \begin{description}
+  \item[userItem:] an array that stores objects of MenuItems class. This is used to save menu items a user would like to order.
+\end{description}
+
+Only one object is instantiated through the life time of this application. This object represents the user cart of menu items he/she would like to order. This object is called upon when a user decides to add an item to their cart. When this occurs, a copy of the MenuItem object is saved within the userItem variables. This way, there is a list maintained to hold all item a user would like to order. When a user confirms and sends their order, the item information is extracted from userItem list, formatted into a JSON request and send back to the database for further processing. Having this class implemented allows extendibility in the future, as all vital information pertaining to a user can be stored within the class (for example, user settings).  
+
+\subsection{Accounts Structure}
+
+
+
+\subsection{Transactions Structure}
+
 \section{User Interface Design}
 
 \subsection{User Interface Design Overview}
