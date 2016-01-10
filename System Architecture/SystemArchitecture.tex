@@ -61,13 +61,34 @@ This document uses Volere Template for its organization.
 
 \section{System Architecture}
 
+\subsection{Overall Operation}
+Below is a high level overview of Smart Waiter operation. The operation is decomposed into three components which is introduced in this section and will be thoroughly explained in the following sections. 
+
+
+\includegraphics[width=150mm,scale=0.5]{OverallOperation.png}
+
+
+\subsection{Order}
+This component encompasses all operations needed to allow a user to place an order. This includes, user sign in and all operations till placing the order (top segment of operation diagram). The following components are described in detail in section 4 of this document: 
+
+ \begin{enumerate}
+  \item Menu Class Structure
+  \item Barcode Scanning 
+  \item Accounts
+  \item Transactions
+\end{enumerate}
+
+\subsection{Database}
+
+\subsection{Processing Order}
+
 \section{Orders}
 
 \subsection{Overview}
 Below are key details of ordering component for Smart Waiter application. Detailed architecture review is provided.
 
-\subsection{Ordering Structure}
-There are three primary classes used to hold all vital information regarding ordering. These are: MenuCategories, MenuItems and User. Each class purpose and its correlation with each other is explained below.
+\subsection{Menu Class Structure}
+There are three primary classes used to hold all vital information regarding menu information. These are: MenuCategories, MenuItems and User. Each class purpose and its correlation with each other is explained below.
 
 \subsubsection{MenuCategories Class}
 This class purpose is to store menu category information of a restaurant menu. This entails category name, picture and a reference to category items. To do so, there are three main variables used within this class to hold this information: 
