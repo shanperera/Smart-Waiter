@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  11 JAN 2016 01:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  11 JAN 2016 02:08
 entering extended mode
 **DetailedDesign.tex
 (DetailedDesign.tex
@@ -147,26 +147,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  (DetailedDesign.lot)
 \tf@lot=\write5
  [1] [2]
-Overfull \hbox (9.84863pt too wide) in paragraph at lines 66--71
+Overfull \hbox (10.26541pt too wide) in paragraph at lines 64--67
+\OT1/cmr/m/n/12 CouchbaseLite (Database) ZX-ing Em-bed-ded (QR Code Scan-ner) S
+tripe (Credit
+ []
+
+[3]
+Overfull \hbox (9.84863pt too wide) in paragraph at lines 73--78
 \OT1/cmr/m/n/12 con-tents = parseAc-tiv-i-ty-Func-tion (re-quest-Code, re-sult-
 Code, in-tent) if(contents
  []
 
-[3]
-Overfull \hbox (13.2125pt too wide) in paragraph at lines 80--85
+
+Overfull \hbox (13.2125pt too wide) in paragraph at lines 87--92
 []\OT1/cmr/m/n/12 try chargeParams(amount, in-te-ger amount in cents) chargePar
 ams(currency,
  []
 
 
-Overfull \hbox (56.42593pt too wide) in paragraph at lines 80--85
+Overfull \hbox (56.42593pt too wide) in paragraph at lines 87--92
 \OT1/cmr/m/n/12 string value of type of cur-rency) chargeParams(source, to-ken)
  chargeParams(description,
  []
 
 [4]
 
-LaTeX Warning: File `MenuCategories.png' not found on input line 121.
+LaTeX Warning: File `MenuCategories.png' not found on input line 128.
 
 
 ! Package pdftex.def Error: File `MenuCategories.png' not found.
@@ -175,14 +181,15 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 ...width=80mm,scale=0.5]{MenuCategories.png}
+l.128 ...width=80mm,scale=0.5]{MenuCategories.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[5]
 
-LaTeX Warning: File `CategoryItems.png' not found on input line 124.
+LaTeX Warning: File `CategoryItems.png' not found on input line 131.
 
 
 ! Package pdftex.def Error: File `CategoryItems.png' not found.
@@ -191,15 +198,15 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.124 ...[width=80mm,scale=0.5]{CategoryItems.png}
+l.131 ...[width=80mm,scale=0.5]{CategoryItems.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[5]
+[6]
 
-LaTeX Warning: File `OrderSummary.png' not found on input line 127.
+LaTeX Warning: File `OrderSummary.png' not found on input line 134.
 
 
 ! Package pdftex.def Error: File `OrderSummary.png' not found.
@@ -208,14 +215,14 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 ...s[width=80mm,scale=0.5]{OrderSummary.png}
+l.134 ...s[width=80mm,scale=0.5]{OrderSummary.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `UIProcess.png' not found on input line 131.
+LaTeX Warning: File `UIProcess.png' not found on input line 138.
 
 
 ! Package pdftex.def Error: File `UIProcess.png' not found.
@@ -224,63 +231,63 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131 ...ics[width=180mm,scale=0.5]{UIProcess.png}
+l.138 ...ics[width=180mm,scale=0.5]{UIProcess.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (122.29085pt too wide) in paragraph at lines 131--132
+Overfull \hbox (122.29085pt too wide) in paragraph at lines 138--139
 [] 
  []
 
-[6]
-Overfull \hbox (73.54208pt too wide) in paragraph at lines 137--148
- [] 
- []
-
 [7]
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 153--160
- [] 
- []
-
-
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 164--171
- [] 
- []
-
-
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 175--182
- [] 
- []
-
-
-Overfull \hbox (67.66714pt too wide) in paragraph at lines 187--196
+Overfull \hbox (73.54208pt too wide) in paragraph at lines 144--155
  [] 
  []
 
 [8]
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 200--208
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 160--167
  [] 
  []
 
 
-Underfull \hbox (badness 6893) in paragraph at lines 217--217
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 171--178
+ [] 
+ []
+
+
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 182--189
+ [] 
+ []
+
+
+Overfull \hbox (67.66714pt too wide) in paragraph at lines 194--203
+ [] 
+ []
+
+[9]
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 207--215
+ [] 
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 224--224
 []\OT1/cmr/m/n/12 Toaster dis-played read-ing "in-valid
  []
 
 
-Underfull \hbox (badness 4013) in paragraph at lines 218--219
+Underfull \hbox (badness 4013) in paragraph at lines 225--226
 []\OT1/cmr/m/n/12 Application tran-si-tions to pre-vi-ous
  []
 
 
-Overfull \hbox (67.2141pt too wide) in paragraph at lines 213--221
+Overfull \hbox (67.2141pt too wide) in paragraph at lines 220--228
  [] 
  []
 
-[9] (DetailedDesign.aux) ) 
+[10] (DetailedDesign.aux) ) 
 Here is how much of TeX's memory you used:
  2722 strings out of 493673
  39708 string characters out of 3145987
@@ -289,13 +296,13 @@ Here is how much of TeX's memory you used:
  8977 words of font info for 32 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  36i,8n,38p,653b,191s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/LaTeX/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fil
-es/LaTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on DetailedDesign.pdf (10 pages, 67141 bytes).
+<C:/Program Files/LaTeX/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+<C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
+les/LaTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on DetailedDesign.pdf (11 pages, 68908 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

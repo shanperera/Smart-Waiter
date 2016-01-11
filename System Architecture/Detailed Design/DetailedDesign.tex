@@ -42,23 +42,30 @@ This document uses Volere Template for its organization.
 \section{Introduction}
 
 \subsection{Purpose}
+The purpose of Smart-Waiter aims to provide a solution that will allow users to order and pay through a mobile application at restaurants. 
 
 \subsection{Description}
+This opportunity arose from the lack of a universal application in the market that allows users to walk into a restaurant, scan a code to view the menu, and proceed to order and pay through the use of a singular application. Android users will be able to walk into any restaurant that offers our solution, and have the ability to use these services.
 
 \subsection{Scope}
-
+The scope of Smart-Waiter will be limited to providing the user with the following features: viewing the restaurant's menu, creating the user's order, placing the order and paying for their order. 
+ 
 \section{Overview}
 
 \subsection{Design Principals}
 \subsubsection{Information Hiding}
-
+Information hiding is the principle of segregation of design components that are likely to undergo changes as the lifecycle of the application progresses. This way, other key parts of the application will remain unhindered by any possible changes.
 
 \section{Development Details}
 \subsection{Language of Implementation}
+The source code of the Android Smart-Waiter application will be written in Java and XML, as well as the API libraries used in development. 
+
 \subsection{Supporting Frameworks/APIs}
+CouchbaseLite (Database)
+ZXing Embedded (QR Code Scanner)
+Stripe (Credit Card)
 
 \section{Implementation Components}
-
 \subsection{Camera Function}
 In this section we will detail the function that relates to the camera aspect of Smart-Waiter. There is one main function necessary for QR code scanning: onActivityResult. onActivityResult is called as soon as a QR code is captured by the camera. The function is passed three variables, a requestCode (int), a resultCode (int), an intent (Intent). Using these three variables, the function calls the ZXing function parseActivityResult using the three aforementioned variables as parameters. The parseActivityResult returns the contents of the QR code. 
  
