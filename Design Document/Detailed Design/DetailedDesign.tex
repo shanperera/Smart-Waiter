@@ -85,7 +85,7 @@ In this section we will detail the key function that relates to account transact
 Below are function descriptions that are necessary for ordering in Smart-Waiter. As explained in System Architecture, there are three primary classes used to hold all vital information regarding menu information. These are: MenuCategories, MenuItems and User. These three classes are used to provide a user with a full menu of a particular restaurant and allow them to place an order.
 
 \subsubsection{Parsing Function}
-A parsing function was created to parse through received JSON responses to save information in appropriate classes. Stated below is pseudo code for this JSON parser. This function will parse through a JSON request. View if the key equals "categoryname". If so, save the value within MenuCategories class under . Also, if the key equals "categorypic" save the value within MenuCategories class under pi
+A parsing function was created to parse through received JSON responses to save information in appropriate classes. Stated below is pseudo code for this JSON parser. This function will parse through a JSON request. View if the key equals "categoryname". If so, save the value within MenuCategories class under variable, categoryName. Also, if the key equals "categorypic" save the value within MenuCategories class under variable, categoryPic.
 
 \includegraphics[width=150mm,scale=0.5]{parser.png}
 
