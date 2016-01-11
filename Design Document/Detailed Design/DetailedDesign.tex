@@ -157,6 +157,7 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 \section{User Interface Design}
 
 \subsection{User Interface Design Overview}
+Below are sample screen mock ups for the UI in place for Smart Waiter
 
 \subsubsection{Menu Categories}
 \includegraphics[width=80mm,scale=0.5]{MenuCategories.png}
@@ -168,12 +169,17 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 \includegraphics[width=80mm,scale=0.5]{OrderSummary.png}
 
 \subsection{User Interface Navigation Flow}
+Presented is the over all UI navigation flow for Smart Waiter. Provided below are descriptions and use cases of each component. 
 
 \includegraphics[width=180mm,scale=0.5]{UIProcess.png}
 
-\subsection{Use Cases}
+\subsection{UI Description and Use Cases}
 
 \subsubsection{Sign In Page}
+
+When the app is launched the user is presented a screen promoting to sign in or skip sign in. The app will transition to one of two screens depending on the user’s decision. If the user decides to sign in, he will be redirected to a sign in page. Else, if he chooses to skip sign in, he will be redirected to barcode scanning page.
+
+
 \begin{center}
     \begin{tabular}{ | l | p{8cm} |}
     \hline
@@ -190,6 +196,9 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 
 
 \subsubsection{Barcode Scan Page}
+
+This page informs the user to locate the barcode presented on the table in front of him in the restaurant.  After doing so, the user is asked to click “Scan”, to scan the bar code. Doing so, the app will transition to the camera page so the user can scan the code. Successfully scanning the barcode will transition to menu categories page. 
+
 \begin{center}
     \begin{tabular}{ | l | p{10cm} |}
     \hline
@@ -201,6 +210,8 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 \end{center}
 
 \subsubsection{Menu Categories Page}
+This page display menu categories in wide labels that cover the screen. Attached is the category name and a picture above. An example can be seen in 6.1.1. A user would simply click on a category to view its menu items. Doing so will transition the app to Category Items Page. 
+
 \begin{center}
     \begin{tabular}{ | l | p{10cm} |}
     \hline
@@ -212,6 +223,8 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 \end{center}
 
 \subsubsection{Category Items Page}
+This page display menu items in an android list view. Within each cell contains the item name, description and price. A use would simply tap on a cell to customize the item and add to cart. Please see 6.1.2 for an example.
+
 \begin{center}
     \begin{tabular}{ | l | p{10cm} |}
     \hline
@@ -224,6 +237,8 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 
 
 \subsubsection{Customize Item Page}
+This page allows customization of menu item. The UI consists of check boxes and options to indicate if certain toppings want to be added. The format of page is dependent on the type of item. At the bottom of the page, there will always be an option to add item to cart. 
+
 \begin{center}
     \begin{tabular}{ | l | p{8cm} |}
     \hline
@@ -237,6 +252,7 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 \end{center}
 
 \subsubsection{Cart Page}
+This page displays all menu items a user requested. Below is an option to submit the order and proceed to payment page. 
 \begin{center}
     \begin{tabular}{ | l | p{10cm} |}
     \hline
@@ -249,7 +265,7 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 \end{center}
 
 \subsubsection{Payment Page}
-
+This page allows users to input credit card information. This is the final page of the UI. After processing transaction, user will be redirected to bar code scan page. 
 \begin{center}
     \begin{tabular}{ | l | p{7cm} |}
     \hline

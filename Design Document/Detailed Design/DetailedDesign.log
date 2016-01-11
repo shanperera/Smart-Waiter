@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 JAN 2016 14:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 JAN 2016 15:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -339,46 +339,52 @@ Overfull \vbox (31.10904pt too high) has occurred while \output is active []
 File: Images/MenuCategories.png Graphic file (type png)
 
 <use Images/MenuCategories.png>
-Package pdftex.def Info: Images/MenuCategories.png used on input line 162.
+Package pdftex.def Info: Images/MenuCategories.png used on input line 163.
 (pdftex.def)             Requested size: 169.13145pt x 278.03807pt.
 
 <Images/CategoryItems.png, id=59, 283.0575pt x 501.875pt>
 File: Images/CategoryItems.png Graphic file (type png)
 
 <use Images/CategoryItems.png>
-Package pdftex.def Info: Images/CategoryItems.png used on input line 165.
+Package pdftex.def Info: Images/CategoryItems.png used on input line 166.
 (pdftex.def)             Requested size: 141.5284pt x 250.93687pt.
  [13 <./Images/MenuCategories.png>]
 <Images/OrderSummary.png, id=64, 456.70625pt x 798.985pt>
 File: Images/OrderSummary.png Graphic file (type png)
 
 <use Images/OrderSummary.png>
-Package pdftex.def Info: Images/OrderSummary.png used on input line 168.
+Package pdftex.def Info: Images/OrderSummary.png used on input line 169.
 (pdftex.def)             Requested size: 228.35255pt x 399.49152pt.
  [14 <./Images/CategoryItems.png>]
 <Images/UIProcess.png, id=69, 774.895pt x 370.38374pt>
 File: Images/UIProcess.png Graphic file (type png)
 
 <use Images/UIProcess.png>
-Package pdftex.def Info: Images/UIProcess.png used on input line 172.
+Package pdftex.def Info: Images/UIProcess.png used on input line 174.
 (pdftex.def)             Requested size: 387.44655pt x 185.1914pt.
 
-Overfull \hbox (122.15944pt too wide) in paragraph at lines 172--173
-[] 
+Overfull \hbox (139.78426pt too wide) in paragraph at lines 174--175
+[][] 
  []
 
 [15 <./Images/OrderSummary.png>]
-Overfull \hbox (73.54208pt too wide) in paragraph at lines 178--189
- [] 
- []
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
 
-
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 194--201
+Overfull \hbox (73.54208pt too wide) in paragraph at lines 184--195
  [] 
  []
 
 [16 <./Images/UIProcess.png>]
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 205--212
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no œ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no  in font cmr12!
+
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 203--210
  [] 
  []
 
@@ -388,27 +394,32 @@ Overfull \hbox (66.1191pt too wide) in paragraph at lines 216--223
  []
 
 
-Overfull \hbox (67.66714pt too wide) in paragraph at lines 228--237
- [] 
- []
-
-
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 241--249
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 229--236
  [] 
  []
 
 [17]
-Underfull \hbox (badness 6893) in paragraph at lines 258--258
+Overfull \hbox (67.66714pt too wide) in paragraph at lines 243--252
+ [] 
+ []
+
+
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 257--265
+ [] 
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 274--274
 []\OT1/cmr/m/n/12 Toaster dis-played read-ing "in-valid
  []
 
 
-Underfull \hbox (badness 4013) in paragraph at lines 259--260
+Underfull \hbox (badness 4013) in paragraph at lines 275--276
 []\OT1/cmr/m/n/12 Application tran-si-tions to pre-vi-ous
  []
 
 
-Overfull \hbox (67.2141pt too wide) in paragraph at lines 254--262
+Overfull \hbox (67.2141pt too wide) in paragraph at lines 270--278
  [] 
  []
 
@@ -426,7 +437,7 @@ blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb>
-Output written on DetailedDesign.pdf (19 pages, 818027 bytes).
+Output written on DetailedDesign.pdf (19 pages, 820115 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
