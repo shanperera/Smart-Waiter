@@ -152,10 +152,52 @@ There are 3 main classes related to the Accounts structure: User, Card, and Stri
 This component follows the Single Responsibility and the Information Hiding principle.  
 
 \begin{description}
-	\item[Single Responsibility:] The responsibility of this component is to securely store a user's credit card information for use in transactions. If this component had to be changed, it would only affect the camera functionality of the application, and not other components like the menu or accounts.
-	\item[Information Hiding:] The camera component is separate from every other component of this application. If any changes were to be made to the camera application, it will not affect the other components of the application. However, it is unlikely that there will be any changes applied to this component of the application.
+	\item[Single Responsibility:] The responsibility of this component is to securely store a user's credit card information for use in account transactions. If this component had to be changed, it would only affect the accounts functionality of the application, and not other components like the menu or camera.
+	\item[Information Hiding:] The accounts component is separate from every other component of this application. If any changes were to be made to the accounts module, it will not affect the other components of the application.
 \end{description}
- 
+
+\subsubsection{User Class}
+This class creates a structure for storing a user's account information and general details. The User class has 7 field variables for storing the user's general information. The field variables include: username, password, firstName, lastName, billingAddress, postalCode, phoneNumber
+
+\begin{description}
+  \item[username:] Used as an identifier for the user 
+  \item[password:] Used for logging into the user's account 
+  \item[firstName:] First name of the user, used for the billing address
+  \item[lastName:] Last name of the user, used for the billing address
+  \item[billingAddress:] User's home address, used for billing address
+  \item[postalCode:] User's home address, used for billing address
+  \item[phoneNumber:] User's phone number, used if we need to get in touch with the user
+\end{description}
+
+\subsubsection{Card Class}
+This class creates a structure for storing a user's credit card information. The Card class has 4 field variables, which include: cardNumber, cardExpMonth, cardExpYear, cardCVC.
+
+\begin{description}
+  \item[cardNumber:] Stores the 16 digit credit card number 
+  \item[cardExpMonth:] Stores the 2 digit expiry month 
+  \item[cardExpYear:] Stores the 4 digit expiry year
+  \item[cardCVC:] Stores the 3 digit CVC code, stored to prevent fraud
+\end{description}
+
+\subsubsection{Stripe}
+This method is used to securely send credit card information to the Stripe server, the Stripe servers then sends a token that can be used to charge the user's credit card. An instance of the Card class is created using the user's credit card information, and a token is created
+using the card and the application's Stripe API key. The token is sent to the server, Stripe then returns a token that can be used to charge the user's credit card. The transaction parameters are passed to the charge function, which is then used to accurately charge the user's card.
+The parameters include: amount, currency, source, and description.
+  
+\begin{description}
+  \item[amount:] An integer value of the amount to be charged to the user's credit card in cents.
+  \item[currency:] A string value of the type of currency to be charged, for our application, we will use Canadian dollars (CAD) 
+  \item[source:] A string value of Stripe token retrieved from the Stripe servers 
+  \item[description:] A string value containing the description of the charge to the user's credit card.
+\end{description}
+
+\subsubsection{Module Decomposition}
+Module: chargeParams
+\begin{description}
+	\item[Secret:]How the user's credit card is charged accurately
+	\item[Service:] Charges the user's credit card based on the parameters passed.
+\end{description}
+
 \section{Traceability Matrix}
 Below describes how our decomposed modules relate to requirements specified in SRS
 \begin{table}[H]
