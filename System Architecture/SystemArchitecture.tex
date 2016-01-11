@@ -153,14 +153,13 @@ Module: onActivityResult
 \end{description}
 
 \subsection{Accounts Structure}
-There are 3 main classes related to the Accounts structure: User, Card, and Stripe. Accounts are used to associate a user identifier for transactions and for storing a user's credit card information securely. Credit card information transfer and storage uses Stripe API. This reduces the burden on the developers, since we can use an established API that follows the restrictions applied by credit card companies, and handles the secure transfer of sensitive information, rather than developing an efficient and secure system ourselves.
+There are 3 main classes related to the Accounts structure: User, Card, and Stripe. Accounts are used to associate a user identifier to a user, so that data can be used for transactions and for storing a user's credit card information securely. Credit card information transfer and storage uses Stripe API. This reduces the burden on the developers, since we can use an established API that follows the restrictions applied by credit card companies, and handles the secure transfer of sensitive information, rather than developing an efficient and secure system ourselves.
 
 \subsubsection{Design Principles}
 This component follows the Single Responsibility and the Information Hiding principle.  
 
 \begin{description}
-	\item[Single Responsibility:] The responsibility of this component is to securely store a user's credit card information for use in transactions. If this component had to be changed, it would only affect the camera functionality of the application, and not other components like the menu or accounts.
-	\item[Information Hiding:] The camera component is separate from every other component of this application. If any changes were to be made to the camera application, it will not affect the other components of the application. However, it is unlikely that there will be any changes applied to this component of the application.
+	\item[Single Responsibility:] The responsibility of this component is to securely store a user's credit card information and to associate this information with a user identifier for use in transactions. If this component had to be changed, it would only affect the transactions class functionality of the application, and not other components like the menu or camera.
 \end{description}
  
 \subsection{Transactions Structure}
