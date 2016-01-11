@@ -49,7 +49,17 @@ This opportunity arose from the lack of a universal application in the market th
 The scope of Smart-Waiter will be limited to providing the user with the following features: viewing the restaurant's menu, creating the user's order, placing the order and paying for their order. 
 
 \section{Overview}
+\subsection{Revision History}
 
+\begin{table}[H]
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Date}  & \textbf{Comments} \\ \hline
+January 11, 2016 &  First Draft. \\ 
+\hline
+\end{tabular}
+\caption{Revision History Table}
+\end{table}
 
 \section{Development Details}
 \subsection{Language of Implementation}
@@ -75,7 +85,7 @@ In this section we will detail the key function that relates to account transact
 Below are function descriptions that are necessary for ordering in Smart-Waiter. As explained in System Architecture, there are three primary classes used to hold all vital information regarding menu information. These are: MenuCategories, MenuItems and User. These three classes are used to provide a user with a full menu of a particular restaurant and allow them to place an order.
 
 \subsubsection{Parsing Function}
-A parsing function was created to parse through received JSON response to save information in appropriate classes. Stated below is sudo code for this JSON parser. This function will parse through a JSON request. View if the key equals "categoryname". If so, save the value within MenuCategories class under . Also, if the key equals "categorypic" save the value within MenuCategories  class under pi
+A parsing function was created to parse through received JSON responses to save information in appropriate classes. Stated below is pseudo code for this JSON parser. This function will parse through a JSON request. View if the key equals "categoryname". If so, save the value within MenuCategories class under . Also, if the key equals "categorypic" save the value within MenuCategories class under pi
 
 \includegraphics[width=150mm,scale=0.5]{parser.png}
 
@@ -106,7 +116,7 @@ Primary functions are accessors and mutators
 \subsection{Couchbase Functions}
 
 \subsubsection{Creating local database}
-A top-level manager object is created when the application launches, which manages collection of couchbase instances. In the case of this application, there are two database instances, one that holds menus and another to hold orders. The Manager creates a directory in the filesystem (if one does not already exist) and stores the databases inside it. The file path is determined by the application context. Thusly, if the application is ever deleted, all of the content will be deleted as well. In addition, creating the database at this point makes it readily available for functions, which might try to use it immediately following the application’s launch. 
+A top-level manager object is created when the application launches, which manages collection of couchbase instances. In the case of this application, there are two database instances, one that holds menus and another to hold orders. The Manager creates a directory in the filesystem (if one does not already exist) and stores the databases inside it. The file path is determined by the application context. Thus, if the application is ever deleted, all of the content will be deleted as well. In addition, creating the database at this point makes it readily available for functions, which might try to use it immediately following the application’s launch. 
 
 \includegraphics[width=150mm,scale=0.5]{createDatabase.png}
 
@@ -160,13 +170,25 @@ As mentioned above the database is schema less, meaning the JSON format and attr
 Below are sample screen mock ups for the UI in place for Smart Waiter
 
 \subsubsection{Menu Categories}
+\begin{figure}[H]
+\centering 
 \includegraphics[width=80mm,scale=0.5]{MenuCategories.png}
-
+\caption{Main menu UI screen}
+\end{figure}
 \subsubsection{Menu Items}
+
+\begin{figure}[H]
+\centering 
 \includegraphics[width=80mm,scale=0.5]{CategoryItems.png}
+\caption{Entree Category UI screen}
+\end{figure}
 
 \subsubsection{Confirm Order}
+\begin{figure}[H]
+\centering
 \includegraphics[width=80mm,scale=0.5]{OrderSummary.png}
+\caption{Order Confirmation UI screen}
+\end{figure}
 
 \subsection{User Interface Navigation Flow}
 Presented is the over all UI navigation flow for Smart Waiter. Provided below are descriptions and use cases of each component. 
