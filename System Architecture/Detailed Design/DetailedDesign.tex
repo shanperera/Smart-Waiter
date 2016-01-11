@@ -59,6 +59,35 @@ This document uses Volere Template for its organization.
 
 \section{Implementation Components}
 
+\subsection{Camera Function}
+In this section we will detail the function that relates to the camera aspect of Smart-Waiter. There is one main function necessary for QR code scanning: onActivityResult. onActivityResult is called as soon as a QR code is captured by the camera. The function is passed three variables, a requestCode (int), a resultCode (int), an intent (Intent). Using these three variables, the function calls the ZXing function parseActivityResult using the three aforementioned variables as parameters. The parseActivityResult returns the contents of the QR code. 
+ 
+
+function onActivityResult (requestCode, resultCode, intent)
+	IntentResult contents = parseActivityFunction (requestCode, resultCode, intent)
+	if(contents is not null)
+		String QRContents = contents.getContents()
+		Call populate menu functions using QRContents as a parameter
+		
+\subsection{Account Function}
+In this section we will detail the key function that relates to account transactions and credit card charges. There is one key method related to credit card transactions: chargeParams, it involves using the Stripe class. As described in the System Architecture, given an instance of the Card class, and using Smart-Waiter's Stripe API key, a token is created and sent to the Stripe servers. The Stripe servers return a token that can be used to charge the user's credit card. The token is then used as a parameter of chargeParams, along with the information related to the credit card charge, like amount and the type of currency. 
+
+Stripe = new Stripe (Smart-Waiter's Stripe API key)
+createToken(card, tokenCallback())
+
+token = request the Stripe token from Stripe server
+
+try{
+	chargeParams(amount, integer amount in cents)
+	chargeParams(currency, string value of type of currency)
+	chargeParams(source, token)
+	chargeParams(description, string value of description regarding charges to card)
+
+	charge = Charge.create(chargeParams)
+}
+catch (Exception e){
+	Error handling
+}
 \subsection{Ordering Functions}
 Below are function descriptions that are necessary for ordering in Smart-Waiter. As explained in System Architecture, there are three primary classes used to hold all vital information regarding menu information. These are: MenuCategories, MenuItems and User. These three classes are used to provide a user with a full menu of a particular restaurant and allow them to place an order.
 
