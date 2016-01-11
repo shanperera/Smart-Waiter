@@ -124,7 +124,27 @@ Only one object is instantiated through the life time of this application. This 
 
 \subsection{Accounts Structure}
 
+\subsection{Camera Structure}
+There are two main function related to the Camera structure: onActivityResult, parseActivityResult. The camera is used to read QR codes, which contain the location of where the menu data is stored in relation to the current restaurant. The QR codes are read using an embedded version of the ZXing library. When the application starts, a ZXing specific variable (IntentIntegrator) is initialized, when the user clicks the "Scan QR Code" button on the first screen, the Camera is initialized. 
 
+\subsubsection{Design Principles}
+This component follows the Single Responsibility and the Information Hiding principle.  
+
+\begin{description}
+	\item[Single Responsibility:] The responsiblity of this component is to capture and parse QR code data. If this component had to be changed, it would only affect the camera functionality of the application, and not other components like the menu or accounts.
+	\item[Information Hiding:] The camera component is separate from every other component of this application. If any changes were to be made to the camera application, it will not affect the other components of the application. However, it is unlikely that there will be any changes applied to this component of the application.
+\end{description}
+
+\subsubsection{onActivityResult}
+This function uses an integrated version of the ZXing library to scan QR codes. After the camera is initialized, the application waits for the user to pass a QR code, this is done by taking a picture of the QR code with the camera. The function onActivityResult is called as soon as a QR code is passed. It takes, as input a requestCode, resultCode, and the current intent: 
+
+\begin{description}
+  \item[requestCode:] Used to parse the QR code 
+  \item[resultCode:] Used to parse the QR code 
+  \item[intent:] Gives the current intent, used to parse the QR code
+\end{description}
+
+Using the given input, the function parses and gets the contents of the QR code that was passed to the function using the ZXing function parseActivityResult. The information stored in the QR code is then saved to a local variable to be used by the other components of the application.
 
 \subsection{Transactions Structure}
 
