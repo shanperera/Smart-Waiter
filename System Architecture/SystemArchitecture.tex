@@ -220,6 +220,24 @@ As the figure above illustrates, the sync gateway sits in the middle of the couc
 \subsubsection{Couchbase Server Cluster}
 Couchbase server is the component, which sits in the private cloud along with the sync gateway. As previously described the sync gateway only acts as the manager and administers the traffic between mobile devices and the Couchbase server. The Couchbase server itself is responsible for all data storage in the cloud. The server also uses same JSON data format as Couchbase Lite. For the purpose and scale of the SmartWaiter project, only one server node will be used to hold all data. More importantly, the server will run on a local machine for demonstration purposes. 
 
+\subsubsection{Couchbase Server Cluster}
+In regards to information hiding, this class is implemented to hide details on how to interact with the local database. Specifically, any functions, which need to interact with the database, will utilize this class throughout the application. The CouchbaseLite class implements all functions that are required to interact with Couchbase Lite database on the device. 
+
+\begin{description}
+	\item[Secrets:]The algorithms used to interact with couchbase Lite API and logic to utilize Couchbase Lite database.
+	\item[Services:] Specifically, the class implements create, retrieve, update and destroy functions for Couchbase lite database.
+\end{description}
+
+\subsubsection{Error Handling Module}
+
+In regards to information hiding, this class is implemented to hide details on how to handle errors. This class is designed for change, because error handling will change based on end user feedback
+
+\begin{description}
+	\item[Secrets:]How an error should be handled.
+	\item[Services:] Specifically, the class implements error handling for each type of exception, which could be thrown throughout the application and the appropriate reaction.
+\end{description}
+
+In regards to, single responsibility principal, there should be one central module, which deals with handling all errors. Handling each error individually inside functions could lead to inconsistency and make code maintainability harder. 
 
 \section{Traceability Matrix}
 Below describes how our decomposed modules relate to requirements specified in SRS

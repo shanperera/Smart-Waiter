@@ -162,6 +162,17 @@ The Sync Gateway requires some basic configuration to correctly synchronize mobi
 
 \includegraphics[width=150mm,scale=0.5]{jsonCouchbase.png}
 
+\subsection{Error Handling}
+
+As per the pseudo code, functions throw appropriate exception when an error occurs. There will actually be an error-handling module called in the catch statement, which will handle all of the error in the program.  The design will be a simple mapping between error code and how the error will be handled. In some cases for instance, when scanning an invalid barcode, the error is handled by propagating the error to the UI. Similarly, error which result in unexpected behavior will be propagated up to the UI. However, other errors such as replication fail due to network connectivity could be ignored and logged in the application log dump for debugging. They will not be propagated up to the UI. This module will most likely be changed according to feedback from end users.
+
+\includegraphics[width=150mm,scale=0.5]{error.png}
+
+\subsection{Communication Protocol}
+There is only one communication protocol used within server-client inside of our application. This is used to pull information from the couchbase server. However, the application simply calls Couchbase Lite API to pull data from the server. The details are implemented by couchbase Lite class itself.  An example of HTTP get is given below to pull data from server using a Mac terminal. 
+
+curl -X GET 192.168.2.12:4984/couchbaseevents/1
+
 \section{Database Structure}
 
 \subsection{Implementation detail}
