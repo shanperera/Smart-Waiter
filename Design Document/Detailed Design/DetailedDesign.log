@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 JAN 2016 12:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 JAN 2016 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -207,59 +207,74 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout5 = `DetailedDesign.lot'.
 
 
-[2] [3]
-Overfull \hbox (9.84863pt too wide) in paragraph at lines 71--76
-\OT1/cmr/m/n/12 con-tents = parseAc-tiv-i-ty-Func-tion (re-quest-Code, re-sult-
-Code, in-tent) if(contents
+[2] [3] <Images/camera.png, id=18, 653.44125pt x 130.4875pt>
+File: Images/camera.png Graphic file (type png)
+
+<use Images/camera.png>
+Package pdftex.def Info: Images/camera.png used on input line 67.
+(pdftex.def)             Requested size: 326.71982pt x 65.24358pt.
+
+Overfull \hbox (54.41553pt too wide) in paragraph at lines 67--68
+[][] 
  []
 
+<Images/stripe.png, id=19, 626.34pt x 298.11375pt>
+File: Images/stripe.png Graphic file (type png)
+ <use Images/stripe.png>
+Package pdftex.def Info: Images/stripe.png used on input line 72.
+(pdftex.def)             Requested size: 313.16922pt x 149.0565pt.
 
-Overfull \hbox (13.2125pt too wide) in paragraph at lines 85--90
-[]\OT1/cmr/m/n/12 try chargeParams(amount, in-te-ger amount in cents) chargePar
-ams(currency,
+Overfull \hbox (54.43352pt too wide) in paragraph at lines 72--73
+[][] 
  []
 
+[4 <./Images/camera.png>]
+<Images/parser.png, id=23, 392.46625pt x 233.87375pt>
+File: Images/parser.png Graphic file (type png)
+ <use Images/parser.png>
+Package pdftex.def Info: Images/parser.png used on input line 80.
+(pdftex.def)             Requested size: 196.23264pt x 116.93657pt.
 
-Overfull \hbox (56.42593pt too wide) in paragraph at lines 85--90
-\OT1/cmr/m/n/12 string value of type of cur-rency) chargeParams(source, to-ken)
- chargeParams(description,
+Overfull \hbox (54.44337pt too wide) in paragraph at lines 80--81
+[][] 
  []
 
-[4] [5]
+[5 <./Images/stripe.png>] [6 <./Images/parser.png>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- <Images/createDatabase.png, id=24, 537.00626pt x 125.46875pt>
+
+<Images/createDatabase.png, id=31, 537.00626pt x 125.46875pt>
 File: Images/createDatabase.png Graphic file (type png)
 
 <use Images/createDatabase.png>
-Package pdftex.def Info: Images/createDatabase.png used on input line 147.
+Package pdftex.def Info: Images/createDatabase.png used on input line 111.
 (pdftex.def)             Requested size: 268.50247pt x 62.7342pt.
 
-Overfull \hbox (54.41985pt too wide) in paragraph at lines 147--148
+Overfull \hbox (54.41985pt too wide) in paragraph at lines 111--112
 [][] 
  []
 
-[6 <./Images/createDatabase.png>]
-<Images/accessdatabase.png, id=29, 433.62pt x 86.3225pt>
+<Images/accessdatabase.png, id=32, 433.62pt x 86.3225pt>
 File: Images/accessdatabase.png Graphic file (type png)
 
 <use Images/accessdatabase.png>
-Package pdftex.def Info: Images/accessdatabase.png used on input line 152.
+Package pdftex.def Info: Images/accessdatabase.png used on input line 116.
 (pdftex.def)             Requested size: 216.80946pt x 43.16113pt.
 
-Overfull \hbox (54.46844pt too wide) in paragraph at lines 152--153
+Overfull \hbox (54.46844pt too wide) in paragraph at lines 116--117
 [][] 
  []
 
-<Images/replications.png, id=30, 588.1975pt x 344.28625pt>
+[7 <./Images/createDatabase.png> <./Images/accessdatabase.png>]
+<Images/replications.png, id=36, 588.1975pt x 344.28625pt>
 File: Images/replications.png Graphic file (type png)
 
 <use Images/replications.png>
-Package pdftex.def Info: Images/replications.png used on input line 157.
+Package pdftex.def Info: Images/replications.png used on input line 121.
 (pdftex.def)             Requested size: 294.09802pt x 172.1427pt.
 
-Overfull \hbox (54.42056pt too wide) in paragraph at lines 157--158
+Overfull \hbox (54.42056pt too wide) in paragraph at lines 121--122
 [][] 
  []
 
@@ -272,135 +287,137 @@ Missing character: There is no ù in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-[7 <./Images/accessdatabase.png> <./Images/replications.png>]
-<Images/jsonCouchbase.png, id=34, 582.175pt x 344.28625pt>
+<Images/jsonCouchbase.png, id=37, 582.175pt x 344.28625pt>
 File: Images/jsonCouchbase.png Graphic file (type png)
 
 <use Images/jsonCouchbase.png>
-Package pdftex.def Info: Images/jsonCouchbase.png used on input line 163.
+Package pdftex.def Info: Images/jsonCouchbase.png used on input line 127.
 (pdftex.def)             Requested size: 291.08679pt x 172.1427pt.
 
-Overfull \hbox (54.44788pt too wide) in paragraph at lines 163--164
+Overfull \hbox (54.44788pt too wide) in paragraph at lines 127--128
 [][] 
  []
 
-[8 <./Images/jsonCouchbase.png>]
-<Images/error.png, id=38, 580.1675pt x 173.64874pt>
+[8 <./Images/replications.png>]
+<Images/error.png, id=41, 580.1675pt x 173.64874pt>
 File: Images/error.png Graphic file (type png)
  <use Images/error.png>
-Package pdftex.def Info: Images/error.png used on input line 169.
+Package pdftex.def Info: Images/error.png used on input line 133.
 (pdftex.def)             Requested size: 290.08302pt x 86.82416pt.
 
-Overfull \hbox (54.44557pt too wide) in paragraph at lines 169--170
+Overfull \hbox (54.44557pt too wide) in paragraph at lines 133--134
 [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 181.
+[9 <./Images/jsonCouchbase.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 145.
+
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
- [9 <./Images/error.png>] <Images/JSONdata.png, id=43, 381.425pt x 517.935pt>
-File: Images/JSONdata.png Graphic file (type png)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
 
-<use Images/JSONdata.png>
-Package pdftex.def Info: Images/JSONdata.png used on input line 190.
+<Images/JSONdata.png, id=45, 381.425pt x 517.935pt>
+File: Images/JSONdata.png Graphic file (type png)
+ <use Images/JSONdata.png>
+Package pdftex.def Info: Images/JSONdata.png used on input line 154.
 (pdftex.def)             Requested size: 190.71202pt x 258.96686pt.
 
-Overfull \hbox (54.46867pt too wide) in paragraph at lines 190--191
+[10 <./Images/error.png>]
+Overfull \hbox (54.46867pt too wide) in paragraph at lines 154--155
 [][] 
  []
 
-[10]
+[11]
 Overfull \vbox (31.10904pt too high) has occurred while \output is active []
 
 
-[11 <./Images/JSONdata.png>]
-<Images/MenuCategories.png, id=50, 338.26375pt x 556.0775pt>
+[12 <./Images/JSONdata.png>]
+<Images/MenuCategories.png, id=57, 338.26375pt x 556.0775pt>
 File: Images/MenuCategories.png Graphic file (type png)
 
 <use Images/MenuCategories.png>
-Package pdftex.def Info: Images/MenuCategories.png used on input line 198.
+Package pdftex.def Info: Images/MenuCategories.png used on input line 162.
 (pdftex.def)             Requested size: 169.13145pt x 278.03807pt.
 
-<Images/CategoryItems.png, id=52, 283.0575pt x 501.875pt>
+<Images/CategoryItems.png, id=59, 283.0575pt x 501.875pt>
 File: Images/CategoryItems.png Graphic file (type png)
 
 <use Images/CategoryItems.png>
-Package pdftex.def Info: Images/CategoryItems.png used on input line 201.
+Package pdftex.def Info: Images/CategoryItems.png used on input line 165.
 (pdftex.def)             Requested size: 141.5284pt x 250.93687pt.
- [12 <./Images/MenuCategories.png>]
-<Images/OrderSummary.png, id=58, 456.70625pt x 798.985pt>
+ [13 <./Images/MenuCategories.png>]
+<Images/OrderSummary.png, id=64, 456.70625pt x 798.985pt>
 File: Images/OrderSummary.png Graphic file (type png)
 
 <use Images/OrderSummary.png>
-Package pdftex.def Info: Images/OrderSummary.png used on input line 204.
+Package pdftex.def Info: Images/OrderSummary.png used on input line 168.
 (pdftex.def)             Requested size: 228.35255pt x 399.49152pt.
- [13 <./Images/CategoryItems.png>]
-<Images/UIProcess.png, id=63, 774.895pt x 370.38374pt>
+ [14 <./Images/CategoryItems.png>]
+<Images/UIProcess.png, id=69, 774.895pt x 370.38374pt>
 File: Images/UIProcess.png Graphic file (type png)
 
 <use Images/UIProcess.png>
-Package pdftex.def Info: Images/UIProcess.png used on input line 208.
+Package pdftex.def Info: Images/UIProcess.png used on input line 172.
 (pdftex.def)             Requested size: 387.44655pt x 185.1914pt.
 
-Overfull \hbox (122.15944pt too wide) in paragraph at lines 208--209
+Overfull \hbox (122.15944pt too wide) in paragraph at lines 172--173
 [] 
  []
 
-[14 <./Images/OrderSummary.png>]
-Overfull \hbox (73.54208pt too wide) in paragraph at lines 214--225
+[15 <./Images/OrderSummary.png>]
+Overfull \hbox (73.54208pt too wide) in paragraph at lines 178--189
  [] 
  []
 
 
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 230--237
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 194--201
  [] 
  []
 
-[15 <./Images/UIProcess.png>]
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 241--248
- [] 
- []
-
-
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 252--259
+[16 <./Images/UIProcess.png>]
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 205--212
  [] 
  []
 
 
-Overfull \hbox (67.66714pt too wide) in paragraph at lines 264--273
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 216--223
  [] 
  []
 
 
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 277--285
+Overfull \hbox (67.66714pt too wide) in paragraph at lines 228--237
  [] 
  []
 
-[16]
-Underfull \hbox (badness 6893) in paragraph at lines 294--294
+
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 241--249
+ [] 
+ []
+
+[17]
+Underfull \hbox (badness 6893) in paragraph at lines 258--258
 []\OT1/cmr/m/n/12 Toaster dis-played read-ing "in-valid
  []
 
 
-Underfull \hbox (badness 4013) in paragraph at lines 295--296
+Underfull \hbox (badness 4013) in paragraph at lines 259--260
 []\OT1/cmr/m/n/12 Application tran-si-tions to pre-vi-ous
  []
 
 
-Overfull \hbox (67.2141pt too wide) in paragraph at lines 290--298
+Overfull \hbox (67.2141pt too wide) in paragraph at lines 254--262
  [] 
  []
 
-[17] (./DetailedDesign.aux) ) 
+[18] (./DetailedDesign.aux) ) 
 Here is how much of TeX's memory you used:
- 3130 strings out of 493315
- 48109 string characters out of 6137904
+ 3145 strings out of 493315
+ 48400 string characters out of 6137904
  107978 words of memory out of 5000000
- 6553 multiletter control sequences out of 15000+600000
+ 6565 multiletter control sequences out of 15000+600000
  8808 words of font info for 31 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,8n,38p,796b,191s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -409,10 +426,10 @@ blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb>
-Output written on DetailedDesign.pdf (18 pages, 710319 bytes).
+Output written on DetailedDesign.pdf (19 pages, 818027 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -40,19 +40,16 @@
 \section{Introduction}
 
 \subsection{Purpose}
-The purpose of Smart-Waiter aims to provide a solution that will allow users to order and pay through a mobile application at restaurants. 
+The purpose of Smart-Waiter aims to provide a solution that will allow users to order and pay through a mobile application at restaurants.
 
 \subsection{Description}
 This opportunity arose from the lack of a universal application in the market that allows users to walk into a restaurant, scan a code to view the menu, and proceed to order and pay through the use of a singular application. Android users will be able to walk into any restaurant that offers our solution, and have the ability to use these services.
 
 \subsection{Scope}
 The scope of Smart-Waiter will be limited to providing the user with the following features: viewing the restaurant's menu, creating the user's order, placing the order and paying for their order. 
- 
+
 \section{Overview}
 
-\subsection{Design Principals}
-\subsubsection{Information Hiding}
-Information hiding is the principle of segregation of design components that are likely to undergo changes as the lifecycle of the application progresses. This way, other key parts of the application will remain unhindered by any possible changes.
 
 \section{Development Details}
 \subsection{Language of Implementation}
@@ -67,53 +64,20 @@ Stripe (Credit Card)
 \subsection{Camera Function}
 In this section we will detail the function that relates to the camera aspect of Smart-Waiter. There is one main function necessary for QR code scanning: onActivityResult. onActivityResult is called as soon as a QR code is captured by the camera. The function is passed three variables, a requestCode (int), a resultCode (int), an intent (Intent). Using these three variables, the function calls the ZXing function parseActivityResult using the three aforementioned variables as parameters. The parseActivityResult returns the contents of the QR code. 
  
+\includegraphics[width=150mm,scale=0.5]{camera.png}
 
-function onActivityResult (requestCode, resultCode, intent)
-	IntentResult contents = parseActivityFunction (requestCode, resultCode, intent)
-	if(contents is not null)
-		String QRContents = contents.getContents()
-		Call populate menu functions using QRContents as a parameter
-		
 \subsection{Account Function}
 In this section we will detail the key function that relates to account transactions and credit card charges. There is one key method related to credit card transactions: chargeParams, it involves using the Stripe class. As described in the System Architecture, given an instance of the Card class, and using Smart-Waiter's Stripe API key, a token is created and sent to the Stripe servers. The Stripe servers return a token that can be used to charge the user's credit card. The token is then used as a parameter of chargeParams, along with the information related to the credit card charge, like amount and the type of currency. 
 
-Stripe = new Stripe (Smart-Waiter's Stripe API key)
-createToken(card, tokenCallback())
+\includegraphics[width=150mm,scale=0.5]{stripe.png}
 
-token = request the Stripe token from Stripe server
-
-try{
-	chargeParams(amount, integer amount in cents)
-	chargeParams(currency, string value of type of currency)
-	chargeParams(source, token)
-	chargeParams(description, string value of description regarding charges to card)
-
-	charge = Charge.create(chargeParams)
-}
-catch (Exception e){
-	Error handling
-}
 \subsection{Ordering Functions}
 Below are function descriptions that are necessary for ordering in Smart-Waiter. As explained in System Architecture, there are three primary classes used to hold all vital information regarding menu information. These are: MenuCategories, MenuItems and User. These three classes are used to provide a user with a full menu of a particular restaurant and allow them to place an order.
 
 \subsubsection{Parsing Function}
 A parsing function was created to parse through received JSON response to save information in appropriate classes. Stated below is sudo code for this JSON parser. This function will parse through a JSON request. View if the key equals "categoryname". If so, save the value within MenuCategories class under . Also, if the key equals "categorypic" save the value within MenuCategories  class under pi
 
-	function parse throws exception corrupt		
-		define categoryArrayList 
-		Save JSON response as list of hash map array
-        for (each element in hash map list) {
-            while (each  array element with list) {
-                if(key equals categoryname){
-                    Create MenuCategories object, save category name
-                }
-                if(key equals "categorypic"){
-                    use MenuCategories object, save category name
-                }
-            }
-            add created MenuCategories object to categoryArrayList
-        }
-
+\includegraphics[width=150mm,scale=0.5]{parser.png}
 
 
 \subsubsection{MenuCategories functions}
