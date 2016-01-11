@@ -19,6 +19,12 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage[round]{natbib}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
 \graphicspath{ {Images/} }
 
 \begin{document}
@@ -34,21 +40,6 @@
 
 \listoftables
 
-\begin{table}[H]
-\section*{Revision History}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Date}  & \textbf{Comments} \\ \hline
-October 9, 2015 &  first draft. \\ 
-\hline
-\end{tabular}
-\caption{Revision History Table}
-\end{table}
-
-\section*{Template}
-This document uses Volere Template for its organization.
-\pagebreak
-
 \section{Introduction}
 
 \subsection{Purpose}
@@ -59,36 +50,38 @@ This document uses Volere Template for its organization.
 
 \section{Overview}
 
-\section{System Architecture}
+\subsection{Design Principals}
+\subsubsection{Information Hiding}
 
-\subsection{Overall Operation}
-Below is a high level overview of Smart Waiter operation. The operation is decomposed into three components which is introduced in this section and will be thoroughly explained in the following sections. 
+\subsubsection{Single Responsibility Principal}
+This principal states every class should have responsibility of a single action within the software architecture. This action shall be encompassed in a class. Doing so will keep each process action separate allowing better organization. 
+
+\subsection{Document Structure}
+This document structure is based on the general software design document template. This document provides a general overview of purpose, description and scope of Smart Waiter. It then provides a detailed review of system architecture and data design in decomposed components. Lastly, the document provides project schedule. 
+
+\subsection{Revision History}
+
+\begin{table}[H]
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Date}  & \textbf{Comments} \\ \hline
+January 11, 2016 &  first draft. \\ 
+\hline
+\end{tabular}
+\caption{Revision History Table}
+\end{table}
+
+\section{Control Flow Diagram}
+Below is a high level overview of Smart Waiter operation. The operation is decomposed into components which is introduced in this section and will be thoroughly explained in the following sections. 
 
 
 \includegraphics[width=150mm,scale=0.5]{OverallOperation.png}
 
+\section{Module Decomposition}
 
-\subsection{Order}
-This component encompasses all operations needed to allow a user to place an order. This includes, user sign in and all operations till placing the order (top segment of operation diagram). The following components are described in detail in section 4 of this document: 
 
- \begin{enumerate}
-  \item Menu Class Structure
-  \item Barcode Scanning 
-  \item Accounts
-  \item Transactions
-\end{enumerate}
-
-\subsection{Database}
-
-\subsection{Processing Order}
-
-\section{Orders}
-
-\subsection{Overview}
-Below are key details of ordering component for Smart Waiter application. Detailed architecture review is provided.
-
-\subsection{Menu Class Structure}
-There are three primary classes used to hold all vital information regarding menu information. These are: MenuCategories, MenuItems and User. Each class purpose and its correlation with each other is explained below.
+\subsection{Ordering Class Structure}
+There are three primary classes used to hold all vital information regarding menu information. These are: MenuCategories, MenuItems and User. In correspondence with single responsibility principal, each class is encompasses a single purpose. This purpose and how classes correlate with each other is described below. 
 
 \subsubsection{MenuCategories Class}
 This class purpose is to store menu category information of a restaurant menu. This entails category name, picture and a reference to category items. To do so, there are three main variables used within this class to hold this information: 
@@ -120,7 +113,7 @@ User class is used to store menu item a user would like to order. For now, there
   \item[userItem:] an array that stores objects of MenuItems class. This is used to save menu items a user would like to order.
 \end{description}
 
-Only one object is instantiated through the life time of this application. This object represents the user cart of menu items he/she would like to order. This object is called upon when a user decides to add an item to their cart. When this occurs, a copy of the MenuItem object is saved within the userItem variables. This way, there is a list maintained to hold all item a user would like to order. When a user confirms and sends their order, the item information is extracted from userItem list, formatted into a JSON request and send back to the database for further processing. Having this class implemented allows extendibility in the future, as all vital information pertaining to a user can be stored within the class (for example, user settings).  
+Only one object is instantiated through the life time of this application. This object represents the user cart of menu items he/she would like to order. This object is called upon when a user decides to add an item to their cart. When this occurs, a copy of the MenuItem object is saved within the userItem variables. This way, there is a list maintained to hold all item a user would like to order. When a user confirms and sends their order, the item information is extracted from userItem list, formatted into a JSON request and send back to the database for further processing. Having this class implemented allows extendibility in the future, as all vital information pertaining to a user can be stored within the class (for example, user settings). 
 
 
 \subsection{Camera Structure}
@@ -153,124 +146,53 @@ Module: onActivityResult
 \end{description}
 
 \subsection{Accounts Structure}
-There are 3 main classes related to the Accounts structure: User, Card, and Stripe. Accounts are used to associate a user identifier to a user, so that data can be used for transactions and for storing a user's credit card information securely. Credit card information transfer and storage uses Stripe API. This reduces the burden on the developers, since we can use an established API that follows the restrictions applied by credit card companies, and handles the secure transfer of sensitive information, rather than developing an efficient and secure system ourselves.
+There are 3 main classes related to the Accounts structure: User, Card, and Stripe. Accounts are used to associate a user identifier for transactions and for storing a user's credit card information securely. Credit card information transfer and storage uses Stripe API. This reduces the burden on the developers, since we can use an established API that follows the restrictions applied by credit card companies, and handles the secure transfer of sensitive information, rather than developing an efficient and secure system ourselves.
 
 \subsubsection{Design Principles}
 This component follows the Single Responsibility and the Information Hiding principle.  
 
 \begin{description}
-	\item[Single Responsibility:] The responsibility of this component is to securely store a user's credit card information and to associate this information with a user identifier for use in transactions. If this component had to be changed, it would only affect the transactions class functionality of the application, and not other components like the menu or camera.
+	\item[Single Responsibility:] The responsibility of this component is to securely store a user's credit card information for use in transactions. If this component had to be changed, it would only affect the camera functionality of the application, and not other components like the menu or accounts.
+	\item[Information Hiding:] The camera component is separate from every other component of this application. If any changes were to be made to the camera application, it will not affect the other components of the application. However, it is unlikely that there will be any changes applied to this component of the application.
 \end{description}
  
-\subsection{Transactions Structure}
+\section{Traceability Matrix}
+Below describes how our decomposed modules relate to requirements specified in SRS
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Req.} & \textbf{Modules}\\
+\midrule
+R1 & Camera Structure\\
+R2 & Accounts Structure\\
+R3 & Accounts Structure\\
+R6 & Ordering Class Structure\\
+R7 & Ordering Class Structure\\
+R9 & Ordering Class Structure\\
+R13 & Accounts Structure \\
+R14 & Accounts Structure\\
+R15 & Ordering Class Structure\\
+R16 & Ordering Class Structure\\
+R18 & Ordering Class Structure\\
+R19 & Ordering Class Structure\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Requirements and Modules}
+\label{TblRT}
+\end{table}
 
-\section{User Interface Design}
-
-\subsection{User Interface Design Overview}
-
-\subsubsection{Menu Categories}
-\includegraphics[width=80mm,scale=0.5]{MenuCategories.png}
-
-\subsubsection{Menu Items}
-\includegraphics[width=80mm,scale=0.5]{CategoryItems.png}
-
-\subsubsection{Confirm Order}
-\includegraphics[width=80mm,scale=0.5]{OrderSummary.png}
-
-\subsection{User Interface Navigation Flow}
-
-\includegraphics[width=180mm,scale=0.5]{UIProcess.png}
-
-\subsection{Use Cases}
-
-\subsubsection{Sign In Page}
-\begin{center}
-    \begin{tabular}{ | l | p{8cm} |}
-    \hline
-    User Input & System Response \\ \hline
-    Enters correct user name and password & Application transitions to Barcode Scan page \\ \hline
-    Enters incorrect user name and password & Toaster displayed reading "incorrect login, please try again" \\ \hline
-    Enters incorrect user name & Toaster displayed reading "incorrect login, please try again" \\ \hline
-    Enters incorrect password & Toaster displayed reading "incorrect login, please try again" \\ \hline
-    Clicks "Skip Sign in" & Application  transitions to Barcode Scan page\\ \hline
-    Clicks Back Button on phone & Application Quits \\
-    \hline
-    \end{tabular}
-\end{center}
-
-
-\subsubsection{Barcode Scan Page}
-\begin{center}
-    \begin{tabular}{ | l | p{10cm} |}
-    \hline
-    User Input & System Response \\ \hline
-    Clicks Scan Barcode & Application transitions to camera so user can scan code. If successful, application will transition to menu page. Otherwise will return to scanning page and display a toaster reading, "please try again" \\ \hline
-    Clicks back button on phone & Application transitions to Sign in Page \\
-    \hline
-    \end{tabular}
-\end{center}
-
-\subsubsection{Menu Categories Page}
-\begin{center}
-    \begin{tabular}{ | l | p{10cm} |}
-    \hline
-    User Input & System Response \\ \hline
-    Clicks category & Application transitions Category Items \\ \hline
-    Clicks back button on phone & Application transitions to Barcode Scan \\
-    \hline
-    \end{tabular}
-\end{center}
-
-\subsubsection{Category Items Page}
-\begin{center}
-    \begin{tabular}{ | l | p{10cm} |}
-    \hline
-    User Input & System Response \\ \hline
-    Clicks Item & Application transitions to Customize Item \\ \hline
-    Clicks back button on phone & Application transitions to Menu Categories \\
-    \hline
-    \end{tabular}
-\end{center}
-
-
-\subsubsection{Customize Item Page}
-\begin{center}
-    \begin{tabular}{ | l | p{8cm} |}
-    \hline
-    User Input & System Response \\ \hline
-    Ticks check boxes & None \\ \hline
-    Enters special instructions in input field & None \\ \hline
-    Clicks "Add to Cart" & Transitions to cart page and populate list with item \\ \hline
-    Clicks back button on phone & Application transitions to Menu items \\
-    \hline
-    \end{tabular}
-\end{center}
-
-\subsubsection{Cart Page}
-\begin{center}
-    \begin{tabular}{ | l | p{10cm} |}
-    \hline
-    User Input & System Response \\ \hline
- 	Clicks "Delete" &  Deletes item from list\\ \hline
-    Clicks "Submit Order" &  Transitions to payment page\\ \hline
-    Clicks back button on phone & Application transitions to previous page \\
-    \hline
-    \end{tabular}
-\end{center}
-
-\subsubsection{Payment Page}
-
-\begin{center}
-    \begin{tabular}{ | l | p{7cm} |}
-    \hline
-    User Input & System Response \\ \hline
- 	Input valid credit card and clicks "Process" & Transitions into Confirm Order page \\ \hline
-    Input invalid credit card and clicks "Process" &  Toaster displayed reading "invalid credit card"\\ \hline
-    Clicks back button on phone & Application transitions to previous Cart Page \\
-    \hline
-    \end{tabular}
-\end{center}
-
+\section{Likely Future Changes}
+\subsection{Anticipated Changes}
+\begin{description}
+  \item[Database:] Consolidation of both databases (for menu items, and orders)
+  \item[Accounts:] Switch to self made account system rather then using Facebook API as it may have compatibility issues
+ \end{description}
+ 
+\subsection{Extra Design Features}
+\begin{description}
+  \item[User Preferences:] Make more use of User class by providing the user the ability to store preferences. Eg, food allergies, past meals
+\end{description}
 
 
 \end{document}
