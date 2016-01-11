@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  10 JAN 2016 23:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  11 JAN 2016 02:28
 entering extended mode
 **SystemArchitecture.tex
 (SystemArchitecture.tex
@@ -181,27 +181,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  (SystemArchitecture.lot
 [1])
 \tf@lot=\write5
- <Images/OverallOperation.png, id=11, 815.045pt x 373.395pt>
+ [2] <Images/OverallOperation.png, id=14, 815.045pt x 373.395pt>
 File: Images/OverallOperation.png Graphic file (type png)
 
 <use Images/OverallOperation.png>
-Package pdftex.def Info: Images/OverallOperation.png used on input line 78.
+Package pdftex.def Info: Images/OverallOperation.png used on input line 83.
 (pdftex.def)             Requested size: 407.5215pt x 186.69704pt.
- [2] [3 <./Images/OverallOperation.png>]
-[4] [5] [6] [7] [8] (SystemArchitecture.aux) ) 
+ [3 <./Images/OverallOperation.png>] [4]
+[5] [6] [7] [8] (SystemArchitecture.aux) ) 
 Here is how much of TeX's memory you used:
  3149 strings out of 493673
  45185 string characters out of 3145987
- 112819 words of memory out of 3000000
+ 114819 words of memory out of 3000000
  6496 multiletter control sequences out of 15000+200000
  8808 words of font info for 31 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  36i,11n,38p,782b,268s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/LaTeX/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/LaTeX/fonts/type1/public/ams
-fonts/cm/cmr12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr17
-.pfb>
-Output written on SystemArchitecture.pdf (9 pages, 155457 bytes).
+<C:/Program Files/LaTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfont
+s/cm/cmr12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb
+>
+Output written on SystemArchitecture.pdf (9 pages, 156456 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

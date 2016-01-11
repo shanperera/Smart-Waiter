@@ -43,15 +43,20 @@
 \section{Introduction}
 
 \subsection{Purpose}
+The purpose of Smart-Waiter aims to provide a solution that will allow users to order and pay through a mobile application at restaurants.
 
 \subsection{Description}
+This opportunity arose from the lack of a universal application in the market that allows users to walk into a restaurant, scan a code to view the menu, and proceed to order and pay through the use of a singular application. Android users will be able to walk into any restaurant that offers our solution, and have the ability to use these services.
 
 \subsection{Scope}
+The scope of Smart-Waiter will be limited to providing the user with the following features: viewing the restaurant's menu, creating the user's order, placing the order and paying for their order. 
 
 \section{Overview}
 
 \subsection{Design Principals}
+
 \subsubsection{Information Hiding}
+Information hiding is the principle of segregation of design components that are likely to undergo changes as the lifecycle of the application progresses. This way, other key parts of the application will remain unhindered by any possible changes.
 
 \subsubsection{Single Responsibility Principal}
 This principal states every class should have responsibility of a single action within the software architecture. This action shall be encompassed in a class. Doing so will keep each process action separate allowing better organization. 
@@ -228,6 +233,9 @@ R19 & Ordering Class Structure\\
 \subsection{Anticipated Changes}
 \begin{description}
   \item[Database:] Consolidation of both databases (for menu items, and orders)
+  \item[Database:] Migrating the Couchbase local database to a more powerful machine
+  \item[Android:] Add support for Android 6.0
+  \item[GUI:] Create a more sophisticated and modern user interface with animations and images
   \item[Accounts:] Switch to self made account system rather then using Facebook API as it may have compatibility issues
  \end{description}
  
