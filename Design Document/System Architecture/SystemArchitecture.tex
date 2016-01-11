@@ -62,7 +62,7 @@ Information hiding is the principle of segregation of design components that are
 This principal states every class should have responsibility of a single action within the software architecture. This action shall be encompassed in a class. Doing so will keep each process action separate allowing better organization. 
 
 \subsection{Document Structure}
-This document structure is based on the general software design document template. This document provides a general overview of purpose, description and scope of Smart Waiter. It then provides a detailed review of system architecture and data design in decomposed components. Lastly, the document provides project schedule. 
+This document structure is based on the general software design document template. This document provides a general overview of purpose, description and scope of Smart Waiter. It then provides a detailed review of system architecture and data design in decomposed components. Lastly, the document provides a project schedule. 
 
 \subsection{Revision History}
 
@@ -86,10 +86,10 @@ Below is a high level overview of Smart Waiter operation. The operation is decom
 
 
 \subsection{Ordering Class Structure}
-There are three primary classes used to hold all vital information regarding menu information. These are: MenuCategories, MenuItems and User. In correspondence with single responsibility principal, each class is encompasses a single purpose. This purpose and how classes correlate with each other is described below. 
+There are three primary classes used to hold all vital information regarding the menu aspect of Smart-Waiter. These are: MenuCategories, MenuItems and User. In correspondence with single responsibility principal, each class encompasses a single purpose. This purpose and how classes correlate with each other are described below. 
 
 \subsubsection{MenuCategories Class}
-This class purpose is to store menu category information of a restaurant menu. This entails category name, picture and a reference to category items. To do so, there are three main variables used within this class to hold this information: 
+The purpose of this class is to store menu category information of a restaurant's menu. This entails category name, picture and a reference to category items. To do so, there are three main variables used within this class to hold this information: 
 
 \begin{description}
   \item[categoryName:] Stores category name in the form of String
@@ -212,7 +212,7 @@ The figure below illustrates how the components mentioned above work together. S
 As the following figure illustrates, the backend of the application is designed using Couchbase Lite, Sync Gateway and Couchbase server cluster.
 
 \subsubsection{Couchbase Lite}
-Couchbase Lite is a fully functional local database, which runs on the mobile device. This is a local storage system, which is integrated into SmartWaiter application.  Similar to the Couchbase Server, Couchbase Lite uses JSON data format, which allows for a flexible data model. Algorithms within SmartWaiter application will be responsible for mapping the JSON data to the application objects. In addition, this solution decouples application data and network connectivity. Thusly, the local data is always available if there is a network connectivity issue or the Couchbase server is down. 
+Couchbase Lite is a fully functional local database, which runs on the mobile device. This is a local storage system, which is integrated into SmartWaiter application.  Similar to the Couchbase Server, Couchbase Lite uses JSON data format, which allows for a flexible data model. Algorithms within SmartWaiter application will be responsible for mapping the JSON data to the application objects. In addition, this solution decouples application data and network connectivity. Thus, the local data is always available if there is a network connectivity issue or the Couchbase server is down. 
 
 \subsubsection{Sync Gateway}
 As the figure above illustrates, the sync gateway sits in the middle of the couchbase server and Couchbase Lite running on the users mobile device. This is a key component of the architecture. The sync gateway is responsible for synchronizing the local database with the cloud. Mobile devices only make changes to their local database, and sync gateway takes care of the rest.  The gateway will implement authorization for users, which will allow for access control. In addition, channels will be used for access control (details later). Most importantly, the gateway runs Smartwaiter business logic to regulate the synchronization and access control.
