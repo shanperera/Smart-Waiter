@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  10 JAN 2016 19:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  10 JAN 2016 21:18
 entering extended mode
 **SystemArchitecture.tex
 (SystemArchitecture.tex
@@ -158,85 +158,85 @@ Overfull \hbox (54.43542pt too wide) in paragraph at lines 68--69
 [][] 
  []
 
-[3 <./Images/OverallOperation.png>] [4] [5] [6]
-<Images/MenuCategories.png, id=28, 338.26375pt x 556.0775pt>
+[3 <./Images/OverallOperation.png>] [4] [5] [6] [7]
+<Images/MenuCategories.png, id=31, 338.26375pt x 556.0775pt>
 File: Images/MenuCategories.png Graphic file (type png)
 
 <use Images/MenuCategories.png>
-Package pdftex.def Info: Images/MenuCategories.png used on input line 156.
+Package pdftex.def Info: Images/MenuCategories.png used on input line 173.
 (pdftex.def)             Requested size: 169.13145pt x 278.03807pt.
- [7]
-<Images/CategoryItems.png, id=33, 283.0575pt x 501.875pt>
+ [8]
+<Images/CategoryItems.png, id=36, 283.0575pt x 501.875pt>
 File: Images/CategoryItems.png Graphic file (type png)
 
 <use Images/CategoryItems.png>
-Package pdftex.def Info: Images/CategoryItems.png used on input line 159.
+Package pdftex.def Info: Images/CategoryItems.png used on input line 176.
 (pdftex.def)             Requested size: 141.5284pt x 250.93687pt.
- [8 <./Images/MenuCategories.png>]
-<Images/OrderSummary.png, id=38, 456.70625pt x 798.985pt>
+ [9 <./Images/MenuCategories.png>]
+<Images/OrderSummary.png, id=41, 456.70625pt x 798.985pt>
 File: Images/OrderSummary.png Graphic file (type png)
 
 <use Images/OrderSummary.png>
-Package pdftex.def Info: Images/OrderSummary.png used on input line 162.
+Package pdftex.def Info: Images/OrderSummary.png used on input line 179.
 (pdftex.def)             Requested size: 228.35255pt x 399.49152pt.
- [9 <./Images/CategoryItems.png>]
-<Images/UIProcess.png, id=43, 774.895pt x 370.38374pt>
+ [10 <./Images/CategoryItems.png>]
+<Images/UIProcess.png, id=46, 774.895pt x 370.38374pt>
 File: Images/UIProcess.png Graphic file (type png)
 
 <use Images/UIProcess.png>
-Package pdftex.def Info: Images/UIProcess.png used on input line 166.
+Package pdftex.def Info: Images/UIProcess.png used on input line 183.
 (pdftex.def)             Requested size: 387.44655pt x 185.1914pt.
 
-Overfull \hbox (122.15944pt too wide) in paragraph at lines 166--167
+Overfull \hbox (122.15944pt too wide) in paragraph at lines 183--184
 [] 
  []
 
-[10 <./Images/OrderSummary.png>]
-Overfull \hbox (73.54208pt too wide) in paragraph at lines 172--183
+[11 <./Images/OrderSummary.png>]
+Overfull \hbox (73.54208pt too wide) in paragraph at lines 189--200
  [] 
  []
 
 
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 188--195
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 205--212
  [] 
  []
 
-[11 <./Images/UIProcess.png>]
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 199--206
- [] 
- []
-
-
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 210--217
+[12 <./Images/UIProcess.png>]
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 216--223
  [] 
  []
 
 
-Overfull \hbox (67.66714pt too wide) in paragraph at lines 222--231
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 227--234
  [] 
  []
 
 
-Overfull \hbox (66.1191pt too wide) in paragraph at lines 235--243
+Overfull \hbox (67.66714pt too wide) in paragraph at lines 239--248
  [] 
  []
 
 
-Underfull \hbox (badness 6893) in paragraph at lines 252--252
+Overfull \hbox (66.1191pt too wide) in paragraph at lines 252--260
+ [] 
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 269--269
 []\OT1/cmr/m/n/12 Toaster dis-played read-ing "in-valid
  []
 
 
-Underfull \hbox (badness 4013) in paragraph at lines 253--254
+Underfull \hbox (badness 4013) in paragraph at lines 270--271
 []\OT1/cmr/m/n/12 Application tran-si-tions to pre-vi-ous
  []
 
 
-Overfull \hbox (67.2141pt too wide) in paragraph at lines 248--256
+Overfull \hbox (67.2141pt too wide) in paragraph at lines 265--273
  [] 
  []
 
-[12] [13] (SystemArchitecture.aux) ) 
+[13] [14] (SystemArchitecture.aux) ) 
 Here is how much of TeX's memory you used:
  2747 strings out of 493673
  40436 string characters out of 3145987
@@ -248,9 +248,9 @@ Here is how much of TeX's memory you used:
 <C:/Program Files/LaTeX/fonts/type1/public/
 amsfonts/cm/cmbx12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/c
 mr12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on SystemArchitecture.pdf (14 pages, 587660 bytes).
+Output written on SystemArchitecture.pdf (15 pages, 589782 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

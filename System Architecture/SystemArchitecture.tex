@@ -122,16 +122,15 @@ User class is used to store menu item a user would like to order. For now, there
 
 Only one object is instantiated through the life time of this application. This object represents the user cart of menu items he/she would like to order. This object is called upon when a user decides to add an item to their cart. When this occurs, a copy of the MenuItem object is saved within the userItem variables. This way, there is a list maintained to hold all item a user would like to order. When a user confirms and sends their order, the item information is extracted from userItem list, formatted into a JSON request and send back to the database for further processing. Having this class implemented allows extendibility in the future, as all vital information pertaining to a user can be stored within the class (for example, user settings).  
 
-\subsection{Accounts Structure}
 
 \subsection{Camera Structure}
-There are two main function related to the Camera structure: onActivityResult, parseActivityResult. The camera is used to read QR codes, which contain the location of where the menu data is stored in relation to the current restaurant. The QR codes are read using an embedded version of the ZXing library. When the application starts, a ZXing specific variable (IntentIntegrator) is initialized, when the user clicks the "Scan QR Code" button on the first screen, the Camera is initialized. 
+There is one main function related to the Camera structure: onActivityResult. The camera is used to read QR codes, which contain the location of where the menu data is stored in relation to the current restaurant. The QR codes are read using an embedded version of the ZXing library. When the application starts, a ZXing specific variable (IntentIntegrator) is initialized, when the user clicks the "Scan QR Code" button on the first screen, the Camera is initialized. 
 
 \subsubsection{Design Principles}
 This component follows the Single Responsibility and the Information Hiding principle.  
 
 \begin{description}
-	\item[Single Responsibility:] The responsiblity of this component is to capture and parse QR code data. If this component had to be changed, it would only affect the camera functionality of the application, and not other components like the menu or accounts.
+	\item[Single Responsibility:] The responsibility of this component is to capture and parse QR code data. If this component had to be changed, it would only affect the camera functionality of the application, and not other components like the menu or accounts.
 	\item[Information Hiding:] The camera component is separate from every other component of this application. If any changes were to be made to the camera application, it will not affect the other components of the application. However, it is unlikely that there will be any changes applied to this component of the application.
 \end{description}
 
@@ -146,6 +145,24 @@ This function uses an integrated version of the ZXing library to scan QR codes. 
 
 Using the given input, the function parses and gets the contents of the QR code that was passed to the function using the ZXing function parseActivityResult. The information stored in the QR code is then saved to a local variable to be used by the other components of the application.
 
+\subsubsection{Module Decomposition}
+Module: onActivityResult
+\begin{description}
+	\item[Secret:]How the QR code is parsed and read
+	\item[Service:] Parses and gets the content of the QR code
+\end{description}
+
+\subsection{Accounts Structure}
+There are 3 main classes related to the Accounts structure: User, Card, and Stripe. Accounts are used to associate a user identifier for transactions and for storing a user's credit card information securely. Credit card information transfer and storage uses Stripe API. This reduces the burden on the developers, since we can use an established API that follows the restrictions applied by credit card companies, and handles the secure transfer of sensitive information, rather than developing an efficient and secure system ourselves.
+
+\subsubsection{Design Principles}
+This component follows the Single Responsibility and the Information Hiding principle.  
+
+\begin{description}
+	\item[Single Responsibility:] The responsibility of this component is to securely store a user's credit card information for use in transactions. If this component had to be changed, it would only affect the camera functionality of the application, and not other components like the menu or accounts.
+	\item[Information Hiding:] The camera component is separate from every other component of this application. If any changes were to be made to the camera application, it will not affect the other components of the application. However, it is unlikely that there will be any changes applied to this component of the application.
+\end{description}
+ 
 \subsection{Transactions Structure}
 
 \section{User Interface Design}
