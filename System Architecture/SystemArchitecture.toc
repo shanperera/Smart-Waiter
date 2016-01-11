@@ -24,7 +24,11 @@
 \contentsline {subsubsection}{\numberline {4.3.3}Card Class}{7}
 \contentsline {subsubsection}{\numberline {4.3.4}Stripe}{7}
 \contentsline {subsubsection}{\numberline {4.3.5}Module Decomposition}{7}
-\contentsline {section}{\numberline {5}Traceability Matrix}{8}
-\contentsline {section}{\numberline {6}Likely Future Changes}{8}
-\contentsline {subsection}{\numberline {6.1}Anticipated Changes}{8}
-\contentsline {subsection}{\numberline {6.2}Extra Design Features}{8}
+\contentsline {subsection}{\numberline {4.4}Backend Architecture}{8}
+\contentsline {subsubsection}{\numberline {4.4.1}Couchbase Lite}{8}
+\contentsline {subsubsection}{\numberline {4.4.2}Sync Gateway}{8}
+\contentsline {subsubsection}{\numberline {4.4.3}Couchbase Server Cluster}{9}
+\contentsline {section}{\numberline {5}Traceability Matrix}{9}
+\contentsline {section}{\numberline {6}Likely Future Changes}{9}
+\contentsline {subsection}{\numberline {6.1}Anticipated Changes}{9}
+\contentsline {subsection}{\numberline {6.2}Extra Design Features}{10}

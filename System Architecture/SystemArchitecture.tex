@@ -203,6 +203,24 @@ Module: chargeParams
 	\item[Service:] Charges the user's credit card based on the parameters passed.
 \end{description}
 
+\subsection{Backend Architecture}
+
+The figure below illustrates how the components mentioned above work together. Specifically, this section will provide details on how Smart waiter utilizes this architecture.
+
+\includegraphics[width=150mm,scale=0.5]{couchbase.png}
+
+As the following figure illustrates, the backend of the application is designed using Couchbase Lite, Sync Gateway and Couchbase server cluster.
+
+\subsubsection{Couchbase Lite}
+Couchbase Lite is a fully functional local database, which runs on the mobile device. This is a local storage system, which is integrated into SmartWaiter application.  Similar to the Couchbase Server, Couchbase Lite uses JSON data format, which allows for a flexible data model. Algorithms within SmartWaiter application will be responsible for mapping the JSON data to the application objects. In addition, this solution decouples application data and network connectivity. Thusly, the local data is always available if there is a network connectivity issue or the Couchbase server is down. 
+
+\subsubsection{Sync Gateway}
+As the figure above illustrates, the sync gateway sits in the middle of the couchbase server and Couchbase Lite running on the users mobile device. This is a key component of the architecture. The sync gateway is responsible for synchronizing the local database with the cloud. Mobile devices only make changes to their local database, and sync gateway takes care of the rest.  The gateway will implement authorization for users, which will allow for access control. In addition, channels will be used for access control (details later). Most importantly, the gateway runs Smartwaiter business logic to regulate the synchronization and access control.
+
+\subsubsection{Couchbase Server Cluster}
+Couchbase server is the component, which sits in the private cloud along with the sync gateway. As previously described the sync gateway only acts as the manager and administers the traffic between mobile devices and the Couchbase server. The Couchbase server itself is responsible for all data storage in the cloud. The server also uses same JSON data format as Couchbase Lite. For the purpose and scale of the SmartWaiter project, only one server node will be used to hold all data. More importantly, the server will run on a local machine for demonstration purposes. 
+
+
 \section{Traceability Matrix}
 Below describes how our decomposed modules relate to requirements specified in SRS
 \begin{table}[H]

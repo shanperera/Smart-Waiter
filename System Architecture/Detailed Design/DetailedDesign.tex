@@ -35,8 +35,6 @@
 \listoftables
 
 
-\section*{Template}
-This document uses Volere Template for its organization.
 \pagebreak
 
 \section{Introduction}
@@ -117,7 +115,68 @@ A parsing function was created to parse through received JSON response to save i
         }
 
 
-\subsubsection{}
+
+\subsubsection{MenuCategories functions}
+Primary functions are accessors and mutators
+\begin{description}
+  \item[getCategory:] Get category name
+  \item[getPic:] Get category picture
+\end{description}
+
+\subsubsection{MenuItems functions}
+Primary functions are accessors and mutators
+\begin{description}
+  \item[getItemName:] Get item name
+  \item[getItemDetail:] Get item description
+  \item[getItemPrice:] Get item price 
+\end{description}
+
+\subsubsection{Users functions}
+Primary functions are accessors and mutators
+\begin{description}
+  \item[requestCode:] Used to parse the QR code 
+  \item[resultCode:] Used to parse the QR code 
+  \item[intent:] Gives the current intent, used to parse the QR code
+\end{description}
+
+\subsection{Couchbase Functions}
+
+\subsubsection{Creating local database}
+A top-level manager object is created when the application launches, which manages collection of couchbase instances. In the case of this application, there are two database instances, one that holds menus and another to hold orders. The Manager creates a directory in the filesystem (if one does not already exist) and stores the databases inside it. The file path is determined by the application context. Thusly, if the application is ever deleted, all of the content will be deleted as well. In addition, creating the database at this point makes it readily available for functions, which might try to use it immediately following the application’s launch. 
+
+\includegraphics[width=150mm,scale=0.5]{createDatabase.png}
+
+\subsubsection{Creating local database}
+The CouchbaseLite API is used to access the documents by barcode. Furthermore, the couchbase get API is used to extract all menu details. An example of extracting a menu from the database is given below.
+
+\includegraphics[width=150mm,scale=0.5]{accessdatabase.png}
+
+\subsubsection{Replications}
+Couchbase API will be used to replicate data from the cloud. For the scope of the application a replication of the whole database is used. However, in the future when there are thousands of restaurants, a filter can be used to pull specific menus from the cloud on demand. Both a continuous pull and push sync are setup so the application can push and pull at any time the application is running. In addition, a change listener is set on each pull to confirm the status. 
+
+\includegraphics[width=150mm,scale=0.5]{replications.png}
+
+\subsubsection{Sync Gateway}
+
+The Sync Gateway requires some basic configuration to correctly synchronize mobile devices and the Couchbase server. The basic configuration is given below. Firstly, the sync gateway is pointed towards the Couchbase server node and the data bucket, which holds menus and orders. Furthermore, the Sync gateway is assigned a “sync data” bucket. This bucket is necessary because the sync gateway needs to store meta-data for accessed documents, such as revision etc. Since we want to decouple the sync-gateway from the Couchbase server and the restaurant menu’s and orders data. A new bucket is created for storing sync gateway metadata. 
+
+\includegraphics[width=150mm,scale=0.5]{jsonCouchbase.png}
+
+\section{Database Structure}
+
+\subsection{Implementation detail}
+The couchbase server uses some basic rules to store data on the cloud. Here are some of the following:
+\begin{itemize}
+  \item Data is stored as key-value pairs, where the key is the barcode and the value is the entire menu of the restaurant.
+  \item Buckets are basically equivalent of a database.
+  \item Each item in the database is referred to as a document.
+  \item The database is schema-less, thusly there is no rigid structure
+\end{itemize}
+
+\subsection{JSON data format}
+As mentioned above the database is schema less, meaning the JSON format and attributes can change from one restaurant to another. However below is an overview of the general JSON formatted restaurant menu.
+
+\includegraphics[width=150mm,scale=0.5]{JSONdata.png}
 
 
 \section{User Interface Design}
