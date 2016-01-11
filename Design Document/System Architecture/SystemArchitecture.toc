@@ -1,0 +1,36 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {subsection}{\numberline {1.1}Purpose}{2}
+\contentsline {subsection}{\numberline {1.2}Description}{2}
+\contentsline {subsection}{\numberline {1.3}Scope}{2}
+\contentsline {section}{\numberline {2}Overview}{2}
+\contentsline {subsection}{\numberline {2.1}Design Principals}{2}
+\contentsline {subsubsection}{\numberline {2.1.1}Information Hiding}{2}
+\contentsline {subsubsection}{\numberline {2.1.2}Single Responsibility Principal}{2}
+\contentsline {subsection}{\numberline {2.2}Document Structure}{3}
+\contentsline {subsection}{\numberline {2.3}Revision History}{3}
+\contentsline {section}{\numberline {3}Control Flow Diagram}{3}
+\contentsline {section}{\numberline {4}Module Decomposition}{3}
+\contentsline {subsection}{\numberline {4.1}Ordering Class Structure}{3}
+\contentsline {subsubsection}{\numberline {4.1.1}MenuCategories Class}{4}
+\contentsline {subsubsection}{\numberline {4.1.2}MenuItems Class}{4}
+\contentsline {subsubsection}{\numberline {4.1.3}User Class}{4}
+\contentsline {subsection}{\numberline {4.2}Camera Structure}{5}
+\contentsline {subsubsection}{\numberline {4.2.1}Design Principles}{5}
+\contentsline {subsubsection}{\numberline {4.2.2}onActivityResult}{5}
+\contentsline {subsubsection}{\numberline {4.2.3}Module Decomposition}{6}
+\contentsline {subsection}{\numberline {4.3}Accounts Structure}{6}
+\contentsline {subsubsection}{\numberline {4.3.1}Design Principles}{6}
+\contentsline {subsubsection}{\numberline {4.3.2}User Class}{6}
+\contentsline {subsubsection}{\numberline {4.3.3}Card Class}{7}
+\contentsline {subsubsection}{\numberline {4.3.4}Stripe}{7}
+\contentsline {subsubsection}{\numberline {4.3.5}Module Decomposition}{7}
+\contentsline {subsection}{\numberline {4.4}Backend Architecture}{8}
+\contentsline {subsubsection}{\numberline {4.4.1}Couchbase Lite}{8}
+\contentsline {subsubsection}{\numberline {4.4.2}Sync Gateway}{8}
+\contentsline {subsubsection}{\numberline {4.4.3}Couchbase Server Cluster}{9}
+\contentsline {subsubsection}{\numberline {4.4.4}Couchbase Server Cluster}{9}
+\contentsline {subsubsection}{\numberline {4.4.5}Error Handling Module}{9}
+\contentsline {section}{\numberline {5}Traceability Matrix}{9}
+\contentsline {section}{\numberline {6}Likely Future Changes}{10}
+\contentsline {subsection}{\numberline {6.1}Anticipated Changes}{10}
+\contentsline {subsection}{\numberline {6.2}Extra Design Features}{10}
