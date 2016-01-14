@@ -5,15 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class CreateAccountActivity extends AppCompatActivity {
+public class AccountCreationActivity extends AppCompatActivity {
 
-public User newUser;
+    User newUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_account);
-
+        setContentView(R.layout.activity_account_creation);
     }
 
     public void createAccount(View button){
@@ -32,12 +31,12 @@ public User newUser;
         getFields = (EditText) findViewById(R.id.addressEditText);
         String address = getFields.getText().toString();
 
-        newUser.setUsername(username);
-        newUser.setPassword(password);
-        newUser.setFirstName(firstName);
-        newUser.setLastName(lastName);
-        newUser.setBillingAddress(address);
-        newUser.setPostalCode("L8S 4L8");
-        newUser.setPhoneNumber("9055259140");
+        getFields = (EditText) findViewById(R.id.postalCodeEditText);
+        String postCode = getFields.getText().toString();
+
+        getFields = (EditText) findViewById(R.id.phoneNumberEditText);
+        String phoneNum = getFields.getText().toString();
+
+        newUser = new User(username, password, firstName, lastName, address, postCode, phoneNum);
     }
 }

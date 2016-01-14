@@ -1,7 +1,19 @@
 <resources>
     <string name="app_name">SmartWaiter</string>
 
-    <string name="hello_world">Hello world!</string>
+    <!-- Strings related to account creation -->
+    <string name="create_account_activity_create_account_title">"Create Account"</string>
+    <string name="create_account_activity_login_label">"Login"</string>
+    <string name="create_account_activity_username_label">"Username"</string>
+    <string name="create_account_activity_password_label">"Password"</string>
+    <string name="create_account_activity_personal_details_label">"Personal Details"</string>
+    <string name="create_account_activity_first_name_label">"First Name"</string>
+    <string name="create_account_activity_last_name_label">"Last Name"</string>
+    <string name="create_account_activity_address_label">"Address"</string>
+    <string name="create_account_activity_postal_code_label">"Postal Code"</string>
+    <string name="create_account_activity_phone_number_label">"Phone Number"</string>
+    <string name="create_account_activity_create_account_button_label">"Create Account"</string>
+
     <string name="action_settings">Settings</string>
     <string name="title_activity_display_categories">DisplayCategoriesActivity</string>
     <string name="title_activity_display_items">DisplayItemsActivity</string>
