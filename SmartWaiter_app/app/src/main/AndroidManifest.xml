@@ -24,6 +24,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".AccountCreationActivity"
+            android:label="@string/create_account_activity_create_account_activity_label"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.pavneetjauhal.smartwaiter.AccountCreationActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".DisplayCategoriesActivity"
             android:label="@string/title_activity_display_categories"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -36,7 +45,7 @@
         <activity
             android:name=".DisplayItemsActivity"
             android:label="@string/title_activity_display_items"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity" />
 
@@ -44,12 +53,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateAccount"
-            android:label="@string/title_activity_create_account" >
-        </activity>
-        <activity android:name=".CreateAccountActivity" >
-        </activity>
-        <activity android:name=".AccountCreationActivity" >
+            android:name=".GetPaymentInformationActivity"
+            android:label="@string/title_activity_get_payment"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -69,8 +69,10 @@ public class MainActivity extends AppCompatActivity {
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
-                integrator.initiateScan();
+                Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity");
+                startActivity(intent);
+                //IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
+                //integrator.initiateScan();
             }
         });
 
@@ -129,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
             Log.d("code", re);
             onPopulateMenu(re);
+
         }
 
     }

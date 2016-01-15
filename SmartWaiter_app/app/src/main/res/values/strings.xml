@@ -13,10 +13,54 @@
     <string name="create_account_activity_postal_code_label">"Postal Code"</string>
     <string name="create_account_activity_phone_number_label">"Phone Number"</string>
     <string name="create_account_activity_create_account_button_label">"Create Account"</string>
+    <string name="create_account_activity_create_account_activity_label">AccountCreationActivity</string>
+
+    <!-- Strings related to payment information activity -->
+    <string name="get_payment_information_activity_introduction_label">"Please enter the details of the credit card you would like to associate with this account."</string>
+    <string name="get_payment_information_activity_title_label">"Credit Card Information"</string>
+    <string name="get_payment_information_activity_card_number_label">"Card Number"</string>
+    <string name="get_payment_information_activity_name_on_card_label">"Cardholder's Name"</string>
+    <string name="get_payment_information_activity_expiration_date_label">"Expiration Date"</string>
+    <string name="get_payment_information_activity_cvc_label">"CVC"</string>
+    <string name="get_payment_information_activity_finish_label">"Finish"</string>
+    <string name="get_payment_information_activity_cancel_label">"Cancel"</string>
+
+    <string-array name="month_array">
+        <item>Month</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="year_array">
+        <item>Year</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+    </string-array>
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_display_categories">DisplayCategoriesActivity</string>
     <string name="title_activity_display_items">DisplayItemsActivity</string>
+    <string name="title_activity_get_payment">GetPaymentInformationActivity</string>
     <string name="title_activity_create_account">Create Account</string>
 
     <!-- Strings related to login -->
