@@ -1,5 +1,8 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Shan on 2016-01-12.
  *
@@ -22,6 +25,18 @@ public class User {
     private String billingAddress; // Example "125 Royal Ave"
     private String postalCode;
     private String phoneNumber; // Stored as "9055554213" no dashes for coding simplicity
+
+
+    //methods for adding menu items to cart
+    List<UserItems> userItems = new ArrayList<UserItems>();;
+    public void createUserItem(String itemName, String itemPrice) {
+        this.userItems.add(new UserItems(itemName, itemPrice));
+    }
+    public void removeUserItem(int index){
+        userItems.remove(index);
+    }
+
+    public User(){}
 
     //All credentials given
     public User(String username, String password, String firstName, String lastName, String billingAddress, String postalCode, String phoneNumber) {

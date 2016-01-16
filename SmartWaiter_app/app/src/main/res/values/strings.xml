@@ -75,4 +75,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_customize_item">CustomizeItemActivity</string>
+    <string name="title_activity_cart">CartActivity</string>
+    <string name="action_cart">Cart</string>
 </resources>

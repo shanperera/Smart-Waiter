@@ -1,9 +1,11 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import java.io.Serializable;
+
 /**
  * Created by meraj0 on 2015-11-22.
  */
-public class MenuItems {
+public class MenuItems implements Serializable {
     private String itemName;
     private String itemPrice;
     private String itemDetail;
