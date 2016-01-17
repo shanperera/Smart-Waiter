@@ -48,6 +48,8 @@ The purpose of Smart-Waiter aims to provide a solution that will allow users to 
 \subsection{Description}
 This opportunity arose from the lack of a universal application in the market that allows users to walk into a restaurant, scan a code to view the menu, and proceed to order and pay through the use of a singular application. Android users will be able to walk into any restaurant that offers our solution, and have the ability to use these services.
 
+\ds{This isn't a description.}
+
 \subsection{Scope}
 The scope of Smart-Waiter will be limited to providing the user with the following features: viewing the restaurant's menu, creating the user's order, placing the order and paying for their order. 
 
@@ -84,6 +86,7 @@ Below is a high level overview of Smart Waiter operation. The operation is decom
 
 \section{Module Decomposition}
 
+\ds{This section should be set up more like a module interface specification.}
 
 \subsection{Ordering Class Structure}
 There are three primary classes used to hold all vital information regarding the menu aspect of Smart-Waiter. These are: MenuCategories, MenuItems and User. In correspondence with single responsibility principal, each class encompasses a single purpose. This purpose and how classes correlate with each other are described below. 
@@ -144,6 +147,7 @@ This function uses an integrated version of the ZXing library to scan QR codes. 
 Using the given input, the function parses and gets the contents of the QR code that was passed to the function using the ZXing function parseActivityResult. The information stored in the QR code is then saved to a local variable to be used by the other components of the application.
 
 \subsubsection{Module Decomposition}
+
 Module: onActivityResult
 \begin{description}
 	\item[Secret:]How the QR code is parsed and read
@@ -264,6 +268,8 @@ R19 & Ordering Class Structure\\
 \caption{Trace Between Requirements and Modules}
 \label{TblRT}
 \end{table}
+
+\ds{What about Non-Functional Requirement traceability?}
 
 \section{Likely Future Changes}
 \subsection{Anticipated Changes}
