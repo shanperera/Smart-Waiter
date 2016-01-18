@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,6 +26,8 @@ public class DisplayItemsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_items);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarCategories);
+        //setSupportActionBar(toolbar);
 
         //mActionBarToolbar = (Toolbar) findViewById(R.id.toolbarItems);
         //setSupportActionBar(mActionBarToolbar);
@@ -107,6 +110,15 @@ public class DisplayItemsActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayCategoriesActivity");
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 
 }

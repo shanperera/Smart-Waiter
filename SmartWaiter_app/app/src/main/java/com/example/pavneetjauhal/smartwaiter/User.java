@@ -36,6 +36,14 @@ public class User {
         userItems.remove(index);
     }
 
+    public String getTotalPrice(){
+        double price = 0;
+        for (int x = 0; x < userItems.size(); x++){
+            price = price +  Double.parseDouble(userItems.get(x).getItemPrice());
+        }
+        return String.valueOf(price);
+    }
+
     public User(){}
 
     //All credentials given
