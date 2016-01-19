@@ -9,6 +9,8 @@ import com.couchbase.lite.Manager;
 import com.couchbase.lite.Query;
 import com.couchbase.lite.QueryEnumerator;
 import com.couchbase.lite.QueryRow;
+import com.couchbase.lite.ReplicationFilter;
+import com.couchbase.lite.SavedRevision;
 import com.couchbase.lite.android.AndroidContext;
 import com.couchbase.lite.replicator.Replication;
 
@@ -16,6 +18,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -26,12 +29,16 @@ import java.util.Set;
  * Created by pavneetjauhal on 15-11-16.
  */
 public class CouchBaseLite {
-    private static final String DB_NAME = "couchbaseevents";
-    private static final String TAG = "couchbaseevents";
-    private static final String HOST = "http://192.168.43.136";
+    private static final String DB_NAME = "restaurant_menus";
+    private static final String DB_ORDER = "couchbaseevents";
+    private static final String TAG = "SmartWaiter";
+    private static final String HOST = "http://192.168.2.18";
     private static final String PORT = "4984";
     Manager manager = null;
     Database database = null;
+    Database database2 = null;
+    ArrayList str = new ArrayList();
+    Replication push = null;
 
     /* Key definitions for document */
     private static final String NAME = "Res_Name";
@@ -40,14 +47,21 @@ public class CouchBaseLite {
     public CouchBaseLite(MainActivity mainActivity) throws IOException, CouchbaseLiteException {
         this.manager = new Manager(new AndroidContext(mainActivity), Manager.DEFAULT_OPTIONS);
         this.database = manager.getDatabase(DB_NAME);
+        this.database2 = manager.getDatabase(DB_ORDER);
         Log.d(TAG, "################ Create Couch Base Lite database ################");
     }
 
-    public Database getDatabaseInstance() throws CouchbaseLiteException {
+    public Database getMenuDatabase() throws CouchbaseLiteException {
         if ((this.database == null) & (this.manager != null)) {
             this.database = manager.getDatabase(DB_NAME);
         }
         return database;
+    }
+    public Database getOrderDatabase() throws CouchbaseLiteException {
+        if ((this.database2 == null) & (this.manager != null)) {
+            this.database2 = manager.getDatabase(DB_ORDER);
+        }
+        return database2;
     }
 
     /* This method is used to extract the restaurant menu associated with specific barcode */
@@ -196,36 +210,87 @@ public class CouchBaseLite {
         }
     }
 
-    private URL createSyncURL() throws MalformedURLException {
+    private URL createSyncURL(String host, String port, String db_name) throws MalformedURLException {
         URL syncURL = null;
-        syncURL = new URL(this.HOST + ":" + this.PORT + "/" + this.DB_NAME);
+        syncURL = new URL(host + ":" + port + "/" + db_name);
         return syncURL;
     }
 
-    public void startReplications() throws CouchbaseLiteException, MalformedURLException {
-        final Replication pull = this.getDatabaseInstance().createPullReplication(this.createSyncURL());
-        /* For now no need for push replication. Client will not be allowed to change data */
-        //Replication push = this.getDatabaseInstance().createPushReplication(this.createSyncURL(false));
-        //push.setContinuous(true);
-        //push.start();
+    public void createItem(String text) throws Exception {
 
-        /* No authentication required for the prototype. Will add back later */
-        //Authenticator authenticator = AuthenticatorFactory.createBasicAuthenticator("couchbase_user", "mobile");
+        String id = "1234";
 
-        pull.setContinuous(true);
-        pull.start();
+        Map<String, Object> properties = new HashMap<String, Object>();
+        properties.put("id", id);
+        properties.put("text", text);
+        properties.put("check", false);
+        properties.put("owner", "525");
+        properties.put("byOwner", "525");
+        Document document = this.getOrderDatabase().getDocument("1234");
+        document.putProperties(properties);
 
-        pull.addChangeListener(new Replication.ChangeListener() {
-            @Override
-            public void changed(Replication.ChangeEvent event) {
-                // will be called back when the pull replication status changes
-                if (pull.getStatus() == Replication.ReplicationStatus.REPLICATION_IDLE) {
-                    Log.d(TAG, "################ The replication is complete #####################");
-                } else {
-                    Log.d(TAG, "################ The replication Failed #####################");
-                }
-            }
-        });
+        Map<String, Object> properties2 = new HashMap<String, Object>();
+        properties2.put("id", id);
+        properties2.put("text", text);
+        properties2.put("check", false);
+        properties2.put("owner", "123");
+        properties2.put("byOwner", "123");
+        Document document2 = this.getOrderDatabase().getDocument("12345");
+        document2.putProperties(properties2);
+        Log.d(TAG, "Created new grocery item with id: %s" + this.getOrderDatabase().getDocument("12345"));
+        str.add("1234");
+        Log.d(TAG, "###### Restaurant Menu Content ######" + this.getOrderDatabase().getDocument("1234").getProperties());
+
     }
 
-}
+    public void setpushfilter() throws CouchbaseLiteException, MalformedURLException {
+        // Define a filter that matches only docs with a given "owner" property.
+        // The value to match is given as a parameter named "name":
+
+        this.getOrderDatabase().setFilter("byOwner", new ReplicationFilter() {
+            @Override
+            public boolean filter(SavedRevision revision, Map<String, Object> params) {
+                assert revision != null;
+                return revision.getProperty("owner") != null && revision.getProperty("owner").equals("525");
+            }
+        });
+        //
+        // Set up a filtered push replication using the above filter block,
+        // that will push only docs whose "owner" property equals "Waldo":
+        Replication push = this.getOrderDatabase().createPushReplication(this.createSyncURL(HOST, PORT, DB_ORDER));
+        push.setFilter("byOwner");
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("name", "525");
+        push.setFilterParams(params);
+        push.start();
+    }
+
+    public void startReplications() throws CouchbaseLiteException, MalformedURLException {
+        final Replication pull = this.getMenuDatabase().createPullReplication(this.createSyncURL(HOST, PORT, DB_NAME));
+        //push = this.getOrderDatabase().createPushReplication(this.createSyncURL(HOST, PORT, DB_ORDER));
+        //push.start();
+        setpushfilter();
+        /* For now no need for push replication. Client will not be allowed to change data */
+        /* No authentication required for the prototype. Will add back later */
+                //Authenticator authenticator = AuthenticatorFactory.createBasicAuthenticator("couchbase_user", "mobile");
+                pull.setContinuous(true);
+                pull.start();
+
+                pull.addChangeListener(new Replication.ChangeListener()
+
+                                       {
+                                           @Override
+                                           public void changed(Replication.ChangeEvent event) {
+                                               // will be called back when the pull replication status changes
+                                               if (pull.getStatus() == Replication.ReplicationStatus.REPLICATION_IDLE) {
+                                                   Log.d(TAG, "################ The replication is complete #####################");
+                                               } else {
+                                                   Log.d(TAG, "################ The replication Failed #####################");
+                                               }
+                                           }
+                                       }
+
+                );
+            }
+
+    }
