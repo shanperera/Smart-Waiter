@@ -44,7 +44,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (CouchbaseLiteException e) {
             e.printStackTrace();
         }
-
+        try {
+            local_database.createItem("hello world");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if (local_database != null){
             try {
                 local_database.startReplications();
@@ -63,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         // defined by the ZXing embedded scanner library to initialise the
         // barcode scanner, initiateScan() brings up the local camera app
         // and prompts the user to take a picture of the QR/barcode
-
 
         scanButton = (Button)findViewById(R.id.scanCodeButton);
 
@@ -131,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
             String re = scanResult.getContents();
 
             Log.d("code", re);
+            //onPopulateMenu(re);
             onPopulateMenu(re);
 
         }
