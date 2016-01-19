@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.KeyEvent;
 import android.widget.Toast;
 
 public class CustomizeItemActivity extends AppCompatActivity {
@@ -51,6 +52,16 @@ public class CustomizeItemActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 
 }

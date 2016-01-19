@@ -9,44 +9,50 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Button;
-import android.widget.Toast;
 
-public class CartActivity extends AppCompatActivity {
+public class ConfirmOrderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.activity_confirm_order);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         popualteCartListView();
+        displayTotal();
     }
 
     public void popualteCartListView(){
         ArrayAdapter<UserItems> adapter = new CategoryListAdapter();
-        ListView list = (ListView) findViewById(R.id.cartList);
+        ListView list = (ListView) findViewById(R.id.confirmOrderList);
         list.setAdapter(adapter);
     }
 
-    public void confirmOrder(View view) {
-        Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.ConfirmOrderActivity");
+    public void displayTotal(){
+        TextView t =new TextView(this);
+        t=(TextView)findViewById(R.id.totalPrice);
+        t.setText(MainActivity.user.getTotalPrice());
+    }
+
+    public void proceedPayment(View view) {
+        Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity");
         startActivity(intent);
     }
 
 
     private class CategoryListAdapter extends ArrayAdapter<UserItems> {
         public CategoryListAdapter() {
-            super(CartActivity.this, R.layout.cart_view, MainActivity.user.userItems);
+            super(ConfirmOrderActivity.this, R.layout.confirm_order_view, MainActivity.user.userItems);
         }
 
         public View getView(int position, View convertView, ViewGroup parent){
             // Make sure we have a view to work with, may have been given null
             View itemView = convertView;
             if(itemView == null){
-                itemView = getLayoutInflater().inflate(R.layout.cart_view, parent, false);
+                itemView = getLayoutInflater().inflate(R.layout.confirm_order_view, parent, false);
             }
 
             //Find the menu item to work with
@@ -63,22 +69,12 @@ public class CartActivity extends AppCompatActivity {
             TextView makeText2 = (TextView) itemView.findViewById(R.id.txtItemPrice);
             makeText2.setText(currentItem.getItemPrice());
 
-            Button btn = (Button)itemView.findViewById(R.id.deleteItem);
-            btn.setTag(position);
-            btn.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    Integer index = (Integer) v.getTag();
-                    MainActivity.user.removeUserItem(index);
-                    notifyDataSetChanged();
-
-                }
-            });
 
             return  itemView;
             //return super.getView(position, convertView, parent);
         }
 
     }
+
+
 }
