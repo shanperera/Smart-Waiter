@@ -1,18 +1,39 @@
 {
     "log":["CRUD+", "REST+", "Changes+", "Attach+"],
     "databases": {
-        "couchbaseevents": {
+        "restaurant_menus": {
             "server":"http://127.0.0.1:8091",
 	    "bucket":"myapp",
             "shadow": {
 
                       "server": "http://127.0.0.1:8091",
 
-                      "bucket": "couchbaseevents"
+                      "bucket": "restaurant_menus"
 
                      },		
 	    "import_Docs": true,
 	    "sync":`
+                function (doc) {
+                    channel (doc.channels);
+                }`,
+            "users": {
+                "GUEST": {
+                    "disabled": false,
+                    "admin_channels": ["*"]
+                }
+            }
+        },
+        "couchbaseevents": {
+            "server":"http://127.0.0.1:8091",
+	    "bucket":"myapp2",
+	     "shadow": {
+
+                      "server": "http://127.0.0.1:8091",
+
+                      "bucket": "couchbaseevents"
+
+                     },
+        "sync":`
                 function (doc) {
                     channel (doc.channels);
                 }`,
