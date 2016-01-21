@@ -40,6 +40,7 @@
 \hline
 \textbf{Date}  & \textbf{Comments} \\ \hline
 October 9, 2015 &  first draft. \\ 
+January 19, 2016 &  Modified function and non function requirements. \\ 
 \hline
 \end{tabular}
 \caption{Revision History Table}
@@ -410,22 +411,9 @@ an item to their current order, the total should update immediately (regardless
 of what the item is)}
 \newline
 
+
+
 \noindent\textbf{\textit{Requirement 11}}\newline
-\textit{Description:}\newline
-The product will allow users to rate menu items \newline\newline
-\textit{Fit Criterion:}\newline 
-A user orders a meal and enjoys it so much he decides to post a review using the products. \ds{This isn't a fit criterion}
-\newline
-
-\noindent\textbf{\textit{Requirement 12}}\newline
-\textit{Description:}\newline
-The product will allow users to view other user's ratings of menu items. \newline\newline
-\textit{Fit Criterion:}\newline 
-A user is browsing the menu and cannot decide between two items, she decides to view a review of an item and decides to order after reading a good review.
-\ds{See my other comments to fix this}
-\newline
-
-\noindent\textbf{\textit{Requirement 13}}\newline
 \textit{Description:}\newline
 The product will allow users to pay for their order using a credit card. \newline\newline
 \textit{Fit Criterion:}\newline 
@@ -434,41 +422,35 @@ A user is finishing his meal and all the waiters are busy with other tables. The
 to confirm that the requirement has been met}
 \newline
 
-\noindent\textbf{\textit{Requirement 14}}\newline
+\noindent\textbf{\textit{Requirement 12}}\newline
 \textit{Description:}\newline
 The product must be Payment Card Industry (PCI) compliant.
 \ds{Where's your fit criterion?}
 \newline
 
-\noindent\textbf{\textit{Requirement 15}}\newline
+\noindent\textbf{\textit{Requirement 13}}\newline
 \textit{Description:}\newline
 The product will allow users to place their order. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user adds a hamburger, fries and a drink to her order. She is really hungry and doesn't want to wait for a waiter to take her order. She places the order through the application. \ds{Not a fit criterion}
 \newline
 
-\noindent\textbf{\textit{Requirement 16}}\newline
+\noindent\textbf{\textit{Requirement 14}}\newline
 \textit{Description:}\newline
 The product will show a summary of the user's order before they place it. \newline\newline
 \textit{Fit Criterion:}\newline 
 A users adds a hamburger, fries and a drink to her order. She is ready to place her order, a screen is brought up on her device which shows her what she is about to order.
 \newline \ds{No need for the story}
 
-\noindent\textbf{\textit{Requirement 17}}\newline
-\textit{Description:}\newline
-The product will allow users to leave employee feedback. \newline\newline
-\textit{Fit Criterion:}\newline 
-A user places an order, during her stay at the establishment she encounters a very indifferent and apathetic waiter. She decides to leave feedback on the waiter after she pays for her order.\ds{Not a fit criterion}
-\newline
 
-\noindent\textbf{\textit{Requirement 18}}\newline
+\noindent\textbf{\textit{Requirement 15}}\newline
 \textit{Description:}\newline
 The product will allow users to remove items from their order before it has been placed. \newline\newline
 \textit{Fit Criterion:}\newline 
 A user adds a hamburger, fries and a milkshake to their order. The user then decides they no longer want a milkshake and remove it from their order before he place the order.
 \newline
 
-\noindent\textbf{\textit{Requirement 19}}\newline
+\noindent\textbf{\textit{Requirement 16}}\newline
 \textit{Description:}\newline
 The product will allow the menu to be viewed on a smart phone. \newline\newline
 \textit{Fit Criterion:}\newline 
@@ -487,35 +469,29 @@ The style of the app will be consistent between most pages by using a template. 
 \subsubsection{Ease of Use Requirements}
  The app will be easy to use for any casual customer equipped with a smart device in a dining establishment. This can range from an elementary student to a senior citizen.  
 \subsubsection{Personalization and Internationalization Requirements}
-Considering this app can be used in various ethic restaurants, customers may prefer to communicate in their own language. Thus the app will provide option to restaurant mangers to allow them to add an additional language setting. The app will always have English setting
- \ds{There should be functional requirements regarding how to update/change
- language settings}
+Considering this app can be used in various ethic restaurants, customers may prefer to communicate in their own language. Thus, for a future functional requirement, the app will provide option to restaurant mangers to allow them to add an additional language setting. The app will always have English setting.
+
 \subsubsection{Learning Requirements}
-The learning curve will be kept as minimal as possible. The requirement is a user should be able to flawlessly use the app to view the restaurant menu and place and order without the use of a help function. The user should be comfortable and have complete understanding with this process as soon as he/she does it once.
+The learning curve will be kept as minimal as possible. The requirement is a user should be able to flawlessly use the app to view the restaurant menu and place and order without the use of a help function. The user should be comfortable and have complete understanding with this process as soon as he/she does it once. To meet this requirement, usability tests will be conducted to until high percentage of users feel comfortable with the process.  
 \ds{Will there be a help function just in case? 
 How can you guarantee that anyone will be able to use it?}
 
 \subsubsection{Understandability and Politeness Requirements}
 To promote understandability, appropriate images, text descriptions and symbols will be in place. That is, the user will understand this app is meant to serve as a menu and waiter by incorporating pictures, description and price of food available. A checkout button will clearly be indicated when the user is ready to place the order.
 \subsubsection{Accessibility Requirements}
-This app will be accessible to those with relatively well
-\ds{``Good" not ``well"}
+This app will be accessible to those with relatively good
 eyesight and have use of their index finger. 
  
 \subsection{Performance Requirements}
 
 \subsubsection{Speed and Latency Requirements}
-Query restaurant information should take no longer then
-\ds{``Than" not ``then"}
-five seconds. Processing transactions should take no longer then
-\ds{``Than" not ``then"}
+Query restaurant information should take no longer than
+five seconds. Processing transactions should take no longer than
 10 seconds.  
 
 \subsubsection{Safety-Critical Requirements}
-To maintain confidentiality, credit card and personal information will not be stored in
-\ds{``The"} backend database. As well, an SSL connection will always be instantiated when placing an order to ensure data protection. 
-\ds{Stating it will be SSL is too concrete unless you have a specific
-constraint as to why}
+To maintain confidentiality, credit card and personal information will not be stored in the backend database. As well, an secure connection will always be instantiated when placing an order to ensure data protection. 
+
 \subsubsection{Precision or Accuracy Requirements}
 The restaurant will set all monetary amounts for food and beverages seen on the app. All appropriate taxes will be included in the bill when making an order.  
 \ds{There should be functional requirements detailing how this is done}
@@ -531,46 +507,44 @@ If the app fails to scan the QR code repeatedly (after 3 times), it will prompt 
 \subsubsection{Capacity Requirements}
 App capacity is dependent on how many people can be seated at a restaurant. This will vary, as it is dependent on restaurant capacity
 \ds{Are you talking about the app on the phone or the restaurant backend that can handle a certain capacity?}
+
 \subsubsection{Scalability or Extensibility Requirements}
 Increasing number of participating restaurants may induce database upgrade in terms of efficiency in querying.   
 \ds{Is there one central database for all restaurants?
 Where are the database specifications?}
 
 \subsubsection{Longevity Requirements}
-App conforms to restaurant. \ds{What does that mean?} If restaurant decides to shutdown, app service will no longer be available to that restaurant.\ds{Grammar issues with that sentence} However it will still be able to serve other participating restaurants.
+App is reliant on the restaurant. \ds{What does that mean?} For example, if restaurant decides to shutdown, the app will no longer server that restaurant.\ds{Grammar issues with that sentence}
 
 \subsection{Operational and Environmental Requirements}
 \subsubsection{Expected Physical Environment}
-App should only be functional only at restaurant \ds{Grammar}. Functional in the sense of being able to view a menu and place an order.
+Ordering component of the app will be functional only at restaurants. This includes, viewing a menu and placing an order. \ds{Grammar}.
+
 \subsubsection{Requirements for Interfacing with Adjacent Systems}
 Our product must be compatible with various versions of android. The smart device must have a camera to operate.
 \subsubsection{Productization Requirements}
-App will be available on google play \ds{``Google Play"}
-for download. Restaurant customers would download the app.As well, QR codes must be implemented at participating restaurants. These codes will be placed on tables so customers can scan appropriately if they have the app. 
+App will be available on Google Play for download by customers.QR codes will be implemented at participating restaurants. These codes will be placed on tables so customers can scan appropriately if they have the app. 
 \subsubsection{Release Requirements}
-A new app release will not affect restaurant data or comprise 
-\ds{``Compromise"}
+A new app release will not affect restaurant data or compromise 
 integrity. For example, customers with an older app version would still be able to view the same information as those with updated version. 
 \subsection{Maintainability and Support Requirements}
 \subsubsection{Maintenance Requirements}
-If a restaurant requires maintenance changes in current menu \ds{Grammar}, this will be processed after restaurant hours and take effect the next day. This insures \ds{ensures} all customers see the same information. 
+Restaurants menu changes will be processed after restaurant hours and take effect the next day. This ensures all customers see the same information. 
 \subsubsection{Supportability Requirements}
 If a restaurant manager requires support on maintenance (updating menu items), they will log a request with us to make this change. Customers using the app will rely on self-support (download and update when new release is available).
 \subsubsection{Adaptability Requirements}
-Might be extended to other mobile platforms (IOS, blackberry, windows) 
+For a future requirement, the app will be extended to other mobile platforms (IOS, blackberry, windows) 
 \subsection{Security Requirements}
 \subsubsection{Access Requirements}
 User is only allowed access to restaurant data by scanning QR code. Other participating restaurants data will not be available unless they have QR code. 
 \subsubsection{Integrity Requirements}
 Credit information is never recorded on backend database, thus no chance of leakage.
 \subsubsection{Privacy Requirements}
-Will inform user that credit card information transactions will be secured through the use of SSL.
-\ds{Again, not necessary to state SSL unless it is a design constraint}
-Also, will insure \ds{ensure} restaurant mangers data read from QR code cannot be tampered with. Issue a read only setting. 
+Will inform user that credit card information transactions will be secured through the use of encrypted connection. Also, will ensure restaurant mangers that data is read from QR code cannot be tampered with.
 \subsubsection{Audit Requirements}
 N/A
 \subsubsection{Immunity Requirements}
-Allow QR code to be read only, prevent tampering of data. 	Always insure \ds{ensure} SSL connections with processing credit card transactions.
+Allow QR code to be read only, prevent tampering of data. 	Always ensure secure connections with processing credit card transactions.
 \subsection{Cultural and Political Requirements}
 \subsubsection{Cultural Requirements}
 N/A
