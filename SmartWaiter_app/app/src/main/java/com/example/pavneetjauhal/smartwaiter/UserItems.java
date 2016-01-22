@@ -1,12 +1,14 @@
 package com.example.pavneetjauhal.smartwaiter;
+import java.util.ArrayList;
+
 
 /**
  * Created by meraj0 on 2016-01-12.
  */
 public class UserItems {
+    ArrayList<String> itemToppings = new ArrayList<String>();
     private String itemName;
     private String itemPrice;
-    private String itemToppings;
     private String specialInstrucitons;
 
     public UserItems(String itemName, String itemPrice){
@@ -15,12 +17,12 @@ public class UserItems {
     }
 
     public void setItemToppings (String itemToppings){
-        this.itemToppings = itemToppings;
+        this.itemToppings.add(itemToppings);
     }
     public void setSpecialInstructions (String specialInstructions) {
         this.specialInstrucitons = specialInstructions;
     }
-    public String getItemToppings(){return itemToppings;}
+    public String getItemToppings(){return itemToppings.toString();}
     public String getSpecialInstrucitons() {
         return specialInstrucitons;
     }

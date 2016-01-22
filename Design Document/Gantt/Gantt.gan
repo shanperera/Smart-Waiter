@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Capstone" company="McMaster, CAS Department" webLink="" view-date="2015-07-01" view-index="0" gantt-divider-location="354" resource-divider-location="300" version="2.7.1" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="Capstone" company="McMaster, CAS Department" webLink="" view-date="2015-12-01" view-index="0" gantt-divider-location="354" resource-divider-location="300" version="2.7.1" locale="en_US">
     <description><![CDATA[Simulation of temperature over time for a solar water heating tank incorporating phase change material (PCM).]]></description>
     <view zooming-state="default:9" id="gantt-chart">
         <field id="tpd3" name="Name" width="55" order="0"/>
@@ -7,7 +7,7 @@
     </view>
     <view id="resource-table">
         <field id="0" name="Name" width="50" order="0"/>
-        <field id="1" name="Default role" width="49" order="1"/>
+        <field id="1" name="Default role" width="50" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -44,11 +44,12 @@
                 <task id="130" name="Design Doc Due" color="#8cb6ce" meeting="true" start="2016-01-11" duration="0" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="44" name="Implementation Rev0" color="#8cb6ce" meeting="false" start="2016-01-11" duration="15" complete="0" expand="true">
+        <task id="44" name="Implementation Rev0" color="#8cb6ce" meeting="false" start="2016-01-11" duration="22" complete="0" expand="true">
             <task id="136" name="UI Design" color="#8cb6ce" meeting="false" start="2016-01-11" duration="9" complete="0" expand="true"/>
-            <task id="140" name="Database" color="#8cb6ce" meeting="false" start="2016-01-11" duration="15" complete="0" expand="true"/>
-            <task id="142" name="Accounts/Transactions" color="#8cb6ce" meeting="false" start="2016-01-11" duration="15" complete="0" expand="true"/>
-            <task id="143" name="Supervisor Demo - Rong Zheng" color="#8cb6ce" meeting="true" start="2016-01-19" duration="0" complete="0" expand="true"/>
+            <task id="213" name="Intergration" color="#8cb6ce" meeting="false" start="2016-01-19" duration="14" complete="0" expand="true"/>
+            <task id="140" name="Database" color="#8cb6ce" meeting="false" start="2016-01-11" duration="9" complete="0" expand="true"/>
+            <task id="142" name="Accounts/Transactions" color="#8cb6ce" meeting="false" start="2016-01-11" duration="9" complete="0" expand="true"/>
+            <task id="143" name="Supervisor Demo - Rong Zheng" color="#8cb6ce" meeting="true" start="2016-02-02" duration="0" complete="0" expand="true"/>
         </task>
         <task id="61" name="Unit Testing Rev0" color="#8cb6ce" meeting="false" start="2016-01-17" duration="2" complete="0" expand="true">
             <task id="62" name="Barcode Scanning" color="#8cb6ce" meeting="false" start="2016-01-17" duration="2" complete="0" expand="true"/>
@@ -59,23 +60,29 @@
             <task id="153" name="Usability Testing" color="#8cb6ce" meeting="false" start="2016-01-28" duration="5" complete="0" expand="true"/>
             <task id="152" name="Order Transaction Test" color="#8cb6ce" meeting="false" start="2016-01-25" duration="4" complete="0" expand="true"/>
         </task>
-        <task id="21" name="Rev 0 Demo" color="#8cb6ce" meeting="true" start="2016-02-01" duration="0" complete="0" expand="true"/>
-        <task id="69" name="Revise Docs Rev0" color="#8cb6ce" meeting="false" start="2016-01-11" duration="22" complete="0" expand="true">
+        <task id="21" name="Rev 0 Demo" color="#8cb6ce" meeting="true" start="2016-02-04" duration="0" complete="0" expand="true"/>
+        <task id="69" name="Revise Docs Rev0" color="#8cb6ce" meeting="false" start="2016-01-11" duration="24" complete="0" expand="true">
             <task id="161" name="Revise Test Plan" color="#8cb6ce" meeting="false" start="2016-01-17" duration="8" complete="0" expand="true"/>
             <task id="162" name="Revise SRS" color="#8cb6ce" meeting="false" start="2016-01-11" duration="7" complete="0" expand="true"/>
-            <task id="163" name="Revise Design Doc" meeting="false" start="2016-01-24" duration="9" complete="0" expand="true"/>
+            <task id="163" name="Revise Design Doc" meeting="false" start="2016-01-24" duration="11" complete="0" expand="true"/>
         </task>
-        <task id="184" name="User Guide" color="#8cb6ce" meeting="false" start="2016-02-15" duration="20" complete="0" expand="true"/>
-        <task id="186" name="User Guide Deadline" color="#8cb6ce" meeting="true" start="2016-02-29" duration="0" complete="0" expand="true"/>
+        <task id="184" name="User Guide" color="#8cb6ce" meeting="false" start="2016-02-29" duration="6" complete="0" expand="true">
+            <task id="208" name="User Guide Deadline" color="#8cb6ce" meeting="true" start="2016-02-29" duration="0" complete="0" expand="true"/>
+        </task>
         <task id="70" name="Revise Docs Final Demo" color="#8cb6ce" meeting="false" start="2016-02-10" duration="39" complete="0" expand="true">
             <task id="172" name="Revise Test Plan" color="#8cb6ce" meeting="false" start="2016-02-29" duration="11" complete="0" expand="true"/>
             <task id="174" name="Revise SRS" color="#8cb6ce" meeting="false" start="2016-02-10" duration="20" complete="0" expand="true"/>
             <task id="173" name="Revise Design Doc" color="#8cb6ce" meeting="false" start="2016-02-29" duration="20" complete="0" expand="true"/>
         </task>
-        <task id="72" name="Implementation Final" color="#8cb6ce" meeting="false" start="2016-02-08" duration="23" complete="0" expand="true"/>
-        <task id="188" name="System Testing Final" color="#8cb6ce" meeting="false" start="2016-03-01" duration="25" complete="0" expand="true">
+        <task id="72" name="Implementation Final" color="#8cb6ce" meeting="false" start="2016-02-04" duration="58" complete="0" expand="true">
+            <task id="200" name="Extra User Features" meeting="false" start="2016-02-04" duration="27" complete="0" expand="true"/>
+            <task id="214" name="Intergration" meeting="false" start="2016-03-01" duration="32" complete="0" expand="true"/>
+            <task id="202" name="UI Design Improvements" meeting="false" start="2016-02-04" duration="27" complete="0" expand="true"/>
+            <task id="211" name="Database Maintenance (for User Features)" meeting="false" start="2016-02-04" duration="27" complete="0" expand="true"/>
+        </task>
+        <task id="188" name="System Testing Final" color="#8cb6ce" meeting="false" start="2016-01-17" duration="69" complete="0" expand="true">
             <task id="190" name="Account Login Funcional Test" color="#8cb6ce" meeting="false" start="2016-03-01" duration="6" complete="0" expand="true"/>
-            <task id="192" name="Database Testing" color="#8cb6ce" meeting="false" start="2016-03-01" duration="15" complete="0" expand="true"/>
+            <task id="192" name="Database Testing" color="#8cb6ce" meeting="false" start="2016-01-17" duration="1" complete="0" expand="true"/>
             <task id="194" name="Usability Testing" color="#8cb6ce" meeting="false" start="2016-03-21" duration="5" complete="0" expand="true"/>
             <task id="196" name="Order Transaction Test" color="#8cb6ce" meeting="false" start="2016-03-15" duration="7" complete="0" expand="true"/>
         </task>

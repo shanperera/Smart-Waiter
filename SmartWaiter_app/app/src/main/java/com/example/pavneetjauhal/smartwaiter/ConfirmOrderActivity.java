@@ -39,6 +39,8 @@ public class ConfirmOrderActivity extends AppCompatActivity {
 
     public void proceedPayment(View view) {
         Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity");
+
+
         startActivity(intent);
     }
 

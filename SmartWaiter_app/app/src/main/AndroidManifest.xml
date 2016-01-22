@@ -47,7 +47,7 @@
         <activity
             android:name=".DisplayItemsActivity"
             android:label="@string/title_activity_display_items"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity" />
 

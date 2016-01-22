@@ -26,12 +26,12 @@ public class DisplayItemsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_items);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarCategories);
-        //setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarItems);
+        setSupportActionBar(toolbar);
 
-        //mActionBarToolbar = (Toolbar) findViewById(R.id.toolbarItems);
-        //setSupportActionBar(mActionBarToolbar);
-        //getSupportActionBar().setTitle(" Category Items");
+        mActionBarToolbar = (Toolbar) findViewById(R.id.toolbarItems);
+        setSupportActionBar(mActionBarToolbar);
+        getSupportActionBar().setTitle(" Category Items");
 
         onDisplayItemList();
     }

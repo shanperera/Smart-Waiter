@@ -29,10 +29,10 @@ import java.util.Set;
  * Created by pavneetjauhal on 15-11-16.
  */
 public class CouchBaseLite {
-    private static final String DB_NAME = "restaurant_menus";
+    private static final String DB_NAME = "couchbaseevents";
     private static final String DB_ORDER = "couchbaseevents";
     private static final String TAG = "SmartWaiter";
-    private static final String HOST = "http://192.168.2.18";
+    private static final String HOST = "http://192.168.43.136";
     private static final String PORT = "4984";
     Manager manager = null;
     Database database = null;

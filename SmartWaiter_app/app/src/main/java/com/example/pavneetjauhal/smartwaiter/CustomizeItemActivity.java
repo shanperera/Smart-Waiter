@@ -10,11 +10,11 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.KeyEvent;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class CustomizeItemActivity extends AppCompatActivity {
     MenuItems selectedItem;
-    MainActivity mainObject;
     Toolbar mActionBarToolbar;
 
     @Override
@@ -26,6 +26,15 @@ public class CustomizeItemActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");
+
+        TextView itemNameText = (TextView)findViewById(R.id.itemName);
+        itemNameText.setText(selectedItem.getItemName());
+
+        TextView itemDescriptionText = (TextView)findViewById(R.id.itemDesciption);
+        itemDescriptionText.setText(selectedItem.getItemDetail());
+
+        TextView itemPriceText = (TextView)findViewById(R.id.itemPrice);
+        itemPriceText.setText(selectedItem.getItemPrice());
 
         Log.d("TAG", selectedItem.getItemName());
 
