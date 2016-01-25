@@ -2,8 +2,6 @@ package com.example.pavneetjauhal.smartwaiter;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -15,8 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import java.io.Serializable;
 
 public class DisplayItemsActivity extends AppCompatActivity {
     MainActivity mainObject;
@@ -84,7 +80,6 @@ public class DisplayItemsActivity extends AppCompatActivity {
 
             TextView priceText = (TextView) itemView.findViewById(R.id.txtItemPrice);
             priceText.setText(currentItem.getItemPrice());
-
             return  itemView;
             //return super.getView(position, convertView, parent);
         }

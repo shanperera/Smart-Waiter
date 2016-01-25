@@ -18,10 +18,10 @@ import java.util.List;
 
 
 public class User {
-    private String username;
+    private String username = "username";
     private String password; //storing the password in plain text for now
-    private String firstName;
-    private String lastName;
+    private String firstName = "firstName";
+    private String lastName = "lastName";
     private String billingAddress; // Example "125 Royal Ave"
     private String postalCode;
     private String phoneNumber; // Stored as "9055554213" no dashes for coding simplicity

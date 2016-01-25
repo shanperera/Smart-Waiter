@@ -22,9 +22,11 @@ import java.util.List;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.google.zxing.qrcode.encoder.QRCode;
 
 public class MainActivity extends AppCompatActivity {
-    CouchBaseLite local_database;
+    public static CouchBaseLite local_database;
+    public static String qrCode;
     static List<MenuCategories> menuCategoryList = new ArrayList<MenuCategories>();
     static List<MenuItems> menuItemList = new ArrayList<MenuItems>();
     static User user = new User();
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         try {
-            local_database.createItem("hello world");
+            //local_database.createItem("hello world");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -131,11 +133,11 @@ public class MainActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanResult != null) {
-            String re = scanResult.getContents();
+            qrCode = scanResult.getContents();
 
-            Log.d("code", re);
+            Log.d("code", qrCode);
             //onPopulateMenu(re);
-            onPopulateMenu(re);
+            onPopulateMenu(qrCode);
 
         }
 

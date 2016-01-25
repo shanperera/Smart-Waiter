@@ -2,6 +2,8 @@ package com.example.pavneetjauhal.smartwaiter;
 import java.util.ArrayList;
 
 
+import java.util.ArrayList;
+
 /**
  * Created by meraj0 on 2016-01-12.
  */

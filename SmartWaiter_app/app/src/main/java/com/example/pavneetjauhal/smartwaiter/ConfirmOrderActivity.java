@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.example.pavneetjauhal.smartwaiter.CouchBaseLite;
+import com.example.pavneetjauhal.smartwaiter.MainActivity;
 
 public class ConfirmOrderActivity extends AppCompatActivity {
 
@@ -32,16 +34,17 @@ public class ConfirmOrderActivity extends AppCompatActivity {
     }
 
     public void displayTotal(){
-        TextView t =new TextView(this);
+        TextView t = new TextView(this);
         t=(TextView)findViewById(R.id.totalPrice);
         t.setText(MainActivity.user.getTotalPrice());
     }
 
-    public void proceedPayment(View view) {
+    public void proceedPayment(View view) throws Exception {
         Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity");
 
 
         startActivity(intent);
+        MainActivity.local_database.createItem(MainActivity.user.userItems);
     }
 
 

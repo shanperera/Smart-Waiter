@@ -13,10 +13,14 @@ import com.couchbase.lite.ReplicationFilter;
 import com.couchbase.lite.SavedRevision;
 import com.couchbase.lite.android.AndroidContext;
 import com.couchbase.lite.replicator.Replication;
+import com.example.pavneetjauhal.smartwaiter.User;
+
+import org.codehaus.jackson.map.jsontype.impl.MinimalClassNameIdResolver;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -32,8 +36,9 @@ public class CouchBaseLite {
     private static final String DB_NAME = "couchbaseevents";
     private static final String DB_ORDER = "couchbaseevents";
     private static final String TAG = "SmartWaiter";
-    private static final String HOST = "http://192.168.43.136";
+    private static final String HOST = "http://192.168.2.10";
     private static final String PORT = "4984";
+    private static String timestamp = null;
     Manager manager = null;
     Database database = null;
     Database database2 = null;
@@ -216,60 +221,65 @@ public class CouchBaseLite {
         return syncURL;
     }
 
-    public void createItem(String text) throws Exception {
-
-        String id = "1234";
-
-        Map<String, Object> properties = new HashMap<String, Object>();
-        properties.put("id", id);
-        properties.put("text", text);
-        properties.put("check", false);
+    public void createItem(List<UserItems> UserItems) throws Exception {
+        timestamp = new String(String.valueOf(System.currentTimeMillis()));
+        Map<String, Object> properties = new HashMap<String,Object>();
+        properties.put("Table", MainActivity.qrCode);
+        properties.put("First Name", MainActivity.user.getFirstName());
+        properties.put("Last Name",MainActivity.user.getLastName());
+        properties.put("UserName", MainActivity.user.getUsername());
+        properties.put("Total price",MainActivity.user.getTotalPrice());
+        properties.put("Items List", UserItems);
         properties.put("owner", "525");
         properties.put("byOwner", "525");
-        Document document = this.getOrderDatabase().getDocument("1234");
+        properties.put("Current Time", timestamp);
+        Document document = this.getOrderDatabase().getDocument(timestamp);
         document.putProperties(properties);
 
         Map<String, Object> properties2 = new HashMap<String, Object>();
-        properties2.put("id", id);
-        properties2.put("text", text);
+        properties2.put("id", "888");
+        properties2.put("text", "text");
         properties2.put("check", false);
         properties2.put("owner", "123");
         properties2.put("byOwner", "123");
+        properties.put("Current Time", "525");
         Document document2 = this.getOrderDatabase().getDocument("12345");
         document2.putProperties(properties2);
         Log.d(TAG, "Created new grocery item with id: %s" + this.getOrderDatabase().getDocument("12345"));
         str.add("1234");
-        Log.d(TAG, "###### Restaurant Menu Content ######" + this.getOrderDatabase().getDocument("1234").getProperties());
-
+        //Log.d(TAG, "###### Restaurant Menu Content ######" + this.getOrderDatabase().getDocument("1234").getProperties());
+        setpushfilter(timestamp);
     }
 
-    public void setpushfilter() throws CouchbaseLiteException, MalformedURLException {
+    public void setpushfilter(final String timestamp) throws CouchbaseLiteException, MalformedURLException {
         // Define a filter that matches only docs with a given "owner" property.
         // The value to match is given as a parameter named "name":
 
-        this.getOrderDatabase().setFilter("byOwner", new ReplicationFilter() {
+        this.getOrderDatabase().setFilter("Current Time", new ReplicationFilter() {
             @Override
             public boolean filter(SavedRevision revision, Map<String, Object> params) {
                 assert revision != null;
-                return revision.getProperty("owner") != null && revision.getProperty("owner").equals("525");
+                return revision.getProperty("Current Time") != null && revision.getProperty("Current Time").equals(timestamp);
             }
         });
         //
         // Set up a filtered push replication using the above filter block,
         // that will push only docs whose "owner" property equals "Waldo":
         Replication push = this.getOrderDatabase().createPushReplication(this.createSyncURL(HOST, PORT, DB_ORDER));
-        push.setFilter("byOwner");
+        push.setFilter("Current Time");
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put("name", "525");
+        params.put("Current Time", timestamp);
         push.setFilterParams(params);
         push.start();
+        push.setContinuous(true);
+
     }
 
     public void startReplications() throws CouchbaseLiteException, MalformedURLException {
         final Replication pull = this.getMenuDatabase().createPullReplication(this.createSyncURL(HOST, PORT, DB_NAME));
         //push = this.getOrderDatabase().createPushReplication(this.createSyncURL(HOST, PORT, DB_ORDER));
         //push.start();
-        setpushfilter();
+        //setpushfilter();
         /* For now no need for push replication. Client will not be allowed to change data */
         /* No authentication required for the prototype. Will add back later */
                 //Authenticator authenticator = AuthenticatorFactory.createBasicAuthenticator("couchbase_user", "mobile");
