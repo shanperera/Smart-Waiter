@@ -1,5 +1,7 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import com.stripe.android.model.Token;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +27,8 @@ public class User {
     private String billingAddress; // Example "125 Royal Ave"
     private String postalCode;
     private String phoneNumber; // Stored as "9055554213" no dashes for coding simplicity
+    private Token token;
+    private String customerID;
 
 
     //methods for adding menu items to cart
@@ -57,6 +61,21 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
+    public User(Token token){
+        this.token = token;
+    }
+
+    public User(String customerID){
+        this.customerID = customerID;
+    }
+
+    public Token getToken(){
+        return token;
+    }
+
+    public String getCustomerID(){
+        return customerID;
+    }
     public String getUsername() {
         return username;
     }
