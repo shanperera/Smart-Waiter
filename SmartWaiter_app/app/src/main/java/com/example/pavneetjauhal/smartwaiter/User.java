@@ -20,10 +20,10 @@ import java.util.List;
 
 
 public class User {
-    private String username = "username";
+    private String username;
     private String password; //storing the password in plain text for now
-    private String firstName = "firstName";
-    private String lastName = "lastName";
+    private String firstName;
+    private String lastName;
     private String billingAddress; // Example "125 Royal Ave"
     private String postalCode;
     private String phoneNumber; // Stored as "9055554213" no dashes for coding simplicity
@@ -97,7 +97,11 @@ public class User {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        if (firstName == null) {
+            return;
+        }else{
+            this.firstName = firstName;
+        }
     }
 
     public String getLastName() {
@@ -105,7 +109,11 @@ public class User {
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        if (lastName == null){
+            return;
+        }else{
+            this.lastName = lastName;
+        }
     }
 
     public String getBillingAddress() {
@@ -113,7 +121,11 @@ public class User {
     }
 
     public void setBillingAddress(String billingAddress) {
-        this.billingAddress = billingAddress;
+        if (billingAddress == null){
+            return;
+        }else{
+            this.billingAddress = billingAddress;
+        }
     }
 
     public String getPostalCode() {
@@ -121,7 +133,9 @@ public class User {
     }
 
     public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+        if (postalCode != null){
+            this.postalCode = postalCode;
+        }
     }
 
     public String getPhoneNumber() {
@@ -129,6 +143,8 @@ public class User {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        if (phoneNumber != null){
+            this.phoneNumber = phoneNumber;
+        }
     }
 }

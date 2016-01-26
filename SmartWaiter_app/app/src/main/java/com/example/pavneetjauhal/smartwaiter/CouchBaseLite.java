@@ -33,17 +33,19 @@ import java.util.Set;
  * Created by pavneetjauhal on 15-11-16.
  */
 public class CouchBaseLite {
-    private static final String DB_NAME = "couchbaseevents";
-    private static final String DB_ORDER = "couchbaseevents";
+    private static final String DB_NAME = "restaurant_menus";
+    private static final String DB_ORDER = "local_orders";
+    private static final String DB_USER = "user_data";
+    public static String restaurant_Address = null;
     private static final String TAG = "SmartWaiter";
-    private static final String HOST = "http://192.168.2.10";
+    private static final String HOST = "http://172.20.10.5";
     private static final String PORT = "4984";
     private static String timestamp = null;
     Manager manager = null;
     Database database = null;
     Database database2 = null;
+    Database database3 = null;
     ArrayList str = new ArrayList();
-    Replication push = null;
 
     /* Key definitions for document */
     private static final String NAME = "Res_Name";
@@ -53,6 +55,7 @@ public class CouchBaseLite {
         this.manager = new Manager(new AndroidContext(mainActivity), Manager.DEFAULT_OPTIONS);
         this.database = manager.getDatabase(DB_NAME);
         this.database2 = manager.getDatabase(DB_ORDER);
+        this.database3 = manager.getDatabase(DB_USER);
         Log.d(TAG, "################ Create Couch Base Lite database ################");
     }
 
@@ -67,6 +70,37 @@ public class CouchBaseLite {
             this.database2 = manager.getDatabase(DB_ORDER);
         }
         return database2;
+    }
+    public Database getUserDatabase() throws CouchbaseLiteException {
+        if ((this.database3 == null) & (this.manager != null)) {
+            this.database3 = manager.getDatabase(DB_USER);
+        }
+        return database3;
+    }
+
+    /* Method to add all user information to local database */
+    public void storeUserData(User userData) throws CouchbaseLiteException, NullPointerException {
+        Document userdocument = this.getUserDatabase().getDocument("userData");
+        Map<String, Object> properties = new HashMap<String,Object>();
+        properties.put("First Name", userData.getFirstName());
+        properties.put("Last Name", userData.getLastName());
+        properties.put("Phone Number", userData.getPhoneNumber());
+        properties.put("Postal Code", userData.getPostalCode());
+        properties.put("Home Address", userData.getBillingAddress());
+        userdocument.putProperties(properties);
+    }
+
+    public void populateUserData() throws CouchbaseLiteException {
+        Document userdocument = this.getUserDatabase().getDocument("userData");
+        if (userdocument.getProperties() != null && this.getUserDatabase().getDocument("userData") != null){
+            MainActivity.user.setFirstName((String) userdocument.getProperty("First Name"));
+            MainActivity.user.setLastName((String) userdocument.getProperty("Last Name"));
+            MainActivity.user.setBillingAddress((String) userdocument.getProperty("Phone Number"));
+            MainActivity.user.setPostalCode((String) userdocument.getProperty("Postal Code"));
+            MainActivity.user.setPhoneNumber((String) userdocument.getProperty("Home Address"));
+        } else {
+            return;
+        }
     }
 
     /* This method is used to extract the restaurant menu associated with specific barcode */
@@ -222,9 +256,11 @@ public class CouchBaseLite {
     }
 
     public void createItem(List<UserItems> UserItems) throws Exception {
+        /* Truncate barcode to extract the table number */
+        String tableNumber = MainActivity.qrCode.substring(MainActivity.qrCode.indexOf('-') + 1, MainActivity.qrCode.length());
         timestamp = new String(String.valueOf(System.currentTimeMillis()));
         Map<String, Object> properties = new HashMap<String,Object>();
-        properties.put("Table", MainActivity.qrCode);
+        properties.put("Table", tableNumber);
         properties.put("First Name", MainActivity.user.getFirstName());
         properties.put("Last Name",MainActivity.user.getLastName());
         properties.put("UserName", MainActivity.user.getUsername());
@@ -236,24 +272,25 @@ public class CouchBaseLite {
         Document document = this.getOrderDatabase().getDocument(timestamp);
         document.putProperties(properties);
 
-        Map<String, Object> properties2 = new HashMap<String, Object>();
+        /*Map<String, Object> properties2 = new HashMap<String, Object>();
         properties2.put("id", "888");
         properties2.put("text", "text");
         properties2.put("check", false);
         properties2.put("owner", "123");
         properties2.put("byOwner", "123");
-        properties.put("Current Time", "525");
-        Document document2 = this.getOrderDatabase().getDocument("12345");
-        document2.putProperties(properties2);
+        properties.put("Current Time", timestamp);
+        //Document document2 = this.getOrderDatabase().getDocument("12345");
+        //document2.putProperties(properties2);
         Log.d(TAG, "Created new grocery item with id: %s" + this.getOrderDatabase().getDocument("12345"));
         str.add("1234");
+        */
         //Log.d(TAG, "###### Restaurant Menu Content ######" + this.getOrderDatabase().getDocument("1234").getProperties());
         setpushfilter(timestamp);
     }
 
     public void setpushfilter(final String timestamp) throws CouchbaseLiteException, MalformedURLException {
-        // Define a filter that matches only docs with a given "owner" property.
-        // The value to match is given as a parameter named "name":
+        // Define a filter that matches only docs with a given "Current Time" property.
+        // The value to match is given as a parameter named "Current Time":
 
         this.getOrderDatabase().setFilter("Current Time", new ReplicationFilter() {
             @Override
@@ -265,7 +302,7 @@ public class CouchBaseLite {
         //
         // Set up a filtered push replication using the above filter block,
         // that will push only docs whose "owner" property equals "Waldo":
-        Replication push = this.getOrderDatabase().createPushReplication(this.createSyncURL(HOST, PORT, DB_ORDER));
+        Replication push = this.getOrderDatabase().createPushReplication(this.createSyncURL(HOST, PORT, restaurant_Address));
         push.setFilter("Current Time");
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("Current Time", timestamp);

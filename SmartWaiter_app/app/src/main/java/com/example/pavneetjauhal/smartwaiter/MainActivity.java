@@ -46,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (CouchbaseLiteException e) {
             e.printStackTrace();
         }
-        try {
-            //local_database.createItem("hello world");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         if (local_database != null){
             try {
                 local_database.startReplications();
@@ -60,7 +55,13 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
+        try {
+            local_database.populateUserData();
+        } catch (CouchbaseLiteException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e){
+            e.printStackTrace();
+        }
         //setContentView(R.layout.categorylist);
 
 
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         /* Added to test functionality so far */
         local_database.queryAllRestautant();
         try {
-            Document testRestaurantMenu = local_database.getRestaurantByBarcode(qrCode);
+            Document testRestaurantMenu = local_database.getRestaurantByBarcode(qrCode.substring(qrCode.indexOf('-') + 1, qrCode.length()));
             local_database.outputContent(testRestaurantMenu);
             restarauntName = local_database.getRestaurantName(testRestaurantMenu);
 
@@ -120,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Error - Invalid QRcode",
                     Toast.LENGTH_LONG).show();
         }
+        /* Truncate barcode to extract the order server address */
+        local_database.restaurant_Address = qrCode.substring(0, qrCode.indexOf('-'));
 
         /*
         for (int i =0; i < categoryNameList.size(); i++) {
