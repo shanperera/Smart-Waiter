@@ -86,6 +86,11 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
                         new TokenCallback() {
                             public void onSuccess(Token token) {
                                 createCharge(token);
+                                try {
+                                    MainActivity.local_database.createItem(MainActivity.user.userItems);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                             }
                             public void onError(Exception error) {
                             }
