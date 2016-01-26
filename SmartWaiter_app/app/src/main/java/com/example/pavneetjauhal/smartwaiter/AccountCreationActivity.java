@@ -1,5 +1,6 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,5 +39,11 @@ public class AccountCreationActivity extends AppCompatActivity {
         String phoneNum = getFields.getText().toString();
 
         newUser = new User(username, password, firstName, lastName, address, postCode, phoneNum);
+        try{
+            MainActivity.local_database.storeUserData(newUser);
+        }
+        catch(Exception e){
+
+        }
     }
 }

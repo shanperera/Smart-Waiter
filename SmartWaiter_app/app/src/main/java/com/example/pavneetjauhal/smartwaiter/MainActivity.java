@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        boolean checkExists = true;
         //ActionBar actionBar = getActionBar();
         //actionBar.setHomeButtonEnabled(true);
         super.onCreate(savedInstanceState);
@@ -59,10 +60,14 @@ public class MainActivity extends AppCompatActivity {
             local_database.populateUserData();
         } catch (CouchbaseLiteException e) {
             e.printStackTrace();
+            checkExists = false;
         } catch (NullPointerException e){
+            checkExists = false;
             e.printStackTrace();
         }
         //setContentView(R.layout.categorylist);
+
+
 
 
         // Created an onClickListener for the "Scan QR code / Barcode" button
@@ -71,13 +76,16 @@ public class MainActivity extends AppCompatActivity {
         // barcode scanner, initiateScan() brings up the local camera app
         // and prompts the user to take a picture of the QR/barcode
 
+        if(checkExists == false) {
+            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.AccountCreationActivity");
+            startActivity(intent);
+        }
+
         scanButton = (Button)findViewById(R.id.scanCodeButton);
 
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity");
-                //startActivity(intent);
                 IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
                 integrator.initiateScan();
             }
@@ -85,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
 
         //onPopulateMenu("456");
 
+
+    }
+
+    public void checkExists(){
 
     }
 
