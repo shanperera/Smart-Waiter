@@ -38,7 +38,7 @@ public class CouchBaseLite {
     private static final String DB_USER = "user_data";
     public static String restaurant_Address = null;
     private static final String TAG = "SmartWaiter";
-    private static final String HOST = "http://172.20.10.5";
+    private static final String HOST = "http://162.243.20.236";
     private static final String PORT = "4984";
     private static String timestamp = null;
     Manager manager = null;
@@ -156,8 +156,8 @@ public class CouchBaseLite {
                     categoryUrl = (String) me.getValue();
                     //categoryNamesList.add(me.getValue());
                 }
-               // Log.d(TAG, (me.getKey() + ": "));
-               // Log.d(TAG, (String) me.getValue());
+                // Log.d(TAG, (me.getKey() + ": "));
+                // Log.d(TAG, (String) me.getValue());
             }
             menuList.add(new MenuCategories(categoryName, categoryUrl));
             //Log.d(TAG, (String) menuList.get(i).getCategory());
@@ -174,6 +174,10 @@ public class CouchBaseLite {
         String itemName = null;
         String itemPrice = null;
         String itemDetail = null;
+        ArrayList <String> itemToppings = new ArrayList();
+        ArrayList <String> itemSides = new ArrayList();
+        itemSides = null;
+        itemToppings = null;
         //ArrayList categoryNamesList = new ArrayList();
         LinkedHashMap categoryItemsHash = new LinkedHashMap();
         for (int i = 0; i < categoryItems.size(); i++) {
@@ -197,10 +201,30 @@ public class CouchBaseLite {
                     itemDetail = (String) me.getValue();
                     //categoryNamesList.add(me.getValue());
                 }
+                if(me.getKey() == "toppings"){
+                    ArrayList <Object> temp = new ArrayList();
+                    temp.add(me.getValue());
+                    Log.d("work mofo", "HELLO MOFO"+ temp.get(0));
+                    itemToppings = (ArrayList) temp.get(0);
+                    //Log.d("work mofo2", "HELLO MOFO2"+ al1.get(0));
+                }
+                else{
+                    itemToppings = null;
+                }
+                if(me.getKey() == "sides"){
+                    ArrayList <Object> temp2 = new ArrayList();
+                    temp2.add(me.getValue());
+                    Log.d("work mofo", "HELLO MOFOSIDES"+ temp2.get(0));
+                    itemSides = (ArrayList) temp2.get(0);
+                    //itemSides.add((String) me.getValue());
+                }
+                //else if(itemSides==null){
+                  //  itemSides = null;
+                //}
                 // Log.d(TAG, (me.getKey() + ": "));
                 // Log.d(TAG, (String) me.getValue());
             }
-            itemList.add(new MenuItems(itemName, itemPrice, itemDetail));
+            itemList.add(new MenuItems(itemName, itemPrice, itemDetail,itemToppings,itemSides));
             //Log.d(TAG, (String) menuList.get(i).getCategory());
             //Log.d(TAG, (String) categoryNamesList.get(i));
         }
@@ -209,6 +233,7 @@ public class CouchBaseLite {
         }
         return itemList;
     }
+
 
     public void getCategoryItems2(Document restaurantMenu, String categoryName){
         ArrayList listOfItems = new ArrayList();
@@ -319,25 +344,25 @@ public class CouchBaseLite {
         //setpushfilter();
         /* For now no need for push replication. Client will not be allowed to change data */
         /* No authentication required for the prototype. Will add back later */
-                //Authenticator authenticator = AuthenticatorFactory.createBasicAuthenticator("couchbase_user", "mobile");
-                pull.setContinuous(true);
-                pull.start();
+        //Authenticator authenticator = AuthenticatorFactory.createBasicAuthenticator("couchbase_user", "mobile");
+        pull.setContinuous(true);
+        pull.start();
 
-                pull.addChangeListener(new Replication.ChangeListener()
+        pull.addChangeListener(new Replication.ChangeListener()
 
-                                       {
-                                           @Override
-                                           public void changed(Replication.ChangeEvent event) {
-                                               // will be called back when the pull replication status changes
-                                               if (pull.getStatus() == Replication.ReplicationStatus.REPLICATION_IDLE) {
-                                                   Log.d(TAG, "################ The replication is complete #####################");
-                                               } else {
-                                                   Log.d(TAG, "################ The replication Failed #####################");
-                                               }
-                                           }
+                               {
+                                   @Override
+                                   public void changed(Replication.ChangeEvent event) {
+                                       // will be called back when the pull replication status changes
+                                       if (pull.getStatus() == Replication.ReplicationStatus.REPLICATION_IDLE) {
+                                           Log.d(TAG, "################ The replication is complete #####################");
+                                       } else {
+                                           Log.d(TAG, "################ The replication Failed #####################");
                                        }
+                                   }
+                               }
 
-                );
-            }
-
+        );
     }
+
+}

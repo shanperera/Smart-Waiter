@@ -79,4 +79,8 @@
     <string name="title_activity_cart">CartActivity</string>
     <string name="action_cart">Cart</string>
     <string name="title_activity_confirm_order">ConfirmOrderActivity</string>
+    <string name="title_activity_custom_toppings">CustomToppingsActivity</string>
+    <string name="title_activity_custome_side">CustomeSideActivity</string>
+    <string name="title_activity_custom_side">CustomSideActivity</string>
+    <string name="title_activity_special_instrunctions">SpecialInstrunctionsActivity</string>
 </resources>

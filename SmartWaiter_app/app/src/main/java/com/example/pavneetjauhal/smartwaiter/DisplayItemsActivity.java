@@ -42,7 +42,7 @@ public class DisplayItemsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
                 MenuItems object = mainObject.menuItemList.get(position);
-                Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomizeItemActivity");
+                Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomToppingsActivity");
                 intent.putExtra("selectedItem", object);
                 startActivity(intent);
                 //onDisplayItemList();
@@ -78,7 +78,7 @@ public class DisplayItemsActivity extends AppCompatActivity {
             TextView descriptionText = (TextView) itemView.findViewById(R.id.txtItemDescription);
             descriptionText.setText(currentItem.getItemDetail());
 
-            TextView priceText = (TextView) itemView.findViewById(R.id.txtItemPrice);
+            TextView priceText = (TextView) itemView.findViewById(R.id.txtitemTopping);
             priceText.setText(currentItem.getItemPrice());
             return  itemView;
             //return super.getView(position, convertView, parent);

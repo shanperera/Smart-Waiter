@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         catch (Exception e){
+            Log.d("code", String.valueOf(e));
             Toast.makeText(getApplicationContext(), "Error - Invalid QRcode",
                     Toast.LENGTH_LONG).show();
         }

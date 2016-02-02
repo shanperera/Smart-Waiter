@@ -2,18 +2,13 @@ package com.example.pavneetjauhal.smartwaiter;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.example.pavneetjauhal.smartwaiter.CouchBaseLite;
-import com.example.pavneetjauhal.smartwaiter.MainActivity;
 
 public class ConfirmOrderActivity extends AppCompatActivity {
 
@@ -70,7 +65,7 @@ public class ConfirmOrderActivity extends AppCompatActivity {
             TextView makeText = (TextView) itemView.findViewById(R.id.txtItemName);
             makeText.setText(currentItem.getItemName());
 
-            TextView makeText2 = (TextView) itemView.findViewById(R.id.txtItemPrice);
+            TextView makeText2 = (TextView) itemView.findViewById(R.id.txtitemTopping);
             makeText2.setText(currentItem.getItemPrice());
 
 

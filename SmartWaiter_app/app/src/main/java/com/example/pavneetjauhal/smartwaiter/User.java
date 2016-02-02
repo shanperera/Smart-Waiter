@@ -33,8 +33,8 @@ public class User {
 
     //methods for adding menu items to cart
     List<UserItems> userItems = new ArrayList<UserItems>();;
-    public void createUserItem(String itemName, String itemPrice) {
-        this.userItems.add(new UserItems(itemName, itemPrice));
+    public void createUserItem(String itemName, String itemPrice, ArrayList<String> itemToppings, String sideOrder, MenuItems itemObject, String specialInstructions) {
+        this.userItems.add(new UserItems(itemName, itemPrice,itemToppings,sideOrder, itemObject, specialInstructions));
     }
     public void removeUserItem(int index){
         userItems.remove(index);
