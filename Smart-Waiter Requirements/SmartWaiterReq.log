@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  20 JAN 2016 19:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  2 FEB 2016 18:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -583,52 +583,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--351
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--358
+Underfull \hbox (badness 10000) in paragraph at lines 353--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--358
+Underfull \hbox (badness 10000) in paragraph at lines 353--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--365
+Underfull \hbox (badness 10000) in paragraph at lines 360--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--365
+Underfull \hbox (badness 10000) in paragraph at lines 360--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--372
+Underfull \hbox (badness 10000) in paragraph at lines 367--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--372
+Underfull \hbox (badness 10000) in paragraph at lines 367--373
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 373--379
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--379
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--386
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--386
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 
  []
 
@@ -639,92 +629,92 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--395
+Underfull \hbox (badness 10000) in paragraph at lines 381--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--395
+Underfull \hbox (badness 10000) in paragraph at lines 381--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--397
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 396--403
+Underfull \hbox (badness 10000) in paragraph at lines 398--407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--403
+Underfull \hbox (badness 10000) in paragraph at lines 398--407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--413
+Underfull \hbox (badness 10000) in paragraph at lines 410--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--413
+Underfull \hbox (badness 10000) in paragraph at lines 410--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--424
+Underfull \hbox (badness 10000) in paragraph at lines 419--424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--424
+Underfull \hbox (badness 10000) in paragraph at lines 425--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--430
+Underfull \hbox (badness 10000) in paragraph at lines 425--431
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 431--437
+Underfull \hbox (badness 10000) in paragraph at lines 432--438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--437
+Underfull \hbox (badness 10000) in paragraph at lines 440--446
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--444
+Underfull \hbox (badness 10000) in paragraph at lines 440--446
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--452
+Underfull \hbox (badness 10000) in paragraph at lines 447--453
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--452
+Underfull \hbox (badness 10000) in paragraph at lines 447--453
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 453--459
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 453--459
-
- []
-
-[23] [24] [25] [26] [27]
-Overfull \hbox (1.81075pt too wide) in paragraph at lines 543--544
+[23] [24] [25] [26]
+Overfull \hbox (1.81075pt too wide) in paragraph at lines 537--538
 \OT1/cmr/m/n/12 through the use of en-crypted con-nec-tion. Also, will en-sure 
 restau-rant mangers
  []
 
-[28] [29] [30] (./SmartWaiterReq.aux) ) 
+[27] [28] [29] [30] (./SmartWaiterReq.aux) ) 
 Here is how much of TeX's memory you used:
  3109 strings out of 493315
  47370 string characters out of 6137904
@@ -733,14 +723,14 @@ Here is how much of TeX's memory you used:
  9514 words of font info for 33 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,8n,38p,518b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti12.pfb>
-Output written on SmartWaiterReq.pdf (31 pages, 260695 bytes).
+</usr/local/texlive/2013/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on SmartWaiterReq.pdf (31 pages, 260612 bytes).
 PDF statistics:
  131 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream
