@@ -20,6 +20,7 @@ import java.util.List;
 
 
 public class User {
+    private String salt;
     private String username;
     private String password; //storing the password in plain text for now
     private String firstName;
@@ -51,8 +52,8 @@ public class User {
     public User(){}
 
     //All credentials given
-    public User(String username, String password, String firstName, String lastName, String billingAddress, String postalCode, String phoneNumber) {
-        this.username = username;
+    public User(String salt, String password, String firstName, String lastName, String billingAddress, String postalCode, String phoneNumber) {
+        this.salt = salt;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -87,6 +88,8 @@ public class User {
     public String getPassword() {
         return password;
     }
+    public String getSalt(){return salt;}
+    public void setSalt(String salt){ this.salt = salt;}
 
     public void setPassword(String password) {
         this.password = password;

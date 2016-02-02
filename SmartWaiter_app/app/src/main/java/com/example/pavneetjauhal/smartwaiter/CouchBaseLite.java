@@ -13,14 +13,10 @@ import com.couchbase.lite.ReplicationFilter;
 import com.couchbase.lite.SavedRevision;
 import com.couchbase.lite.android.AndroidContext;
 import com.couchbase.lite.replicator.Replication;
-import com.example.pavneetjauhal.smartwaiter.User;
-
-import org.codehaus.jackson.map.jsontype.impl.MinimalClassNameIdResolver;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -87,6 +83,8 @@ public class CouchBaseLite {
         properties.put("Phone Number", userData.getPhoneNumber());
         properties.put("Postal Code", userData.getPostalCode());
         properties.put("Home Address", userData.getBillingAddress());
+        properties.put("Salt", userData.getSalt());
+        properties.put("Password", userData.getPassword());
         userdocument.putProperties(properties);
     }
 
@@ -95,9 +93,11 @@ public class CouchBaseLite {
         if (userdocument.getProperties() != null && this.getUserDatabase().getDocument("userData") != null){
             MainActivity.user.setFirstName((String) userdocument.getProperty("First Name"));
             MainActivity.user.setLastName((String) userdocument.getProperty("Last Name"));
-            MainActivity.user.setBillingAddress((String) userdocument.getProperty("Phone Number"));
+            MainActivity.user.setBillingAddress((String) userdocument.getProperty("Address"));
             MainActivity.user.setPostalCode((String) userdocument.getProperty("Postal Code"));
-            MainActivity.user.setPhoneNumber((String) userdocument.getProperty("Home Address"));
+            MainActivity.user.setPhoneNumber((String) userdocument.getProperty("Phone Number"));
+            MainActivity.user.setSalt((String)userdocument.getProperty("Salt"));
+            MainActivity.user.setPassword((String) userdocument.getProperty("Password"));
         } else {
             return;
         }
@@ -291,8 +291,10 @@ public class CouchBaseLite {
         properties.put("UserName", MainActivity.user.getUsername());
         properties.put("Total price",MainActivity.user.getTotalPrice());
         properties.put("Items List", UserItems);
-        properties.put("owner", "525");
-        properties.put("byOwner", "525");
+        properties.put("Token", MainActivity.user.getToken());
+        properties.put("Address", MainActivity.user.getBillingAddress());
+        properties.put("Phone Number", MainActivity.user.getPhoneNumber());
+        properties.put("Postal Code", MainActivity.user.getPostalCode());
         properties.put("Current Time", timestamp);
         Document document = this.getOrderDatabase().getDocument(timestamp);
         document.putProperties(properties);

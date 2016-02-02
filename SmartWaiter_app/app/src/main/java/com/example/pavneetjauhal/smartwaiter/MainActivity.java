@@ -3,26 +3,20 @@ package com.example.pavneetjauhal.smartwaiter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.ActionBar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.couchbase.lite.CouchbaseLiteException;
 import com.couchbase.lite.Document;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
-import com.google.zxing.qrcode.encoder.QRCode;
 
 public class MainActivity extends AppCompatActivity {
     public static CouchBaseLite local_database;
@@ -67,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
         }
         //setContentView(R.layout.categorylist);
 
-
+        Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.LoginActivity");
+        startActivity(intent);
 
 
         // Created an onClickListener for the "Scan QR code / Barcode" button
@@ -75,21 +70,24 @@ public class MainActivity extends AppCompatActivity {
         // defined by the ZXing embedded scanner library to initialise the
         // barcode scanner, initiateScan() brings up the local camera app
         // and prompts the user to take a picture of the QR/barcode
+        String password = "";
+
 
         if(checkExists == false) {
-            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.AccountCreationActivity");
+            intent = new Intent("com.example.pavneetjauhal.smartwaiter.AccountCreationActivity");
             startActivity(intent);
+        }else {
+
+            scanButton = (Button) findViewById(R.id.scanCodeButton);
+
+            scanButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
+                    integrator.initiateScan();
+                }
+            });
         }
-
-        scanButton = (Button)findViewById(R.id.scanCodeButton);
-
-        scanButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
-                integrator.initiateScan();
-            }
-        });
 
         //onPopulateMenu("456");
 

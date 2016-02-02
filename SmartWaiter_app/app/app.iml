@@ -96,6 +96,7 @@
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="stripe-java-1.40.0" level="project" />
+    <orderEntry type="library" exported="" name="commons-codec-1.4" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.1.0" level="project" />
     <orderEntry type="library" exported="" name="zxing-android-embedded-3.0.3" level="project" />
     <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />

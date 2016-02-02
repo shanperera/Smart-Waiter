@@ -83,4 +83,6 @@
     <string name="title_activity_custome_side">CustomeSideActivity</string>
     <string name="title_activity_custom_side">CustomSideActivity</string>
     <string name="title_activity_special_instrunctions">SpecialInstrunctionsActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hello_world">Hello world!</string>
 </resources>

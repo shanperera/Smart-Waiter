@@ -39,26 +39,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/create_account_activity_login_label"
-            android:textStyle="bold"
-            android:textSize="7pt"
-            android:layout_marginTop="6dp"
-            android:id="@+id/loginLabel" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/create_account_activity_username_label"
-            android:id="@+id/usernameLabel" />
-
-        <EditText
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/usernameEditText" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/create_account_activity_password_label"
             android:layout_marginTop="6dp"
             android:id="@+id/passwordLabel" />
@@ -68,6 +48,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
+            android:maxLength="5"
             android:id="@+id/passwordEditText" />
 
         <TextView
