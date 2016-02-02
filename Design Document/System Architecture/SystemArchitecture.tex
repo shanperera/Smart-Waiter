@@ -73,6 +73,7 @@ This document structure is based on the general software design document templat
 \hline
 \textbf{Date}  & \textbf{Comments} \\ \hline
 January 11, 2016 &  first draft. \\ 
+January 31, 2016 &  Added information regarding UserItems class. \\ 
 \hline
 \end{tabular}
 \caption{Revision History Table}
@@ -118,11 +119,23 @@ Objects of this class are instantiated from the MenuCategories class. By success
 User class is used to store menu item a user would like to order. For now, there is only one important variable to consider: 
 
  \begin{description}
-  \item[userItem:] an array that stores objects of MenuItems class. This is used to save menu items a user would like to order.
+  \item[userItem:] an array that stores objects of UserItems class. This is used to save menu items a user would like to order.
 \end{description}
 
-Only one object is instantiated through the life time of this application. This object represents the user cart of menu items he/she would like to order. This object is called upon when a user decides to add an item to their cart. When this occurs, a copy of the MenuItem object is saved within the userItem variables. This way, there is a list maintained to hold all item a user would like to order. When a user confirms and sends their order, the item information is extracted from userItem list, formatted into a JSON request and send back to the database for further processing. Having this class implemented allows extendibility in the future, as all vital information pertaining to a user can be stored within the class (for example, user settings). 
+Only one object is instantiated through the life time of this application. This object represents the user cart of menu items he/she would like to order. This object is called upon when a user decides to add an item to their cart. When this occurs, an object of UserItems class is created and used to store information pertaining to the item the user would like to order. These objects are kept the userItem list. When a user confirms and sends their order, the item information is extracted from userItem list, formatted into a JSON request and send back to the database for further processing. Having this class implemented allows extendibility in the future, as all vital information pertaining to a user can be stored within the class (for example, user settings). 
 
+\subsubsection{UserItems Class}
+UserItems class is used to information regarding an item a user would like to order. The following variables below describe what type of information is stored: 
+
+\begin{description}
+  \item[itemName:] Stores item name
+  \item[itemPrice:] Stores item price
+  \item[itemToppings:] Stores item toppings
+  \item[sideOrder:] Stores side order
+  \item[specialInstructions:] Stores special instructions
+\end{description}
+
+Objects of this class are instantiated by the User class, whenever a user decides to add an item to cart. These objects store all vital information in relation to the item the user would like to order. These objects are deleted when a user send out this order.
 
 \subsection{Camera Structure}
 There is one main function related to the Camera structure: onActivityResult. The camera is used to read QR codes, which contain the location of where the menu data is stored in relation to the current restaurant. The QR codes are read using an embedded version of the ZXing library. When the application starts, a ZXing specific variable (IntentIntegrator) is initialized, when the user clicks the "Scan QR Code" button on the first screen, the Camera is initialized. 
