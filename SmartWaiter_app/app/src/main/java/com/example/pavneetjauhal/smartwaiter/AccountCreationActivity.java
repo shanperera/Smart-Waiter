@@ -1,5 +1,6 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -73,6 +74,9 @@ public class AccountCreationActivity extends AppCompatActivity {
         MainActivity.user = newUser;
         try{
             MainActivity.local_database.storeUserData(newUser);
+            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity");
+            startActivity(intent);
+
         }
         catch(Exception e){
         }

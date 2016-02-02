@@ -3,6 +3,7 @@ package com.example.pavneetjauhal.smartwaiter;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -14,6 +15,11 @@ import com.stripe.android.model.Token;
 import com.stripe.model.Charge;
 import com.stripe.model.Customer;
 
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -85,14 +91,17 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
                         card,
                         new TokenCallback() {
                             public void onSuccess(Token token) {
-                                createCharge(token);
+                                postToken(token);
+                                //createCharge(token);
                                 try {
                                     MainActivity.local_database.createItem(MainActivity.user.userItems);
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }
+                                Log.d("TokenSuccess", "Token Success!");
                             }
                             public void onError(Exception error) {
+                                Log.d("TokenError", "Token Failed!");
                             }
                         }
                 );
@@ -101,6 +110,32 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
 
             }
         }catch (Exception e){
+
+        }
+    }
+
+    public void postToken(Token token){
+        String url = "https://node-js-charge-card.herokuapp.com/";
+        String charset = "UTF-8";
+        String pToken = token.toString();
+        String chargeParameters;
+
+        try{
+            String query = String.format("param1=%s",
+                    URLEncoder.encode(pToken, charset));
+
+            URLConnection connection = new URL(url).openConnection();
+            connection.setDoOutput(true); // Triggers POST.
+            connection.setRequestProperty("Accept-Charset", charset);
+            connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
+
+            try (OutputStream output = connection.getOutputStream()) {
+                output.write(query.getBytes(charset));
+            }
+
+            InputStream response = connection.getInputStream();
+            response.close();
+        }catch(Exception e){
 
         }
     }

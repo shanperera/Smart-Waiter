@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.categorylist);
 
         Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.LoginActivity");
-        startActivity(intent);
+//        startActivity(intent);
 
 
         // Created an onClickListener for the "Scan QR code / Barcode" button
