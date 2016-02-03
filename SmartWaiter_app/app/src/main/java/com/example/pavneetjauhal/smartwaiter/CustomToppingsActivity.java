@@ -85,7 +85,6 @@ public class CustomToppingsActivity extends AppCompatActivity {
             intent.putExtra("selectedItem", selectedItem);
             intent.putExtra("modifyOrder", modifyItem);
             startActivity(intent);
-            finish();
         }
         else {
             itemToppings = selectedItem.getItemToppings();
@@ -162,7 +161,6 @@ public class CustomToppingsActivity extends AppCompatActivity {
                     CheckBox checkBox = (CheckBox)v;
                     if(checkBox.isChecked()){
                         itemToppingsToAdd.add(itemsArrayList.get(position));
-                        Toast.makeText(CustomToppingsActivity.this, itemsArrayList.get(position), Toast.LENGTH_SHORT).show();
                     }
                     else{
                         itemToppingsToAdd.remove(itemsArrayList.get(position));
@@ -192,7 +190,6 @@ public class CustomToppingsActivity extends AppCompatActivity {
         b.putInt("index", index); //Your id
         intent.putExtras(b);
         startActivity(intent);
-        finish();
     }
 
 
@@ -221,7 +218,6 @@ public class CustomToppingsActivity extends AppCompatActivity {
             Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
             itemToppingsToAdd.clear();
             startActivity(intent);
-
             return true;
         }
 

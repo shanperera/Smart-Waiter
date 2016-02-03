@@ -80,6 +80,9 @@ public class AccountCreationActivity extends AppCompatActivity {
         }
         catch(Exception e){
         }
-        finish();
+        //finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

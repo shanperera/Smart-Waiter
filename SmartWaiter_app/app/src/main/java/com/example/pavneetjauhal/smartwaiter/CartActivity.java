@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CartActivity extends AppCompatActivity {
 
@@ -29,9 +30,14 @@ public class CartActivity extends AppCompatActivity {
     }
 
     public void confirmOrder(View view) {
+        if(MainActivity.user.userItems.size() != 0){
         Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.ConfirmOrderActivity");
         startActivity(intent);
-        finish();
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Cart Is Empty. Please Add Items Before Checkout.",
+                    Toast.LENGTH_LONG).show();
+        }
     }
 
 
@@ -130,7 +136,6 @@ public class CartActivity extends AppCompatActivity {
                     b.putInt("index", index); //Your id
                     intent.putExtras(b);
                     startActivity(intent);
-                    finish();
                 }
             });
 

@@ -49,7 +49,6 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
                 mainObject.menuItemList = list.categoryItems;
                 Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
                 startActivity(intent);
-                finish();
                 //onDisplayItemList();
             }
         });
@@ -108,7 +107,6 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
         if (id == R.id.action_cart) {
             Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CartActivity");
             startActivity(intent);
-            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -120,6 +118,7 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        MainActivity.user.userItems.clear();
                         Intent intent = new Intent(DisplayCategoriesActivity.this, MainActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);

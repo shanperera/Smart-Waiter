@@ -1,5 +1,6 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -96,7 +97,11 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
                                     e.printStackTrace();
                                 }
                                 Log.d("TokenSuccess", "Token Success!");
-                                finish();
+                                //finish();
+                                MainActivity.user.userItems.clear();
+                                Intent intent = new Intent(GetPaymentInformationActivity.this, MainActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
                                 Toast.makeText(getApplicationContext(), "Order Sent Successfully",
                                         Toast.LENGTH_LONG).show();
                             }

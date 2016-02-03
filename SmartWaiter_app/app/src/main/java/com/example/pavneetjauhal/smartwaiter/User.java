@@ -46,6 +46,7 @@ public class User {
         for (int x = 0; x < userItems.size(); x++){
             price = price +  Double.parseDouble(userItems.get(x).getItemPrice());
         }
+        price = (double)Math.round(price * 100d) / 100d;
         return String.valueOf(price);
     }
 

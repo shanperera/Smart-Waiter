@@ -87,7 +87,6 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
     public void addToCart(View view) {
         //et = (EditText) findViewById(R.id.specialInstructions);
         String specialInstructions = et.getText().toString();
-        Toast.makeText(getBaseContext(), specialInstructions, Toast.LENGTH_LONG).show();
 
 
         if (modifyItem == null) {
@@ -104,8 +103,6 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
             MainActivity.user.userItems.get(index).setItemToppings(itemToppingsToAdd);
             MainActivity.user.userItems.get(index).setSideOrder(sideOrder);
             MainActivity.user.userItems.get(index).setSpecialInstructions(specialInstructions);
-            Toast.makeText(getApplicationContext(), "Modified Item",
-                    Toast.LENGTH_LONG).show();
 
         }
         Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
@@ -115,7 +112,6 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
         //CustomizeItemActivity.itemToppingsToAdd.clear();
         //CustomizeItemSideActivity.sideOrdersToAdd = null;
         startActivity(intent);
-        finish();
     }
 
     public boolean onKeyDown(int keyCode, KeyEvent event)  {
@@ -124,18 +120,14 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
                 Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
                 intent.putExtra("selectedItem", selectedItem);
                 startActivity(intent);
-
             }
             else if((selectedItem.getItemSides() == null)){
                 Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomToppingsActivity");
                 intent.putExtra("selectedItem", selectedItem);
                 startActivity(intent);
-
             }
             else{
-                Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomSideActivity");
-                intent.putExtra("selectedItem", selectedItem);
-                startActivity(intent);
+                finish();
             }
             return true;
         }

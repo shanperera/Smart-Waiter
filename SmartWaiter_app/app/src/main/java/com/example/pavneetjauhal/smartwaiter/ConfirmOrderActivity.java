@@ -36,10 +36,8 @@ public class ConfirmOrderActivity extends AppCompatActivity {
 
     public void proceedPayment(View view) throws Exception {
         Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity");
-
         //MainActivity.local_database.createItem(MainActivity.user.userItems);
         startActivity(intent);
-        finish();
     }
 
 
