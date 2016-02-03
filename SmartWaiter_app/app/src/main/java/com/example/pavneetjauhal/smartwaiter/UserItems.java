@@ -1,8 +1,5 @@
 package com.example.pavneetjauhal.smartwaiter;
-import java.util.ArrayList;
 import java.io.Serializable;
-
-
 import java.util.ArrayList;
 import java.util.List;
 

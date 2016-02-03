@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
-import com.stripe.android.*;
+import com.stripe.android.Stripe;
+import com.stripe.android.TokenCallback;
 import com.stripe.android.model.Card;
 import com.stripe.android.model.Token;
 
@@ -94,6 +96,9 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
                                     e.printStackTrace();
                                 }
                                 Log.d("TokenSuccess", "Token Success!");
+                                finish();
+                                Toast.makeText(getApplicationContext(), "Order Sent Successfully",
+                                        Toast.LENGTH_LONG).show();
                             }
                             public void onError(Exception error) {
                                 Log.d("TokenError", "Token Failed!");

@@ -34,7 +34,7 @@ public class CouchBaseLite {
     private static final String DB_USER = "user_data";
     public static String restaurant_Address = null;
     private static final String TAG = "SmartWaiter";
-    private static final String HOST = "http://162.243.20.236";
+    private static final String HOST = "http://192.168.43.200";
     private static final String PORT = "4984";
     private static String timestamp = null;
     Manager manager = null;
@@ -279,6 +279,13 @@ public class CouchBaseLite {
         syncURL = new URL(host + ":" + port + "/" + db_name);
         return syncURL;
     }
+    public List<OrderItems>  populateOderitems(List<UserItems> userItems){
+        List<OrderItems> orderItems = new ArrayList<>();
+        for (int i =0; i < userItems.size(); i++){
+            orderItems.add(new OrderItems(userItems.get(i).getItemName(), userItems.get(i).getItemPrice(),userItems.get(i).getItemToppings(), userItems.get(i).getSideOrder(), userItems.get(i).getSpecialInstrucitons()));
+        }
+        return orderItems;
+    }
 
     public void createItem(List<UserItems> UserItems) throws Exception {
         /* Truncate barcode to extract the table number */
@@ -290,8 +297,10 @@ public class CouchBaseLite {
         properties.put("Last Name",MainActivity.user.getLastName());
         properties.put("UserName", MainActivity.user.getUsername());
         properties.put("Total price",MainActivity.user.getTotalPrice());
-        properties.put("Items List", UserItems);
-        properties.put("Token", MainActivity.user.getToken());
+        List<OrderItems> orderItems = new ArrayList<OrderItems>();
+        orderItems = populateOderitems(UserItems);
+        properties.put("Items List", orderItems);
+        //properties.put("Token", MainActivity.user.getToken());
         properties.put("Address", MainActivity.user.getBillingAddress());
         properties.put("Phone Number", MainActivity.user.getPhoneNumber());
         properties.put("Postal Code", MainActivity.user.getPostalCode());

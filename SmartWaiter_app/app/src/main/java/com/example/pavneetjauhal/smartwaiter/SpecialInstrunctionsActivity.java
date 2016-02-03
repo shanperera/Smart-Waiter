@@ -115,6 +115,7 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
         //CustomizeItemActivity.itemToppingsToAdd.clear();
         //CustomizeItemSideActivity.sideOrdersToAdd = null;
         startActivity(intent);
+        finish();
     }
 
     public boolean onKeyDown(int keyCode, KeyEvent event)  {
@@ -123,14 +124,18 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
                 Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
                 intent.putExtra("selectedItem", selectedItem);
                 startActivity(intent);
+
             }
             else if((selectedItem.getItemSides() == null)){
                 Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomToppingsActivity");
                 intent.putExtra("selectedItem", selectedItem);
                 startActivity(intent);
+
             }
             else{
-                finish();
+                Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomSideActivity");
+                intent.putExtra("selectedItem", selectedItem);
+                startActivity(intent);
             }
             return true;
         }

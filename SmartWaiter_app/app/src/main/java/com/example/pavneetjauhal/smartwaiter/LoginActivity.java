@@ -2,6 +2,7 @@ package com.example.pavneetjauhal.smartwaiter;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -48,5 +49,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
         finish();
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 }

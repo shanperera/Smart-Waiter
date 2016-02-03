@@ -85,6 +85,7 @@ public class CustomToppingsActivity extends AppCompatActivity {
             intent.putExtra("selectedItem", selectedItem);
             intent.putExtra("modifyOrder", modifyItem);
             startActivity(intent);
+            finish();
         }
         else {
             itemToppings = selectedItem.getItemToppings();
@@ -191,6 +192,7 @@ public class CustomToppingsActivity extends AppCompatActivity {
         b.putInt("index", index); //Your id
         intent.putExtras(b);
         startActivity(intent);
+        finish();
     }
 
 
@@ -207,6 +209,7 @@ public class CustomToppingsActivity extends AppCompatActivity {
         if (id == R.id.action_cart) {
             Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CartActivity");
             startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -218,6 +221,7 @@ public class CustomToppingsActivity extends AppCompatActivity {
             Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
             itemToppingsToAdd.clear();
             startActivity(intent);
+
             return true;
         }
 

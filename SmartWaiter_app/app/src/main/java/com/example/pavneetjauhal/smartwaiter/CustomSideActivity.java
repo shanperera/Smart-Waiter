@@ -75,6 +75,7 @@ public class CustomSideActivity extends AppCompatActivity {
             intent.putExtra("itemToppings", itemToppingsToAdd);
             intent.putExtra("modifyOrder", modifyItem);
             startActivity(intent);
+            finish();
         }
         else {
             sideOrders = selectedItem.getItemSides();
@@ -147,6 +148,7 @@ public class CustomSideActivity extends AppCompatActivity {
                     b.putInt("index", index); //Your id
                     intent.putExtras(b);
                     startActivity(intent);
+                    finish();
                     //onDisplayItemList();
                 }
             });
@@ -180,6 +182,7 @@ public class CustomSideActivity extends AppCompatActivity {
         if (id == R.id.action_cart) {
             Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CartActivity");
             startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -193,7 +196,9 @@ public class CustomSideActivity extends AppCompatActivity {
                 startActivity(intent);
             }
             else{
-                finish();
+                Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayToppingsActivity");
+                sideOrdersToAdd = null;
+                startActivity(intent);
             }
             return true;
         }

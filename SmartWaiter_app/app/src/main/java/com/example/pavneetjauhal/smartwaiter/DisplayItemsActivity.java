@@ -45,6 +45,7 @@ public class DisplayItemsActivity extends AppCompatActivity {
                 Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomToppingsActivity");
                 intent.putExtra("selectedItem", object);
                 startActivity(intent);
+                finish();
                 //onDisplayItemList();
             }
         });
@@ -102,6 +103,7 @@ public class DisplayItemsActivity extends AppCompatActivity {
         if (id == R.id.action_cart) {
             Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CartActivity");
             startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);

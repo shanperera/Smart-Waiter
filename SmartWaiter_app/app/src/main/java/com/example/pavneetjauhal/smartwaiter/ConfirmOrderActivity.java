@@ -39,6 +39,7 @@ public class ConfirmOrderActivity extends AppCompatActivity {
 
         //MainActivity.local_database.createItem(MainActivity.user.userItems);
         startActivity(intent);
+        finish();
     }
 
 

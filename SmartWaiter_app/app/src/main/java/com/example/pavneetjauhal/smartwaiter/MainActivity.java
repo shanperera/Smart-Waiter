@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         if(checkExists == false) {
             intent = new Intent("com.example.pavneetjauhal.smartwaiter.AccountCreationActivity");
             startActivity(intent);
-        }else {
+        }
 
             scanButton = (Button) findViewById(R.id.scanCodeButton);
 
@@ -87,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
                     integrator.initiateScan();
                 }
             });
-        }
 
         //onPopulateMenu("456");
 
