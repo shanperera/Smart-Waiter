@@ -135,6 +135,7 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
             connection.setDoOutput(true); // Triggers POST.
             connection.setRequestProperty("Accept-Charset", charset);
             connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
+            connection.connect();
 
             try (OutputStream output = connection.getOutputStream()) {
                 output.write(query.getBytes(charset));
@@ -142,8 +143,9 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
 
             InputStream response = connection.getInputStream();
             response.close();
+            Log.d("WebSuccess", "Web Success!");
         }catch(Exception e){
-
+            Log.d("WebFail", "Web Fail!");
         }
     }
 }
