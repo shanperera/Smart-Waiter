@@ -87,7 +87,7 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
                         new TokenCallback() {
                             public void onSuccess(Token token) {
                                 postToken(token);
-                                //createCharge(token);
+                                MainActivity.user.setToken(token);
                                 try {
                                     MainActivity.local_database.createItem(MainActivity.user.userItems);
                                 } catch (Exception e) {
@@ -112,11 +112,13 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
     public void postToken(Token token){
         String url = "https://node-js-charge-card.herokuapp.com/";
         String charset = "UTF-8";
+        String name = "stripeToken";
         String pToken = token.toString();
         String chargeParameters;
 
         try{
-            String query = String.format("param1=%s",
+            String query = String.format("name=%s&pToken=%s",
+                    URLEncoder.encode(name, charset),
                     URLEncoder.encode(pToken, charset));
 
             URLConnection connection = new URL(url).openConnection();

@@ -62,9 +62,7 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public User(Token token){
-        this.token = token;
-    }
+    public void setToken(Token token){ this.token = token;};
 
     public User(String customerID){
         this.customerID = customerID;
