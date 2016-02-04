@@ -20,6 +20,7 @@ public class CartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cart);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Cart Menu");
         popualteCartListView();
     }
 

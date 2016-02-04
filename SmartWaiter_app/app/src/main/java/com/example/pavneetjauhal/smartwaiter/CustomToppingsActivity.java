@@ -41,6 +41,7 @@ public class CustomToppingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_custom_toppings);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Choose Toppings");
 
         Intent intent = getIntent();
         selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");

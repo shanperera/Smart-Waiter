@@ -68,11 +68,11 @@ The targeted customers will include clients of the restaurants, which offer Smar
 \subsubsection{Other Stakeholders}
 Other Stakeholders of this project include:
 \begin{itemize}
-  \item Supervisor – Dr. Rong Zheng \ds{Hyphens aren't showing up in the pdf for me, try using `--'}
-  \item 	Android Users – Clients of restaurant
-  \item 	Developers and Testers – Pavneet Jaual, Meraj Patel and Shan Perera
+  \item Supervisor -- Dr. Rong Zheng \ds{Hyphens aren't showing up in the pdf for me, try using `--'}
+  \item 	Android Users --�� Clients of restaurant
+  \item 	Developers and Testers -- Pavneet Jaual, Meraj Patel and Shan Perera
   \item 	Beta Testers
-  \item Prospective manager/restaurant owners \ldots \ds{Why do you have dots here? If there are more stakeholders you can include, include them. Otherwise, just end the list}
+  \item Prospective manager/restaurant owners \ds{Why do you have dots here? If there are more stakeholders you can include, include them. Otherwise, just end the list}
 \end{itemize}
 
 \subsection{Users of the Product}
@@ -93,14 +93,14 @@ There are some basic characteristics that the user should have, to qualify to us
   \item Should have an android device and an internet connection
   \item Basic understanding of how to use an android application. 
   \item 	Should have a credit card, to make payments through the application. 
-  \item 	Users who generally frequent restaurants at least once a month \ds{Why do they need to frequent restaurants at least once a month to qualify for this app? Couldn't anyone use it regardless of how often they go out?}
+ \ds{Why do they need to frequent restaurants at least once a month to qualify for this app? Couldn't anyone use it regardless of how often they go out?}
 \end{itemize}
 
 \noindent\textbf{\textit{Group - Restaurant Owners}}\newline
 Restaurant managers who have Smart Waiter solutions implemented \newline
 \newline
 \textit{User Role}\newline
-These users will use the application to view restaurant menu, order their selection and pay for their meal.\ds{Wouldn't they be doing something different than just what the customers can do?}\newline\newline
+These users will use the application to see how well it fits into their business requirements. These users will also demands features and enhancements.\ds{Wouldn't they be doing something different than just what the customers can do?}\newline\newline
 \textit{Subject Matter Experience}\newline
 To be considered masters, as they have in depth knowledge of the business. \newline\newline
 \textit{Technological Experience}\newline
@@ -114,7 +114,7 @@ There are some basic characteristics that the user should have, to qualify to us
   \item 	These users will pay attention to details. They will generally critique the UI and other aspects of the application to see how it fits their specific business needs.
 \end{itemize}
 
-\noindent\textbf{\textit{Group – Testers/Developers}}\newline
+\noindent\textbf{\textit{Group - Testers/Developers}}\newline
 Testers and developers of Smart Waiter \newline
 \newline
 \textit{User Role}\newline
@@ -130,6 +130,7 @@ They will be a master in technological experience. They will know the code base 
   \item 	Evaluate the application from the engineering perspective
   \item 	These users will pay close attention to detail
   \item 	Knowledge of all possible use-cases and expected outcomes of the application
+  \item 	These users will also be responsible for settings the menus, and providing updates and support for the app.
 \end{itemize}
 
 \ds{Who will be setting the menu and how?}
@@ -187,12 +188,10 @@ The application must run on Android operating system. \newline\newline
 \textit{Rationale}\newline
 We are catering to the entire android platform users. \newline\newline
 \textit{Fit criterion}\newline
-The application must be approved complaint \ds{What does ``approved complaint" mean? Did you mean ``compliant"?} from the developers and testers. This will involve thorough testing on the Android platform. \ds{This paragraph is awkward}\newline\newline
-
+The application must be approved \ds{What does ``approved complaint" mean? Did you mean ``compliant"?} from the developers and testers. This will involve thorough testing on the Android platform. \ds{This paragraph is awkward}\newline\newline
 
 \ds{You should avoid using pagebreaks}
 
-\pagebreak 
 \noindent\textbf{\textit{Constraint 4}}
 \newline
 \textit{Description}\newline
@@ -200,7 +199,7 @@ The application shall support credit card payments. \newline\newline
 \textit{Rationale}\newline
 This will transfer money to the restaurant account. \newline\newline
 \textit{Fit criterion}\newline
-The functionality must be approved complaint \ds{``Approved complaint" again} by the developer and testers. This will require approving the code base and the end-to-end functionality.\newline\newline
+The functionality must be approved \ds{``Approved complaint" again} by the developer and testers. This will require approving the code base and the end-to-end functionality.\newline\newline
 
 \noindent\textbf{\textit{Constraint 5}}
 \newline
@@ -209,7 +208,7 @@ The payment information for the client must be stored safely \newline\newline
 \textit{Rationale}\newline
 This is very sensitive data and should not be abused and exploited. \newline\newline
 \textit{Fit criterion}\newline
-The functionality must be approved complaint \ds{``Approved complaint" again} by the developer and testers. This will require approving the code base and the end-to-end functionality.
+The functionality must be approved \ds{``Approved complaint" again} by the developer and testers. This will require approving the code base and the end-to-end functionality.
 \ds{The uses of ``approved complaint" make the sentences awkward, and I do not know what they mean}\newline\newline
 
 \subsubsection{Implementation Environment of the Current System}
@@ -217,24 +216,23 @@ The functionality must be approved complaint \ds{``Approved complaint" again} by
 actual constraints, explain why you \emph{must} use them.}
 The environment will require the following;
 \begin{itemize}
-  \item Source code will be written in Java
-  \item Android Studio will be used as the IDE
-  \item 	Couchbase API Library for Android will be used for cloud storage
-  \item 	Stripe API will be used to process credit card payments
+  \item Source code will be written in Java because it is the only common language between third party API's used, and Android platform.
+  \item 	Cloud storage must be used, because of the dynamic nature of the application. The menus cannot packaged with the application.
+  \item 	A third party API or correct security features must be integrated into application to support credit card payments
+  \item	Restaurant clients should not be able to dine and dash. 
 \end{itemize}
 
 \subsubsection{Partner or collaborative applications}
 Not Applicable \newline\newline
 
 \subsubsection{Off-the-shelf software}
-
-Sketch will be used to make UI blueprints. In addition, Photoshop will be used to make custom logos and icons. 
+Not Applicable \newline\newline
 \ds{Again, not constraints unless you explain why they \emph{must} be used 
-instead of existing alternatives.}
+}
 \newline\newline
 
 \subsubsection{Anticipated workplace environment}
-The users will be using this application in a restaurant. Typically, this work environment would be loud and distracting. Thus, we plan on making the UI of the application visually attractive, where the user does not need to read much.
+The users will be using this application in a restaurant. Typically, this work environment would be loud and distracting. Thus, we plan on making the UI of the application visually attractive, where the user does not need to read much. Specifically, the UI will use larger fonts, pictures and a design which is intuitive and straight forward to use.
 \ds{This could use some clarification.}
 \newline\newline
 
@@ -259,20 +257,18 @@ N/A \ds{Seems like you could have something here. You use ``PCI" in the next fac
 \subsection{Relevant Facts and Assumptions} 
 \subsubsection{Relevant Facts}
 \textbf{\textit{Fact 1}}\newline
-Stripe API used for payment processing is payment card industry (PCI) complaint. \ds{``Compliant"}
-\newline\newline
-\textbf{\textit{Fact 2}}\newline
-Restaurant clients should not be able to dine and dash. 
+Stripe API used for payment processing is payment card industry (PCI) compliant. \ds{``Compliant"}
+\newline
 \ds{This sounds more like an assumption or a constraint.}
 \newline
 
 \subsubsection{Assumptions}
 
 \textbf{\textit{Assumption  1}}\newline
-Parse Database offers top-notch security for backend infrastructure from physical to application level.
+Couchbase Database offers top-notch security for backend infrastructure from physical to application level.
 \newline\newline
 \textbf{\textit{Assumption  2}}\newline
-SSL connection used for socket programming is secure and cannot be sniffed.
+Communication between mobile device and server cannot be sniffed.
 
 \ds{These are implementation details. You should be a bit more abstract}
 
@@ -280,7 +276,7 @@ SSL connection used for socket programming is secure and cannot be sniffed.
 
 \subsection{The Scope of the Work}
 \subsubsection{The Current Situation}
-An android application is required to allow customers to walk into a restaurant and use their smart device to view a menu, place an order and pay for there \ds{``Their"} meal. This will be a singular solution extended to multiple restaurants so users only have to use one mobile application to serve these functions.
+An android application is required to allow customers to walk into a restaurant and use their smart device to view a menu, place an order and pay for their \ds{``Their"} meal. This will be a singular solution extended to multiple restaurants so users only have to use one mobile application to serve these functions.
 \subsubsection{The Context of the Work}
 \begin{figure}[H]
   \centering
@@ -382,7 +378,7 @@ A user is browsing the menu and selects a hamburger, a new screen is brought up 
 \textit{Description:}\newline
 The product will allow a user to request special instructions for food items they have ordered. \newline\newline
 \textit{Fit Criterion:}\newline 
-A user is browsing the menu and selects a steak, the user decides to add the hamburger
+A user is browsing the menu and selects a steak
 \ds{is it a steak or a hamburger?}
 to his order, a new screen is brought up on the users device with a text entry box that allows the user to give special cooking instructions to the chef. The user types “medium rare” into the text box and confirms the order.
 \newline
@@ -391,7 +387,7 @@ to his order, a new screen is brought up on the users device with a text entry b
 \textit{Description:}\newline
 The product will allow the user to view their current order. \newline\newline
 \textit{Fit Criterion:}\newline 
-A user is browsing the menu and adds a chicken entree \ds{Should be ``entr\'{e}e"}
+A user is browsing the menu and adds a chicken entr\'{e}e \ds{Should be ``entr\'{e}e"}
  and a beer to her order. Afterwards she adds a side dish to her order. She wants to see the subtotal of her order, she views her order through the interface.
 \newline
 
@@ -399,7 +395,8 @@ A user is browsing the menu and adds a chicken entree \ds{Should be ``entr\'{e}e
 \textit{Description:}\newline
 The product will update the total amount owed for the order in real time. \newline\newline
 \textit{Fit Criterion:}\newline 
-A user is browsing the menu and adds an entree to his order, the total is calculated immediately afterwards. The user then adds a drink to his order, the total of the order updated immediately afterwards. 
+A user is browsing the menu and adds an entree to his order, the total is calculated immediately afterwards.  If they add
+an item to their current order, the total should update immediately
 \ds{You shouldn't mention the specifics of what the user is adding. If they add
 an item to their current order, the total should update immediately (regardless
 of what the item is)}
@@ -411,7 +408,7 @@ of what the item is)}
 \textit{Description:}\newline
 The product will allow users to pay for their order using a credit card. \newline\newline
 \textit{Fit Criterion:}\newline 
-A user is finishing his meal and all the waiters are busy with other tables. The user is in a rush, he pays for his order using the credit card info registered to his account associated with the product
+The user should be able to process their payment through the application using their credit card. No interaction with the restaurant personnel should be required.
 \ds{You don't need to tell a story as part of your fit criterion, simply how
 to confirm that the requirement has been met}
 \newline
@@ -419,6 +416,8 @@ to confirm that the requirement has been met}
 \noindent\textbf{\textit{Requirement 11}}\newline
 \textit{Description:}\newline
 The product must be Payment Card Industry (PCI) compliant.
+\textit{Fit Criterion:}\newline 
+Use a third party API in the application to process credit card which is PCI compliant.
 \ds{Where's your fit criterion?}
 \newline
 
@@ -426,14 +425,14 @@ The product must be Payment Card Industry (PCI) compliant.
 \textit{Description:}\newline
 The product will allow users to place their order. \newline\newline
 \textit{Fit Criterion:}\newline 
-A user adds a hamburger, fries and a drink to her order. She is really hungry and doesn't want to wait for a waiter to take her order. She places the order through the application. \ds{Not a fit criterion}
+User should be capable of placing their entire order, including special instructions through the application. Help from restaurant personnel should not be required. \ds{Not a fit criterion}
 \newline
 
 \noindent\textbf{\textit{Requirement 13}}\newline
 \textit{Description:}\newline
 The product will show a summary of the user's order before they place it. \newline\newline
 \textit{Fit Criterion:}\newline 
-A users adds a hamburger, fries and a drink to her order. She is ready to place her order, a screen is brought up on her device which shows her what she is about to order.
+There should be a screen which shows all of the order details for the client.
 \newline \ds{No need for the story}
 
 
@@ -466,7 +465,7 @@ The style of the app will be consistent between most pages by using a template. 
 Considering this app can be used in various ethic restaurants, customers may prefer to communicate in their own language. Thus, for a future functional requirement, the app will provide option to restaurant mangers to allow them to add an additional language setting. The app will always have English setting.
 
 \subsubsection{Learning Requirements}
-The learning curve will be kept as minimal as possible. The requirement is a user should be able to flawlessly use the app to view the restaurant menu and place and order without the use of a help function. The user should be comfortable and have complete understanding with this process as soon as he/she does it once. To meet this requirement, usability tests will be conducted to until high percentage of users feel comfortable with the process.  
+The learning curve will be kept as minimal as possible. The requirement is a user should be able to flawlessly use the app to view the restaurant menu and place and order without the use of a help function. The user should be comfortable and have complete understanding with this process as soon as he/she does it once. To meet this requirement, usability tests will be conducted to until high percentage of users feel comfortable with the process. We will add a help function which will allow users to seek help when required.
 \ds{Will there be a help function just in case? 
 How can you guarantee that anyone will be able to use it?}
 
@@ -487,7 +486,7 @@ five seconds. Processing transactions should take no longer than
 To maintain confidentiality, credit card and personal information will not be stored in the backend database. As well, an secure connection will always be instantiated when placing an order to ensure data protection. 
 
 \subsubsection{Precision or Accuracy Requirements}
-The restaurant will set all monetary amounts for food and beverages seen on the app. All appropriate taxes will be included in the bill when making an order.  
+The restaurant will set all monetary amounts for food and beverages seen on the app. All appropriate taxes will be included in the bill when making an order.  This is covered in requirement number 9.
 \ds{There should be functional requirements detailing how this is done}
 \subsubsection{Reliability and Availability Requirements}
 Mobile app will be working whenever the user wants. However, services such as viewing menu and placing orders will only be available during restaurant hours.
@@ -495,20 +494,21 @@ Mobile app will be working whenever the user wants. However, services such as vi
 tries to place an order outside of restaurant hours}
 
 \subsubsection{Robustness or Fault-Tolerance Requirements}
-If the app fails to scan the QR code repeatedly (after 3 times), it will prompt the user to reach out to their waiter/waitress for service. It will also provide an option to report this error.
+If the app fails to scan the QR code repeatedly (after 3 times), it will prompt the user to reach out to their waiter/waitress for service. 
+%It will also provide an option to report this error.
 \ds{This should be a functional requirement}
 
 \subsubsection{Capacity Requirements}
-App capacity is dependent on how many people can be seated at a restaurant. This will vary, as it is dependent on restaurant capacity
+Multiple users within the restaurants must be able to use the application and place orders simultaneously.
 \ds{Are you talking about the app on the phone or the restaurant backend that can handle a certain capacity?}
 
 \subsubsection{Scalability or Extensibility Requirements}
-Increasing number of participating restaurants may induce database upgrade in terms of efficiency in querying.   
+Increasing number of participating restaurants may induce database upgrade in terms of efficiency in querying. There is one central database for all restaurants.
 \ds{Is there one central database for all restaurants?
 Where are the database specifications?}
 
 \subsubsection{Longevity Requirements}
-App is reliant on the restaurant. \ds{What does that mean?} For example, if restaurant decides to shutdown, the app will no longer server that restaurant.\ds{Grammar issues with that sentence}
+App is relies on the restaurants business life. \ds{What does that mean?} For example, if restaurant decides to shutdown, the app will no longer serve that restaurant.\ds{Grammar issues with that sentence}
 
 \subsection{Operational and Environmental Requirements}
 \subsubsection{Expected Physical Environment}
@@ -552,8 +552,8 @@ N/A
 \section{Project Issues}
 \subsection{Open Issues}
 \begin{itemize}
-\item Amount of data to be queried is unknown as its \ds{``it's" is the correct spelling, but don't use contractions. ``it is"} specific to each restaurant.
-\item Amount of concurrent clients requesting data is variable. Will effect \ds{affect. I will not be pointing out any more spelling errors, please find them on your own.} efficiency
+\item Amount of data to be queried is unknown as it is \ds{``it's" is the correct spelling, but don't use contractions. ``it is"} specific to each restaurant.
+\item Amount of concurrent clients requesting data is variable. Will affect \ds{affect. I will not be pointing out any more spelling errors, please find them on your own.} efficiency
 \end{itemize}
 \subsection{Off the Shelf Solutions}
 \subsubsection{Ready Made Products}
@@ -568,7 +568,9 @@ N/A
 \begin{itemize}
   \item Develop product prototype and perform testing 
   \item Introduce prototype to supervisor for feedback
-  \item 	Work on revisions
+  \item Work on revisions
+  \item Design decisions need to be made
+  \item Test plan should be designed to cover all use cases 
 \end{itemize}
 \ds{Very vague. What about design decisions? What kind of testing?}
 \subsection{Migration to New Product}
