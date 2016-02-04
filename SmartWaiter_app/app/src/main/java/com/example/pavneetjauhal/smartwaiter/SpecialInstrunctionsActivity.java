@@ -32,6 +32,7 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_special_instrunctions);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Enter Special Instructions");
 
         Intent intent = getIntent();
         selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");
@@ -97,7 +98,7 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Added Item to cart",
                     Toast.LENGTH_LONG).show();
         }
-        else{
+        else {
             MainActivity.user.userItems.remove(index);
             MainActivity.user.userItems.add(index, modifyItem);
             MainActivity.user.userItems.get(index).setItemToppings(itemToppingsToAdd);

@@ -34,6 +34,7 @@ public class CustomSideActivity extends AppCompatActivity {
         setContentView(R.layout.activity_custom_side);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Choose Side");
 
         Intent intent = getIntent();
         selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");

@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         /* Added to test functionality so far */
         local_database.queryAllRestautant();
         try {
+            local_database.restaurant_Address = qrCode.substring(0, qrCode.indexOf('-'));
             Document testRestaurantMenu = local_database.getRestaurantByBarcode(qrCode.substring(qrCode.indexOf('-') + 1, qrCode.length()));
             local_database.outputContent(testRestaurantMenu);
             restarauntName = local_database.getRestaurantName(testRestaurantMenu);
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         }
         /* Truncate barcode to extract the order server address */
-        local_database.restaurant_Address = qrCode.substring(0, qrCode.indexOf('-'));
+        //local_database.restaurant_Address = qrCode.substring(0, qrCode.indexOf('-'));
 
         /*
         for (int i =0; i < categoryNameList.size(); i++) {
@@ -148,11 +149,15 @@ public class MainActivity extends AppCompatActivity {
         if (scanResult != null) {
             qrCode = scanResult.getContents();
 
-            Log.d("code", qrCode);
-            //onPopulateMenu(re);
-            onPopulateMenu(qrCode);
+            //Log.d("code", qrCode);
+            if(qrCode != null) {
+                //onPopulateMenu(re);
+                onPopulateMenu(qrCode);
+            }else
+                return;
 
         }
+
 
     }
 
