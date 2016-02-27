@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        boolean checkExists = true;
+        boolean checkExists = false;
         //ActionBar actionBar = getActionBar();
         //actionBar.setHomeButtonEnabled(true);
         super.onCreate(savedInstanceState);
@@ -61,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
         }
         //setContentView(R.layout.categorylist);
 
+
         Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.LoginActivity");
         startActivity(intent);
-
 
         // Created an onClickListener for the "Scan QR code / Barcode" button
         // When clicked, this activity initialises an IntentIntegrator, a class
