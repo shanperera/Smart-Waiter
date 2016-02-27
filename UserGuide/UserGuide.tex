@@ -1,0 +1,77 @@
+\documentclass[12pt, titlepage]{article}
+\usepackage{xcolor} % for different colour comments
+
+%% Comments
+\newif\ifcomments\commentstrue
+
+\ifcomments
+\newcommand{\authornote}[3]{\textcolor{#1}{[#3 ---#2]}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\else
+\newcommand{\authornote}[3]{}
+\newcommand{\todo}[1]{}
+\fi
+
+\newcommand{\wss}[1]{\authornote{magenta}{SS}{#1}}
+\newcommand{\ds}[1]{\authornote{blue}{DS}{#1}}
+
+%% Graphics
+\usepackage{float}
+\usepackage{caption}
+\usepackage{graphicx}
+\graphicspath{ {Images/} }
+
+\begin{document}
+
+\title{Smart Waiter User Guide} 
+\author{Meraj Patel \#1137491 \\ Pavneet Jauhal \#1149311\\ Shan Perera \#1150394}
+\date{\today}
+\maketitle
+
+\tableofcontents 
+
+\listoffigures
+
+\listoftables
+
+\begin{table}[H]
+\section*{Revision History}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Date}  & \textbf{Comments} \\ \hline
+February 29, 2016 &  first draft. \\ 
+\hline
+\end{tabular}
+\caption{Revision History Table}
+\end{table}
+
+\section{Introduction}
+\subsection{What is Smart-Waiter?}
+\subsection{Objectives of User Manual}
+
+\section{Getting Started }
+\subsection{System Requirements}
+\subsection{Installation Instructions}
+
+\section{Account Setup}
+\subsection{Creating an Account}
+\subsection{Accessing Account Settings}
+
+\section{View Restaurant Menu}
+\subsection{Scanning Barcode}
+\subsection{Menu Layout}
+
+\section{Placing an Order}
+\subsection{Adding Item to Cart}
+\subsection{Confirmation and Payment}
+\subsection{Submitting an Order}
+
+\section{Troubleshooting}
+\subsection{Overview}
+\subsection{Barcode Scanning Error}
+\subsection{Application Freeze}
+\subsection{Frequently Asked Questions}
+
+
+
+\end{document}
