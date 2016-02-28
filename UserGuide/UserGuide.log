@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  28 FEB 2016 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  28 FEB 2016 18:43
 entering extended mode
 **UserGuide.tex
 (UserGuide.tex
@@ -149,84 +149,97 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@lof=\write4
  (UserGuide.lot)
 \tf@lot=\write5
- [1]
-<images/accountCreation.png, id=11, 338.4645pt x 555.2745pt>
-File: images/accountCreation.png Graphic file (type png)
-
-<use images/accountCreation.png>
-Package pdftex.def Info: images/accountCreation.png used on input line 68.
-(pdftex.def)             Requested size: 195.0pt x 319.91582pt.
- [2]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 77.
+ [1] [2]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 95.
 
 ("C:\Program Files\LaTeX\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [3 <./images/accountCreation.png>] <images/ui-fragment-button.png, id=21, 122
-.4575pt x 122.4575pt>
+) [3]
+<images/android-studio.png, id=19, 1927.2pt x 1044.90375pt>
+File: images/android-studio.png Graphic file (type png)
+
+<use images/android-studio.png>
+Package pdftex.def Info: images/android-studio.png used on input line 120.
+(pdftex.def)             Requested size: 390.0pt x 211.44835pt.
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 120--121
+ [] 
+ []
+
+[4 <./images/android-studio.png>]
+<images/accountCreation.png, id=25, 338.4645pt x 555.2745pt>
+File: images/accountCreation.png Graphic file (type png)
+
+<use images/accountCreation.png>
+Package pdftex.def Info: images/accountCreation.png used on input line 130.
+(pdftex.def)             Requested size: 195.0pt x 319.91582pt.
+ [5 <./images/accountCreation.png>]
+<images/ui-fragment-button.png, id=30, 122.4575pt x 122.4575pt>
 File: images/ui-fragment-button.png Graphic file (type png)
 
 <use images/ui-fragment-button.png>
-Package pdftex.def Info: images/ui-fragment-button.png used on input line 91.
+Package pdftex.def Info: images/ui-fragment-button.png used on input line 153.
 (pdftex.def)             Requested size: 19.50119pt x 19.50017pt.
 
-<images/nav-menu.png, id=22, 722.7pt x 1284.8pt>
+<images/nav-menu.png, id=31, 722.7pt x 1284.8pt>
 File: images/nav-menu.png Graphic file (type png)
  <use images/nav-menu.png>
-Package pdftex.def Info: images/nav-menu.png used on input line 98.
+Package pdftex.def Info: images/nav-menu.png used on input line 160.
 (pdftex.def)             Requested size: 155.99762pt x 277.32446pt.
 
-Overfull \hbox (14.48114pt too wide) in paragraph at lines 104--105
+[6 <./images/ui-fragment-button.png>]
+Overfull \hbox (14.48114pt too wide) in paragraph at lines 166--167
 \OT1/cmr/m/n/12 low-ing ac-tions in the set-tings page: \OT1/pcr/m/n/12 Change 
 Password \OT1/cmr/m/n/12 and \OT1/pcr/m/n/12 Edit Personal
  []
 
-[4 <./images/ui-fragment-button.png> <./images/nav-menu.png (PNG copy)>]
-[5] <images/main-menu.png, id=29, 550.055pt x 875.27pt>
+[7 <./images/nav-menu.png (PNG copy)>]
+<images/main-menu.png, id=39, 550.055pt x 875.27pt>
 File: images/main-menu.png Graphic file (type png)
-
-<use images/main-menu.png>
-Package pdftex.def Info: images/main-menu.png used on input line 136.
+ <use images/main-menu.png>
+Package pdftex.def Info: images/main-menu.png used on input line 198.
 (pdftex.def)             Requested size: 195.0pt x 310.28897pt.
 
-Overfull \hbox (5.87006pt too wide) in paragraph at lines 140--141
+[8]
+Overfull \hbox (5.87006pt too wide) in paragraph at lines 202--203
 []\OT1/cmr/m/n/12 Press the la-bel for the menu item of your choice. Ex: \OT1/p
 cr/m/n/12 Autumn Spinach
  []
 
-<images/appetizers.png, id=30, 556.0775pt x 877.2775pt>
+<images/appetizers.png, id=43, 556.0775pt x 877.2775pt>
 File: images/appetizers.png Graphic file (type png)
 
 <use images/appetizers.png>
-Package pdftex.def Info: images/appetizers.png used on input line 142.
+Package pdftex.def Info: images/appetizers.png used on input line 204.
 (pdftex.def)             Requested size: 195.0pt x 307.64072pt.
- [6 <./images/main-menu.png>]
-<images/special-instructions.png, id=35, 560.0925pt x 883.3pt>
+ [9 <./images/main-menu.png>]
+<images/special-instructions.png, id=47, 560.0925pt x 883.3pt>
 File: images/special-instructions.png Graphic file (type png)
 
 <use images/special-instructions.png>
-Package pdftex.def Info: images/special-instructions.png used on input line 148
+Package pdftex.def Info: images/special-instructions.png used on input line 210
 .
 (pdftex.def)             Requested size: 195.0pt x 307.5288pt.
- [7 <./images/appetizers.png>]
-<images/confirm-order.png, id=39, 562.1pt x 882.29625pt>
+ [10 <./images/appetizers.png>]
+<images/confirm-order.png, id=51, 562.1pt x 882.29625pt>
 File: images/confirm-order.png Graphic file (type png)
 
 <use images/confirm-order.png>
-Package pdftex.def Info: images/confirm-order.png used on input line 162.
+Package pdftex.def Info: images/confirm-order.png used on input line 224.
 (pdftex.def)             Requested size: 195.0pt x 306.07538pt.
- [8 <./images/special-instructions.png>] [9 <./images/confirm-order.png>] <imag
-es/cc.png, id=46, 558.085pt x 919.435pt>
+ [11 <./images/special-instructions.png>]
+[12 <./images/confirm-order.png>]
+<images/cc.png, id=59, 558.085pt x 919.435pt>
 File: images/cc.png Graphic file (type png)
-
-<use images/cc.png>
-Package pdftex.def Info: images/cc.png used on input line 188.
+ <use images/cc.png>
+Package pdftex.def Info: images/cc.png used on input line 250.
 (pdftex.def)             Requested size: 195.0pt x 321.25992pt.
- [10 <./images/cc.png>] [11] (UserGuide.aux) ) 
+ [13 <./images/cc.png>] [14] (UserGuide.aux) ) 
 Here is how much of TeX's memory you used:
- 2805 strings out of 493673
- 41349 string characters out of 3145987
+ 2810 strings out of 493673
+ 41486 string characters out of 3145987
  107377 words of memory out of 3000000
- 6152 multiletter control sequences out of 15000+200000
+ 6156 multiletter control sequences out of 15000+200000
  9670 words of font info for 34 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  36i,8n,38p,555b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -236,9 +249,9 @@ mbx12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
 Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/
 LaTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/LaTeX/fonts/t
 ype1/urw/courier/ucrr8a.pfb>
-Output written on UserGuide.pdf (12 pages, 667725 bytes).
+Output written on UserGuide.pdf (15 pages, 818344 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
