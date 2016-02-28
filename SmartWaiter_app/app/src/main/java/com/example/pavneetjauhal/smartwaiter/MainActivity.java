@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        boolean checkExists = false;
+        boolean checkExists = true;
         //ActionBar actionBar = getActionBar();
         //actionBar.setHomeButtonEnabled(true);
         super.onCreate(savedInstanceState);
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.categorylist);
 
 
-        Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.LoginActivity");
-        startActivity(intent);
+        //Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.LoginActivity");
+        //startActivity(intent);
 
         // Created an onClickListener for the "Scan QR code / Barcode" button
         // When clicked, this activity initialises an IntentIntegrator, a class
@@ -72,12 +72,12 @@ public class MainActivity extends AppCompatActivity {
         // and prompts the user to take a picture of the QR/barcode
         String password = "";
 
-
+/*
         if(checkExists == false) {
             intent = new Intent("com.example.pavneetjauhal.smartwaiter.AccountCreationActivity");
             startActivity(intent);
         }
-
+*/
             scanButton = (Button) findViewById(R.id.scanCodeButton);
 
             scanButton.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-        //onPopulateMenu("456");
+        onPopulateMenu("couchbaseevents-777");
 
 
     }

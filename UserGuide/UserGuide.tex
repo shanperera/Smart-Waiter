@@ -40,7 +40,13 @@
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Date}  & \textbf{Comments} \\ \hline
-February 29, 2016 &  first draft. \\ 
+February 26, 2016 &  First Draft. \\ 
+\hline
+February 27, 2016 & Create Account section complete. \\
+\hline
+February 28, 2016 & Account Setup complete \\
+\hline
+February 28, 2016 & Placing an Order complete \\
 \hline
 \end{tabular}
 \caption{Revision History Table}
@@ -79,17 +85,20 @@ Your Smart-Waiter account has now been successfully created.
 This feature is set to be implemented in our final revision. For the time being, a general walk-through is given using a generic android application settings module. To access your Account Settings in Smart-Waiter proceed with the following steps:
 
 \begin{enumerate}
-	\item Press the button with 3 horizontal white lines to bring up the 		Navigation menu, as seen in Figure 2: 
+	\item Press the button with 3 horizontal white lines on the top right-			hand corner of the screen to bring up the Navigation menu, as seen 			in Figure 2: 
+	
 	\begin{center}
 	\includegraphics[width=0.05\textwidth]{ui-fragment-button.png}
 	\linebreak Figure 2
 	\end{center}
 
 	\item Press the \texttt{Settings} button in the Navigation Menu as seen 	in Figure 3:
+
 	\begin{center}
 	\includegraphics[width=0.4\textwidth]{nav-menu.png}
 	\linebreak Figure 3
 	\end{center}
+
 \end{enumerate}
 
 From here you can edit your Account Settings. You can perform the following actions in the settings page: \texttt{Change Password} and \texttt{Edit Personal Details}.
@@ -119,7 +128,74 @@ From here you can edit your Account Settings. You can perform the following acti
 
 \section{Placing an Order}
 \subsection{Adding Item to Cart}
-\subsection{Confirmation and Payment}
+This section will walk-through how to add an item to your cart. In this case we are using the Chalet Bar and Grill Menu, however these instructions can be applied to any menu available through Smart-Waiter. Your screen will look similar to Figure 4 below. To learn how to add an item to your cart, proceed with the following instructions:
+	\begin{enumerate}
+		\item Press the label for the category of your choice. Ex: 						\texttt{Appetizers}
+
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{main-menu.png}
+		\linebreak Figure 4
+	\end{center}
+
+		\item Press the label for the menu item of your choice. Ex: 					\texttt{Autumn Spinach Salad}
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{appetizers.png}
+			\linebreak Figure 5
+		\end{center}				
+		
+		\item Enter any special instructions you may have for the menu 					item. Ex: \texttt{Easy on the salad dressing} - Refer to Figure 			6
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{special-instructions.png}
+			\linebreak Figure 6
+		\end{center}		
+	
+		\item Press the \texttt{Add To Cart} button
+	\end{enumerate}
+
+\subsection{Order Confirmation}
+This section will guide you through the order confirmation process. We will continue with the Chalet Bar and Grill case we followed in the previous sections. These instructions can be applied to any menu available through Smart-Waiter. To learn how to confirm your order, proceed with the following instructions:
+
+	\begin{enumerate}
+		\item Press the \texttt{Cart} button on the top right corner of the 			application.
+		\item Press the \texttt{Confirm Order} button
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{confirm-order.png}
+			\linebreak Figure 7
+		\end{center}
+		\item Press the \texttt{Proceed to Payment} button
+	\end{enumerate}
+	
+	\textbf{Edit Special Instructions:}
+	To edit the special instructions for a menu item, proceed to the Cart Menu by pressing the \texttt{Cart} button on the top right corner of the screen and follow these instructions:
+	
+	\begin{enumerate}
+		\item Press the \texttt{C} button
+		\item Update the \texttt{Special Instructions} field with your new instructions
+		\item Press the \texttt{Modify Item} button
+	\end{enumerate}
+	
+		\textbf{Remove Item from Cart:}
+	To remove a menu item from your cart, proceed to the Cart Menu by pressing the \texttt{Cart} button on the top right corner of the screen and follow these instructions:
+	
+	\begin{enumerate}
+		\item Press the \texttt{X} button
+	\end{enumerate}
+
+\subsection{Paying for an Order}
+This section will guide you through the payment process. If you have not read the \emph{Order Confirmation} section yet, please do so now before moving forward with this guide. This tutorial assumes that you have added at least one menu item to your cart and have followed the main \emph{Order Confirmation} instructions up to step 3 where the user presses the \texttt{Proceed to Payment} button step. Your screen will look similar to Figure 8 below. To learn how to pay your order, proceed with the following instructions:
+
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{cc.png}
+		\linebreak Figure 8
+	\end{center}
+	\begin{enumerate}
+		\item Enter your \emph{Credit Card Number} into the \texttt{Card 				Number}	field
+		\item Enter the \emph{Cardholder's Name} into the corresponding 				field
+		\item Enter the \emph{Expiration Date} using the dropdown list
+		\item Enter the \emph{CVC} into the corresponding field
+		\item Press the \texttt{Finish} button
+	\end{enumerate}
+
 \subsection{Submitting an Order}
 
 \section{Troubleshooting}

@@ -7,15 +7,16 @@
 \contentsline {section}{\numberline {3}Account Setup}{2}
 \contentsline {subsection}{\numberline {3.1}Creating an Account}{2}
 \contentsline {subsection}{\numberline {3.2}Accessing Account Settings}{4}
-\contentsline {section}{\numberline {4}View Restaurant Menu}{6}
-\contentsline {subsection}{\numberline {4.1}Scanning Barcode}{6}
-\contentsline {subsection}{\numberline {4.2}Menu Layout}{6}
-\contentsline {section}{\numberline {5}Placing an Order}{6}
-\contentsline {subsection}{\numberline {5.1}Adding Item to Cart}{6}
-\contentsline {subsection}{\numberline {5.2}Confirmation and Payment}{6}
-\contentsline {subsection}{\numberline {5.3}Submitting an Order}{6}
-\contentsline {section}{\numberline {6}Troubleshooting}{6}
-\contentsline {subsection}{\numberline {6.1}Overview}{6}
-\contentsline {subsection}{\numberline {6.2}Barcode Scanning Error}{6}
-\contentsline {subsection}{\numberline {6.3}Application Freeze}{6}
-\contentsline {subsection}{\numberline {6.4}Frequently Asked Questions}{6}
+\contentsline {section}{\numberline {4}View Restaurant Menu}{5}
+\contentsline {subsection}{\numberline {4.1}Scanning Barcode}{5}
+\contentsline {subsection}{\numberline {4.2}Menu Layout}{5}
+\contentsline {section}{\numberline {5}Placing an Order}{5}
+\contentsline {subsection}{\numberline {5.1}Adding Item to Cart}{5}
+\contentsline {subsection}{\numberline {5.2}Order Confirmation}{8}
+\contentsline {subsection}{\numberline {5.3}Paying for an Order}{10}
+\contentsline {subsection}{\numberline {5.4}Submitting an Order}{11}
+\contentsline {section}{\numberline {6}Troubleshooting}{11}
+\contentsline {subsection}{\numberline {6.1}Overview}{11}
+\contentsline {subsection}{\numberline {6.2}Barcode Scanning Error}{11}
+\contentsline {subsection}{\numberline {6.3}Application Freeze}{11}
+\contentsline {subsection}{\numberline {6.4}Frequently Asked Questions}{11}
