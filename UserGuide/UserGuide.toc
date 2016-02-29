@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Menu Items}{11}
 \contentsline {subsubsection}{\numberline {3.2.3}Customize Item}{12}
 \contentsline {subsubsection}{\numberline {3.2.4}Menu Cart}{15}
-\contentsline {section}{\numberline {4}Placing an Order}{16}
+\contentsline {section}{\numberline {4}Placing an Order}{17}
 \contentsline {subsection}{\numberline {4.1}Adding Item to Cart}{17}
 \contentsline {subsection}{\numberline {4.2}Order Confirmation}{19}
 \contentsline {subsection}{\numberline {4.3}Paying for an Order}{21}

@@ -48,6 +48,8 @@ February 28, 2016 & Account Setup complete \\
 \hline
 February 28, 2016 & Placing an Order complete \\
 \hline
+February 29, 2016 & All sections complete \\
+\hline
 \end{tabular}
 \caption{Revision History Table}
 \end{table}
@@ -116,7 +118,7 @@ Instructions for installing Smart-Waiter with 3 different methods are presented 
 		\item Select the \texttt{build.gradle} file in the \emph{root} 					directory
 		\item Wait for the project to build
 		\item Plug your Android device in to your computer 
-		\item Press the \texttt{Run 'app'} button or Press \texttt{Shift+F10}
+		\item Press the \texttt{Run 'app'} button or a \texttt{Shift+F10}
 		\item Select your Android device from the \emph{Choose a running device} section
 		\begin{center}
 			\includegraphics[width=1.0\textwidth]{android-studio.png}
@@ -150,7 +152,7 @@ Your Smart-Waiter account has now been successfully created.
 This feature is set to be implemented in our final revision. For the time being, a general walk-through is given using a generic android application settings module. To access your Account Settings in Smart-Waiter proceed with the following steps:
 
 \begin{enumerate}
-	\item Press the button with 3 horizontal white lines on the top right-			hand corner of the screen to bring up the Navigation menu, as seen 			in Figure 2: 
+	\item Press the button with 3 horizontal white lines on the top right-hand corner of the screen to bring up the Navigation menu, as seen 			in Figure 2: 
 	
 	\begin{center}
 	\includegraphics[width=0.05\textwidth]{ui-fragment-button.png}
@@ -193,21 +195,22 @@ The following section provides step by step process of how to access restaurant 
 \subsection{Scanning Barcode}
 After logging into Smart-Waiter application, a barcode scanning page will be presented.
 
-\begin{center}\includegraphics[scale=0.15]{qrcode.png}\end{center}
+\begin{center}\includegraphics[scale=0.15]{qrcode.png}	\linebreak Figure 4
+\end{center}
 
 \noindent To access a restaurant menu, you are required to scan a barcode located within the restaurant. Please follow these instructions to scan the barcode:
 
 \begin{enumerate}
 \item In the restaurant, locate the barcode placed on the dining table.
 \item Press "Scan QR Code" button on the application. This will open camera page on the user phone. 
-\item Proceed to scan the barcode by aligning the red line on screen with the barcode like shown.
-\begin{center}\includegraphics[scale=0.15]{scan.png}\end{center}
+\item Proceed to scan the barcode by aligning the red line on screen with the barcode like shown in figure 5.
+\begin{center}\includegraphics[scale=0.15]{scan.png}	\linebreak Figure 5 \end{center}
 \item Wait for the application to recognize the code. 
 \end{enumerate}
 
 \noindent If the scan is successful, the application will transition to the menu. Otherwise, the application will transition back to the scan page, and prompt to try again. 
 \newline\newline
-Please view troubleshooting section if you are having consistent errors scanning the barcode. 
+Please view Section \emph{5.2 - Bug Reporting} if you are having consistent errors scanning the barcode. 
 
 \subsection{Menu Layout}
 After successfully scanning a barcode, the application will transition to the restaurant menu. The layout is split into sections as you would see in a typical menu. The following sections are provided and described below.
@@ -215,7 +218,7 @@ After successfully scanning a barcode, the application will transition to the re
 \subsubsection{Menu Categories}
 The first section called upon is menu categories. This is a single page that displays category names of a restaurant menu. Each category contains a list of items available to order at the restaurant.
 
-\begin{center}\includegraphics[scale=0.15]{category.png}\end{center}
+\begin{center}\includegraphics[scale=0.15]{category.png}	\linebreak Figure 6\end{center}
 
 \noindent To view items of a category, tap on the name. This will transition the page to menu items section.
 
@@ -239,22 +242,22 @@ There are three different methods available to customize an item.
 The layout of the page, and use of each method is provided below: \pagebreak\newline
 \textbf{Custom Toppings} \newline
 If toppings are available to add to the item, the following page is presented:
-\begin{center}\includegraphics[scale=0.15]{toppings.png}\end{center}
+\begin{center}\includegraphics[scale=0.15]{toppings.png}	\linebreak Figure 7 \end{center}
 This page displays a list of toppings available. To add a topping, tap on the check box to the right of the topping name. Multiple toppings can be selected. When complete, press "Next" button on the bottom of the page to proceed.\pagebreak
 \newline
 \textbf{Custom Sides}\newline
 If the item selected is offered a side, the following page is displayed:
-\begin{center}\includegraphics[scale=0.15]{sides.png}\end{center}
+\begin{center}\includegraphics[scale=0.15]{sides.png}	\linebreak Figure 8\end{center}
 This page is used to select a side dish for an item. Side dish names are presented in a list. To select a side dish, simply tap on its name.\pagebreak \newline
 \textbf{Special Instructions}\newline
 For all menu items, special instructions can be requested. To make a request, tap on the text field under "Special Instructions", and enter your text. 
-\begin{center}\includegraphics[scale=0.15]{instructions.png}\end{center}
+\begin{center}\includegraphics[scale=0.15]{instructions.png}	\linebreak Figure 9\end{center}
 Once complete, tap "Add to Cart" button on the bottom of the page. This will add the selected item to cart, and transition the page back to menu items section. 
 
 \subsubsection{Menu Cart}
 
 Menu cart section contains all items selected to order. During any section after scanning the barcode, you can view your cart by tapping "Cart" on the title bar.
-\begin{center}\includegraphics[scale=0.15]{titlebar.png}\end{center}
+\begin{center}\includegraphics[scale=0.15]{titlebar.png}	\linebreak Figure 10\end{center}
 
 \noindent Doing so will transition the page to cart page. Every item selected is presented in sequent rows on this page. Specifically, the item name, price, and custom details are provided for review. There are several options available on this page:
 
@@ -264,7 +267,7 @@ Menu cart section contains all items selected to order. During any section after
   \item Confirm Order: Pressing this button will transition to payment page
 \end{itemize}
 
-\begin{center}\includegraphics[scale=0.15]{cart.png}\end{center}
+\begin{center}\includegraphics[scale=0.15]{cart.png}	\linebreak Figure 11\end{center}
 
 \section{Placing an Order}
 The following section provides a step by step example of placing an order. If you have not already, it is advised you review \emph{View Restaurant Menu} section before proceeding to avoid confusion. 
@@ -275,19 +278,19 @@ This section will walk-through how to add an item to your cart. In this case we 
 
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{main-menu.png}
-		\linebreak Figure 4
+		\linebreak Figure 12
 	\end{center}
 
 		\item Press the label for the menu item of your choice. Ex: 					\texttt{Autumn Spinach Salad}
 		\begin{center}
 			\includegraphics[width=0.5\textwidth]{appetizers.png}
-			\linebreak Figure 5
+			\linebreak Figure 13
 		\end{center}				
 		
 		\item Given the selected item, the only means of customization is special instructions. Thus, enter any special instructions you may have for the menu 					item. Ex: \texttt{Easy on the salad dressing} - Refer to Figure 			6
 		\begin{center}
 			\includegraphics[width=0.5\textwidth]{special-instructions.png}
-			\linebreak Figure 6
+			\linebreak Figure 14
 		\end{center}		
 	
 		\item Press the \texttt{Add To Cart} button
@@ -301,7 +304,7 @@ This section will guide you through the order confirmation process. We will cont
 		\item Press the \texttt{Confirm Order} button
 		\begin{center}
 			\includegraphics[width=0.5\textwidth]{confirm-order.png}
-			\linebreak Figure 7
+			\linebreak Figure 15
 		\end{center}
 		\item Press the \texttt{Proceed to Payment} button
 	\end{enumerate}
@@ -327,7 +330,7 @@ This section will guide you through the payment process. If you have not read th
 
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{cc.png}
-		\linebreak Figure 8
+		\linebreak Figure 16
 	\end{center}
 	\begin{enumerate}
 		\item Enter your \emph{Credit Card Number} into the \texttt{Card 				Number}	field

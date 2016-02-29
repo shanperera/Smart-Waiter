@@ -1,16 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 FEB 2016 13:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 FEB 2016 13:48
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **UserGuide.tex
 (./UserGuide.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -24,21 +23,21 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -53,7 +52,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count88
 \float@exts=\toks14
@@ -61,15 +60,15 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks15
 \@floatcapt=\box27
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
 \captionmargin=\dimen103
@@ -83,24 +82,24 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \c@ContinuedFloat=\count89
 Package caption Info: float package is loaded.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen110
 \Gin@req@width=\dimen111
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/courier.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
 (./UserGuide.aux)
@@ -119,7 +118,7 @@ LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count90
 \scratchdimen=\dimen112
@@ -135,15 +134,15 @@ LaTeX Font Info:    ... okay on input line 25.
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+ (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -152,22 +151,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -179,7 +178,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -190,7 +189,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./UserGuide.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 2.
@@ -211,19 +210,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout5 = `UserGuide.lot'.
 
  [1] [2]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 97.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 99.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [3]
 <images/android-studio.png, id=20, 1927.2pt x 1044.90375pt>
 File: images/android-studio.png Graphic file (type png)
 
 <use images/android-studio.png>
-Package pdftex.def Info: images/android-studio.png used on input line 122.
+Package pdftex.def Info: images/android-studio.png used on input line 124.
 (pdftex.def)             Requested size: 390.0pt x 211.44835pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 122--123
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 124--125
  [] 
  []
 
@@ -231,23 +230,23 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 122--123
 File: images/accountCreation.png Graphic file (type png)
 
 <use images/accountCreation.png>
-Package pdftex.def Info: images/accountCreation.png used on input line 133.
+Package pdftex.def Info: images/accountCreation.png used on input line 135.
 (pdftex.def)             Requested size: 195.0pt x 319.91582pt.
  [5 <./images/android-studio.png>] [6 <./images/accountCreation.png>]
 <images/ui-fragment-button.png, id=35, 122.4575pt x 122.4575pt>
 File: images/ui-fragment-button.png Graphic file (type png)
 
 <use images/ui-fragment-button.png>
-Package pdftex.def Info: images/ui-fragment-button.png used on input line 156.
+Package pdftex.def Info: images/ui-fragment-button.png used on input line 158.
 (pdftex.def)             Requested size: 19.50119pt x 19.50017pt.
 
 <images/nav-menu.png, id=36, 722.7pt x 1284.8pt>
 File: images/nav-menu.png Graphic file (type png)
  <use images/nav-menu.png>
-Package pdftex.def Info: images/nav-menu.png used on input line 163.
+Package pdftex.def Info: images/nav-menu.png used on input line 165.
 (pdftex.def)             Requested size: 155.99762pt x 277.32446pt.
 
-Overfull \hbox (14.48114pt too wide) in paragraph at lines 169--170
+Overfull \hbox (14.48114pt too wide) in paragraph at lines 171--172
 \OT1/cmr/m/n/12 low-ing ac-tions in the set-tings page: \OT1/pcr/m/n/12 Change 
 Password \OT1/cmr/m/n/12 and \OT1/pcr/m/n/12 Edit Personal
  []
@@ -256,34 +255,34 @@ Password \OT1/cmr/m/n/12 and \OT1/pcr/m/n/12 Edit Personal
 <images/qrcode.png, id=40, 1084.05pt x 1927.2pt>
 File: images/qrcode.png Graphic file (type png)
  <use images/qrcode.png>
-Package pdftex.def Info: images/qrcode.png used on input line 196.
+Package pdftex.def Info: images/qrcode.png used on input line 198.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
 
 [8] <images/scan.png, id=44, 1927.2pt x 1084.05pt>
 File: images/scan.png Graphic file (type png)
  <use images/scan.png>
-Package pdftex.def Info: images/scan.png used on input line 204.
+Package pdftex.def Info: images/scan.png used on input line 207.
 (pdftex.def)             Requested size: 289.06754pt x 162.60048pt.
 
 [9 <./images/qrcode.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 208--211
+Underfull \hbox (badness 10000) in paragraph at lines 211--214
 
  []
 
 <images/category.png, id=48, 1084.05pt x 1927.2pt>
 File: images/category.png Graphic file (type png)
  <use images/category.png>
-Package pdftex.def Info: images/category.png used on input line 218.
+Package pdftex.def Info: images/category.png used on input line 221.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
 
 [10 <./images/scan.png>] <images/items.png, id=52, 1084.05pt x 1927.2pt>
 File: images/items.png Graphic file (type png)
 
 <use images/items.png>
-Package pdftex.def Info: images/items.png used on input line 225.
+Package pdftex.def Info: images/items.png used on input line 228.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
  [11 <./images/category.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 237--242
+Underfull \hbox (badness 10000) in paragraph at lines 240--245
 
  []
 
@@ -291,66 +290,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--242
 File: images/toppings.png Graphic file (type png)
 
 <use images/toppings.png>
-Package pdftex.def Info: images/toppings.png used on input line 242.
+Package pdftex.def Info: images/toppings.png used on input line 245.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
  [13 <./images/toppings.png>]
 <images/sides.png, id=64, 1084.05pt x 1927.2pt>
 File: images/sides.png Graphic file (type png)
  <use images/sides.png>
-Package pdftex.def Info: images/sides.png used on input line 247.
+Package pdftex.def Info: images/sides.png used on input line 250.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
  [14 <./images/sides.png>] <images/instructions.png, id=68, 1084.05pt x 1927.2p
 t>
 File: images/instructions.png Graphic file (type png)
 
 <use images/instructions.png>
-Package pdftex.def Info: images/instructions.png used on input line 251.
+Package pdftex.def Info: images/instructions.png used on input line 254.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
 
 <images/titlebar.png, id=69, 1082.0425pt x 388.45125pt>
 File: images/titlebar.png Graphic file (type png)
 
 <use images/titlebar.png>
-Package pdftex.def Info: images/titlebar.png used on input line 257.
+Package pdftex.def Info: images/titlebar.png used on input line 260.
 (pdftex.def)             Requested size: 162.29936pt x 58.26517pt.
- [15 <./images/instructions.png> <./images/titlebar.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 262.
+ [15 <./images/instructions.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 265.
 
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 262.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 265.
 
-<images/cart.png, id=74, 1084.05pt x 1927.2pt>
+<images/cart.png, id=73, 1084.05pt x 1927.2pt>
 File: images/cart.png Graphic file (type png)
  <use images/cart.png>
-Package pdftex.def Info: images/cart.png used on input line 267.
+Package pdftex.def Info: images/cart.png used on input line 270.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
- [16 <./images/cart.png>] <images/main-menu.png, id=79, 550.055pt x 875.27pt>
+ [16 <./images/titlebar.png> <./images/cart.png>]
+<images/main-menu.png, id=79, 550.055pt x 875.27pt>
 File: images/main-menu.png Graphic file (type png)
-
-<use images/main-menu.png>
-Package pdftex.def Info: images/main-menu.png used on input line 277.
+ <use images/main-menu.png>
+Package pdftex.def Info: images/main-menu.png used on input line 280.
 (pdftex.def)             Requested size: 195.0pt x 310.28897pt.
 
-Overfull \hbox (5.87006pt too wide) in paragraph at lines 281--282
+Overfull \hbox (5.87006pt too wide) in paragraph at lines 284--285
 []\OT1/cmr/m/n/12 Press the la-bel for the menu item of your choice. Ex: \OT1/p
 cr/m/n/12 Autumn Spinach
  []
 
-<images/appetizers.png, id=80, 556.0775pt x 877.2775pt>
+[17 <./images/main-menu.png>]
+<images/appetizers.png, id=83, 556.0775pt x 877.2775pt>
 File: images/appetizers.png Graphic file (type png)
 
 <use images/appetizers.png>
-Package pdftex.def Info: images/appetizers.png used on input line 283.
+Package pdftex.def Info: images/appetizers.png used on input line 286.
 (pdftex.def)             Requested size: 195.0pt x 307.64072pt.
- [17 <./images/main-menu.png>]
+
 <images/special-instructions.png, id=84, 560.0925pt x 883.3pt>
 File: images/special-instructions.png Graphic file (type png)
 
 <use images/special-instructions.png>
-Package pdftex.def Info: images/special-instructions.png used on input line 289
+Package pdftex.def Info: images/special-instructions.png used on input line 292
 .
 (pdftex.def)             Requested size: 195.0pt x 307.5288pt.
  [18 <./images/appetizers.png>]
@@ -358,22 +359,22 @@ Package pdftex.def Info: images/special-instructions.png used on input line 289
 File: images/confirm-order.png Graphic file (type png)
 
 <use images/confirm-order.png>
-Package pdftex.def Info: images/confirm-order.png used on input line 303.
+Package pdftex.def Info: images/confirm-order.png used on input line 306.
 (pdftex.def)             Requested size: 195.0pt x 306.07538pt.
  [19 <./images/special-instructions.png>]
 [20 <./images/confirm-order.png>]
 <images/cc.png, id=96, 558.085pt x 919.435pt>
 File: images/cc.png Graphic file (type png)
  <use images/cc.png>
-Package pdftex.def Info: images/cc.png used on input line 329.
+Package pdftex.def Info: images/cc.png used on input line 332.
 (pdftex.def)             Requested size: 195.0pt x 321.25992pt.
  [21 <./images/cc.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 350--352
+Underfull \hbox (badness 10000) in paragraph at lines 353--355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
@@ -381,86 +382,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 353--354
 File: images/bugReport.png Graphic file (type png)
 
 <use images/bugReport.png>
-Package pdftex.def Info: images/bugReport.png used on input line 355.
+Package pdftex.def Info: images/bugReport.png used on input line 358.
 (pdftex.def)             Requested size: 195.0pt x 110.13028pt.
  [22]
-Underfull \hbox (badness 10000) in paragraph at lines 358--360
+Underfull \hbox (badness 10000) in paragraph at lines 361--363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--364
+Underfull \hbox (badness 10000) in paragraph at lines 365--367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--366
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--368
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--370
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
 
  []
 
 
-Overfull \hbox (17.00272pt too wide) in paragraph at lines 368--370
+Overfull \hbox (17.00272pt too wide) in paragraph at lines 371--373
 \OT1/cmr/m/n/12 Contact our cus-tomer sup-port di-rectly at customer-service@sm
 artwaiter.ca
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--372
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 
  []
 
 [23 <./images/bugReport.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
+Underfull \hbox (badness 10000) in paragraph at lines 375--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--376
+Underfull \hbox (badness 10000) in paragraph at lines 377--379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--378
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--380
+Underfull \hbox (badness 10000) in paragraph at lines 381--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--382
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
 
  []
 
 [24] (./UserGuide.aux) ) 
 Here is how much of TeX's memory you used:
- 3224 strings out of 493089
- 49795 string characters out of 6134842
- 109093 words of memory out of 5000000
- 6662 multiletter control sequences out of 15000+600000
+ 3224 strings out of 493315
+ 49794 string characters out of 6137904
+ 108023 words of memory out of 5000000
+ 6629 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 957 hyphenation exceptions out of 8191
  37i,8n,38p,555b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/bas
-e/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on UserGuide.pdf (25 pages, 4581582 bytes).
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/bas
+e/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
+b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on UserGuide.pdf (25 pages, 4582323 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
