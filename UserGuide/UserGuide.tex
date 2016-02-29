@@ -48,17 +48,19 @@ February 28, 2016 & Account Setup complete \\
 \hline
 February 28, 2016 & Placing an Order complete \\
 \hline
-February 28, 2016 & Getting Started complete \\
-\hline
 \end{tabular}
 \caption{Revision History Table}
 \end{table}
 
-\section{Introduction}
-\subsection{What is Smart-Waiter?}
-\subsection{Objectives of User Manual}
 
-\section{Getting Started }
+
+\section{Introduction}
+
+\subsection{What is Smart-Waiter?}
+Smart-Waiter is an application that aims to provide a solution to allow users to order and pay through a mobile application at restaurants. More specifically, it allows users to walk into a restaurant, scan a code to view the menu, and proceed to order and pay for their meal.
+\subsection{Objectives of User Manual}
+This document describes how to use Smart-Waiter mobile application. For the scope of this project, this guide is written for restaurant patrons. This manual will describe instructions necessary for a user to walk into a restaurant and place an order using Smart-Waiter application. 
+
 \subsection{System Requirements}
 To use Smart-Waiter, your phone must be running Android's Ice Cream Sandwich (4.0.1) operating system or higher. Your device must also have at least 512MB of RAM. The minimum and recommended requirements for running Smart-Waiter are given below.
 Minimum Requirements:
@@ -122,6 +124,7 @@ Instructions for installing Smart-Waiter with 3 different methods are presented 
 		\item Press the \texttt{OK} button		
 	\end{enumerate}
 You have successfully installed Smart-Waiter on your Android device.
+
 \section{Account Setup}
 \subsection{Creating an Account}
 If this is the first time that Smart-Waiter is launched, you will be asked to create an account. You will be brought to the Account Creation screen as soon as Smart-Waiter is initialized. Your screen will look similar to Figure 1 below. 
@@ -184,11 +187,87 @@ From here you can edit your Account Settings. You can perform the following acti
 		\end{enumerate}
 		\item Press the \texttt{Save Changes} button.
 	\end{enumerate}
+
 \section{View Restaurant Menu}
+The following section provides step by step process of how to access restaurant menu using Smart-Waiter. As well it provides a detail overview of menu layout.
 \subsection{Scanning Barcode}
+After logging into Smart-Waiter application, a barcode scanning page will be presented.
+
+\begin{center}\includegraphics[scale=0.15]{qrcode.png}\end{center}
+
+\noindent To access a restaurant menu, you are required to scan a barcode located within the restaurant. Please follow these instructions to scan the barcode:
+
+\begin{enumerate}
+\item In the restaurant, locate the barcode placed on the dining table.
+\item Press "Scan QR Code" button on the application. This will open camera page on the user phone. 
+\item Proceed to scan the barcode by aligning the red line on screen with the barcode like shown.
+\begin{center}\includegraphics[scale=0.15]{scan.png}\end{center}
+\item Wait for the application to recognize the code. 
+\end{enumerate}
+
+\noindent If the scan is successful, the application will transition to the menu. Otherwise, the application will transition back to the scan page, and prompt to try again. 
+\newline\newline
+Please view troubleshooting section if you are having consistent errors scanning the barcode. 
+
 \subsection{Menu Layout}
+After successfully scanning a barcode, the application will transition to the restaurant menu. The layout is split into sections as you would see in a typical menu. The following sections are provided and described below.
+
+\subsubsection{Menu Categories}
+The first section called upon is menu categories. This is a single page that displays category names of a restaurant menu. Each category contains a list of items available to order at the restaurant.
+
+\begin{center}\includegraphics[scale=0.15]{category.png}\end{center}
+
+\noindent To view items of a category, tap on the name. This will transition the page to menu items section.
+
+\subsubsection{Menu Items}
+This section contains a single page that displays menu items specific to the category selected. To select an item, tap on the row. This will transition to the next section to allow customization of the selected item. 
+
+\begin{center}\includegraphics[scale=0.15]{items.png}\end{center}
+
+ 
+\subsubsection{Customize Item}
+There are three different methods available to customize an item. 
+
+\begin{enumerate}
+  \item Custom Toppings
+  \item Custom Sides
+  \item Special Instructions
+\end{enumerate}
+
+\noindent  Each method is presented on a separate page, and is shown in accordance to the item selected. This means, that you will have the ability to customize the item by choosing toppings, picking a side and by setting special instructions if applicable. 
+\newline \newline
+The layout of the page, and use of each method is provided below: \pagebreak\newline
+\textbf{Custom Toppings} \newline
+If toppings are available to add to the item, the following page is presented:
+\begin{center}\includegraphics[scale=0.15]{toppings.png}\end{center}
+This page displays a list of toppings available. To add a topping, tap on the check box to the right of the topping name. Multiple toppings can be selected. When complete, press "Next" button on the bottom of the page to proceed.\pagebreak
+\newline
+\textbf{Custom Sides}\newline
+If the item selected is offered a side, the following page is displayed:
+\begin{center}\includegraphics[scale=0.15]{sides.png}\end{center}
+This page is used to select a side dish for an item. Side dish names are presented in a list. To select a side dish, simply tap on its name.\pagebreak \newline
+\textbf{Special Instructions}\newline
+For all menu items, special instructions can be requested. To make a request, tap on the text field under "Special Instructions", and enter your text. 
+\begin{center}\includegraphics[scale=0.15]{instructions.png}\end{center}
+Once complete, tap "Add to Cart" button on the bottom of the page. This will add the selected item to cart, and transition the page back to menu items section. 
+
+\subsubsection{Menu Cart}
+
+Menu cart section contains all items selected to order. During any section after scanning the barcode, you can view your cart by tapping "Cart" on the title bar.
+\begin{center}\includegraphics[scale=0.15]{titlebar.png}\end{center}
+
+\noindent Doing so will transition the page to cart page. Every item selected is presented in sequent rows on this page. Specifically, the item name, price, and custom details are provided for review. There are several options available on this page:
+
+\begin{itemize}
+  \item C - Customize item: Pressing this button allows  you to modify the item
+  \item D - Delete item: Pressing this button will remove item from cart
+  \item Confirm Order: Pressing this button will transition to payment page
+\end{itemize}
+
+\begin{center}\includegraphics[scale=0.15]{cart.png}\end{center}
 
 \section{Placing an Order}
+The following section provides a step by step example of placing an order. If you have not already, it is advised you review \emph{View Restaurant Menu} section before proceeding to avoid confusion. 
 \subsection{Adding Item to Cart}
 This section will walk-through how to add an item to your cart. In this case we are using the Chalet Bar and Grill Menu, however these instructions can be applied to any menu available through Smart-Waiter. Your screen will look similar to Figure 4 below. To learn how to add an item to your cart, proceed with the following instructions:
 	\begin{enumerate}
@@ -205,7 +284,7 @@ This section will walk-through how to add an item to your cart. In this case we 
 			\linebreak Figure 5
 		\end{center}				
 		
-		\item Enter any special instructions you may have for the menu 					item. Ex: \texttt{Easy on the salad dressing} - Refer to Figure 			6
+		\item Given the selected item, the only means of customization is special instructions. Thus, enter any special instructions you may have for the menu 					item. Ex: \texttt{Easy on the salad dressing} - Refer to Figure 			6
 		\begin{center}
 			\includegraphics[width=0.5\textwidth]{special-instructions.png}
 			\linebreak Figure 6
