@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 FEB 2016 13:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 FEB 2016 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -201,16 +201,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `UserGuide.toc'.
 
- (./UserGuide.lof)
-\tf@lof=\write4
-\openout4 = `UserGuide.lof'.
-
  (./UserGuide.lot)
-\tf@lot=\write5
-\openout5 = `UserGuide.lot'.
+\tf@lot=\write4
+\openout4 = `UserGuide.lot'.
 
  [1] [2]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 99.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 97.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -219,10 +215,10 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 File: images/android-studio.png Graphic file (type png)
 
 <use images/android-studio.png>
-Package pdftex.def Info: images/android-studio.png used on input line 124.
+Package pdftex.def Info: images/android-studio.png used on input line 122.
 (pdftex.def)             Requested size: 390.0pt x 211.44835pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 124--125
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 122--124
  [] 
  []
 
@@ -230,23 +226,23 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 124--125
 File: images/accountCreation.png Graphic file (type png)
 
 <use images/accountCreation.png>
-Package pdftex.def Info: images/accountCreation.png used on input line 135.
+Package pdftex.def Info: images/accountCreation.png used on input line 134.
 (pdftex.def)             Requested size: 195.0pt x 319.91582pt.
  [5 <./images/android-studio.png>] [6 <./images/accountCreation.png>]
 <images/ui-fragment-button.png, id=35, 122.4575pt x 122.4575pt>
 File: images/ui-fragment-button.png Graphic file (type png)
 
 <use images/ui-fragment-button.png>
-Package pdftex.def Info: images/ui-fragment-button.png used on input line 158.
+Package pdftex.def Info: images/ui-fragment-button.png used on input line 157.
 (pdftex.def)             Requested size: 19.50119pt x 19.50017pt.
 
 <images/nav-menu.png, id=36, 722.7pt x 1284.8pt>
 File: images/nav-menu.png Graphic file (type png)
  <use images/nav-menu.png>
-Package pdftex.def Info: images/nav-menu.png used on input line 165.
+Package pdftex.def Info: images/nav-menu.png used on input line 164.
 (pdftex.def)             Requested size: 155.99762pt x 277.32446pt.
 
-Overfull \hbox (14.48114pt too wide) in paragraph at lines 171--172
+Overfull \hbox (14.48114pt too wide) in paragraph at lines 170--171
 \OT1/cmr/m/n/12 low-ing ac-tions in the set-tings page: \OT1/pcr/m/n/12 Change 
 Password \OT1/cmr/m/n/12 and \OT1/pcr/m/n/12 Edit Personal
  []
@@ -255,34 +251,34 @@ Password \OT1/cmr/m/n/12 and \OT1/pcr/m/n/12 Edit Personal
 <images/qrcode.png, id=40, 1084.05pt x 1927.2pt>
 File: images/qrcode.png Graphic file (type png)
  <use images/qrcode.png>
-Package pdftex.def Info: images/qrcode.png used on input line 198.
+Package pdftex.def Info: images/qrcode.png used on input line 197.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
 
 [8] <images/scan.png, id=44, 1927.2pt x 1084.05pt>
 File: images/scan.png Graphic file (type png)
  <use images/scan.png>
-Package pdftex.def Info: images/scan.png used on input line 207.
+Package pdftex.def Info: images/scan.png used on input line 206.
 (pdftex.def)             Requested size: 289.06754pt x 162.60048pt.
 
 [9 <./images/qrcode.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
+Underfull \hbox (badness 10000) in paragraph at lines 210--213
 
  []
 
 <images/category.png, id=48, 1084.05pt x 1927.2pt>
 File: images/category.png Graphic file (type png)
  <use images/category.png>
-Package pdftex.def Info: images/category.png used on input line 221.
+Package pdftex.def Info: images/category.png used on input line 220.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
 
 [10 <./images/scan.png>] <images/items.png, id=52, 1084.05pt x 1927.2pt>
 File: images/items.png Graphic file (type png)
 
 <use images/items.png>
-Package pdftex.def Info: images/items.png used on input line 228.
+Package pdftex.def Info: images/items.png used on input line 227.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
  [11 <./images/category.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 240--245
+Underfull \hbox (badness 10000) in paragraph at lines 239--244
 
  []
 
@@ -290,51 +286,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--245
 File: images/toppings.png Graphic file (type png)
 
 <use images/toppings.png>
-Package pdftex.def Info: images/toppings.png used on input line 245.
+Package pdftex.def Info: images/toppings.png used on input line 244.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
  [13 <./images/toppings.png>]
 <images/sides.png, id=64, 1084.05pt x 1927.2pt>
 File: images/sides.png Graphic file (type png)
  <use images/sides.png>
-Package pdftex.def Info: images/sides.png used on input line 250.
+Package pdftex.def Info: images/sides.png used on input line 249.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
  [14 <./images/sides.png>] <images/instructions.png, id=68, 1084.05pt x 1927.2p
 t>
 File: images/instructions.png Graphic file (type png)
 
 <use images/instructions.png>
-Package pdftex.def Info: images/instructions.png used on input line 254.
+Package pdftex.def Info: images/instructions.png used on input line 253.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
 
 <images/titlebar.png, id=69, 1082.0425pt x 388.45125pt>
 File: images/titlebar.png Graphic file (type png)
 
 <use images/titlebar.png>
-Package pdftex.def Info: images/titlebar.png used on input line 260.
+Package pdftex.def Info: images/titlebar.png used on input line 259.
 (pdftex.def)             Requested size: 162.29936pt x 58.26517pt.
  [15 <./images/instructions.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 265.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 264.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 265.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 264.
 
 <images/cart.png, id=73, 1084.05pt x 1927.2pt>
 File: images/cart.png Graphic file (type png)
  <use images/cart.png>
-Package pdftex.def Info: images/cart.png used on input line 270.
+Package pdftex.def Info: images/cart.png used on input line 269.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
  [16 <./images/titlebar.png> <./images/cart.png>]
 <images/main-menu.png, id=79, 550.055pt x 875.27pt>
 File: images/main-menu.png Graphic file (type png)
  <use images/main-menu.png>
-Package pdftex.def Info: images/main-menu.png used on input line 280.
+Package pdftex.def Info: images/main-menu.png used on input line 279.
 (pdftex.def)             Requested size: 195.0pt x 310.28897pt.
 
-Overfull \hbox (5.87006pt too wide) in paragraph at lines 284--285
+Overfull \hbox (5.87006pt too wide) in paragraph at lines 283--284
 []\OT1/cmr/m/n/12 Press the la-bel for the menu item of your choice. Ex: \OT1/p
 cr/m/n/12 Autumn Spinach
  []
@@ -344,14 +340,14 @@ cr/m/n/12 Autumn Spinach
 File: images/appetizers.png Graphic file (type png)
 
 <use images/appetizers.png>
-Package pdftex.def Info: images/appetizers.png used on input line 286.
+Package pdftex.def Info: images/appetizers.png used on input line 285.
 (pdftex.def)             Requested size: 195.0pt x 307.64072pt.
 
 <images/special-instructions.png, id=84, 560.0925pt x 883.3pt>
 File: images/special-instructions.png Graphic file (type png)
 
 <use images/special-instructions.png>
-Package pdftex.def Info: images/special-instructions.png used on input line 292
+Package pdftex.def Info: images/special-instructions.png used on input line 291
 .
 (pdftex.def)             Requested size: 195.0pt x 307.5288pt.
  [18 <./images/appetizers.png>]
@@ -359,22 +355,22 @@ Package pdftex.def Info: images/special-instructions.png used on input line 292
 File: images/confirm-order.png Graphic file (type png)
 
 <use images/confirm-order.png>
-Package pdftex.def Info: images/confirm-order.png used on input line 306.
+Package pdftex.def Info: images/confirm-order.png used on input line 305.
 (pdftex.def)             Requested size: 195.0pt x 306.07538pt.
  [19 <./images/special-instructions.png>]
 [20 <./images/confirm-order.png>]
 <images/cc.png, id=96, 558.085pt x 919.435pt>
 File: images/cc.png Graphic file (type png)
  <use images/cc.png>
-Package pdftex.def Info: images/cc.png used on input line 332.
+Package pdftex.def Info: images/cc.png used on input line 331.
 (pdftex.def)             Requested size: 195.0pt x 321.25992pt.
  [21 <./images/cc.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 353--355
+Underfull \hbox (badness 10000) in paragraph at lines 352--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
@@ -382,75 +378,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 356--357
 File: images/bugReport.png Graphic file (type png)
 
 <use images/bugReport.png>
-Package pdftex.def Info: images/bugReport.png used on input line 358.
+Package pdftex.def Info: images/bugReport.png used on input line 357.
 (pdftex.def)             Requested size: 195.0pt x 110.13028pt.
  [22]
-Underfull \hbox (badness 10000) in paragraph at lines 361--363
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
+Underfull \hbox (badness 10000) in paragraph at lines 364--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--369
+Underfull \hbox (badness 10000) in paragraph at lines 366--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--371
+Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
+Underfull \hbox (badness 10000) in paragraph at lines 370--372
 
  []
 
 
-Overfull \hbox (17.00272pt too wide) in paragraph at lines 371--373
+Overfull \hbox (17.00272pt too wide) in paragraph at lines 370--372
 \OT1/cmr/m/n/12 Contact our cus-tomer sup-port di-rectly at customer-service@sm
 artwaiter.ca
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--375
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
 
  []
 
 [23 <./images/bugReport.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 375--377
+Underfull \hbox (badness 10000) in paragraph at lines 374--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--379
+Underfull \hbox (badness 10000) in paragraph at lines 376--378
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--381
+Underfull \hbox (badness 10000) in paragraph at lines 378--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--383
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--385
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
 
  []
 
 [24] (./UserGuide.aux) ) 
 Here is how much of TeX's memory you used:
- 3224 strings out of 493315
- 49794 string characters out of 6137904
+ 3220 strings out of 493315
+ 49756 string characters out of 6137904
  108023 words of memory out of 5000000
- 6629 multiletter control sequences out of 15000+600000
+ 6628 multiletter control sequences out of 15000+600000
  9670 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,8n,38p,555b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -461,7 +457,7 @@ x12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on UserGuide.pdf (25 pages, 4582323 bytes).
+Output written on UserGuide.pdf (25 pages, 4582311 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
