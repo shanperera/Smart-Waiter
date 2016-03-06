@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">SmartWaiter</string>
 
+    <string name="settings_icon">"Settings"</string>
+
     <!-- Strings related to account creation -->
     <string name="create_account_activity_create_account_title">"Create Account"</string>
     <string name="create_account_activity_login_label">"Login"</string>
@@ -84,5 +86,5 @@
     <string name="title_activity_custom_side">CustomSideActivity</string>
     <string name="title_activity_special_instrunctions">SpecialInstrunctionsActivity</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_scan">Scan QR/Barcode</string>
 </resources>

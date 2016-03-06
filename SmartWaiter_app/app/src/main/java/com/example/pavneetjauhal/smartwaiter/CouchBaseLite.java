@@ -34,8 +34,8 @@ public class CouchBaseLite {
     private static final String DB_USER = "user_data";
     public static String restaurant_Address = null;
     private static final String TAG = "SmartWaiter";
-    //private static final String HOST = "http://192.168.43.200";
-    private static final String HOST = "http://162.243.20.236";
+    private static final String HOST = "http://192.168.2.10";
+    //private static final String HOST = "http://162.243.20.236";
     private static final String PORT = "4984";
     private static String timestamp = null;
     Manager manager = null;

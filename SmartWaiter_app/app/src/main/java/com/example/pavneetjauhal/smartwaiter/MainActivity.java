@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -33,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
         //ActionBar actionBar = getActionBar();
         //actionBar.setHomeButtonEnabled(true);
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        //this.setTitle(getResources().getString(R.string.title_activity_scan));
+        //Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+       // setSupportActionBar(myToolbar);
         try {
             local_database = new CouchBaseLite(this);
         } catch (IOException e) {
@@ -41,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (CouchbaseLiteException e) {
             e.printStackTrace();
         }
-        if (local_database != null){
+        if (local_database != null) {
             try {
                 local_database.startReplications();
             } catch (CouchbaseLiteException e) {
@@ -55,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (CouchbaseLiteException e) {
             e.printStackTrace();
             checkExists = false;
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             checkExists = false;
             e.printStackTrace();
         }
@@ -73,28 +79,32 @@ public class MainActivity extends AppCompatActivity {
         String password = "";
 
 
-        if(checkExists == false) {
+        if (checkExists == false) {
             intent = new Intent("com.example.pavneetjauhal.smartwaiter.AccountCreationActivity");
             startActivity(intent);
         }
 
-            scanButton = (Button) findViewById(R.id.scanCodeButton);
-
-            scanButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
-                    integrator.initiateScan();
-                }
-            });
+        scanButton = (Button) findViewById(R.id.scanCodeButton);
 
         //onPopulateMenu("couchbaseevents-777");
+        scanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
+                integrator.initiateScan();
+            }
+        });
+        //onPopulateMenu("456");
 
 
     }
 
-    public void checkExists(){
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //getMenuInflater().inflate(R.menu.menu_login, menu);
+        MenuInflater mif = getMenuInflater();
+        mif.inflate(R.menu.main_actionbar,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     public void onPopulateMenu(String qrCode){
