@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         String password = "";
 
 
-        if (checkExists == true) {
+        if (!checkExists) {
             intent = new Intent("com.example.pavneetjauhal.smartwaiter.AccountCreationActivity");
             startActivity(intent);
         }
