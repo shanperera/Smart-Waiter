@@ -40,12 +40,26 @@
 \textbf{Date}  & \textbf{Comments} \\ \hline
 March 20, 2016 & Test results added \\
 \hline
+March 20, 2016 & Account Tests added \\
+\hline
+March 21, 2016 & Order Transactions added \\
+\hline
+March 21, 2016 & Introduction Created \\
+\hline
 \end{tabular}
 \caption{Revision History Table}
 \end{table}
 
 \section{Introduction}
+\subsection{Purpose of the Report}
+This section will provide an introduction and general outline of the Smart-Waiter test report. 
 
+\subsection{Scope of Testing}
+The test report primarily focuses on the overall correctness of the software with regard to the test cases provided. Many of the test cases provided are in the form of functional dynamic tests. Automatic testing for modules in Smart-Waiter were not feasible, as mentioned in the Test Plan. This plan is fairly exhaustive, further testing will be performed for the final revision to ensure a completely smooth and intuitive user experience.
+
+\subsection{Organization}
+In section 1 we provide the introduction to the test report. In section 2 we outline and provide the results of the system testing, including but not limited to: Database security testing, order transactions testing, account testing. Section 3 describes the Usability tests that were conducted and carried out by the Smart-Waiter team.
+ 
 \section{System Testing} 
 \subsection{Database Testing}
 Database testing was exclusively performed from structural testing point of view. The goal of this component of testing was to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database was created for testing purposes, because any failed test case could affect the state of the original database.\\\\
@@ -99,6 +113,17 @@ Account creation and login tests were performed to ensure Smart-Waiter users are
 
 \subsubsection{Test Results}
 \includegraphics[width=1.2\textwidth]{accountTC.png}
+
+\subsection{Order Transactions}
+\subsubsection{Functional Dynamic Test}
+As per our test plan, manual functional dynamic tests we performed to assess the following test cases. In a few of these test cases, manual testing for unexpected behaviour was performed by passing unexpected input. This is so any unexpected errors that may come up from unusual input is identified and fixed so that this does not add any extra work or effect the day-to-day operations of our restaurant partners. The two test cases that are performed to identify any unexpected behaviour is 6.2.1 and 6.2.7 in the table below. The 6.2.1 test is performed by rapidly clicking different sides that are available in the sides menu before the application transitions to the next activity. The 6.2.7 test is performed by selecting toppings for an entree menu item. Then editing the toppings using the function available in the order summary page, the toppings are changed and the side is changed and added to cart multiple times. These tests yielded no strange behaviour, and the application performed as expected. 
+
+\subsubsection{Purpose}
+Order transactions are a critical part of Smart-Waiter, any unforeseen bugs or errors could effect the operations of the restaurant. Therefore, these modules of Smart-Waiter were rigorously tested to ensure no unexpected behaviour and a smooth and intuitive experience. Tests were performed to ensure Smart-Waiter users are able to order from the restaurants menu quickly without having to wait for a server to arrive. This is also to ensure proper error checking is implemented in the applications transaction related modules.
+
+\subsubsection{Test Results}
+\includegraphics[width=1.2\textwidth]{orderTransactionTC.png}
+
 \section{Usability Test}
 Usability tests are conducted to assess the user's ability to complete routine tasks, and acquire their impression of the application.
 \subsection{Summary}
