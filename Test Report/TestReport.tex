@@ -61,7 +61,14 @@ The test report primarily focuses on the overall correctness of the software wit
 In section 1 we provide the introduction to the test report. In section 2 we outline and provide the results of the system testing, including but not limited to: Database security testing, order transactions testing, account testing. Section 3 describes the Usability tests that were conducted and carried out by the Smart-Waiter team.
  
 \section{System Testing} 
+
+
 \subsection{Database Testing}
+
+\subsubsection{Purpose}
+Database testing is critical component in correlation with Smart Waiter application. Testing was conducted to ensure users are able to retrieve and send information regarding restaurant orders.
+
+\subsubsection{Structural Test}
 Database testing was exclusively performed from structural testing point of view. The goal of this component of testing was to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database was created for testing purposes, because any failed test case could affect the state of the original database.\\\\
 \emph{Note: A mix of scripts and manual commands were required for database testing. The tests cannot be fully automated because it is not feasible, as mentioned in test plan.}
 \subsubsection{Test Factors}
@@ -75,22 +82,22 @@ As per test plan, the following test factors will be considered for database tes
 
 \subsubsection{Correctness}
 In this section of database testing, tester had to verify that the application receives complete and correct data from the couchbase server.
-\subsubsection{Database Correctness Tests }
+\subsubsection{Correctness Tests Results}
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{correctness_tests.png}
 
 \subsubsection{Performance}
 In this section of database testing, tester had to verify that the data query was performed in a reasonable amount of time. 
-\subsubsection{Database Performance Tests }
+\subsubsection{Performance Test Results}
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{performance_tests.png}
 
 \subsubsection{Security}
 In this section of database query testing, tester had to verify that database allows correct access control. Database penetration testing was not required because we will leverage couchbase security implementation, testing and certifications.
-\subsubsection{Database Security Tests }
+\subsubsection{Security Test Results}
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{security_tests.png}
 
 \subsubsection{Reliability}
 In this section of database testing, we tested the robustness and reliability of the database. 
-\subsubsection{Database Reliability Automated Tests }
+\subsubsection{Reliability Automated Test Results }
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{reliability_tests.png}
 
 
@@ -99,6 +106,16 @@ In this section of database testing, we tested the robustness and reliability of
 \subsubsection{Purpose}
 Barcode scanning tests were conducted to make sure users are able to scan a barcode with minimal attempts. Also, to check if appropriate messages are displayed according to each test case.
 
+\subsubsection{Test Factors}
+\begin{itemize}
+ \item Correctness
+ \item Performance
+ \item Ease of use
+ \end{itemize}
+
+\subsubsection{Correctness, Performance and Ease of use}
+Testing is performed to ensure barcode scanning provides correct results in an efficient and timely manner. As well to make sure user is easily able to scan the barcode and is provided helpful messages in regards to errors encountered.
+
 \subsubsection{Functional Unit Test}
 As per our test plan, functional unit tests were  conducted to assess test cases. Doing so replicates real world usage.
 
@@ -106,10 +123,10 @@ As per our test plan, functional unit tests were  conducted to assess test cases
 \includegraphics[width=1.2\textwidth]{barcodeTable.png}
 
 \subsection{Accounts}
-\subsubsection{Functional Dynamic Test}
-As per our test plan, manual functional dynamic tests we performed to assess the following test cases. This allows the system to be exhaustively tested which will minimize or completely erase errors in real world usage.
 \subsubsection{Purpose}
 Account creation and login tests were performed to ensure Smart-Waiter users are able to create an account quickly while still adhering to the account constraints set by Smart-Waiter. This is also to ensure proper error checking is implemented in the applications account related modules.
+\subsubsection{Functional Dynamic Test}
+As per our test plan, manual functional dynamic tests we performed to assess the following test cases. This allows the system to be exhaustively tested which will minimize or completely erase errors in real world usage.
 \subsubsection{Test Factors}
 As per test plan, the following test factors will be considered for database testing;
 \begin{itemize}
@@ -123,11 +140,13 @@ In this section of Account testing, the tester had to verify that all data being
 \includegraphics[width=1.2\textwidth]{accountTC.png}
 
 \subsection{Order Transactions}
-\subsubsection{Functional Dynamic Test}
-As per our test plan, manual functional dynamic tests we performed to assess the following test cases. In a few of these test cases, manual testing for unexpected behaviour was performed by passing unexpected input. This is so any unexpected errors that may come up from unusual input is identified and fixed so that this does not add any extra work or effect the day-to-day operations of our restaurant partners. The two test cases that are performed to identify any unexpected behaviour is 6.2.1 and 6.2.7 in the table below. The 6.2.1 test is performed by rapidly clicking different sides that are available in the sides menu before the application transitions to the next activity. The 6.2.7 test is performed by selecting toppings for an entree menu item. Then editing the toppings using the function available in the order summary page, the toppings are changed and the side is changed and added to cart multiple times. These tests yielded no strange behaviour, and the application performed as expected. 
 
 \subsubsection{Purpose}
 Order transactions are a critical part of Smart-Waiter, any unforeseen bugs or errors could effect the operations of the restaurant. Therefore, these modules of Smart-Waiter were rigorously tested to ensure no unexpected behaviour and a smooth and intuitive experience. Tests were performed to ensure Smart-Waiter users are able to order from the restaurants menu quickly without having to wait for a server to arrive. This is also to ensure proper error checking is implemented in the applications transaction related modules.
+
+\subsubsection{Functional Dynamic Test}
+As per our test plan, manual functional dynamic tests we performed to assess the following test cases. In a few of these test cases, manual testing for unexpected behaviour was performed by passing unexpected input. This is so any unexpected errors that may come up from unusual input is identified and fixed so that this does not add any extra work or effect the day-to-day operations of our restaurant partners. The two test cases that are performed to identify any unexpected behaviour is 6.2.1 and 6.2.7 in the table below. The 6.2.1 test is performed by rapidly clicking different sides that are available in the sides menu before the application transitions to the next activity. The 6.2.7 test is performed by selecting toppings for an entree menu item. Then editing the toppings using the function available in the order summary page, the toppings are changed and the side is changed and added to cart multiple times. These tests yielded no strange behaviour, and the application performed as expected. 
+
 
 \subsubsection{Test Factors}
 As per test plan, the following test factors will be considered for database testing;
