@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  21 MAR 2016 13:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  21 MAR 2016 13:55
 entering extended mode
 **TestReport.tex
 (TestReport.tex
@@ -198,54 +198,53 @@ Overfull \hbox (77.99881pt too wide) in paragraph at lines 106--107
 [] 
  []
 
-[6 <./images/reliability_tests.png>]
-<images/accountTC.png, id=39, 1014.79124pt x 702.625pt>
+[6 <./images/reliability_tests.png>] [7 <./images/barcodeTable.png>]
+<images/accountTC.png, id=42, 1014.79124pt x 702.625pt>
 File: images/accountTC.png Graphic file (type png)
 
 <use images/accountTC.png>
-Package pdftex.def Info: images/accountTC.png used on input line 115.
+Package pdftex.def Info: images/accountTC.png used on input line 123.
 (pdftex.def)             Requested size: 467.99881pt x 324.03694pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 115--116
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 123--124
 [] 
  []
 
-[7 <./images/barcodeTable.png>] [8 <./images/accountTC.png>]
-<images/orderTransactionTC.png, id=47, 1003.75pt x 762.85pt>
+[8 <./images/accountTC.png>] [9]
+<images/orderTransactionTC.png, id=50, 1003.75pt x 762.85pt>
 File: images/orderTransactionTC.png Graphic file (type png)
 
 <use images/orderTransactionTC.png>
-Package pdftex.def Info: images/orderTransactionTC.png used on input line 125.
+Package pdftex.def Info: images/orderTransactionTC.png used on input line 143.
 (pdftex.def)             Requested size: 467.99881pt x 355.68771pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 125--126
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 143--144
 [] 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 131--136
+[10 <./images/orderTransactionTC.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 149--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--136
+Underfull \hbox (badness 10000) in paragraph at lines 149--154
 
  []
 
-[10 <./images/orderTransactionTC.png>] [11]
-<images/usabilityResults.png, id=58, 592.2125pt x 176.66pt>
+[11] <images/usabilityResults.png, id=58, 592.2125pt x 176.66pt>
 File: images/usabilityResults.png Graphic file (type png)
 
 <use images/usabilityResults.png>
-Package pdftex.def Info: images/usabilityResults.png used on input line 166.
+Package pdftex.def Info: images/usabilityResults.png used on input line 184.
 (pdftex.def)             Requested size: 467.99881pt x 139.61107pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 166--167
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 184--185
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
 
  []
 
@@ -263,7 +262,7 @@ aTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/LaTeX/fonts/ty
 pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/LaTeX/fonts/type1/public/ams
 fonts/cm/cmr17.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on TestReport.pdf (14 pages, 481604 bytes).
+Output written on TestReport.pdf (14 pages, 482566 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

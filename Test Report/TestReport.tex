@@ -110,6 +110,14 @@ As per our test plan, functional unit tests were  conducted to assess test cases
 As per our test plan, manual functional dynamic tests we performed to assess the following test cases. This allows the system to be exhaustively tested which will minimize or completely erase errors in real world usage.
 \subsubsection{Purpose}
 Account creation and login tests were performed to ensure Smart-Waiter users are able to create an account quickly while still adhering to the account constraints set by Smart-Waiter. This is also to ensure proper error checking is implemented in the applications account related modules.
+\subsubsection{Test Factors}
+As per test plan, the following test factors will be considered for database testing;
+\begin{itemize}
+ \item Correctness
+ \item Data Integrity
+ \end{itemize}
+\subsubsection{Correctness and Data Integrity}
+In this section of Account testing, the tester had to verify that all data being passed is in the correct format and that the passwords were being stored properly so that user logins can be authenticated. 
 
 \subsubsection{Test Results}
 \includegraphics[width=1.2\textwidth]{accountTC.png}
@@ -120,6 +128,16 @@ As per our test plan, manual functional dynamic tests we performed to assess the
 
 \subsubsection{Purpose}
 Order transactions are a critical part of Smart-Waiter, any unforeseen bugs or errors could effect the operations of the restaurant. Therefore, these modules of Smart-Waiter were rigorously tested to ensure no unexpected behaviour and a smooth and intuitive experience. Tests were performed to ensure Smart-Waiter users are able to order from the restaurants menu quickly without having to wait for a server to arrive. This is also to ensure proper error checking is implemented in the applications transaction related modules.
+
+\subsubsection{Test Factors}
+As per test plan, the following test factors will be considered for database testing;
+\begin{itemize}
+ \item Correctness
+ \item Reliability
+ \item Data Integrity
+ \end{itemize}
+\subsubsection{Correctness, Reliability and Data Integrity}
+In this section of Order Transaction testing, the tester had to verify that all data being passed is in the correct format and valid. Multiple tests to verify that the credit card information being passed is valid are performed. The tests are also used to check the reliability of the Stripe API and overall error testing. Some test cases check for unexpected behaviour in the Sides and Toppings module of the application by performing unexpected input. This is done to test the overall reliability of the Orders module.    
 
 \subsubsection{Test Results}
 \includegraphics[width=1.2\textwidth]{orderTransactionTC.png}
