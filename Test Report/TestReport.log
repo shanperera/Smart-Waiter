@@ -1,12 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  20 MAR 2016 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 MAR 2016 11:06
 entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
 **TestReport.tex
-(TestReport.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-("C:\Program Files\LaTeX\tex\latex\base\article.cls"
+(./TestReport.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\LaTeX\tex\latex\base\size12.clo"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,21 +24,21 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\LaTeX\tex\latex\xcolor\xcolor.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Program Files\LaTeX\tex\latex\00miktex\color.cfg"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Program Files\LaTeX\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\LaTeX\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\LaTeX\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -50,7 +53,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-("C:\Program Files\LaTeX\tex\latex\float\float.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count88
 \float@exts=\toks14
@@ -58,14 +61,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks15
 \@floatcapt=\box27
 )
-("C:\Program Files\LaTeX\tex\latex\caption\caption.sty"
-Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Program Files\LaTeX\tex\latex\caption\caption3.sty"
-Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 
-("C:\Program Files\LaTeX\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
@@ -80,26 +83,29 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \c@ContinuedFloat=\count89
 Package caption Info: float package is loaded.
 )
-("C:\Program Files\LaTeX\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\LaTeX\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\LaTeX\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\LaTeX\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 )
 \Gin@req@height=\dimen110
 \Gin@req@width=\dimen111
 )
-("C:\Program Files\LaTeX\tex\latex\psnfss\courier.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
-) (TestReport.aux)
+)
+(./TestReport.aux)
+\openout1 = `TestReport.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
@@ -113,7 +119,7 @@ LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 
-("C:\Program Files\LaTeX\tex\context\base\supp-pdf.mkii"
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count90
 \scratchdimen=\dimen112
@@ -129,14 +135,63 @@ LaTeX Font Info:    ... okay on input line 25.
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 30.
- [1
 
-{C:/Users/Shan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(TestReport.toc
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./TestReport.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -145,82 +200,121 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
 )
 \tf@toc=\write3
- (TestReport.lot)
+\openout3 = `TestReport.toc'.
+
+ (./TestReport.lot)
 \tf@lot=\write4
+\openout4 = `TestReport.lot'.
+
  [1]
-<images/barcodeTable.png, id=11, 595.22375pt x 328.22626pt>
-File: images/barcodeTable.png Graphic file (type png)
-
-<use images/barcodeTable.png>
-Package pdftex.def Info: images/barcodeTable.png used on input line 59.
-(pdftex.def)             Requested size: 467.99881pt x 258.06885pt.
-
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 59--60
-[] 
- []
-
-[2 <./images/barcodeTable.png>]
-<images/accountTC.png, id=15, 1014.79124pt x 702.625pt>
-File: images/accountTC.png Graphic file (type png)
-
-<use images/accountTC.png>
-Package pdftex.def Info: images/accountTC.png used on input line 68.
-(pdftex.def)             Requested size: 467.99881pt x 324.03694pt.
-
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 68--69
-[] 
- []
-
-[3 <./images/accountTC.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 73--78
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--78
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 84.
-("C:\Program Files\LaTeX\tex\latex\base\omscmr.fd"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 54.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
- [4]
-<images/usabilityResults.png, id=25, 592.2125pt x 176.66pt>
-File: images/usabilityResults.png Graphic file (type png)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
 
-<use images/usabilityResults.png>
-Package pdftex.def Info: images/usabilityResults.png used on input line 108.
-(pdftex.def)             Requested size: 467.99881pt x 139.61107pt.
+<images/correctness_tests.png, id=12, 819.06pt x 578.16pt>
+File: images/correctness_tests.png Graphic file (type png)
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 108--109
+<use images/correctness_tests.png>
+Package pdftex.def Info: images/correctness_tests.png used on input line 63.
+(pdftex.def)             Requested size: 390.00737pt x 275.29932pt.
+ [2]
+<images/performance_tests.png, id=19, 888.31876pt x 385.44pt>
+File: images/performance_tests.png Graphic file (type png)
+
+<use images/performance_tests.png>
+Package pdftex.def Info: images/performance_tests.png used on input line 68.
+(pdftex.def)             Requested size: 389.99396pt x 169.21771pt.
+ [3 <./images/correctness_tests.png>]
+<images/security_tests.png, id=24, 666.49pt x 278.03876pt>
+File: images/security_tests.png Graphic file (type png)
+
+<use images/security_tests.png>
+Package pdftex.def Info: images/security_tests.png used on input line 73.
+(pdftex.def)             Requested size: 390.00186pt x 162.69655pt.
+ [4 <./images/performance_tests.png> <./images/security_tests.png>]
+<images/reliability_tests.png, id=30, 673.51625pt x 398.48875pt>
+File: images/reliability_tests.png Graphic file (type png)
+
+<use images/reliability_tests.png>
+Package pdftex.def Info: images/reliability_tests.png used on input line 78.
+(pdftex.def)             Requested size: 390.00252pt x 230.74664pt.
+
+<images/barcodeTable.png, id=31, 595.22375pt x 328.22626pt>
+File: images/barcodeTable.png Graphic file (type png)
+
+<use images/barcodeTable.png>
+Package pdftex.def Info: images/barcodeTable.png used on input line 90.
+(pdftex.def)             Requested size: 467.99881pt x 258.06885pt.
+
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 90--91
 [] 
  []
 
+[5 <./images/reliability_tests.png>]
+<images/accountTC.png, id=36, 1014.79124pt x 702.625pt>
+File: images/accountTC.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--115
+<use images/accountTC.png>
+Package pdftex.def Info: images/accountTC.png used on input line 99.
+(pdftex.def)             Requested size: 467.99881pt x 324.03694pt.
+
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 99--100
+[] 
+ []
+
+[6 <./images/barcodeTable.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
 
  []
 
-[5 <./images/usabilityResults.png>] [6] (TestReport.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--109
+
+ []
+
+[7 <./images/accountTC.png>]
+<images/usabilityResults.png, id=45, 592.2125pt x 176.66pt>
+File: images/usabilityResults.png Graphic file (type png)
+
+<use images/usabilityResults.png>
+Package pdftex.def Info: images/usabilityResults.png used on input line 139.
+(pdftex.def)             Requested size: 467.99881pt x 139.61107pt.
+
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 139--140
+[] 
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 143--146
+
+ []
+
+[9 <./images/usabilityResults.png>] [10] (./TestReport.aux) ) 
 Here is how much of TeX's memory you used:
- 2757 strings out of 493673
- 40476 string characters out of 3145987
- 106377 words of memory out of 3000000
- 6114 multiletter control sequences out of 15000+200000
- 8808 words of font info for 31 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 36i,8n,38p,319b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/LaT
-eX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/LaTeX/fonts/type
-1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb>
-Output written on TestReport.pdf (7 pages, 204384 bytes).
+ 3126 strings out of 493089
+ 48079 string characters out of 6134842
+ 109093 words of memory out of 5000000
+ 6583 multiletter control sequences out of 15000+600000
+ 9155 words of font info for 32 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,8n,38p,389b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on TestReport.pdf (11 pages, 426088 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

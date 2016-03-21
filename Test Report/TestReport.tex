@@ -45,6 +45,37 @@ March 20, 2016 & Test results added \\
 \end{table}
 
 \section{Introduction}
+\section{Database Testing}
+Database testing was exclusively performed from structural testing point of view. The goal of this component of testing was to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database was created for testing purposes, because any failed test case could affect the state of the original database.\\\\
+\emph{Note: A mix of scripts and manual commands were required for database testing. The tests cannot be fully automated because it is not feasible, as mentioned in test plan.}
+\subsection{Test Factors}
+For database testing, the following test factors will be considered;
+\begin{itemize}
+ \item Correctness
+ \item Performance
+ \item Security
+ \item Reliability
+ \end{itemize}
+
+\subsubsection{Correctness}
+In this section of database testing, tester had to verify that the application receives complete and correct data from the couchbase server.
+\subsubsection{Database Correctness Tests }
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{correctness_tests.png}
+
+\subsubsection{Performance}
+In this section of database testing, tester had to verify that the data query was performed in a reasonable amount of time. 
+\subsubsection{Database Performance Tests }
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{performance_tests.png}
+
+\subsubsection{Security}
+In this section of database query testing, tester had to verify that database allows correct access control. Database penetration testing was not required because we will leverage couchbase security implementation, testing and certifications.
+\subsubsection{Database Security Tests }
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{security_tests.png}
+
+\subsubsection{Reliability}
+In this section of database testing, we tested the robustness and reliability of the database. 
+\subsubsection{Database Reliability Automated Tests }
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{reliability_tests.png}
 
 \section{System Testing} 
 \subsection{Barcode Scanning}
