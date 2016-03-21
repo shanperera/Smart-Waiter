@@ -45,11 +45,13 @@ March 20, 2016 & Test results added \\
 \end{table}
 
 \section{Introduction}
-\section{Database Testing}
+
+\section{System Testing} 
+\subsection{Database Testing}
 Database testing was exclusively performed from structural testing point of view. The goal of this component of testing was to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database was created for testing purposes, because any failed test case could affect the state of the original database.\\\\
 \emph{Note: A mix of scripts and manual commands were required for database testing. The tests cannot be fully automated because it is not feasible, as mentioned in test plan.}
-\subsection{Test Factors}
-For database testing, the following test factors will be considered;
+\subsubsection{Test Factors}
+As per test plan, the following test factors will be considered for database testing;
 \begin{itemize}
  \item Correctness
  \item Performance
@@ -77,7 +79,7 @@ In this section of database testing, we tested the robustness and reliability of
 \subsubsection{Database Reliability Automated Tests }
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{reliability_tests.png}
 
-\section{System Testing} 
+
 \subsection{Barcode Scanning}
 
 \subsubsection{Purpose}
