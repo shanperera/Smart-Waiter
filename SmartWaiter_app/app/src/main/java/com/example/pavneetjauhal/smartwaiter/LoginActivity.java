@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void login(View view) throws Exception {
-        EditText getFields = (EditText) findViewById(R.id.passwordEditText);
+        EditText getFields = (EditText) findViewById(R.id.pwEditText);
         String password = getFields.getText().toString();
         if (password != null || !password.isEmpty()){
             if(!LocalAuth.checkPassword(password, MainActivity.user.getPassword(), MainActivity.user.getSalt())){
