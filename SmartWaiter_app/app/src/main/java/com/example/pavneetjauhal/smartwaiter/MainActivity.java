@@ -95,8 +95,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //onPopulateMenu("456");
-
-
     }
 
     @Override

@@ -21,6 +21,9 @@ public class LoginActivity extends AppCompatActivity {
         TextView pwString = (TextView) findViewById(R.id.passwordTextView);
         Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/bebas.otf");
         pwString.setTypeface(tf);
+
+        pwString = (TextView) findViewById(R.id.taglineLabel);
+        pwString.setTypeface(tf);
     }
 
     @Override
@@ -44,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     public void login(View view) throws Exception {
         EditText getFields = (EditText) findViewById(R.id.pwEditText);
         String password = getFields.getText().toString();
@@ -56,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         }
         finish();
     }
+
     public boolean onKeyDown(int keyCode, KeyEvent event)  {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
             return true;

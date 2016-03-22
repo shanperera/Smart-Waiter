@@ -3,7 +3,7 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.example.pavneetjauhal.smartwaiter.LoginActivity"
-    android:background="@drawable/login"
+    android:background="@drawable/loginscreen"
     android:id="@+id/LoginActivity">
     <!--
         <ImageView
@@ -98,11 +98,30 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoImageView"
+        android:src="@drawable/sw_logo"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fits Your Lifestyle"
+        android:id="@+id/taglineLabel"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp" /><![CDATA[
 
 
-    <![CDATA[
+
 
     />
+
 
 ]]>
 </RelativeLayout>
