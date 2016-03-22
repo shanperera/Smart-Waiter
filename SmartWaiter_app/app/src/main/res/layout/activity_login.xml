@@ -94,7 +94,7 @@
         android:id="@+id/button3"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/buttongradient"/>
+        android:background="@drawable/edittextstyle"/>
 
 
 

@@ -1,5 +1,6 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -7,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
@@ -15,6 +17,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        TextView pwString = (TextView) findViewById(R.id.passwordTextView);
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/bebas.otf");
+        pwString.setTypeface(tf);
     }
 
     @Override
