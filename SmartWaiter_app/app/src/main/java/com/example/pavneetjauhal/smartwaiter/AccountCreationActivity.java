@@ -1,12 +1,14 @@
 package com.example.pavneetjauhal.smartwaiter;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AccountCreationActivity extends AppCompatActivity {
@@ -20,6 +22,32 @@ public class AccountCreationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account_creation);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+
+        setTypeFace();
+    }
+
+    public void setTypeFace(){
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/bebas.otf");
+        TextView curr = (TextView) findViewById(R.id.passwordLabel);
+        curr.setTypeface(tf);
+
+        curr = (TextView) findViewById(R.id.personalDetailsLabel);
+        curr.setTypeface(tf);
+
+        curr = (TextView) findViewById(R.id.firstNameLabel);
+        curr.setTypeface(tf);
+
+        curr = (TextView) findViewById(R.id.lastNameLabel);
+        curr.setTypeface(tf);
+
+        curr = (TextView) findViewById(R.id.addressLabel);
+        curr.setTypeface(tf);
+
+        curr = (TextView) findViewById(R.id.postalCodeLabel);
+        curr.setTypeface(tf);
+
+        curr = (TextView) findViewById(R.id.phoneNumberLabel);
+        curr.setTypeface(tf);
     }
 
     public void createAccount(View button) throws Exception {

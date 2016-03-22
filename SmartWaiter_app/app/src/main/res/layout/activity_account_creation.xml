@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/accountscreen"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     >
@@ -17,7 +17,7 @@
             android:id="@+id/my_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#457c06"
+            android:background="#6D0019"
             android:elevation="4dp"
             android:textColor="#ffff"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
@@ -36,16 +36,16 @@
             android:layout_height="wrap_content"
             android:text="@string/create_account_activity_password_label"
             android:textSize="11pt"
-            android:textColor="#457c06"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="6dp"
             android:id="@+id/passwordLabel" />
 
         <EditText
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:inputType="textPassword"
             android:textSize="12pt"
-            android:textColor="#cad6de"
+            android:textColor="#FFFFFF"
             android:maxLength="5"
             android:id="@+id/passwordEditText"
             android:background="@drawable/edittextstyle"
@@ -54,85 +54,94 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="16dp"
             android:textStyle="bold"
-            android:background="#cad6de"
             android:text="@string/create_account_activity_personal_details_label"
             android:textSize="12pt"
-            android:textColor="#457c06"
+            android:textColor="#FFFFFF"
             android:id="@+id/personalDetailsLabel" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:text="@string/create_account_activity_first_name_label"
-            android:textSize="11pt"
-            android:textColor="#457c06"
+            android:textSize="9pt"
+            android:textColor="#FFFFFF"
             android:id="@+id/firstNameLabel" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#457c06"
-            android:id="@+id/firstNameEditText" />
+            android:layout_height="30dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/firstNameEditText"
+            android:background="@drawable/edittextstyle"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:text="@string/create_account_activity_last_name_label"
-            android:textSize="11pt"
-            android:textColor="#457c06"
+            android:textSize="9pt"
+            android:textColor="#FFFFFF"
             android:id="@+id/lastNameLabel" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#457c06"
-            android:id="@+id/lastNameEditText" />
+            android:layout_height="30dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/lastNameEditText"
+            android:background="@drawable/edittextstyle"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:text="@string/create_account_activity_address_label"
-            android:textColor="#457c06"
-            android:textSize="11pt"
+            android:textColor="#FFFFFF"
+            android:textSize="9pt"
             android:id="@+id/addressLabel" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#457c06"
-            android:id="@+id/addressEditText" />
+            android:layout_height="30dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/addressEditText"
+            android:background="@drawable/edittextstyle"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:text="@string/create_account_activity_postal_code_label"
-            android:textColor="#457c06"
-            android:textSize="11pt"
-            android:id="@+id/textView4" />
+            android:textColor="#FFFFFF"
+            android:textSize="9pt"
+            android:id="@+id/postalCodeLabel" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#457c06"
-            android:id="@+id/postalCodeEditText" />
+            android:layout_height="30dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/postalCodeEditText"
+            android:background="@drawable/edittextstyle"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:text="@string/create_account_activity_phone_number_label"
-            android:textColor="#457c06"
-            android:textSize="11pt"
-            android:id="@+id/textView5" />
+            android:textColor="#FFFFFF"
+            android:textSize="9pt"
+            android:id="@+id/phoneNumberLabel" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:inputType="phone"
-            android:textColor="#457c06"
+            android:textColor="#FFFFFF"
             android:ems="10"
-            android:id="@+id/phoneNumberEditText" />
+            android:id="@+id/phoneNumberEditText"
+            android:background="@drawable/edittextstyle"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -140,9 +149,11 @@
             android:text="@string/create_account_activity_create_account_button_label"
             android:onClick="createAccount"
             android:id="@+id/button"
-            android:background="#457c06"
+            android:background="@drawable/edittextstyle"
+            android:textColor="#FFFFFF"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center" />
         </LinearLayout>
     </LinearLayout>
