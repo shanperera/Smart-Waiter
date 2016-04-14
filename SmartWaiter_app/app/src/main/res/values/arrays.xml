@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_array">
+        <item>Account Settings</item>
+        <item>Order History</item>
+        <item>Set Preferences</item>
+        <item>Report Bug</item>
+    </string-array>
+</resources>

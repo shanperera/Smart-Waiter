@@ -1,13 +1,23 @@
 package com.example.pavneetjauhal.smartwaiter;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.couchbase.lite.CouchbaseLiteException;
@@ -20,7 +30,7 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     public static CouchBaseLite local_database;
     public static String qrCode;
     static List<MenuCategories> menuCategoryList = new ArrayList<MenuCategories>();
@@ -29,17 +39,24 @@ public class MainActivity extends AppCompatActivity {
     static String restarauntName = "";
     private Button scanButton;
 
+    private String[] SettingsMenu;
+    public DrawerLayout mDrawerLayout;
+    public ListView mDrawerList;
+    public ActionBarDrawerToggle mDrawerToggle;
+    public CharSequence mTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         boolean checkExists = true;
-        //ActionBar actionBar = getActionBar();
-        //actionBar.setHomeButtonEnabled(true);
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        //this.setTitle(getResources().getString(R.string.title_activity_scan));
-        //Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-       // setSupportActionBar(myToolbar);
+
+        sideMenuSetup();
+
+        //Couchbase Setup
         try {
             local_database = new CouchBaseLite(this);
         } catch (IOException e) {
@@ -97,11 +114,79 @@ public class MainActivity extends AppCompatActivity {
         //onPopulateMenu("456");
     }
 
+    public void sideMenuSetup(){
+        //ActionBar setup
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+        //this.setTitle(getResources().getString(R.string.title_activity_scan));
+        //Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        // setSupportActionBar(myToolbar);
+
+        SettingsMenu = getResources().getStringArray(R.array.menu_array);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+
+        // Set the adapter for the list view
+        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+                R.layout.drawer_list_item, SettingsMenu));
+        // Set the list's click listener
+        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+
+        mTitle = "test";
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+
+        // Set the adapter for the list view
+        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+                R.layout.drawer_list_item, SettingsMenu));
+        // Set the list's click listener
+        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+
+        mDrawerToggle = new ActionBarDrawerToggle(
+                this,                  /* host Activity */
+                mDrawerLayout,         /* DrawerLayout object */
+                R.drawable.ic_drawer,  /* nav drawer icon to replace 'Up' caret */
+                R.string.drawer_open,  /* "open drawer" description */
+                R.string.drawer_close  /* "close drawer" description */
+        ) {
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                //getActionBar().setTitle(mTitle);
+            }
+
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                //getActionBar().setTitle(mTitle);
+            }
+        };
+
+        // Set the drawer toggle as the DrawerListener
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(false);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_drawer);
+
+        LayoutInflater inflater = getLayoutInflater();
+        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header, mDrawerList,
+                false);
+        ViewGroup footer = (ViewGroup) inflater.inflate(R.layout.footer, mDrawerList,
+                false);
+        mDrawerList.addHeaderView(header, null, false);
+        mDrawerList.addFooterView(footer, null, false);
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //getMenuInflater().inflate(R.menu.menu_login, menu);
-        MenuInflater mif = getMenuInflater();
-        mif.inflate(R.menu.main_actionbar,menu);
+        //MenuInflater mif = getMenuInflater();
+        //mif.inflate(R.menu.main_actionbar,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -170,6 +255,50 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        // Sync the toggle state after onRestoreInstanceState has occurred.
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Pass the event to ActionBarDrawerToggle, if it returns
+        // true, then it has handled the app icon touch event
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        // Handle your other action bar items...
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Swaps fragments in the main content view
+     */
+    private void selectItem(int position) {
+        Toast.makeText(this, R.string.app_name, Toast.LENGTH_SHORT).show();
+
+        // Highlight the selected item, update the title, and close the drawer
+        mDrawerList.setItemChecked(position, true);
+        setTitle(SettingsMenu[position]);
+        mDrawerLayout.closeDrawer(mDrawerList);
+    }
+
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView parent, View view, int position, long id) {
+            selectItem(position);
+        }
+    }
     /*public void onDestroy() {
         Log.d("couchbaseevents", "###### DESTROY CALLED #######");
         super.onDestroy();
