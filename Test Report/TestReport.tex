@@ -55,10 +55,14 @@ March 21, 2016 & Introduction Created \\
 This section will provide an introduction and general outline of the Smart-Waiter test report. 
 
 \subsection{Scope of Testing}
-The test report primarily focuses on the overall correctness of the software with regard to the test cases provided. Many of the test cases provided are in the form of functional dynamic tests. Automatic testing for modules in Smart-Waiter were not feasible, as mentioned in the Test Plan. This plan is fairly exhaustive, further testing will be performed for the final revision to ensure a completely smooth and intuitive user experience.
+The test report primarily focuses on the overall correctness of the software with regard to the test cases provided. Many of the test cases provided are in the form of functional dynamic tests. Automatic testing for modules in Smart-Waiter were not feasible, as mentioned in the Test Plan.
+\ds{You should give a quick summary as to why it was not feasible here.}
+This plan is fairly exhaustive, further testing will be performed for the final revision to ensure a completely smooth and intuitive user experience.
 
 \subsection{Organization}
-In section 1 we provide the introduction to the test report. In section 2 we outline and provide the results of the system testing, including but not limited to: Database security testing, order transactions testing, account testing. Section 3 describes the Usability tests that were conducted and carried out by the Smart-Waiter team.
+In section 1
+\ds{Use \LaTeX properly! Use refs!}
+we provide the introduction to the test report. In section 2 we outline and provide the results of the system testing, including but not limited to: Database security testing, order transactions testing, account testing. Section 3 describes the Usability tests that were conducted and carried out by the Smart-Waiter team.
  
 \section{System Testing} 
 
@@ -71,6 +75,10 @@ Database testing is critical component in correlation with Smart Waiter applicat
 \subsubsection{Structural Test}
 Database testing was exclusively performed from structural testing point of view. The goal of this component of testing was to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database was created for testing purposes, because any failed test case could affect the state of the original database.\\\\
 \emph{Note: A mix of scripts and manual commands were required for database testing. The tests cannot be fully automated because it is not feasible, as mentioned in test plan.}
+
+\ds{Explain what you mean when you say they cannot be fully automated. 
+Are your scripts partial automation?}
+
 \subsubsection{Test Factors}
 As per test plan, the following test factors will be considered for database testing;
 \begin{itemize}
@@ -99,7 +107,7 @@ In this section of database query testing, tester had to verify that database al
 In this section of database testing, we tested the robustness and reliability of the database. 
 \subsubsection{Reliability Automated Test Results }
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{reliability_tests.png}
-
+\ds{Test 2's result seems like it would be a major problem.}
 
 \subsection{Barcode Scanning}
 
@@ -114,7 +122,9 @@ Barcode scanning tests were conducted to make sure users are able to scan a barc
  \end{itemize}
 
 \subsubsection{Correctness, Performance and Ease of use}
-Testing is performed to ensure barcode scanning provides correct results in an efficient and timely manner. As well to make sure user is easily able to scan the barcode and is provided helpful messages in regards to errors encountered.
+Testing is performed to ensure barcode scanning provides correct results in an efficient and timely manner. As well to make sure 
+\ds{``the user"}
+user is easily able to scan the barcode and is provided helpful messages in regards to errors encountered.
 
 \subsubsection{Functional Unit Test}
 As per our test plan, functional unit tests were  conducted to assess test cases. Doing so replicates real world usage.
@@ -122,13 +132,20 @@ As per our test plan, functional unit tests were  conducted to assess test cases
 \subsubsection{Test Results}
 \includegraphics[width=1.2\textwidth]{barcodeTable.png}
 
+\ds{What about scanning deprecated/obsolete barcodes?}
+
 \subsection{Accounts}
 \subsubsection{Purpose}
 Account creation and login tests were performed to ensure Smart-Waiter users are able to create an account quickly while still adhering to the account constraints set by Smart-Waiter. This is also to ensure proper error checking is implemented in the applications account related modules.
 \subsubsection{Functional Dynamic Test}
-As per our test plan, manual functional dynamic tests we performed to assess the following test cases. This allows the system to be exhaustively tested which will minimize or completely erase errors in real world usage.
+As per our test plan, manual functional dynamic tests 
+\ds{``were"}
+we performed to assess the following test cases. This allows the system to be exhaustively tested which will minimize or completely erase errors in real world usage.
 \subsubsection{Test Factors}
 As per test plan, the following test factors will be considered for database testing;
+
+\ds{Weren't you just talking about accounts? Why are you bringing up databases?}
+
 \begin{itemize}
  \item Correctness
  \item Data Integrity
@@ -138,6 +155,8 @@ In this section of Account testing, the tester had to verify that all data being
 
 \subsubsection{Test Results}
 \includegraphics[width=1.2\textwidth]{accountTC.png}
+
+\ds{Why does this table have a different style than the others?}
 
 \subsection{Order Transactions}
 
@@ -160,6 +179,7 @@ In this section of Order Transaction testing, the tester had to verify that all 
 
 \subsubsection{Test Results}
 \includegraphics[width=1.2\textwidth]{orderTransactionTC.png}
+\ds{Why aren't you creating your tables in \LaTeX{}? Your table is being cut off.}
 
 \section{Usability Test}
 Usability tests are conducted to assess the user's ability to complete routine tasks, and acquire their impression of the application.
@@ -231,4 +251,9 @@ Conducting this usability test definitely helps our team in terms of adjusting r
 \item Allow users to view order history
 \end{itemize}
 After implementation of these additions, a second usability test will be conducted. New participants will be gathered in order to provide unbiased results. 
+
+\ds{To reiterate: Create your tables in \LaTeX{}, it will make things clearer. Also,
+why do none of your tables/figures have captions?}
+
+\ds{You have not explicitly traced your tests to your requirements or modules.}
 \end{document}
