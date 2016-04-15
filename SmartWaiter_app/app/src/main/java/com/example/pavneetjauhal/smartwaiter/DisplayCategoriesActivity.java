@@ -3,13 +3,9 @@ package com.example.pavneetjauhal.smartwaiter;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,103 +14,24 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class DisplayCategoriesActivity extends AppCompatActivity {
 
     MainActivity mainObject;
     Toolbar mActionBarToolbar;
-
-    private String[] SettingsMenu;
-    public DrawerLayout mDrawerLayout;
-    public ListView mDrawerList;
-    public ActionBarDrawerToggle mDrawerToggle;
-    public CharSequence mTitle;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_categories);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarCategories);
-        //setSupportActionBar(toolbar);
-        sideMenuSetup();
-        //mActionBarToolbar = (Toolbar) findViewById(R.id.toolbarCategories);
-        //setSupportActionBar(mActionBarToolbar);
-        //getSupportActionBar().setTitle(mainObject.restarauntName + " Menu Categories");
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarCategories);
+        setSupportActionBar(toolbar);
+        mActionBarToolbar = (Toolbar) findViewById(R.id.toolbarCategories);
+        setSupportActionBar(mActionBarToolbar);
+        getSupportActionBar().setTitle(mainObject.restarauntName + " Menu Categories");
         onDisplayCategoryList();
 
 
-    }
-
-    public void sideMenuSetup(){
-        //ActionBar setup
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-        }
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(mainObject.restarauntName + " Menu Categories");
-        //this.setTitle(getResources().getString(R.string.title_activity_scan));
-        //Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        // setSupportActionBar(myToolbar);
-
-        SettingsMenu = getResources().getStringArray(R.array.menu_array);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        // Set the adapter for the list view
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, SettingsMenu));
-        // Set the list's click listener
-        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
-        mTitle = "test";
-
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        // Set the adapter for the list view
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, SettingsMenu));
-        // Set the list's click listener
-        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
-        mDrawerToggle = new ActionBarDrawerToggle(
-                this,                  /* host Activity */
-                mDrawerLayout,         /* DrawerLayout object */
-                R.drawable.ic_drawer,  /* nav drawer icon to replace 'Up' caret */
-                R.string.drawer_open,  /* "open drawer" description */
-                R.string.drawer_close  /* "close drawer" description */
-        ) {
-
-            /** Called when a drawer has settled in a completely closed state. */
-            public void onDrawerClosed(View view) {
-                //getActionBar().setTitle(mTitle);
-            }
-
-            /** Called when a drawer has settled in a completely open state. */
-            public void onDrawerOpened(View drawerView) {
-                //getActionBar().setTitle(mTitle);
-            }
-        };
-
-        // Set the drawer toggle as the DrawerListener
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(false);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_drawer);
-
-        LayoutInflater inflater = getLayoutInflater();
-        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header, mDrawerList,
-                false);
-        ViewGroup footer = (ViewGroup) inflater.inflate(R.layout.footer, mDrawerList,
-                false);
-        mDrawerList.addHeaderView(header, null, false);
-        mDrawerList.addFooterView(footer, null, false);
     }
 
     public void onDisplayCategoryList(){
@@ -191,9 +108,6 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
             Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CartActivity");
             startActivity(intent);
         }
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -212,39 +126,5 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
                 })
                 .setNegativeButton("No", null)
                 .show();
-    }
-
-
-
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
-        mDrawerToggle.syncState();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        mDrawerToggle.onConfigurationChanged(newConfig);
-    }
-
-    /**
-     * Swaps fragments in the main content view
-     */
-    private void selectItem(int position) {
-        Toast.makeText(this, R.string.app_name, Toast.LENGTH_SHORT).show();
-
-        // Highlight the selected item, update the title, and close the drawer
-        mDrawerList.setItemChecked(position, true);
-        setTitle(SettingsMenu[position]);
-        mDrawerLayout.closeDrawer(mDrawerList);
-    }
-
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView parent, View view, int position, long id) {
-            selectItem(position);
-        }
     }
 }
