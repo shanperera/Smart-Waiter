@@ -25,12 +25,9 @@ import java.util.List;
 
 /**
  * Created by Shan on 2016-01-14.
- *
- *
  */
 
-public class GetPaymentInformationActivity extends AppCompatActivity{
-
+public class GetPaymentInformationActivity extends AppCompatActivity {
 
 
     @Override
@@ -41,7 +38,7 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
         populateSpinner();
     }
 
-    public void populateSpinner(){
+    public void populateSpinner() {
         Spinner monthSpinner, yearSpinner;
 
         //Find XML spinner object
@@ -62,7 +59,7 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
         yearSpinner.setAdapter(yAdapter);
     }
 
-    public void getInfo(View button){
+    public void getInfo(View button) {
         EditText getFields;
         Spinner spinner1, spinner2;
 
@@ -81,52 +78,52 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
         int cardYear = Integer.parseInt(cardExpYear);
 
         Card card = new Card(cardNumber, cardMonth, cardYear, cardCVC);
-        try{
+        try {
             Stripe stripe = new Stripe("pk_test_YvxrNPpmntwiq44Rp4HkAYuT");
 
-            if(card.validateCard()){
+            if (card.validateCard()) {
                 stripe.createToken(
                         card,
                         new TokenCallback() {
                             public void onSuccess(Token token) {
                                 postToken(token);
-                                MainActivity.user.setToken(token);
+                                LoginActivity.user.setToken(token);
                                 try {
-                                    MainActivity.local_database.createItem(MainActivity.user.userItems);
+                                    MainActivity.local_database.createItem(LoginActivity.user.userItems);
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }
                                 Log.d("TokenSuccess", "Token Success!");
                                 //finish();
-                                MainActivity.user.userItems.clear();
+                                LoginActivity.user.userItems.clear();
                                 Intent intent = new Intent(GetPaymentInformationActivity.this, MainActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                                 Toast.makeText(getApplicationContext(), "Order Sent Successfully",
                                         Toast.LENGTH_LONG).show();
                             }
+
                             public void onError(Exception error) {
                                 Log.d("TokenError", "Token Failed!");
                             }
                         }
                 );
-            }
-            else{
+            } else {
 
             }
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
     }
 
-    public void postToken(Token token){
+    public void postToken(Token token) {
         String url = "https://node-js-charge-card.herokuapp.com/";
         String charset = "UTF-8";
         String name = "stripeToken";
         String pToken = token.toString();
         String chargeParameters;
 
-        try{
+        try {
             String query = String.format("name=%s&pToken=%s",
                     URLEncoder.encode(name, charset),
                     URLEncoder.encode(pToken, charset));
@@ -144,7 +141,7 @@ public class GetPaymentInformationActivity extends AppCompatActivity{
             InputStream response = connection.getInputStream();
             response.close();
             Log.d("WebSuccess", "Web Success!");
-        }catch(Exception e){
+        } catch (Exception e) {
             Log.d("WebFail", "Web Fail!");
         }
     }

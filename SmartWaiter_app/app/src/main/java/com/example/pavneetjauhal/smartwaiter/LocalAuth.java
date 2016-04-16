@@ -1,4 +1,5 @@
 package com.example.pavneetjauhal.smartwaiter;
+
 import android.util.Base64;
 import android.util.Log;
 
@@ -16,21 +17,22 @@ public class LocalAuth {
     /* This will be stored in the database as well */
     public final String password;
     public final String salt;
+
     public LocalAuth(String password, String salt) {
         this.password = password;
         this.salt = salt;
     }
 
     /* Check if user input matches stored password.*/
-    public static boolean checkPassword(String password, String stored, String salt) throws Exception{
-       // Log.d("FACKKK2", salt);
+    public static boolean checkPassword(String password, String stored, String salt) throws Exception {
+        // Log.d("FACKKK2", salt);
         byte[] decodedPass = Base64.decode(salt, Base64.DEFAULT);
         String text = new String(decodedPass, "UTF-8");
         //String hashOfInput = computeHashValue(password, saltDecoded);
         //String s = saltDecoded + hashOfInput;
         Log.d("FACKKK2-C", text);
         Log.d("FACKKK2-C", stored);
-        return password.toString().equals(stored);
+        return password.equals(stored);
     }
 
     /* Computes a salted hash of given plaintext password. However,
@@ -67,6 +69,6 @@ public class LocalAuth {
         int hashIteration = 20000;
         int keyLen = 256;
         SecretKey key = f.generateSecret(new PBEKeySpec(password.toCharArray(), salt, hashIteration, keyLen));
-        return Base64.encodeToString(key.getEncoded(),Base64.DEFAULT);
+        return Base64.encodeToString(key.getEncoded(), Base64.DEFAULT);
     }
 }

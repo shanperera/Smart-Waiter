@@ -87,6 +87,7 @@
     <string name="title_activity_special_instrunctions">SpecialInstrunctionsActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_scan">Scan QR/Barcode</string>
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+    <string name="intro_text_1">Hey There!!\n Welcome to Smart-Waiter. \n\nWe hope you enjoy your meal and your overall experience with Smart-Waiter.</string>
+    <string name="intro_text_2">On the table you\'re seated at, there should be either a QR code or a Barcode:</string>
+    <string name="scan_button_text">Scan QR Code</string>
 </resources>

@@ -13,7 +13,7 @@ public class MenuItems implements Serializable {
     private ArrayList<String> itemToppings = new ArrayList<String>();
     private ArrayList<String> itemSides = new ArrayList<String>();
 
-    public MenuItems(String itemName, String itemPrice, String itemDetail, ArrayList<String> itemToppings, ArrayList<String> itemSides){
+    public MenuItems(String itemName, String itemPrice, String itemDetail, ArrayList<String> itemToppings, ArrayList<String> itemSides) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemDetail = itemDetail;
@@ -21,30 +21,43 @@ public class MenuItems implements Serializable {
         this.itemSides = itemSides;
     }
 
-    public void setItemName(String itemName){
-        this.itemName = itemName;
+    public ArrayList<String> getItemToppings() {
+        return itemToppings;
     }
-    public void setItemPrice(String itemPrice){
-        this.itemPrice = itemPrice;
-    }
-    public void setItemDetail(String itemDetail){
-        this.itemDetail = itemDetail;
-    }
-    public void setItemToppings(ArrayList<String> itemToppings){
+
+    public void setItemToppings(ArrayList<String> itemToppings) {
         this.itemToppings = itemToppings;
     }
-    public void setItemSides(ArrayList<String> itemSides){
+
+    public ArrayList<String> getItemSides() {
+        return itemSides;
+    }
+
+    public void setItemSides(ArrayList<String> itemSides) {
         this.itemSides = itemSides;
     }
-    public ArrayList<String> getItemToppings(){return itemToppings;}
-    public ArrayList<String> getItemSides(){return itemSides;}
-    public String getItemName(){
+
+    public String getItemName() {
         return itemName;
     }
-    public String getItemDetail(){
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getItemDetail() {
         return itemDetail;
     }
-    public String getItemPrice(){
+
+    public void setItemDetail(String itemDetail) {
+        this.itemDetail = itemDetail;
+    }
+
+    public String getItemPrice() {
         return itemPrice;
+    }
+
+    public void setItemPrice(String itemPrice) {
+        this.itemPrice = itemPrice;
     }
 }
