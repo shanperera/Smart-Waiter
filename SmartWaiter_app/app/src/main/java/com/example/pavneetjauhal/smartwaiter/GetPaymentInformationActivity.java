@@ -94,7 +94,6 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
                                     e.printStackTrace();
                                 }
                                 Log.d("TokenSuccess", "Token Success!");
-                                //finish();
                                 LoginActivity.user.userItems.clear();
                                 Intent intent = new Intent(GetPaymentInformationActivity.this, MainActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

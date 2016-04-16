@@ -1,139 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:orientation="vertical"
 
-    android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
+    android:paddingBottom="16dp"
     android:weightSum="1">
 
     <TextView
-        android:id="@+id/titleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/get_payment_information_activity_title_label"
+        android:textStyle="bold"
         android:textSize="8pt"
-        android:textStyle="bold" />
+        android:id="@+id/titleLabel" />
 
     <TextView
-        android:id="@+id/introductionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/get_payment_information_activity_introduction_label" />
+        android:text="@string/get_payment_information_activity_introduction_label"
+        android:id="@+id/introductionLabel" />
 
     <ImageView
-        android:id="@+id/majorCardsImageView"
+        android:layout_marginTop="10dp"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:id="@+id/majorCardsImageView"
         android:contentDescription="major cards image"
         android:src="@drawable/major_cards_logo" />
 
     <TextView
-        android:id="@+id/cardNumberLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/get_payment_information_activity_card_number_label" />
+        android:layout_height="wrap_content"
+        android:text="@string/get_payment_information_activity_card_number_label"
+        android:id="@+id/cardNumberLabel" />
 
     <EditText
-        android:id="@+id/cardNumberEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10" />
-
-    <TextView
-        android:id="@+id/cardNameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:text="@string/get_payment_information_activity_name_on_card_label" />
-
-    <EditText
-        android:id="@+id/cardNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:enabled="true"
-        android:inputType="textPersonName" />
+        android:id="@+id/cardNumberEditText" />
 
     <TextView
-        android:id="@+id/expirationDateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="@string/get_payment_information_activity_expiration_date_label" />
+        android:text="@string/get_payment_information_activity_name_on_card_label"
+        android:id="@+id/cardNameLabel" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/cardNameEditText"
+        android:enabled="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/get_payment_information_activity_expiration_date_label"
+        android:id="@+id/expirationDateLabel" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Spinner
-            android:id="@+id/spinner"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:id="@+id/spinner"
             android:spinnerMode="dropdown" />
 
         <Spinner
-            android:id="@+id/spinner2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/spinner"
-            android:layout_toRightOf="@+id/spinner" />
+            android:layout_toRightOf="@+id/spinner"
+            android:layout_toEndOf="@+id/spinner" />
 
         <TextView
-            android:id="@+id/cvcTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:text="@string/get_payment_information_activity_cvc_label"
+            android:id="@+id/cvcTextView"
             android:layout_below="@+id/spinner"
-            android:text="@string/get_payment_information_activity_cvc_label" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <EditText
-            android:id="@+id/cvcEditText"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/cvcTextView"
+            android:inputType="number"
             android:ems="10"
-            android:inputType="number" />
+            android:id="@+id/cvcEditText"
+            android:layout_below="@+id/cvcTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <Button
-            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/get_payment_information_activity_finish_label"
+            android:id="@+id/button2"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentStart="true"
-            android:layout_toEndOf="@+id/spinner"
             android:background="#0099ff"
+            android:textColor="#ffffff"
             android:onClick="getInfo"
-            android:text="@string/get_payment_information_activity_finish_label"
-            android:textColor="#ffffff" />
+            android:layout_toRightOf="@+id/spinner"
+            />
 
         <ImageView
-            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/cvcEditText"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/spinner2"
-            android:layout_toEndOf="@+id/spinner"
-            android:layout_toRightOf="@+id/spinner"
+            android:id="@+id/imageView"
             android:contentDescription="SSL secure image"
-            android:src="@drawable/ssl" />
+            android:src="@drawable/ssl"
+            android:layout_below="@+id/spinner2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/cvcEditText"
+            android:layout_toRightOf="@+id/spinner"
+            android:layout_toEndOf="@+id/spinner" />
 
     </RelativeLayout>
-
 
 </LinearLayout>

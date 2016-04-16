@@ -8,7 +8,8 @@
     <string name="create_account_activity_login_label">"Login"</string>
     <string name="create_account_activity_username_label">"Username"</string>
     <string name="create_account_activity_password_label">"Password"</string>
-    <string name="create_account_activity_personal_details_label">"Personal Details"</string>
+    <string name="create_account_activity_personal_details_label">"Welcome to Smart Waiter!!"</string>
+    <string name="create_account_activity_personal_details_label_2">Please enter your Personal Details</string>
     <string name="create_account_activity_first_name_label">"First Name"</string>
     <string name="create_account_activity_last_name_label">"Last Name"</string>
     <string name="create_account_activity_address_label">"Address"</string>

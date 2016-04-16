@@ -2,7 +2,6 @@ package com.example.pavneetjauhal.smartwaiter;
 
 import android.content.Context;
 import android.util.Log;
-
 import com.couchbase.lite.CouchbaseLiteException;
 import com.couchbase.lite.Database;
 import com.couchbase.lite.Document;
@@ -14,7 +13,6 @@ import com.couchbase.lite.ReplicationFilter;
 import com.couchbase.lite.SavedRevision;
 import com.couchbase.lite.android.AndroidContext;
 import com.couchbase.lite.replicator.Replication;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -33,14 +31,11 @@ public class CouchBaseLite {
     private static final String DB_NAME = "restaurant_menus";
     private static final String DB_ORDER = "local_orders";
     private static final String DB_USER = "user_data";
+    public static String restaurant_Address = null;
     private static final String TAG = "SmartWaiter";
-    private static final String HOST = "http://192.168.1.102";
+    private static final String HOST = "http://192.168.0.49";
     //private static final String HOST = "http://162.243.20.236";
     private static final String PORT = "4984";
-    /* Key definitions for document */
-    private static final String NAME = "Res_Name";
-    private static final String CATEGORY = "category";
-    public static String restaurant_Address = null;
     private static String timestamp = null;
     private static CouchBaseLite instance;
     Manager manager = null;
@@ -48,6 +43,9 @@ public class CouchBaseLite {
     Database database2 = null;
     Database database3 = null;
     User user = null;
+    /* Key definitions for document */
+    private static final String NAME = "Res_Name";
+    private static final String CATEGORY = "category";
 
     public CouchBaseLite(Context context, User user) throws IOException, CouchbaseLiteException {
         this.manager = new Manager(new AndroidContext(context), Manager.DEFAULT_OPTIONS);
@@ -108,7 +106,7 @@ public class CouchBaseLite {
     public void populateUserData() throws CouchbaseLiteException {
         Document userdocument = this.getUserDatabase().getDocument("userData");
         if (userdocument.getProperties() != null
-                && this.getUserDatabase().getDocument("userData") != null) {
+            && this.getUserDatabase().getDocument("userData") != null) {
             user.setFirstName((String) userdocument.getProperty("First Name"));
             user.setLastName((String) userdocument.getProperty("Last Name"));
             user.setBillingAddress((String) userdocument.getProperty("Address"));
@@ -233,11 +231,9 @@ public class CouchBaseLite {
                     temp2.add(me.getValue());
                     Log.d("work mofo", "HELLO MOFOSIDES" + temp2.get(0));
                     itemSides = (ArrayList) temp2.get(0);
-                    //itemSides.add((String) me.getValue());
                 }
             }
             itemList.add(new MenuItems(itemName, itemPrice, itemDetail, itemToppings, itemSides));
-
         }
         for (int x = 0; x < itemList.size(); x++) {
             Log.d(TAG, (String) itemList.get(x).getItemName());
@@ -284,7 +280,7 @@ public class CouchBaseLite {
     }
 
     private URL createSyncURL(String host, String port, String db_name)
-            throws MalformedURLException {
+        throws MalformedURLException {
         URL syncURL = null;
         syncURL = new URL(host + ":" + port + "/" + db_name);
         return syncURL;
@@ -294,9 +290,9 @@ public class CouchBaseLite {
         List<OrderItems> orderItems = new ArrayList<>();
         for (int i = 0; i < userItems.size(); i++) {
             orderItems.add(
-                    new OrderItems(userItems.get(i).getItemName(), userItems.get(i).getItemPrice(),
-                            userItems.get(i).getItemToppings(), userItems.get(i).getSideOrder(),
-                            userItems.get(i).getSpecialInstrucitons()));
+                new OrderItems(userItems.get(i).getItemName(), userItems.get(i).getItemPrice(),
+                    userItems.get(i).getItemToppings(), userItems.get(i).getSideOrder(),
+                    userItems.get(i).getSpecialInstrucitons()));
         }
         return orderItems;
     }
@@ -304,7 +300,7 @@ public class CouchBaseLite {
     public void createItem(List<UserItems> UserItems) throws Exception {
         /* Truncate barcode to extract the table number */
         String tableNumber = MainActivity.qrCode.substring(MainActivity.qrCode.indexOf('-') + 1,
-                MainActivity.qrCode.length());
+            MainActivity.qrCode.length());
         timestamp = new String(String.valueOf(System.currentTimeMillis()));
         Map<String, Object> properties = new HashMap<String, Object>();
         properties.put("Table", tableNumber);
@@ -326,23 +322,22 @@ public class CouchBaseLite {
     }
 
     public void setpushfilter(final String timestamp)
-            throws CouchbaseLiteException, MalformedURLException {
+        throws CouchbaseLiteException, MalformedURLException {
         // Define a filter that matches only docs with a given "Current Time" property.
         // The value to match is given as a parameter named "Current Time":
 
         this.getOrderDatabase().setFilter("Current Time", new ReplicationFilter() {
-            @Override
-            public boolean filter(SavedRevision revision, Map<String, Object> params) {
+            @Override public boolean filter(SavedRevision revision, Map<String, Object> params) {
                 assert revision != null;
                 return revision.getProperty("Current Time") != null && revision.getProperty(
-                        "Current Time").equals(timestamp);
+                    "Current Time").equals(timestamp);
             }
         });
         //
         // Set up a filtered push replication using the above filter block,
         // that will push only docs whose "owner" property equals "Waldo":
         Replication push = this.getOrderDatabase()
-                .createPushReplication(this.createSyncURL(HOST, PORT, restaurant_Address));
+            .createPushReplication(this.createSyncURL(HOST, PORT, restaurant_Address));
         push.setFilter("Current Time");
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("Current Time", timestamp);
@@ -353,19 +348,18 @@ public class CouchBaseLite {
 
     public void startReplications() throws CouchbaseLiteException, MalformedURLException {
         final Replication pull =
-                this.getMenuDatabase().createPullReplication(this.createSyncURL(HOST, PORT, DB_NAME));
+            this.getMenuDatabase().createPullReplication(this.createSyncURL(HOST, PORT, DB_NAME));
         pull.setContinuous(true);
         pull.start();
 
         pull.addChangeListener(new Replication.ChangeListener()
 
                                {
-                                   @Override
-                                   public void changed(Replication.ChangeEvent event) {
+                                   @Override public void changed(Replication.ChangeEvent event) {
                                        // will be called back when the pull replication status changes
                                        if (pull.getStatus() == Replication.ReplicationStatus.REPLICATION_IDLE) {
                                            Log.d(TAG,
-                                                   "################ The replication is complete #####################");
+                                               "################ The replication is complete #####################");
                                        } else {
                                            Log.d(TAG, "################ The replication Failed #####################");
                                        }

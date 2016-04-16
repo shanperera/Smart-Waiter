@@ -83,9 +83,6 @@ public class CustomSideActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (selectedItem.getItemToppings() == null) {
-            Intent intent = new Intent(this, DisplayItemsActivity.class);
-            sideOrdersToAdd = null;
-            startActivity(intent);
             finish();
         } else {
             Intent intent = new Intent(this, CustomToppingsActivity.class);
@@ -149,7 +146,6 @@ public class CustomSideActivity extends AppCompatActivity {
                     //onDisplayItemList();
                 }
             });
-
 
             // 5. retrn rowView
             return rowView;

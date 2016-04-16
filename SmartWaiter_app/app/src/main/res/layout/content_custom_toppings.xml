@@ -1,76 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.pavneetjauhal.smartwaiter.CustomToppingsActivity"
-    tools:showIn="@layout/activity_custom_toppings">
+    tools:showIn="@layout/activity_custom_toppings"
+    tools:context="com.example.pavneetjauhal.smartwaiter.CustomToppingsActivity">
 
     <TextView
-        android:id="@+id/txtItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:maxWidth="220sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="ItemName"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/txtitemTopping"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:id="@+id/txtItemName"
         android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:maxWidth="220sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="$"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:id="@+id/txtitemTopping"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
-        android:id="@+id/txtItemDes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtItemName"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:id="@+id/txtItemDes"
+        android:layout_below="@+id/txtItemName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/txtToppings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Toppings"
+        android:id="@+id/txtToppings"
+        android:layout_below="@+id/txtItemDes"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtItemDes"
-        android:layout_marginTop="36dp"
-        android:text="Toppings"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_marginTop="36dp" />
 
     <Button
-        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="57dp"
+        android:text="next"
+        android:id="@+id/nextButton"
         android:onClick="next"
-        android:text="next" />
+        android:layout_marginBottom="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <ListView
-        android:id="@+id/toppingsList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/toppingsList"
+        android:layout_below="@+id/txtToppings"
         android:layout_above="@+id/nextButton"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/txtToppings" />
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

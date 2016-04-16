@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/txtSideName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/txtSideName"
         android:layout_marginLeft="48dp"
         android:layout_marginStart="48dp"
+        android:textSize="20dp"
         android:layout_marginTop="20dp"
-        android:layout_toEndOf="@+id/txtSidePrice"
+        android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/txtSidePrice"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20dp" />
+        android:layout_toEndOf="@+id/txtSidePrice" />
 
     <TextView
-        android:id="@+id/txtSidePrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtSidePrice"
         android:layout_below="@+id/txtSideName"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
