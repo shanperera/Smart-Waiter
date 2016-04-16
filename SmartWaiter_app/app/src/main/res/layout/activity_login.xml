@@ -1,93 +1,87 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LoginActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.pavneetjauhal.smartwaiter.LoginActivity"
-    >
+    tools:context="com.example.pavneetjauhal.smartwaiter.LoginActivity">
 
-  <ImageView
-      android:id="@+id/logoImageView"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_centerHorizontal="true"
-      android:scaleType="centerCrop"
-      android:src="@drawable/main_screen"
-      />
-  <TextView
-      android:id="@+id/title_view"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:fontFamily="sans-serif-thin"
-      android:gravity="center_horizontal"
-      android:layout_marginTop="@dimen/activity_vertical_margin"
-      android:padding="@dimen/activity_horizontal_margin"
-      android:text="Smart Waiter"
-      android:textColor="@android:color/white"
-      android:textSize="84sp"
-      />
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_screen" />
 
-  <EditText
-      android:id="@+id/pwEditText"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_centerInParent="true"
-      android:layout_centerVertical="true"
-      android:layout_marginEnd="@dimen/activity_horizontal_margin"
-      android:layout_marginStart="@dimen/activity_horizontal_margin"
-      android:ems="10"
-      android:gravity="center"
-      android:hint="Enter your Password"
-      android:inputType="textPassword"
-      android:padding="@dimen/activity_vertical_margin"
-      android:singleLine="true"
-      android:textColor="@android:color/white"
-      android:textColorHint="@android:color/white"
-      />
-
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_marginTop="@dimen/activity_vertical_margin"
-      android:layout_below="@id/pwEditText"
-      >
-    <Button
-        android:id="@+id/login"
-        android:layout_width="0dp"
-        android:layout_weight="5"
+    <TextView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_vertical_margin"
-        android:background="@android:color/transparent"
-        android:onClick="login"
-        android:text="Login"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="Smart Waiter"
         android:textColor="@android:color/white"
-        />
+        android:textSize="84sp" />
 
-    <Button
-        android:id="@+id/signup"
-        android:layout_width="0dp"
-        android:layout_weight="5"
+    <EditText
+        android:id="@+id/pwEditText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_vertical_margin"
-        android:background="@android:color/transparent"
-        android:onClick="signup"
-        android:text="Sign Up"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter your Password"
+        android:inputType="textPassword"
+        android:padding="@dimen/activity_vertical_margin"
+        android:singleLine="true"
         android:textColor="@android:color/white"
-        />
-  </LinearLayout>
-  <TextView
-      android:id="@+id/taglineLabel"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_centerInParent="true"
-      android:layout_marginBottom="@dimen/activity_vertical_margin"
-      android:fontFamily="sans-serif-light"
-      android:text="Fits Your Lifestyle"
-      android:textAllCaps="true"
-      android:textColor="#FFFFFF"
-      android:textSize="18sp"
-      />
+        android:textColorHint="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pwEditText"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:onClick="login"
+            android:text="Login"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_weight="5"
+            android:background="@android:color/transparent"
+            android:onClick="signup"
+            android:text="Sign Up"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/taglineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif-light"
+        android:text="Fits Your Lifestyle"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 </RelativeLayout>

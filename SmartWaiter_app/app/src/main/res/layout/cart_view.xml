@@ -2,117 +2,107 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/activity_vertical_margin"
-    >
+    android:padding="@dimen/activity_vertical_margin">
 
-  <TextView
-      android:id="@+id/txtItemName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentStart="true"
-      android:text="Text shown here"
-      android:textAppearance="?android:attr/textAppearanceLarge"
-      />
+    <TextView
+        android:id="@+id/txtItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Text shown here"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-  <TextView
-      android:id="@+id/toppingsName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentStart="true"
-      android:layout_below="@+id/txtItemName"
-      android:layout_marginTop="10dp"
-      android:text="Toppings"
-      android:textAppearance="?android:attr/textAppearanceMedium"
-      android:textSize="17dp"
-      />
+    <TextView
+        android:id="@+id/toppingsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtItemName"
+        android:layout_marginTop="10dp"
+        android:text="Toppings"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="17dp" />
 
-  <TextView
-      android:id="@+id/txtitemTopping"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/toppingsName"
-      android:layout_toEndOf="@+id/sideName"
-      android:layout_toRightOf="@+id/sideName"
-      android:maxLines="5"
-      android:singleLine="false"
-      android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textSize="14dp"
-      />
+    <TextView
+        android:id="@+id/txtitemTopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toppingsName"
+        android:layout_toEndOf="@+id/sideName"
+        android:layout_toRightOf="@+id/sideName"
+        android:maxLines="5"
+        android:singleLine="false"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14dp" />
 
 
-  <Button
-      android:id="@+id/customizeItem"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentRight="true"
-      android:layout_below="@+id/txtItemPrice"
-      android:layout_marginTop="10dp"
-      android:text="C"
-      style="?android:attr/buttonStyleSmall"
-      />
-  <Button
-      android:id="@+id/deleteItem"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentEnd="true"
-      android:layout_alignParentRight="true"
-      android:layout_below="@id/customizeItem"
-      android:text="X"
-      style="?android:attr/buttonStyleSmall"
-      />
+    <Button
+        android:id="@+id/customizeItem"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtItemPrice"
+        android:layout_marginTop="10dp"
+        android:text="C" />
 
-  <TextView
-      android:id="@+id/sideName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/txtitemTopping"
-      android:text="Side"
-      android:textAppearance="?android:attr/textAppearanceMedium"
-      android:textSize="17dp"
-      />
+    <Button
+        android:id="@+id/deleteItem"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/customizeItem"
+        android:text="X" />
 
-  <TextView
-      android:id="@+id/txtItemSide"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/sideName"
-      android:layout_toEndOf="@id/sideName"
-      android:layout_toRightOf="@id/sideName"
-      android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textSize="14dp"
-      />
+    <TextView
+        android:id="@+id/sideName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtitemTopping"
+        android:text="Side"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="17dp" />
 
-  <TextView
-      android:id="@+id/instructionsName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/txtItemSide"
-      android:text="Special Instructions"
-      android:textAppearance="?android:attr/textAppearanceMedium"
-      android:textSize="17dp"
-      />
+    <TextView
+        android:id="@+id/txtItemSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sideName"
+        android:layout_toEndOf="@id/sideName"
+        android:layout_toRightOf="@id/sideName"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14dp" />
 
-  <TextView
-      android:id="@+id/txtSpecialInstructions"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignLeft="@id/txtItemSide"
-      android:layout_alignStart="@id/txtItemSide"
-      android:layout_below="@id/instructionsName"
-      android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textSize="14dp"
-      />
+    <TextView
+        android:id="@+id/instructionsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtItemSide"
+        android:text="Special Instructions"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="17dp" />
 
-  <TextView
-      android:id="@+id/txtItemPrice"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentRight="true"
-      android:text="$"
-      android:textAppearance="?android:attr/textAppearanceLarge"
-      />
+    <TextView
+        android:id="@+id/txtSpecialInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txtItemSide"
+        android:layout_alignStart="@id/txtItemSide"
+        android:layout_below="@id/instructionsName"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/txtItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="$"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
 </RelativeLayout>

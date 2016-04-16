@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 public class CartActivity extends AppCompatActivity {
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_cart);
         setTitle("Cart Menu");
@@ -32,7 +33,7 @@ public class CartActivity extends AppCompatActivity {
             startActivity(intent);
         } else {
             Toast.makeText(getApplicationContext(),
-                "Cart Is Empty. Please Add Items Before Checkout.", Toast.LENGTH_LONG).show();
+                    "Cart Is Empty. Please Add Items Before Checkout.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -86,7 +87,7 @@ public class CartActivity extends AppCompatActivity {
 
             TextView instructionName = (TextView) itemView.findViewById(R.id.instructionsName);
             TextView txtSpecialInstructions =
-                (TextView) itemView.findViewById(R.id.txtSpecialInstructions);
+                    (TextView) itemView.findViewById(R.id.txtSpecialInstructions);
 
             if (currentItem.getSpecialInstrucitons().equals("")) {
                 instructionName.setVisibility(View.GONE);
@@ -107,7 +108,8 @@ public class CartActivity extends AppCompatActivity {
             btn.setTag(position);
             btn.setOnClickListener(new View.OnClickListener() {
 
-                @Override public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                     Integer index = (Integer) v.getTag();
                     LoginActivity.user.removeUserItem(index);
                     notifyDataSetChanged();
@@ -118,7 +120,8 @@ public class CartActivity extends AppCompatActivity {
             btn2.setTag(position);
             btn2.setOnClickListener(new View.OnClickListener() {
 
-                @Override public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                     Integer index = (Integer) v.getTag();
                     UserItems object = LoginActivity.user.userItems.get(index);
                     if (object.getItemToppings() != null) {
@@ -137,7 +140,7 @@ public class CartActivity extends AppCompatActivity {
                         startActivity(intent);
                     } else {
                         Intent intent =
-                            new Intent(CartActivity.this, SpecialInstrunctionsActivity.class);
+                                new Intent(CartActivity.this, SpecialInstrunctionsActivity.class);
                         intent.putExtra("modifyOrder", object);
                         Bundle b = new Bundle();
                         b.putInt("index", index); //Your id

@@ -1,20 +1,18 @@
 package com.example.pavneetjauhal.smartwaiter;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class AccountCreationActivity extends AppCompatActivity {
 
     User newUser;
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Create Account");
         setContentView(R.layout.activity_account_creation);
@@ -53,7 +51,7 @@ public class AccountCreationActivity extends AppCompatActivity {
         /* Store Password */
         LocalAuth auth = LocalAuth.computeSaltedHash(password);
         newUser =
-            new User(auth.salt, auth.password, firstName, lastName, address, postCode, phoneNum);
+                new User(auth.salt, auth.password, firstName, lastName, address, postCode, phoneNum);
         LoginActivity.user = newUser;
         try {
             MainActivity.local_database.storeUserData(newUser);

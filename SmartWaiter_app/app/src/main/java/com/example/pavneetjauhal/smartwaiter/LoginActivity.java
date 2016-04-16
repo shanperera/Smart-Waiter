@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
             CouchBaseLite local_database = CouchBaseLite.getInstance(this, user);
             local_database.startReplications();
             local_database.populateUserData();
-        } catch (IOException | CouchbaseLiteException | NullPointerException e ) {
+        } catch (IOException | CouchbaseLiteException | NullPointerException e) {
             e.printStackTrace();
         }
         setContentView(R.layout.activity_login);
@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        } else{
+        } else {
             Toast.makeText(getApplicationContext(), "Please create user account", Toast.LENGTH_LONG).show();
         }
 
