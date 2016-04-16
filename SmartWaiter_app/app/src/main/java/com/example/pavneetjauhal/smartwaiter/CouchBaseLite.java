@@ -95,12 +95,19 @@ public class CouchBaseLite {
     public void storeUserData(User userData) throws CouchbaseLiteException, NullPointerException {
         Document userdocument = this.getUserDatabase().getDocument("userData");
         Map<String, Object> properties = new HashMap<String, Object>();
+        if(userData.getFirstName() != null);
         properties.put("First Name", userData.getFirstName());
+        if(userData.getLastName() != null);
         properties.put("Last Name", userData.getLastName());
+        if(userData.getPhoneNumber() != null);
         properties.put("Phone Number", userData.getPhoneNumber());
+        if(userData.getPostalCode() != null);
         properties.put("Postal Code", userData.getPostalCode());
+        if(userData.getBillingAddress() != null);
         properties.put("Home Address", userData.getBillingAddress());
+        if(userData.getSalt() != null);
         properties.put("Salt", userData.getSalt());
+        if(userData.getPassword() != null);
         properties.put("Password", userData.getPassword());
         userdocument.putProperties(properties);
     }

@@ -1,6 +1,5 @@
 package com.example.pavneetjauhal.smartwaiter;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -50,16 +49,10 @@ public class AccountCreationActivity extends AppCompatActivity {
         String phoneNum = getFields.getText().toString();
         /* Store Password */
         LocalAuth auth = LocalAuth.computeSaltedHash(password);
-        newUser =
-                new User(auth.salt, auth.password, firstName, lastName, address, postCode, phoneNum);
+        newUser = new User(auth.salt, auth.password, firstName, lastName, address, postCode, phoneNum);
         LoginActivity.user = newUser;
-        try {
-            MainActivity.local_database.storeUserData(newUser);
-            Intent intent = new Intent(this, GetPaymentInformationActivity.class);
-            startActivity(intent);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        CouchBaseLite local_database = CouchBaseLite.getInstance(this, newUser);
+        local_database.storeUserData(newUser);
         finish();
     }
 }

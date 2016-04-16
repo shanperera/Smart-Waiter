@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        local_database = CouchBaseLite.getInstance(this, new User());
+        local_database = CouchBaseLite.getInstance(this, LoginActivity.user);
         scanButton = (Button) findViewById(R.id.scanCodeButton);
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
