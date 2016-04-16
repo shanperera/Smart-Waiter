@@ -8,19 +8,20 @@ import java.util.List;
  */
 public class MenuCategories {
 
+    List<MenuItems> categoryItems = new ArrayList<MenuItems>();
     private String categoryName;
     private String picUrl;
-    List<MenuItems> categoryItems = new ArrayList<MenuItems>();
 
-    public MenuCategories(String categoryName, String picUrl){
+    public MenuCategories(String categoryName, String picUrl) {
         this.categoryName = categoryName;
         this.picUrl = picUrl;
     }
 
-    public String getCategory(){
+    public String getCategory() {
         return categoryName;
     }
-    public String getId(){
+
+    public String getId() {
         return picUrl;
     }
 }

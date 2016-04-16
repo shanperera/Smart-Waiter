@@ -34,4 +34,5 @@ dependencies {
     compile 'com.journeyapps:zxing-android-embedded:3.0.3@aar'
     compile 'com.google.zxing:core:3.2.0'
     compile 'com.stripe:stripe-android:+'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 }

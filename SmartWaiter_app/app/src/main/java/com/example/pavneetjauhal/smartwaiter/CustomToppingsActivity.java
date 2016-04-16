@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +16,6 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,10 +36,7 @@ public class CustomToppingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_toppings);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Choose Toppings");
+        setContentView(R.layout.content_custom_toppings);
 
         Intent intent = getIntent();
         selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");
@@ -49,73 +44,73 @@ public class CustomToppingsActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         index = b.getInt("index");
 
-        if (modifyItem != null){
+        if (modifyItem != null) {
             selectedItem = modifyItem.getMenuItem();
             itemToppingsToAdd = (ArrayList<String>) modifyItem.getItemToppings();
         }
 
-
-
-        TextView itemNameText = (TextView)findViewById(R.id.txtItemName);
+        TextView itemNameText = (TextView) findViewById(R.id.txtItemName);
         itemNameText.setText(selectedItem.getItemName());
 
-
-        TextView itemDescriptionText = (TextView)findViewById(R.id.txtItemDes);
+        TextView itemDescriptionText = (TextView) findViewById(R.id.txtItemDes);
         itemDescriptionText.setText(selectedItem.getItemDetail());
 
-        TextView itemPriceText = (TextView)findViewById(R.id.txtitemTopping);
+        TextView itemPriceText = (TextView) findViewById(R.id.txtitemTopping);
         itemPriceText.setText(selectedItem.getItemPrice());
 
         //create user
-        btnDisplay=(Button)findViewById(R.id.nextButton);
+        btnDisplay = (Button) findViewById(R.id.nextButton);
 
-        //Log.d("TOPPINGS TO ADD", itemToppingsToAdd.toString());
+        itemToppings = selectedItem.getItemToppings();
+        MyAdapter adapter = new MyAdapter(this, itemToppings);
+        ListView toppingsListView = (ListView) findViewById(R.id.toppingsList);
+        toppingsListView.setAdapter(adapter);
+        Log.d("TAG", selectedItem.getItemName());
 
-        /*
-        itemToppings.add("Lettuce");
-        itemToppings.add("Tomato");
-        itemToppings.add("Onion");
-        itemToppings.add("Green Peppers");
-        selectedItem.setItemToppings(itemToppings);
-        */
+    }
 
-        //Log.d("SELECTEDITEMSSSSSSSSSSSSSSSS", selectedItem.getItemToppings().toString());
-
-        if (selectedItem.getItemToppings() == null){
-            intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomSideActivity");
+    public void next(View view) {
+        Log.d("TAG", itemToppingsToAdd.toString());
+        if (selectedItem.getItemSides() != null) {
+            Intent intent = new Intent(this, CustomSideActivity.class);
             intent.putExtra("selectedItem", selectedItem);
+            intent.putExtra("itemToppings", itemToppingsToAdd);
             intent.putExtra("modifyOrder", modifyItem);
+            Bundle b = new Bundle();
+            b.putInt("index", index); //Your id
+            intent.putExtras(b);
             startActivity(intent);
-        }
-        else {
-            itemToppings = selectedItem.getItemToppings();
-            MyAdapter adapter = new MyAdapter(this, itemToppings);
-            ListView toppingsListView = (ListView) findViewById(R.id.toppingsList);
-            toppingsListView.setAdapter(adapter);
-            Log.d("TAG", selectedItem.getItemName());
-            //onDisplayItemToppings();
-        }
-
-        /*
-        itemToppings.add("Lettuce");
-        itemToppings.add("Tomato");
-        itemToppings.add("Onion");
-        itemToppings.add("Green Peppers");
-
-        if (itemToppings.size() == 0){
-            intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomizeItemSideActivity");
+            finish();
+        } else {
+            Intent intent = new Intent(this, SpecialInstrunctionsActivity.class);
             intent.putExtra("selectedItem", selectedItem);
+            intent.putExtra("itemToppings", itemToppingsToAdd);
+            intent.putExtra("modifyOrder", modifyItem);
+            Bundle b = new Bundle();
+            b.putInt("index", index); //Your id
+            intent.putExtras(b);
             startActivity(intent);
+            finish();
         }
-        else {
-            MyAdapter adapter = new MyAdapter(this, itemToppings);
-            ListView toppingsListView = (ListView) findViewById(R.id.toppingsList);
-            toppingsListView.setAdapter(adapter);
-            Log.d("TAG", selectedItem.getItemName());
-            //onDisplayItemToppings();
-        }
-        */
+    }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_cart) {
+            Intent intent = new Intent(this, CartActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public class MyAdapter extends ArrayAdapter<String> {
@@ -150,20 +145,25 @@ public class CustomToppingsActivity extends AppCompatActivity {
             //labelView2.setText((itemsArrayList.get(position)));
 
 
-            chBox1 = (CheckBox)rowView.findViewById(R.id.checkTopping);
-            if(modifyItem != null && modifyItem.getItemToppings().contains(itemsArrayList.get(position))){
+            chBox1 = (CheckBox) rowView.findViewById(R.id.checkTopping);
+            if (modifyItem != null && modifyItem.getItemToppings().contains(itemsArrayList.get(position))) {
                 chBox1.setChecked(true);
                 //itemToppingsToAdd.add(itemsArrayList.get(position));
+            }
+            Intent intent = getIntent();
+            ArrayList<String> itemAdded = new ArrayList<String>();
+            itemAdded = (ArrayList<String>) intent.getSerializableExtra("itemToppings");
+            if (itemAdded != null && itemAdded.contains(itemsArrayList.get(position))) {
+                chBox1.setChecked(true);
             }
             chBox1.setTag(position);
             chBox1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    CheckBox checkBox = (CheckBox)v;
-                    if(checkBox.isChecked()){
+                    CheckBox checkBox = (CheckBox) v;
+                    if (checkBox.isChecked()) {
                         itemToppingsToAdd.add(itemsArrayList.get(position));
-                    }
-                    else{
+                    } else {
                         itemToppingsToAdd.remove(itemsArrayList.get(position));
                     }
                 }
@@ -172,57 +172,6 @@ public class CustomToppingsActivity extends AppCompatActivity {
             // 5. retrn rowView
             return rowView;
         }
-    }
-
-
-    public void next(View view) {
-        Log.d("TAG",itemToppingsToAdd.toString());
-        //MainActivity.user.createUserItem(selectedItem.getItemName(), selectedItem.getItemPrice());
-        //MainActivity.user.userItems.get(MainActivity.user.userItems.size() - 1).setItemToppings(itemToppingsToAdd);
-
-        //Toast.makeText(getApplicationContext(), "Added Item to cart",
-        //Toast.LENGTH_LONG).show();
-        //itemToppingsToAdd = (ArrayList<String>) itemToppings;
-        Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CustomSideActivity");
-        intent.putExtra("selectedItem", selectedItem);
-        intent.putExtra("itemToppings", itemToppingsToAdd);
-        intent.putExtra("modifyOrder", modifyItem);
-        Bundle b = new Bundle();
-        b.putInt("index", index); //Your id
-        intent.putExtras(b);
-        startActivity(intent);
-    }
-
-
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_cart) {
-            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CartActivity");
-            startActivity(intent);
-            finish();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    public boolean onKeyDown(int keyCode, KeyEvent event)  {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            //MainActivity.user.userItems.remove(MainActivity.user.userItems.size() - 1);
-            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
-            itemToppingsToAdd.clear();
-            startActivity(intent);
-            return true;
-        }
-
-        return super.onKeyDown(keyCode, event);
     }
 
 }

@@ -4,9 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,10 +29,8 @@ public class CustomSideActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_side);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Choose Side");
+        setContentView(R.layout.content_custom_side);
+        setTitle("Choose Side");
 
         Intent intent = getIntent();
         selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");
@@ -43,66 +39,67 @@ public class CustomSideActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         index = b.getInt("index");
 
-        if (modifyItem != null){
+        if (modifyItem != null) {
             selectedItem = modifyItem.getMenuItem();
         }
 
         Log.d("TAG", selectedItem.getItemName());
         String itemName = selectedItem.getItemName();
 
-        TextView itemNameText = (TextView)findViewById(R.id.txtItemName);
+        TextView itemNameText = (TextView) findViewById(R.id.txtItemName);
         itemNameText.setText(itemName);
 
-        TextView itemDescriptionText = (TextView)findViewById(R.id.txtItemDes);
+        TextView itemDescriptionText = (TextView) findViewById(R.id.txtItemDes);
         itemDescriptionText.setText(selectedItem.getItemDetail());
 
-        TextView itemPriceText = (TextView)findViewById(R.id.txtitemTopping);
+        TextView itemPriceText = (TextView) findViewById(R.id.txtitemTopping);
         itemPriceText.setText(selectedItem.getItemPrice());
 
-        /*
-        sideOrders.add("Fries");
-        sideOrders.add("Baked Potatoe");
-        sideOrders.add("Mashed Potatoe");
-        sideOrders.add("Grilled Onion");
-
-        selectedItem.setItemSides(sideOrders);
-        */
-
-
-
-        if (selectedItem.getItemSides() == null){
-            intent = new Intent("com.example.pavneetjauhal.smartwaiter.SpecialInstrunctionsActivity");
-            intent.putExtra("selectedItem", selectedItem);
-            intent.putExtra("itemToppings", itemToppingsToAdd);
-            intent.putExtra("modifyOrder", modifyItem);
-            startActivity(intent);
-        }
-        else {
-            sideOrders = selectedItem.getItemSides();
-            Log.d("GET ITEM SIDES", selectedItem.getItemSides().toString());
-            MyAdapter adapter = new MyAdapter(this, sideOrders);
-            ListView sideOrderList = (ListView) findViewById(R.id.sideOrderList);
-            sideOrderList.setAdapter(adapter);
-        }
-
-        /*
-        sideOrders.add("Fries");
-        sideOrders.add("Baked Potatoe");
-        sideOrders.add("Mashed Potatoe");
-        sideOrders.add("Grilled Onion");
-
-
+        sideOrders = selectedItem.getItemSides();
+        Log.d("GET ITEM SIDES", selectedItem.getItemSides().toString());
         MyAdapter adapter = new MyAdapter(this, sideOrders);
-
         ListView sideOrderList = (ListView) findViewById(R.id.sideOrderList);
-
         sideOrderList.setAdapter(adapter);
-
-        */
-        //Log.d("TAG", selectedItem.getItemName());
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_cart) {
+            Intent intent = new Intent(this, CartActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (selectedItem.getItemToppings() == null) {
+            Intent intent = new Intent(this, DisplayItemsActivity.class);
+            sideOrdersToAdd = null;
+            startActivity(intent);
+            finish();
+        } else {
+            Intent intent = new Intent(this, CustomToppingsActivity.class);
+            intent.putExtra("selectedItem", selectedItem);
+            intent.putExtra("itemToppings", itemToppingsToAdd);
+            intent.putExtra("modifyOrder", modifyItem);
+            Bundle b = new Bundle();
+            b.putInt("index", index); //Your id
+            intent.putExtras(b);
+            sideOrdersToAdd = null;
+            startActivity(intent);
+            finish();
+        }
+    }
 
     public class MyAdapter extends ArrayAdapter<String> {
 
@@ -139,7 +136,7 @@ public class CustomSideActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
                     //MainActivity.user.userItems.get(MainActivity.user.userItems.size() - 1).setSideOrder(itemsArrayList.get(position));
                     sideOrdersToAdd = itemsArrayList.get(position);
-                    Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.SpecialInstrunctionsActivity");
+                    Intent intent = new Intent(CustomSideActivity.this, SpecialInstrunctionsActivity.class);
                     intent.putExtra("selectedItem", selectedItem);
                     intent.putExtra("itemToppings", itemToppingsToAdd);
                     intent.putExtra("sideOrder", sideOrdersToAdd);
@@ -148,6 +145,7 @@ public class CustomSideActivity extends AppCompatActivity {
                     b.putInt("index", index); //Your id
                     intent.putExtras(b);
                     startActivity(intent);
+                    finish();
                     //onDisplayItemList();
                 }
             });
@@ -157,50 +155,4 @@ public class CustomSideActivity extends AppCompatActivity {
             return rowView;
         }
     }
-
-
-    /*
-        public void addToCart(View view) {
-            MainActivity.user.createUserItem(selectedItem.getItemName(), selectedItem.getItemPrice());
-            Toast.makeText(getApplicationContext(), "Added Item to cart",
-                    Toast.LENGTH_LONG).show();
-
-
-            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
-            startActivity(intent);
-        }
-    */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_cart) {
-            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.CartActivity");
-            startActivity(intent);
-            finish();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    public boolean onKeyDown(int keyCode, KeyEvent event)  {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            if(selectedItem.getItemToppings() == null) {
-                Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity");
-                sideOrdersToAdd = null;
-                startActivity(intent);
-            }
-            else{
-                finish();
-            }
-            return true;
-        }
-
-        return super.onKeyDown(keyCode, event);
-    }
-
 }

@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,13 +18,10 @@ public class AccountCreationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.setTitle("Create Account");
         setContentView(R.layout.activity_account_creation);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
-
         setTypeFace();
     }
 
-    public void setTypeFace(){
+    public void setTypeFace() {
         Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/bebas.otf");
         TextView curr = (TextView) findViewById(R.id.passwordLabel);
         curr.setTypeface(tf);
@@ -51,70 +46,62 @@ public class AccountCreationActivity extends AppCompatActivity {
     }
 
     public void createAccount(View button) throws Exception {
-        Log.d("FACKKK", "This called?");
 
         EditText getFields = (EditText) findViewById(R.id.passwordEditText);
         String password = getFields.getText().toString();
-        if (password == null || password.length()<5){
-            Toast.makeText(getApplicationContext(), "Password Too Short",
-                    Toast.LENGTH_LONG).show();
+        if (password == null || password.length() < 5) {
+            Toast.makeText(getApplicationContext(), "Password Too Short", Toast.LENGTH_LONG).show();
             return;
         }
 
         getFields = (EditText) findViewById(R.id.firstNameEditText);
         String firstName = getFields.getText().toString();
-        if (firstName == null || firstName.isEmpty()){
-            Toast.makeText(getApplicationContext(), "First Name Invalid",
-                    Toast.LENGTH_LONG).show();
+        if (firstName == null || firstName.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "First Name Invalid", Toast.LENGTH_LONG).show();
             return;
         }
 
         getFields = (EditText) findViewById(R.id.lastNameEditText);
         String lastName = getFields.getText().toString();
-        if (lastName == null || lastName.isEmpty()){
-            Toast.makeText(getApplicationContext(), "Last Name Invalid",
-                    Toast.LENGTH_LONG).show();
+        if (lastName == null || lastName.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Last Name Invalid", Toast.LENGTH_LONG).show();
             return;
         }
 
         getFields = (EditText) findViewById(R.id.addressEditText);
         String address = getFields.getText().toString();
-        if (address == null || address.isEmpty()){
-            Toast.makeText(getApplicationContext(), "Address Invalid",
-                    Toast.LENGTH_LONG).show();
+        if (address == null || address.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Address Invalid", Toast.LENGTH_LONG).show();
             return;
         }
 
         getFields = (EditText) findViewById(R.id.postalCodeEditText);
         String postCode = getFields.getText().toString();
-        if (postCode == null || postCode.length()!=6){
-            Toast.makeText(getApplicationContext(), "Postal Code Invalid",
-                    Toast.LENGTH_LONG).show();
+        if (postCode == null || postCode.length() != 6) {
+            Toast.makeText(getApplicationContext(), "Postal Code Invalid", Toast.LENGTH_LONG)
+                    .show();
             return;
         }
 
         getFields = (EditText) findViewById(R.id.phoneNumberEditText);
         String phoneNum = getFields.getText().toString();
-        if (phoneNum == null || phoneNum.length()!=10){
-            Toast.makeText(getApplicationContext(), "Phone Number Invalid",
-                    Toast.LENGTH_LONG).show();
+        if (phoneNum == null || phoneNum.length() != 10) {
+            Toast.makeText(getApplicationContext(), "Phone Number Invalid", Toast.LENGTH_LONG)
+                    .show();
             return;
         }
         /* Store Password */
         LocalAuth auth = LocalAuth.computeSaltedHash(password);
-        newUser = new User(auth.salt, auth.password, firstName, lastName, address, postCode, phoneNum);
-        MainActivity.user = newUser;
-        try{
+        newUser =
+                new User(auth.salt, auth.password, firstName, lastName, address, postCode, phoneNum);
+        LoginActivity.user = newUser;
+        try {
             MainActivity.local_database.storeUserData(newUser);
-            Intent intent = new Intent("com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity");
+            Intent intent = new Intent(this, GetPaymentInformationActivity.class);
             startActivity(intent);
-
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        catch(Exception e){
-        }
-        //finish();
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+        finish();
     }
 }
