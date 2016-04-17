@@ -31,27 +31,21 @@
 \maketitle
 \ds{Missing Student Numbers.}
 
-\ds{Missing the ability to add comments like these, I had to add it.}
 \pagebreak
 
 \tableofcontents
 
 \listoftables
-
 \section*{Revision History}
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{revision.png}
+\begin{tabular}{|p{5cm}|p{5cm}|}
+\hline
+\textbf{Date}  & \textbf{Comments} \\ \hline
+October 30, 2015 &  first draft. \\ 
+February 1, 2016 &  Added usability questions \\ 
+April 15, 2016 &  Addressed Dan's comments in regards to spelling and grammar. Modified automated testing \\ 
+\hline
+\end{tabular}
 
-
-%\begin{table}[H]
-%\section*{Revision History}
-%\begin{tabular}{|c|c|}
-%\hline
-%\textbf{Date}  & \textbf{Comments} \\ \hline
-%October 30, 2015 &  first draft. \\ 
-%\hline
-%\end{tabular}
-%\caption{Revision History Table}
-%\end{table}
 
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -117,19 +111,14 @@ The location where the testing will be performed is Hamilton Ontario. Specifical
 \subsubsection{Dates and Deadlines}
 
 Test Case Creation:
-The creation of test cases is scheduled to begin October 19, 2015. The deadline for creation of test cases for POC November 16, 2015. 
-\ds{Grammar}
-The deadline for final demonstration is February 1, 2016.
-\ds{Grammar}
+Creation of POC test cases begin October 19, 2015 and is expected to end November 16, 2015. Proceeding, test cases for final demonstration will be created and is expected to be complete by February 1, 2016.
 \newline
 \newline
 Test Case Implementation:
-Implementing test cases for POC system test is scheduled to begin November 15, 2015. The implementation period is expected to last approximately one week.
-\ds{Grammar}
+Implementing test cases for POC system test is scheduled to begin November 15, 2015 is expected to be complete in approximately one week.
 \newline
 \newline
-Implementing test cases for Final Demonstration system test is scheduled to begin February 1, 2016. The implementation period is expected to last approximately three weeks. 
-\ds{Grammar}
+Implementing test cases for Final Demonstration system test is scheduled to begin February 1, 2016, and will be completed in approximately three weeks. 
 
 
 \subsection{Budget}
@@ -151,9 +140,7 @@ software is expected to complete, and the non-functional requirements the softwa
 \noindent
 \begin{itemize}
 \item The product shall scan a bar code to access the restaurant menu from a database
-\item The product shall allow the user to register an account for complete access to the products 
-\ds{Multiple products or one? Should be ``products' " or ``product's" respectively.}
-payment services
+\item The product shall allow the user to register an account for complete access to payment services
 \item The product shall allow the user to report bugs
 \item The product will allow users to place their order
 \item The product will allow users to pay for their order using a credit card
@@ -172,8 +159,7 @@ Priority nonfunctional requirements are performance, ease of use, reliability, s
 
 \section{Evaluation}
 
-The following section first presents methods and constraints used during the evaluation process. This is followed by extent of testing and test tools to be used.
-\ds{The last line is awkward.}
+The following section presents methods and constraints used during the evaluation process, and is followed by extent of testing and test tools to be used.
 
 %4.1 Methods and Constraints
 \subsection{ Methods and Constraints} 
@@ -190,12 +176,6 @@ The extent of testing will be end to end for the final demonstration. For POC, s
 \subsubsection{Test Tools}
 To avoid regressions and catch bugs quickly two main test tools will be used. Namely the following;
 \begin{itemize}
-\item JUnit \textemdash Junit 
-\ds{``JUnit"}
-will be used to build an automation test suite for the application. Specifically, JUnit is a testing framework used to implement unit testing in Java. 
-This tool will easily integrate into the android studio build environment used for application.
-\ds{Awkward. I'm not sure what you're saying.}
-In addition, it will help developers leverage their Java knowledge used during application development. 
 \item CodeReviewer \textemdash CodeReviewer will be used for code review process mandatory for all developers. This tool helps post code reviews and provides features such as annotations, diff viewers, easy communication and feedback. This tool will be used for static tests to produce high quality code with less defects
  \end{itemize}
 
@@ -218,8 +198,7 @@ Unit testing refers to providing specific input to a system and verifying it eva
 Manual testing is done by people, while automatic is processed through scripts. 
 
 \subsubsection{Static Testing}
-Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-though through
-\ds{Typo}
+Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-through
 will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. \\
 Static testing will be enforced through out the development process. A code review process will be put into place to strictly manage the quality of the code. Specifically, developers will have to sign off on the quality of the code before it gets checked into the production repo.
 \ds{``repository"}
@@ -278,9 +257,7 @@ For database testing, the following test factors will be considered;
  \end{itemize}
  
 \subsubsection{Correctness}
-In this section of database testing, tester must verify that the application receives complete and correct data from the couchbase server.
-\ds{This is the first time I'm seeing the name ``couchbase" in your project.}
-Automated unit tests will be written using JUnit to perform the following tests.
+In this section of database testing, tester must verify that the application receives complete and correct data from the couchbase server. Automated unit tests will be written using Bash scripts to perform the following tests.
 \subsubsection{Database Correctness Automated Tests }
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{correctness_tests.png}
 
