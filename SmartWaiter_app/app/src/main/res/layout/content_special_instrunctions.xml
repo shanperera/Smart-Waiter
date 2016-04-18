@@ -45,7 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView6"
         android:layout_margin="@dimen/activity_horizontal_margin"
-        android:imeOptions="actionDone" />
+        android:imeOptions="actionDone"
+        android:singleLine="true"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/addCart"

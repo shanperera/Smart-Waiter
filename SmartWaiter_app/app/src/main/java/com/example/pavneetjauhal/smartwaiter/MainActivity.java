@@ -27,9 +27,11 @@ public class MainActivity extends AppCompatActivity {
     public static String qrCode;
     static List<MenuCategories> menuCategoryList = new ArrayList<MenuCategories>();
     static List<MenuItems> menuItemList = new ArrayList<MenuItems>();
+    static String currentCategory = "";
     static String restarauntName = "";
     private Button scanButton;
     private boolean isGranted;
+    public int failCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,8 +97,15 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } catch (Exception e) {
             Log.d("code", String.valueOf(e));
-            Toast.makeText(getApplicationContext(), "Error - Invalid QRcode", Toast.LENGTH_LONG)
-                    .show();
+            failCount ++;
+            if (failCount < 3) {
+                Toast.makeText(getApplicationContext(), "Error - Please try again", Toast.LENGTH_LONG)
+                        .show();
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Error - Please contact host", Toast.LENGTH_LONG)
+                        .show();
+            }
         }
     }
 

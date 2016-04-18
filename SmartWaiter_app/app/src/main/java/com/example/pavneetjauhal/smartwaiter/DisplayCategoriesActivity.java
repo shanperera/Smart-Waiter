@@ -23,7 +23,7 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
-        this.setTitle(mainObject.restarauntName + " Menu Categories");
+        this.setTitle(mainObject.restarauntName);
         onDisplayCategoryList();
 
     }
@@ -37,6 +37,7 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
                 MenuCategories list = mainObject.menuCategoryList.get(position);
+                mainObject.currentCategory = mainObject.menuCategoryList.get(position).getCategory();
                 mainObject.menuItemList = list.categoryItems;
                 Intent intent = new Intent(DisplayCategoriesActivity.this, DisplayItemsActivity.class);
                 startActivity(intent);

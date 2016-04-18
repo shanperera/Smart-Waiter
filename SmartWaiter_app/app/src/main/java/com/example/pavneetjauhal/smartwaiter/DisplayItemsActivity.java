@@ -19,7 +19,7 @@ public class DisplayItemsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
-        setTitle(" Category Items");
+        setTitle(mainObject.currentCategory);
         onDisplayItemList();
     }
 
