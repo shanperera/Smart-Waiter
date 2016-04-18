@@ -14,10 +14,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:gravity="center"
-        android:visibility="gone"
-        android:text="Cart Is Empty.\n Please Add Items Before Checkout"/>
+        android:text="Cart Is Empty.\n Please Add Items Before Checkout"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/confirmOrder"

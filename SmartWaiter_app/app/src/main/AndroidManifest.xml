@@ -4,6 +4,8 @@
     package="com.example.pavneetjauhal.smartwaiter">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:allowBackup="true"
@@ -23,16 +25,36 @@
             </intent-filter>
         </activity>
 
-        <activity android:screenOrientation="portrait" android:name="com.example.pavneetjauhal.smartwaiter.AccountCreationActivity" />
-        <activity android:screenOrientation="portrait" android:name="com.example.pavneetjauhal.smartwaiter.DisplayCategoriesActivity" />
-        <activity android:screenOrientation="portrait" android:name="com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity" />
-        <activity android:screenOrientation="portrait" android:name="com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity" />
-        <activity android:screenOrientation="portrait" android:name=".CartActivity" />
-        <activity android:screenOrientation="portrait" android:name=".ConfirmOrderActivity" />
-        <activity android:screenOrientation="portrait" android:name=".CustomToppingsActivity" />
-        <activity android:screenOrientation="portrait" android:name=".CustomSideActivity" />
-        <activity android:screenOrientation="portrait" android:name=".SpecialInstrunctionsActivity" />
-        <activity android:screenOrientation="portrait" android:name=".MainActivity" />
+        <activity
+            android:name="com.example.pavneetjauhal.smartwaiter.AccountCreationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.pavneetjauhal.smartwaiter.DisplayCategoriesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.pavneetjauhal.smartwaiter.DisplayItemsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.pavneetjauhal.smartwaiter.GetPaymentInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CustomToppingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CustomSideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SpecialInstrunctionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

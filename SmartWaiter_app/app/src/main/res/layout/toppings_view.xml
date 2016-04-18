@@ -6,20 +6,20 @@
     <TextView
         android:id="@+id/txtName"
         android:layout_width="wrap_content"
-        android:padding="@dimen/activity_horizontal_margin"
         android:layout_height="wrap_content"
-        android:text="Text shown here"
         android:layout_weight="7"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="Text shown here"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <CheckBox
         android:id="@+id/checkTopping"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_horizontal_margin"
-        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:checked="false"
         android:gravity="center_vertical"
-        android:checked="false" />
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin" />
 
 </LinearLayout>

@@ -1,23 +1,15 @@
 package com.example.pavneetjauhal.smartwaiter;
 
 import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.view.WindowManager;
 
 import java.util.HashMap;
 
 public class Utils {
     public static HashMap<String, Integer> categoryImage;
-    public static void makeStatusBarTranslucent(Activity activity, boolean makeTranslucent) {
-        if (makeTranslucent) {
-            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        } else {
-            activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        }
-    }
-
-    public static String formatCurrency(String value) {
-        return "$" + value;
-    }
 
     static {
         categoryImage = new HashMap<>();
@@ -34,4 +26,24 @@ public class Utils {
         categoryImage.put("food", R.drawable.main_course_1);
 
     }
+
+    public static void makeStatusBarTranslucent(Activity activity, boolean makeTranslucent) {
+        if (makeTranslucent) {
+            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        } else {
+            activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+    }
+
+    public static String formatCurrency(String value) {
+        return "$" + value;
+    }
+
+    public static boolean isOnline(Context context) {
+        ConnectivityManager cm =
+                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+    }
+
 }

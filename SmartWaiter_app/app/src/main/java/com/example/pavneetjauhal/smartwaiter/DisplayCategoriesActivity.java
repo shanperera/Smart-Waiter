@@ -66,6 +66,19 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                }).setNegativeButton("No", null).show();
+    }
+
     private class CategoryListAdapter extends ArrayAdapter<MenuCategories> {
         public CategoryListAdapter() {
             super(DisplayCategoriesActivity.this, R.layout.category_view, mainObject.menuCategoryList);
@@ -89,18 +102,5 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
             imgCategory.setImageResource(Utils.categoryImage.get(currentItem.getCategory().toLowerCase()));
             return itemView;
         }
-    }
-
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setMessage("Are you sure you want to exit?")
-                .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        finish();
-                    }
-                }).setNegativeButton("No", null).show();
     }
 }

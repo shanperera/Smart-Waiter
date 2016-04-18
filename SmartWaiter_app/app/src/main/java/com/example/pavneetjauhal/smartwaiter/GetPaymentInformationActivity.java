@@ -82,9 +82,12 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        if (cardMonth == 0 || cardYear == 0 || cardNumber.isEmpty()|| cardCVC.isEmpty()) {
+        if (cardMonth == 0 || cardYear == 0 || cardNumber.isEmpty() || cardCVC.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Invalid card details", Toast.LENGTH_LONG)
                     .show();
+        } else if (!Utils.isOnline(this)) {
+            Toast.makeText(getApplicationContext(), "No internet Connection",
+                    Toast.LENGTH_LONG).show();
         } else {
             Card card = new Card(cardNumber, cardMonth, cardYear, cardCVC);
             try {

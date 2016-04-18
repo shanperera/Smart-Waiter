@@ -22,13 +22,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    public static final int MY_PERMISSIONS_REQUEST_CAMERA = 42;
     public static CouchBaseLite local_database;
     public static String qrCode;
     static List<MenuCategories> menuCategoryList = new ArrayList<MenuCategories>();
     static List<MenuItems> menuItemList = new ArrayList<MenuItems>();
     static String restarauntName = "";
     private Button scanButton;
-    public static final int MY_PERMISSIONS_REQUEST_CAMERA = 42;
     private boolean isGranted;
 
     @Override

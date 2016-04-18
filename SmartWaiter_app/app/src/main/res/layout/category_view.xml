@@ -14,13 +14,13 @@
         android:id="@+id/txtCategory"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/scrim"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
-        android:background="@drawable/scrim"
         android:padding="@dimen/activity_vertical_margin"
         android:text="Text shown here"
         android:textAllCaps="true"
-        android:textSize="32sp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="32sp" />
 </FrameLayout>
