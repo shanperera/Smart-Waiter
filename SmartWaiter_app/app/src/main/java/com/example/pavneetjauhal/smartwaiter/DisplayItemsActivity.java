@@ -98,7 +98,7 @@ public class DisplayItemsActivity extends AppCompatActivity {
             descriptionText.setText(currentItem.getItemDetail());
 
             TextView priceText = (TextView) itemView.findViewById(R.id.txtitemTopping);
-            priceText.setText(currentItem.getItemPrice());
+            priceText.setText(Utils.formatCurrency(currentItem.getItemPrice()));
             return itemView;
         }
 

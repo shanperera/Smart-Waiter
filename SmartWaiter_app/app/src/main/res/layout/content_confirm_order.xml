@@ -3,40 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/confirmOrderList"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/paymentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/edittextstyle"
+        android:onClick="proceedPayment"
+        android:text="Proceed to Payment" />
 
     <TextView
         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/confirmOrderList"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/confirmOrderList"
-        android:layout_marginBottom="108dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginRight="111dp"
-        android:text="Total"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_above="@id/paymentButton"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="Grand Total"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/totalPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/confirmOrderList"
-        android:layout_alignRight="@+id/confirmOrderList"
-        android:layout_alignTop="@+id/total"
+        android:layout_above="@id/paymentButton"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/activity_vertical_margin"
         android:text="Price"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <Button
-        android:id="@+id/paymentButton"
+    <ListView
+        android:id="@+id/confirmOrderList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/totalPrice"
-        android:layout_centerHorizontal="true"
-        android:onClick="proceedPayment"
-        android:text="Proceed to Payment" />
+        android:layout_above="@id/total"
+        android:layout_alignParentTop="true" />
 </RelativeLayout>

@@ -29,7 +29,7 @@ public class ConfirmOrderActivity extends AppCompatActivity {
     public void displayTotal() {
         TextView t = new TextView(this);
         t = (TextView) findViewById(R.id.totalPrice);
-        t.setText(LoginActivity.user.getTotalPrice());
+        t.setText(Utils.formatCurrency(LoginActivity.user.getTotalPrice()));
     }
 
     public void proceedPayment(View view) throws Exception {
@@ -37,10 +37,10 @@ public class ConfirmOrderActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     private class CategoryListAdapter extends ArrayAdapter<UserItems> {
         public CategoryListAdapter() {
-            super(ConfirmOrderActivity.this, R.layout.confirm_order_view, LoginActivity.user.userItems);
+            super(ConfirmOrderActivity.this, R.layout.confirm_order_view,
+                    LoginActivity.user.userItems);
         }
 
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -57,12 +57,9 @@ public class ConfirmOrderActivity extends AppCompatActivity {
             makeText.setText(currentItem.getItemName());
 
             TextView makeText2 = (TextView) itemView.findViewById(R.id.txtitemTopping);
-            makeText2.setText(currentItem.getItemPrice());
+            makeText2.setText(Utils.formatCurrency(currentItem.getItemPrice()));
 
             return itemView;
         }
-
     }
-
-
 }

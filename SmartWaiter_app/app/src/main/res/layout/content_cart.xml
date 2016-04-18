@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ListView
         android:id="@+id/cartList"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:divider="@null" />
 
-    <Button
+    <TextView
+        android:id="@+id/cartEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="Cart Is Empty.\n Please Add Items Before Checkout"/>
+
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/confirmOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/cartList"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
         android:layout_margin="@dimen/activity_vertical_margin"
-        android:background="@drawable/edittextstyle"
         android:onClick="confirmOrder"
-        android:padding="8dp"
+        android:src="@drawable/ic_done_all_black_24dp"
         android:text="Confirm Order"
-        android:textColor="@android:color/white" />
-</RelativeLayout>
+        android:textColor="@android:color/white"
+        android:tint="@android:color/white" />
+</android.support.design.widget.CoordinatorLayout>

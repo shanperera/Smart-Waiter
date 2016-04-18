@@ -71,47 +71,58 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
 
         spinner1 = (Spinner) findViewById(R.id.spinner);
         String cardExpMonth = spinner1.getSelectedItem().toString();
-        int cardMonth = Integer.parseInt(cardExpMonth);
 
         spinner2 = (Spinner) findViewById(R.id.spinner2);
         String cardExpYear = "20" + spinner2.getSelectedItem().toString();
-        int cardYear = Integer.parseInt(cardExpYear);
-
-        Card card = new Card(cardNumber, cardMonth, cardYear, cardCVC);
+        int cardMonth = 0, cardYear = 0;
         try {
-            Stripe stripe = new Stripe("pk_test_YvxrNPpmntwiq44Rp4HkAYuT");
-
-            if (card.validateCard()) {
-                stripe.createToken(
-                        card,
-                        new TokenCallback() {
-                            public void onSuccess(Token token) {
-                                postToken(token);
-                                LoginActivity.user.setToken(token);
-                                try {
-                                    MainActivity.local_database.createItem(LoginActivity.user.userItems);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                                Log.d("TokenSuccess", "Token Success!");
-                                LoginActivity.user.userItems.clear();
-                                Intent intent = new Intent(GetPaymentInformationActivity.this, MainActivity.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                startActivity(intent);
-                                Toast.makeText(getApplicationContext(), "Order Sent Successfully",
-                                        Toast.LENGTH_LONG).show();
-                            }
-
-                            public void onError(Exception error) {
-                                Log.d("TokenError", "Token Failed!");
-                            }
-                        }
-                );
-            } else {
-
-            }
+            cardMonth = Integer.parseInt(cardExpMonth);
+            cardYear = Integer.parseInt(cardExpYear);
         } catch (Exception e) {
+            e.printStackTrace();
+        }
 
+        if (cardMonth == 0 || cardYear == 0 || cardNumber.isEmpty()|| cardCVC.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Invalid card details", Toast.LENGTH_LONG)
+                    .show();
+        } else {
+            Card card = new Card(cardNumber, cardMonth, cardYear, cardCVC);
+            try {
+                Stripe stripe = new Stripe("pk_test_YvxrNPpmntwiq44Rp4HkAYuT");
+
+                if (card.validateCard()) {
+                    stripe.createToken(
+                            card,
+                            new TokenCallback() {
+                                public void onSuccess(Token token) {
+                                    postToken(token);
+                                    LoginActivity.user.setToken(token);
+                                    try {
+                                        MainActivity.local_database.createItem(LoginActivity.user.userItems);
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                    Log.d("TokenSuccess", "Token Success!");
+                                    LoginActivity.user.userItems.clear();
+                                    Intent intent = new Intent(GetPaymentInformationActivity.this, MainActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(intent);
+                                    Toast.makeText(getApplicationContext(), "Order Sent Successfully",
+                                            Toast.LENGTH_LONG).show();
+                                }
+
+                                public void onError(Exception error) {
+                                    Log.d("TokenError", "Token Failed!");
+                                }
+                            }
+                    );
+                } else {
+                    Toast.makeText(getApplicationContext(), "Invalid Card Details",
+                            Toast.LENGTH_LONG).show();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

@@ -28,9 +28,6 @@ public class LocalAuth {
         // Log.d("FACKKK2", salt);
         byte[] decodedPass = Base64.decode(salt, Base64.DEFAULT);
         String text = new String(decodedPass, "UTF-8");
-        //String hashOfInput = computeHashValue(password, saltDecoded);
-        //String s = saltDecoded + hashOfInput;
-        Log.d("FACKKK2-C", text);
         Log.d("FACKKK2-C", stored);
         return password.equals(stored);
     }
@@ -42,19 +39,6 @@ public class LocalAuth {
         //length of salt
         byte[] pass = password.getBytes("UTF-8");
         String base64 = Base64.encodeToString(pass, Base64.DEFAULT);
-        /*int saltLen = 32;
-        byte[] salt = SecureRandom.getInstance("SHA1PRNG").generateSeed(saltLen);
-        String Base64String = Base64.encodeToString(salt, Base64.DEFAULT);
-        if(null != Base64String) {
-            Base64String = Base64String.replaceAll(" ","&nbsp;"); // HERE
-            Base64String = Base64String.replaceAll("'","&#39;");
-            Base64String = Base64String.replaceAll("\\\\","&#92;");
-            Base64String = Base64String.replaceAll("/","&#47;");
-            Base64String = Base64String.replaceAll("\\p{C}", "?");
-        }
-        // store the salt with the password
-        String input = computeHashValue(password, salt);
-        String s = salt + input;*/
         Log.d("FACKKK2-P", base64);
         //Log.d("FACKKK2-P", );
         return new LocalAuth(password, base64);

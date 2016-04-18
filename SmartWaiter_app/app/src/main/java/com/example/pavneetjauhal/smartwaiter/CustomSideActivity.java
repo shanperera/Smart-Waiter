@@ -30,7 +30,6 @@ public class CustomSideActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_custom_side);
-        setTitle("Choose Side");
 
         Intent intent = getIntent();
         selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");
@@ -42,18 +41,12 @@ public class CustomSideActivity extends AppCompatActivity {
         if (modifyItem != null) {
             selectedItem = modifyItem.getMenuItem();
         }
-
-        Log.d("TAG", selectedItem.getItemName());
-        String itemName = selectedItem.getItemName();
-
-        TextView itemNameText = (TextView) findViewById(R.id.txtItemName);
-        itemNameText.setText(itemName);
-
+        setTitle(selectedItem.getItemName());
         TextView itemDescriptionText = (TextView) findViewById(R.id.txtItemDes);
         itemDescriptionText.setText(selectedItem.getItemDetail());
 
         TextView itemPriceText = (TextView) findViewById(R.id.txtitemTopping);
-        itemPriceText.setText(selectedItem.getItemPrice());
+        itemPriceText.setText(Utils.formatCurrency(selectedItem.getItemPrice()));
 
         sideOrders = selectedItem.getItemSides();
         Log.d("GET ITEM SIDES", selectedItem.getItemSides().toString());
@@ -105,7 +98,7 @@ public class CustomSideActivity extends AppCompatActivity {
 
         public MyAdapter(CustomSideActivity context, List<String> itemsArrayList) {
 
-            super(context, R.layout.toppings_view, itemsArrayList);
+            super(context, R.layout.sideorder_view, itemsArrayList);
 
             this.context = context;
             this.itemsArrayList = itemsArrayList;
@@ -131,7 +124,6 @@ public class CustomSideActivity extends AppCompatActivity {
 
                 @Override
                 public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-                    //MainActivity.user.userItems.get(MainActivity.user.userItems.size() - 1).setSideOrder(itemsArrayList.get(position));
                     sideOrdersToAdd = itemsArrayList.get(position);
                     Intent intent = new Intent(CustomSideActivity.this, SpecialInstrunctionsActivity.class);
                     intent.putExtra("selectedItem", selectedItem);
@@ -147,7 +139,6 @@ public class CustomSideActivity extends AppCompatActivity {
                 }
             });
 
-            // 5. retrn rowView
             return rowView;
         }
     }

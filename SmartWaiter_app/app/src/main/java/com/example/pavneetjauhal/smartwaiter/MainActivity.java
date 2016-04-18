@@ -1,7 +1,13 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     static List<MenuItems> menuItemList = new ArrayList<MenuItems>();
     static String restarauntName = "";
     private Button scanButton;
+    public static final int MY_PERMISSIONS_REQUEST_CAMERA = 42;
+    private boolean isGranted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +38,32 @@ public class MainActivity extends AppCompatActivity {
 
         local_database = CouchBaseLite.getInstance(this, LoginActivity.user);
         scanButton = (Button) findViewById(R.id.scanCodeButton);
+
+        // check Android 6 permission
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                == PackageManager.PERMISSION_GRANTED) {
+            isGranted = true;
+
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CAMERA},
+                    MY_PERMISSIONS_REQUEST_CAMERA);
+        }
+
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
-                integrator.initiateScan();
+                if (isGranted) {
+                    IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
+                    integrator.initiateScan();
+                } else {
+                    ActivityCompat.requestPermissions(MainActivity.this,
+                            new String[]{Manifest.permission.CAMERA},
+                            MY_PERMISSIONS_REQUEST_CAMERA);
+                }
             }
         });
+
     }
 
     public void onPopulateMenu(String qrCode) {
@@ -76,11 +103,27 @@ public class MainActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanResult =
                 IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-        if (scanResult != null) {
+        if (scanResult != null && isGranted) {
             qrCode = scanResult.getContents();
             //Log.d("code", qrCode);
             if (qrCode != null) {
                 onPopulateMenu(qrCode);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_CAMERA: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    isGranted = true;
+                } else {
+                    setResult(Activity.RESULT_CANCELED);
+                    finish();
+                }
             }
         }
     }

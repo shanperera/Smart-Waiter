@@ -44,6 +44,8 @@
         android:id="@+id/cardNumberEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLines="1"
         android:ems="10" />
 
     <TextView
@@ -115,7 +117,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentStart="true"
             android:layout_toRightOf="@+id/spinner"
-            android:background="#0099ff"
+            android:background="@drawable/edittextstyle"
             android:onClick="getInfo"
             android:text="@string/get_payment_information_activity_finish_label"
             android:textColor="#ffffff" />

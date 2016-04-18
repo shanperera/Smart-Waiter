@@ -34,8 +34,8 @@ public class CouchBaseLite {
     private static final String DB_ORDER = "local_orders";
     private static final String DB_USER = "user_data";
     private static final String TAG = "SmartWaiter";
-    private static final String HOST = "http://192.168.0.49";
-    //private static final String HOST = "http://162.243.20.236";
+    //private static final String HOST = "http://192.168.0.35";
+    private static final String HOST = "http://162.243.20.236";
     private static final String PORT = "4984";
     /* Key definitions for document */
     private static final String NAME = "Res_Name";
@@ -95,19 +95,19 @@ public class CouchBaseLite {
     public void storeUserData(User userData) throws CouchbaseLiteException, NullPointerException {
         Document userdocument = this.getUserDatabase().getDocument("userData");
         Map<String, Object> properties = new HashMap<String, Object>();
-        if(userData.getFirstName() != null);
+        if (userData.getFirstName() != null) ;
         properties.put("First Name", userData.getFirstName());
-        if(userData.getLastName() != null);
+        if (userData.getLastName() != null) ;
         properties.put("Last Name", userData.getLastName());
-        if(userData.getPhoneNumber() != null);
+        if (userData.getPhoneNumber() != null) ;
         properties.put("Phone Number", userData.getPhoneNumber());
-        if(userData.getPostalCode() != null);
+        if (userData.getPostalCode() != null) ;
         properties.put("Postal Code", userData.getPostalCode());
-        if(userData.getBillingAddress() != null);
+        if (userData.getBillingAddress() != null) ;
         properties.put("Home Address", userData.getBillingAddress());
-        if(userData.getSalt() != null);
+        if (userData.getSalt() != null) ;
         properties.put("Salt", userData.getSalt());
-        if(userData.getPassword() != null);
+        if (userData.getPassword() != null) ;
         properties.put("Password", userData.getPassword());
         userdocument.putProperties(properties);
     }
@@ -320,7 +320,7 @@ public class CouchBaseLite {
         List<OrderItems> orderItems = new ArrayList<OrderItems>();
         orderItems = populateOderitems(UserItems);
         properties.put("Items List", orderItems);
-        //properties.put("Token", MainActivity.user.getToken());
+        properties.put("Token", LoginActivity.user.getToken());
         properties.put("Address", user.getBillingAddress());
         properties.put("Phone Number", user.getPhoneNumber());
         properties.put("Postal Code", user.getPostalCode());

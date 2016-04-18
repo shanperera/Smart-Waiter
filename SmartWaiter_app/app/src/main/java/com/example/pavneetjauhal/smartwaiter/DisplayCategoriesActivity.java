@@ -1,14 +1,17 @@
 package com.example.pavneetjauhal.smartwaiter;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,7 +29,6 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
     }
 
     public void onDisplayCategoryList() {
-        //setContentView(R.layout.categorylist);
         popualteCategoriesListView();
 
         ListView list = (ListView) findViewById(R.id.menuList);
@@ -46,13 +48,6 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
         CategoryListAdapter adapter = new CategoryListAdapter();
         ListView list = (ListView) findViewById(R.id.menuList);
         list.setAdapter(adapter);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
     }
 
     @Override
@@ -88,9 +83,24 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
 
             //Make text view
             TextView makeText = (TextView) itemView.findViewById(R.id.txtCategory);
+            ImageView imgCategory = (ImageView) itemView.findViewById(R.id.imgCategory);
             makeText.setText(currentItem.getCategory());
-
+            Log.d("categories", currentItem.getCategory());
+            imgCategory.setImageResource(Utils.categoryImage.get(currentItem.getCategory().toLowerCase()));
             return itemView;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                }).setNegativeButton("No", null).show();
     }
 }

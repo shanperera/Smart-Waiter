@@ -3,13 +3,13 @@ package com.example.pavneetjauhal.smartwaiter;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,14 +23,13 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
     MenuItems selectedItem;
     UserItems modifyItem;
     int index;
-    Button cartButton;
+    FloatingActionButton cartButton;
     EditText et;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_special_instrunctions);
-        setTitle("Enter Special Instructions");
 
         Intent intent = getIntent();
         selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");
@@ -40,30 +39,23 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         index = b.getInt("index");
         et = (EditText) findViewById(R.id.specialInstructions);
-        ;
-        cartButton = (Button) findViewById(R.id.addCart);
+
+        cartButton = (FloatingActionButton) findViewById(R.id.addCart);
 
         if (modifyItem != null) {
-            cartButton.setText("Modify Item");
             selectedItem = modifyItem.getMenuItem();
             et.setText(modifyItem.getSpecialInstrucitons());
-        } else {
-            cartButton.setText("Add to Cart");
         }
-        //Log.d("TAG", selectedItem.getItemName());
-        String itemName = selectedItem.getItemName();
-
-        TextView itemNameText = (TextView) findViewById(R.id.txtItemName);
-        itemNameText.setText(itemName);
+        setTitle(selectedItem.getItemName());
 
         TextView itemDescriptionText = (TextView) findViewById(R.id.txtItemDes);
         itemDescriptionText.setText(selectedItem.getItemDetail());
 
         TextView itemPriceText = (TextView) findViewById(R.id.txtitemTopping);
-        itemPriceText.setText(selectedItem.getItemPrice());
+        itemPriceText.setText(Utils.formatCurrency(selectedItem.getItemPrice()));
 
         et = (EditText) findViewById(R.id.specialInstructions);
-        ;
+
         et.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             /**
              * This listens for the user to press the enter button on
@@ -85,15 +77,9 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
     }
 
     public void addToCart(View view) {
-        //et = (EditText) findViewById(R.id.specialInstructions);
         String specialInstructions = et.getText().toString();
-
-
         if (modifyItem == null) {
             LoginActivity.user.createUserItem(selectedItem.getItemName(), selectedItem.getItemPrice(), itemToppingsToAdd, sideOrder, selectedItem, specialInstructions);
-            //Log.d("TAG", CustomizeItemActivity.itemToppingsToAdd.toString());
-            //MainActivity.user.userItems.get(MainActivity.user.userItems.size() - 1).setItemToppings(CustomizeItemActivity.itemToppingsToAdd);
-            //MainActivity.user.userItems.get(MainActivity.user.userItems.size() - 1).setSideOrder(CustomizeItemSideActivity.sideOrdersToAdd);
             Toast.makeText(getApplicationContext(), "Added Item to cart",
                     Toast.LENGTH_LONG).show();
         } else {

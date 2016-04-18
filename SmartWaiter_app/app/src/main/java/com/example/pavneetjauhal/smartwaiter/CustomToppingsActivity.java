@@ -3,8 +3,8 @@ package com.example.pavneetjauhal.smartwaiter;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -14,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,13 +23,10 @@ public class CustomToppingsActivity extends AppCompatActivity {
 
     static MenuItems selectedItem;
     UserItems modifyItem;
-    Toolbar mActionBarToolbar;
     CheckBox chBox1;
-    //List<String> itemToppings = new ArrayList<String>();
     ArrayList<String> itemToppings = new ArrayList<String>();
     ArrayList<String> itemToppingsToAdd = new ArrayList<String>();
-    RadioButton orderChoiceButton;
-    Button btnDisplay;
+    FloatingActionButton btnDisplay;
     int index;
 
     @Override
@@ -43,23 +39,20 @@ public class CustomToppingsActivity extends AppCompatActivity {
         modifyItem = (UserItems) intent.getSerializableExtra("modifyOrder");
         Bundle b = getIntent().getExtras();
         index = b.getInt("index");
-
         if (modifyItem != null) {
             selectedItem = modifyItem.getMenuItem();
             itemToppingsToAdd = (ArrayList<String>) modifyItem.getItemToppings();
         }
-
-        TextView itemNameText = (TextView) findViewById(R.id.txtItemName);
-        itemNameText.setText(selectedItem.getItemName());
+        setTitle(selectedItem.getItemName());
 
         TextView itemDescriptionText = (TextView) findViewById(R.id.txtItemDes);
         itemDescriptionText.setText(selectedItem.getItemDetail());
 
         TextView itemPriceText = (TextView) findViewById(R.id.txtitemTopping);
-        itemPriceText.setText(selectedItem.getItemPrice());
+        itemPriceText.setText(Utils.formatCurrency(selectedItem.getItemPrice()));
 
         //create user
-        btnDisplay = (Button) findViewById(R.id.nextButton);
+        btnDisplay = (FloatingActionButton) findViewById(R.id.nextButton);
 
         itemToppings = selectedItem.getItemToppings();
         MyAdapter adapter = new MyAdapter(this, itemToppings);
@@ -138,17 +131,13 @@ public class CustomToppingsActivity extends AppCompatActivity {
 
             // 3. Get the two text view from the rowView
             TextView labelView = (TextView) rowView.findViewById(R.id.txtName);
-            //TextView labelView2 = (TextView) rowView.findViewById(R.id.txtToppingPrice);
 
             // 4. Set the text for textView
             labelView.setText(itemsArrayList.get(position));
-            //labelView2.setText((itemsArrayList.get(position)));
-
 
             chBox1 = (CheckBox) rowView.findViewById(R.id.checkTopping);
             if (modifyItem != null && modifyItem.getItemToppings().contains(itemsArrayList.get(position))) {
                 chBox1.setChecked(true);
-                //itemToppingsToAdd.add(itemsArrayList.get(position));
             }
             Intent intent = getIntent();
             ArrayList<String> itemAdded = new ArrayList<String>();
@@ -169,7 +158,6 @@ public class CustomToppingsActivity extends AppCompatActivity {
                 }
             });
 
-            // 5. retrn rowView
             return rowView;
         }
     }
