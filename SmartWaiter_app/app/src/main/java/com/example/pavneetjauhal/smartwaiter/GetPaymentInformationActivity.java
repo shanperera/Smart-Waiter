@@ -29,28 +29,13 @@ import java.util.List;
 
 public class GetPaymentInformationActivity extends AppCompatActivity {
 
-    public String restID;
-    public int index;
-    public String[] spk = new String[3]; //Stripe Private Keys
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_information);
 
-        Intent intent = getIntent();
-        restID = (String) intent.getSerializableExtra("restaurantID");
-        Bundle b = getIntent().getExtras();
-        index = b.getInt("index");
-
-        populatePrivateKeys();
         populateSpinner();
-    }
-
-    public void populatePrivateKeys(){
-        spk[0] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
-        spk[1] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
-        spk[2] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
     }
 
     public void populateSpinner() {
@@ -106,21 +91,7 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
         } else {
             Card card = new Card(cardNumber, cardMonth, cardYear, cardCVC);
             try {
-                Stripe stripe;
-                switch(restID){
-                    case "00":
-                        stripe = new Stripe(spk[0]);
-                        break;
-                    case "01":
-                        stripe = new Stripe(spk[1]);
-                        break;
-                    case "02":
-                        stripe = new Stripe(spk[2]);
-                        break;
-                    default:
-                        stripe = new Stripe(spk[0]);
-                }
-                //Stripe stripe = new Stripe("pk_test_YvxrNPpmntwiq44Rp4HkAYuT");
+                Stripe stripe = new Stripe("pk_test_YvxrNPpmntwiq44Rp4HkAYuT");
 
                 if (card.validateCard()) {
                     stripe.createToken(

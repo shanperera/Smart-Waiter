@@ -18,20 +18,12 @@ import android.widget.TextView;
 public class DisplayCategoriesActivity extends AppCompatActivity {
 
     MainActivity mainObject;
-    public String restID;
-    int index;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
         this.setTitle(mainObject.restarauntName);
-
-        Intent intent = getIntent();
-        restID = (String) intent.getSerializableExtra("restaurantID");
-        Bundle b = getIntent().getExtras();
-        index = b.getInt("index");
-
         onDisplayCategoryList();
 
     }
@@ -69,7 +61,6 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_cart) {
             Intent intent = new Intent(this, CartActivity.class);
-            intent.putExtra("restaurantID", restID);
             startActivity(intent);
         }
 
