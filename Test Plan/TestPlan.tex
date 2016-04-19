@@ -43,9 +43,9 @@
 October 30, 2015 &  first draft. \\ 
 February 1, 2016 &  Added usability questions \\ 
 April 15, 2016 &  Addressed Dan's comments in regards to spelling and grammar. Modified automated testing \\ 
+April 16, 2016 &  Addressed more Dan's comments in regards to spelling and grammar. Fixed tables. Added item selection and customization\\ 
 \hline
 \end{tabular}
-
 
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,11 +201,11 @@ Manual testing is done by people, while automatic is processed through scripts.
 Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-through
 will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. \\
 Static testing will be enforced through out the development process. A code review process will be put into place to strictly manage the quality of the code. Specifically, developers will have to sign off on the quality of the code before it gets checked into the production repo.
-\ds{``repository"}
-The tool used for code reviews be Codereviewer. \\\\
-Below we have highlighted the code review process;\\
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{review_process.png}
-\ds{This graphic would make more sense as a flowchart. Also, label your figures}
+\caption{Code Review Process}
+\label{fig:CodeReview}
+\end{figure}
 \\\\
 The reviewers will assess the code quality and critique the code in following criteria;\\
 \begin{itemize}
@@ -259,24 +259,38 @@ For database testing, the following test factors will be considered;
 \subsubsection{Correctness}
 In this section of database testing, tester must verify that the application receives complete and correct data from the couchbase server. Automated unit tests will be written using Bash scripts to perform the following tests.
 \subsubsection{Database Correctness Automated Tests }
+\break
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{correctness_tests.png}
-
+  \caption{Database Correctness}
+  \label{tbl:excel-table}
+\end{table}
 \subsubsection{Performance}
 In this section of database testing, tester must verify that the data query is performed in a reasonable amount of time. The application should have a maximum loading period of 5 seconds to complete data queries. Moreover, considering the customer base and size of database our application, none of the following test cases should take more than 5 seconds.
+
 \subsubsection{Database Performance Automated Tests }
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{performance_tests.png}
-\ds{5 seconds sounds like a really long time to query one item.}
+  \caption{Performance Automated Tests}
+\end{table}
 
 \subsubsection{Security}
 In this section of database query testing, tester must verify that database allows correct access control. Database penetration testing is not required because we will leverage couchbase security implementation, testing and certifications.
 \subsubsection{Database Security Automated Tests }
+\pagebreak
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{security_tests.png}
-\ds{Graphic was not included properly. I've corrected it.}
+  \caption{Security Test}
+\end{table}
 
 \subsubsection{Reliability}
 In this section of database testing, we will test the robustness and reliability of the database.  This type of testing is essential the health of the database system. There should be no failures or downtimes on the backend side. 
 \subsubsection{Database Reliability Automated Tests }
+\pagebreak
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{reliability_tests.png}
+  \caption{Reliability Automated Tests}
+\end{table}
 
 \section{Final Demonstration System Test Description}
 
@@ -321,8 +335,10 @@ Dynamic testing is used to ensure correctness and data integrity, and to observe
 \textit{Summary}\newline
 Manual black box tests will be performed to assess barcode scanning. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate nonfunctional test factors.
 \newline
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{barcode.png}\newline
-\ds{Graphic was not included properly. I've fixed it}
+  \caption{Barcode Scanning Test}
+\end{table}
 
 \subsection{Account Login}
 Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 
@@ -368,6 +384,32 @@ Manual dynamic tests will be performed to evaluate the account creation module. 
 \ds{Test 1 should state it uses a username that is already in use. Why are
 there no tests for invalid Google/Facebook accounts?}
 
+\subsection{Item Selection and Customization}
+Smart-Waiter needs to ensure a user is able to select, customize and add item to cart. 
+
+\subsubsection{Test Type}
+\begin{itemize}
+  \item Manual 
+  \item functional dynamic test 
+ \end{itemize} 
+ 
+\subsubsection{Functional Test Factors}
+\begin{itemize}
+  \item The product shall allow the user to customize and add items to cart
+ \end{itemize} 
+ 
+\subsubsection{Methods of testing}
+Item selection and customization is performed using  dynamic unit testing. The goal of this component is to verify if a user can select, customize and add multiple menu items to cart. Also, testing is performed to check if a user is able to re-modify an already selected item.  Testing is performed from a functional view to evaluate functional requirements stated in SRS.
+
+\subsubsection{Test Cases}
+\textbf{\textit{Dynamic Unit Test}}\newline
+\newline
+\textit{Summary}\newline
+Manual black box tests will be performed to assess item customization and for the ability to add to cart. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate functional test factors.
+
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{itemselection.png}
+
+
 \subsection{Order Transaction}
 Smart-Waiter needs to ensure that a user can send in their order, and pay for their order easily and securely. Order transaction will be vigorously tested to ensure complete customer satisfaction.  
 \subsubsection{Test Type}
@@ -383,6 +425,7 @@ Smart-Waiter needs to ensure that a user can send in their order, and pay for th
   \item Data security 
   \item Ease of use
  \end{itemize} 
+ 
 
 \begin{comment}
 \subsubsection{Inputs}
@@ -410,7 +453,6 @@ Dynamic testing is used to ensure validity, record the number of successful test
 Manual dynamic tests will be performed to evaluate the order transaction module. This test will be in the form of structural testing. It will test vigorously for all possible inputs of credit card information and account details. The tests being performed on the module are presented below. 
 \newline
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{orderTransactionTC.png}
-\ds{What are these inputs for your test case 1 and 2? Where did the `n's come from?}
 \subsection{Usability Testing}
 The goal of usability testing is to verify if a user can successfully use all functionalities of the application from start to finish in a timely manner. This type of testing aids in evaluating if functional requirements are met. As well it provides scope for evaluating non functional requirements.
 \subsubsection{Nonfunctional Test Factors}

@@ -49,12 +49,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void signup(View view) {
-        if (user == null) {
             Intent intent = new Intent(this, AccountCreationActivity.class);
             startActivity(intent);
-        }
-        else{
-            Toast.makeText(getApplicationContext(), "Account is Already Active. Please Sign In", Toast.LENGTH_LONG).show();
-        }
     }
 }

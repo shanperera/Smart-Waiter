@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 APR 2016 01:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 APR 2016 20:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,11 +279,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `TestPlan.toc'.
 
- (./TestPlan.lot)
+ (./TestPlan.lot [3])
 \tf@lot=\write5
 \openout5 = `TestPlan.lot'.
 
- [3] [4] [5]
+ [4] [5]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 96.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
@@ -301,11 +301,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--122
 
  []
 
-[6] [7] [8] <Images/review_process.png, id=347, 1067.99pt x 451.6875pt>
+[6] [7] [8] <Images/review_process.png, id=382, 1067.99pt x 451.6875pt>
 File: Images/review_process.png Graphic file (type png)
 
 <use Images/review_process.png>
-Package pdftex.def Info: Images/review_process.png used on input line 207.
+Package pdftex.def Info: Images/review_process.png used on input line 205.
 (pdftex.def)             Requested size: 390.00052pt x 164.94382pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 201--211
@@ -317,121 +317,142 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--211
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--211
-
- []
-
-[9 <./Images/review_process.png>] [10]
-<Images/correctness_tests.png, id=358, 450.68375pt x 376.40625pt>
+[9 <./Images/review_process.png>] [10] [11]
+<Images/correctness_tests.png, id=398, 450.68375pt x 376.40625pt>
 File: Images/correctness_tests.png Graphic file (type png)
 
 <use Images/correctness_tests.png>
-Package pdftex.def Info: Images/correctness_tests.png used on input line 262.
+Package pdftex.def Info: Images/correctness_tests.png used on input line 264.
 (pdftex.def)             Requested size: 390.02174pt x 325.74199pt.
- [11]
-<Images/performance_tests.png, id=363, 451.6875pt x 235.88126pt>
+
+<Images/performance_tests.png, id=399, 446.66875pt x 178.6675pt>
 File: Images/performance_tests.png Graphic file (type png)
 
 <use Images/performance_tests.png>
-Package pdftex.def Info: Images/performance_tests.png used on input line 267.
-(pdftex.def)             Requested size: 390.02197pt x 203.67815pt.
- [12 <./Images/correctness_tests.png>]
-<Images/security_tests.png, id=369, 451.6875pt x 291.0875pt>
+Package pdftex.def Info: Images/performance_tests.png used on input line 273.
+(pdftex.def)             Requested size: 390.00949pt x 156.00378pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./Images/correctness_tests.png>] [13 <./Images/performance_tests.png>]
+<Images/security_tests.png, id=410, 451.6875pt x 291.0875pt>
 File: Images/security_tests.png Graphic file (type png)
 
 <use Images/security_tests.png>
-Package pdftex.def Info: Images/security_tests.png used on input line 273.
+Package pdftex.def Info: Images/security_tests.png used on input line 282.
 (pdftex.def)             Requested size: 390.02197pt x 251.34749pt.
- [13 <./Images/performance_tests.png>]
-<Images/reliability_tests.png, id=376, 468.75125pt x 560.0925pt>
+ [14 <./Images/security_tests.png>]
+<Images/reliability_tests.png, id=416, 444.66125pt x 116.435pt>
 File: Images/reliability_tests.png Graphic file (type png)
 
 <use Images/reliability_tests.png>
-Package pdftex.def Info: Images/reliability_tests.png used on input line 279.
-(pdftex.def)             Requested size: 389.99326pt x 465.98767pt.
- [14 <./Images/security_tests.png>] [15 <./Images/reliability_tests.png>]
-<Images/barcode.png, id=387, 486.81876pt x 346.29375pt>
+Package pdftex.def Info: Images/reliability_tests.png used on input line 291.
+(pdftex.def)             Requested size: 390.00038pt x 102.12198pt.
+
+<Images/barcode.png, id=417, 447.6725pt x 306.14375pt>
 File: Images/barcode.png Graphic file (type png)
 
 <use Images/barcode.png>
-Package pdftex.def Info: Images/barcode.png used on input line 324.
-(pdftex.def)             Requested size: 389.99779pt x 277.4211pt.
+Package pdftex.def Info: Images/barcode.png used on input line 339.
+(pdftex.def)             Requested size: 390.01157pt x 266.71194pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--326
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 
  []
 
-[16] [17 <./Images/barcode.png>]
-<Images/accountTC.png, id=398, 1014.79124pt x 702.625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--342
+
+ []
+
+[15 <./Images/reliability_tests.png>] [16 <./Images/barcode.png>]
+<Images/accountTC.png, id=429, 1014.79124pt x 702.625pt>
 File: Images/accountTC.png Graphic file (type png)
 
 <use Images/accountTC.png>
-Package pdftex.def Info: Images/accountTC.png used on input line 367.
+Package pdftex.def Info: Images/accountTC.png used on input line 383.
 (pdftex.def)             Requested size: 389.9913pt x 270.02364pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--370
+Underfull \hbox (badness 10000) in paragraph at lines 378--386
 
  []
 
 
-Overfull \hbox (27.79935pt too wide) in paragraph at lines 362--370
+Overfull \hbox (27.79935pt too wide) in paragraph at lines 378--386
 [] []\OT1/cmr/m/n/12 [Test
  []
 
-[18 <./Images/accountTC.png>]
-<Images/orderTransactionTC.png, id=404, 1003.75pt x 762.85pt>
+[17] [18 <./Images/accountTC.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 405--409
+
+ []
+
+<Images/itemselection.png, id=439, 446.66875pt x 273.02pt>
+File: Images/itemselection.png Graphic file (type png)
+
+<use Images/itemselection.png>
+Package pdftex.def Info: Images/itemselection.png used on input line 410.
+(pdftex.def)             Requested size: 390.00949pt x 238.38783pt.
+
+Overfull \hbox (17.63431pt too wide) in paragraph at lines 410--411
+[][] 
+ []
+
+[19 <./Images/itemselection.png>]
+<Images/orderTransactionTC.png, id=445, 445.665pt x 268.00125pt>
 File: Images/orderTransactionTC.png Graphic file (type png)
 
 <use Images/orderTransactionTC.png>
-Package pdftex.def Info: Images/orderTransactionTC.png used on input line 412.
-(pdftex.def)             Requested size: 390.0059pt x 296.4045pt.
+Package pdftex.def Info: Images/orderTransactionTC.png used on input line 455.
+(pdftex.def)             Requested size: 390.00351pt x 234.52913pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--414
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 426--429
+Underfull \hbox (badness 10000) in paragraph at lines 450--456
 
  []
 
-[20 <./Images/orderTransactionTC.png>] [21]
-<Images/TestingSchedule.png, id=424, 834.11626pt x 323.2075pt>
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 468--471
+
+ []
+
+[21 <./Images/orderTransactionTC.png>]
+<Images/TestingSchedule.png, id=454, 834.11626pt x 323.2075pt>
 File: Images/TestingSchedule.png Graphic file (type png)
 
 <use Images/TestingSchedule.png>
-Package pdftex.def Info: Images/TestingSchedule.png used on input line 466.
+Package pdftex.def Info: Images/TestingSchedule.png used on input line 508.
 (pdftex.def)             Requested size: 389.99829pt x 151.11847pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 472.
- [22 <./Images/TestingSchedule.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 472.
+ [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
+ [23 <./Images/TestingSchedule.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
 
 (./TestPlan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 472.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 472.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
 Package rerunfilecheck Info: File `TestPlan.out' has not changed.
-(rerunfilecheck)             Checksum: AE036848B1013A922153089A55998218;4291.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 472.
+(rerunfilecheck)             Checksum: 673351D500DBE70EDFDA5209BC0005E1;4673.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 514.
  ) 
 Here is how much of TeX's memory you used:
- 5757 strings out of 493315
- 85186 string characters out of 6137904
- 172585 words of memory out of 5000000
- 9072 multiletter control sequences out of 15000+600000
+ 5783 strings out of 493315
+ 85608 string characters out of 6137904
+ 171671 words of memory out of 5000000
+ 9085 multiletter control sequences out of 15000+600000
  9514 words of font info for 33 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 29i,8n,35p,525b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,8n,35p,525b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on TestPlan.pdf (22 pages, 440493 bytes).
+Output written on TestPlan.pdf (23 pages, 497735 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 425 compressed objects within 5 object streams
- 93 named destinations out of 1000 (max. 500000)
- 526 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 466 compressed objects within 5 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 571 words of extra memory for PDF output out of 10000 (max. 10000000)
 

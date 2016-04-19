@@ -11,6 +11,4 @@ do
     echo "started instance no: $i"
     curl -X GET -H "Content-Type: application/text" "http://administrator:administrator@localhost:8091/pools/default/buckets/couchbaseevents/docs/789"
   done
-  # sleep 2 min
-  sleep 120
 done
