@@ -29,13 +29,23 @@ import java.util.List;
 
 public class GetPaymentInformationActivity extends AppCompatActivity {
 
+    public String restID = "00";
+    public String[] spk = new String[3]; //Stripe private keys
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_information);
 
+        populatePrivateKeys();
         populateSpinner();
+    }
+
+    public void populatePrivateKeys(){
+        spk[0] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
+        spk[1] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
+        spk[2] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
     }
 
     public void populateSpinner() {
@@ -91,7 +101,22 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
         } else {
             Card card = new Card(cardNumber, cardMonth, cardYear, cardCVC);
             try {
-                Stripe stripe = new Stripe("pk_test_YvxrNPpmntwiq44Rp4HkAYuT");
+                Stripe stripe;
+                switch(restID){
+                    case "00":
+                        stripe = new Stripe(spk[0]);
+                        break;
+                    case "01":
+                        stripe = new Stripe(spk[1]);
+                        break;
+                    case "02":
+                        stripe = new Stripe(spk[2]);
+                        break;
+                    default:
+                        stripe = new Stripe(spk[0]);
+                        break;
+                }
+                //Stripe stripe = new Stripe("pk_test_YvxrNPpmntwiq44Rp4HkAYuT");
 
                 if (card.validateCard()) {
                     stripe.createToken(
@@ -130,16 +155,17 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
     }
 
     public void postToken(Token token) {
-        String url = "https://node-js-charge-card.herokuapp.com/";
+        String url = "http://charge-card-sw.herokuapp.com/";
         String charset = "UTF-8";
         String name = "stripeToken";
         String pToken = token.toString();
-        String chargeParameters;
+        String amount = "17000";
 
         try {
-            String query = String.format("name=%s&pToken=%s",
+            String query = String.format("name=%s&pToken=%s&amount=%s",
                     URLEncoder.encode(name, charset),
-                    URLEncoder.encode(pToken, charset));
+                    URLEncoder.encode(pToken, charset),
+                    URLEncoder.encode(amount, charset));
 
             URLConnection connection = new URL(url).openConnection();
             connection.setDoOutput(true); // Triggers POST.
