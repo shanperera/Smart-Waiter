@@ -17,12 +17,20 @@ public class CartActivity extends AppCompatActivity {
     private ListView list;
     private FloatingActionButton confirmOrderfab;
     private CategoryListAdapter adapter;
+    public String restID;
+    public int index;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_cart);
         setTitle("Cart Menu");
+
+        Intent intent = getIntent();
+        restID = (String) intent.getSerializableExtra("restaurantID");
+        Bundle b = getIntent().getExtras();
+        index = b.getInt("index");
+
         TextView toppingsName = (TextView) findViewById(R.id.cartEmpty);
         list = (ListView) findViewById(R.id.cartList);
         confirmOrderfab = (FloatingActionButton) findViewById(R.id.confirmOrder);
@@ -46,6 +54,7 @@ public class CartActivity extends AppCompatActivity {
     public void confirmOrder(View view) {
         if (LoginActivity.user.userItems.size() != 0) {
             Intent intent = new Intent(this, ConfirmOrderActivity.class);
+            intent.putExtra("restaurantID", restID);
             startActivity(intent);
         } else {
             Toast.makeText(getApplicationContext(),

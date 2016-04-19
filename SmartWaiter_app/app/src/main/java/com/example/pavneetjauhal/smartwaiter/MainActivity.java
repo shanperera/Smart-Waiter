@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList category;
         ArrayList items;
 
+
         /* Added to test functionality so far */
         local_database.queryAllRestautant();
         try {
@@ -93,8 +94,11 @@ public class MainActivity extends AppCompatActivity {
                 menuCategoryList.get(x).categoryItems = local_database.getItemNames(items);
             }
 
+            String restID = qrCode.substring(qrCode.indexOf('-') + 1, qrCode.length());
             Intent intent = new Intent(this, DisplayCategoriesActivity.class);
+            intent.putExtra("restaurantID", restID);
             startActivity(intent);
+
         } catch (Exception e) {
             Log.d("code", String.valueOf(e));
             failCount ++;

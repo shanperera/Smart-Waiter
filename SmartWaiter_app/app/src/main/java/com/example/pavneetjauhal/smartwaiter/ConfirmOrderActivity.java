@@ -11,11 +11,19 @@ import android.widget.TextView;
 
 public class ConfirmOrderActivity extends AppCompatActivity {
 
+    public String restID;
+    public int index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_confirm_order);
         setTitle("Confirm Order");
+
+        Intent intent = getIntent();
+        restID = (String) intent.getSerializableExtra("restaurantID");
+        Bundle b = getIntent().getExtras();
+        index = b.getInt("index");
+
         popualteCartListView();
         displayTotal();
     }
@@ -34,6 +42,7 @@ public class ConfirmOrderActivity extends AppCompatActivity {
 
     public void proceedPayment(View view) throws Exception {
         Intent intent = new Intent(this, GetPaymentInformationActivity.class);
+        intent.putExtra("restaurantID", restID);
         startActivity(intent);
     }
 
