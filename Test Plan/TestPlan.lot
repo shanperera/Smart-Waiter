@@ -1,5 +1,8 @@
-\contentsline {table}{\numberline {1}{\ignorespaces Database Correctness}}{12}{table.1}
-\contentsline {table}{\numberline {2}{\ignorespaces Performance Automated Tests}}{13}{table.2}
-\contentsline {table}{\numberline {3}{\ignorespaces Security Test}}{14}{table.3}
-\contentsline {table}{\numberline {4}{\ignorespaces Reliability Automated Tests}}{15}{table.4}
-\contentsline {table}{\numberline {5}{\ignorespaces Barcode Scanning Test}}{16}{table.5}
+\contentsline {table}{\numberline {1}{\ignorespaces Database Correctness}}{13}{table.1}
+\contentsline {table}{\numberline {2}{\ignorespaces Performance Automated Tests}}{14}{table.2}
+\contentsline {table}{\numberline {3}{\ignorespaces Security Test}}{15}{table.3}
+\contentsline {table}{\numberline {4}{\ignorespaces Reliability Automated Tests}}{16}{table.4}
+\contentsline {table}{\numberline {5}{\ignorespaces Barcode Scanning Test}}{17}{table.5}
+\contentsline {table}{\numberline {6}{\ignorespaces Account Signup and Login Test}}{19}{table.6}
+\contentsline {table}{\numberline {7}{\ignorespaces Item Selection and Customization Test Cases}}{20}{table.7}
+\contentsline {table}{\numberline {8}{\ignorespaces Order Transaction Test Cases}}{22}{table.8}

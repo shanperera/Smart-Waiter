@@ -48,6 +48,15 @@ April 16, 2016 &  Addressed more Dan's comments in regards to spelling and gramm
 \end{tabular}
 
 \pagebreak
+
+\section{Document Changes}
+\begin{itemize}
+ \item Added specific testing for item selection and customization
+ \item Updated testing tables according to Dan's comments. As well, added more test cases
+ \item Added table figure numbers.
+ \item Added testing schedule
+ \end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
 %	1.) General Information 
@@ -340,7 +349,7 @@ Manual black box tests will be performed to assess barcode scanning. This test w
   \caption{Barcode Scanning Test}
 \end{table}
 
-\subsection{Account Login}
+\subsection{Account Sign up and Login}
 Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 
 \subsubsection{Test Type}
 \begin{itemize}
@@ -353,24 +362,6 @@ Smart-Waiter must use accounts to keep track of a user's personal information. T
   \item data integrity
 \end{itemize}
 
-\begin{comment}
-\subsubsection{Inputs}
-\begin{itemize}
-  \item A new user's credentials, with valid information: username, first name, last name, date of birth, email, address, credit card
-  \item A new user's credentials, with valid information but a fake credit card
-  \item A Google account
-  \item A Facebook account
-\end{itemize}
-\subsubsection{Outputs}
-\begin{itemize}
-  \item A message M, containing either a success of failure message, depending on the account information given. 
-  \item A new user's credentials, with valid information but a fake credit card
-  \item My Account menu
-  \item Add Credit Card menu
-  \end{itemize}
-\subsubsection{Initial State}
-Create account menu, empty
-\end{comment}
 
 \subsubsection{Methods of testing}
 Dynamic testing is used to ensure correctness and data integrity, and to observe the application behaviour when given incorrect information.
@@ -379,11 +370,11 @@ Dynamic testing is used to ensure correctness and data integrity, and to observe
 \newline
 \textit{Summary}\newline
 Manual dynamic tests will be performed to evaluate the account creation module. This test will be in the form of structural testing. The tests being performed on the module are presented below. 
-\newline
+\pagebreak
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{accountTC.png}
-\ds{Test 1 should state it uses a username that is already in use. Why are
-there no tests for invalid Google/Facebook accounts?}
-
+  \caption{Account Signup and Login Test}
+\end{table}
 \subsection{Item Selection and Customization}
 Smart-Waiter needs to ensure a user is able to select, customize and add item to cart. 
 
@@ -407,8 +398,11 @@ Item selection and customization is performed using  dynamic unit testing. The g
 \textit{Summary}\newline
 Manual black box tests will be performed to assess item customization and for the ability to add to cart. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate functional test factors.
 
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{itemselection.png}
 
+\begin{table}[h]
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{itemselection.png}
+  \caption{Item Selection and Customization Test Cases}
+\end{table}
 
 \subsection{Order Transaction}
 Smart-Waiter needs to ensure that a user can send in their order, and pay for their order easily and securely. Order transaction will be vigorously tested to ensure complete customer satisfaction.  
@@ -452,7 +446,11 @@ Dynamic testing is used to ensure validity, record the number of successful test
 \textit{Summary}\newline
 Manual dynamic tests will be performed to evaluate the order transaction module. This test will be in the form of structural testing. It will test vigorously for all possible inputs of credit card information and account details. The tests being performed on the module are presented below. 
 \newline
+
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{orderTransactionTC.png}
+  \caption{Order Transaction Test Cases}
+\end{table}
 \subsection{Usability Testing}
 The goal of usability testing is to verify if a user can successfully use all functionalities of the application from start to finish in a timely manner. This type of testing aids in evaluating if functional requirements are met. As well it provides scope for evaluating non functional requirements.
 \subsubsection{Nonfunctional Test Factors}
@@ -494,8 +492,12 @@ The survey consists of seven questions. Participants are asked to give each ques
 \end{enumerate}
 
 \section{Testing Schedule}
-Active testing is necessary to build Smart-Waiter into a successful application. Therefore, testing will be performed on numerous occasions throughout the development of this application. 
-\ds{When specifically? This should be in your schedule.}
+Active testing is necessary to build Smart-Waiter into a successful application. Therefore, complete system testing will be performed on these dates: 
+\begin{description}
+\item [November 16, 2015] POC System Test
+\item [February 1, 2016] Rev 0 System Test
+\item [April 16, 2016] Final Demo System Test
+\end{description}
 Individual testing will be performed before any code is committed to the repository.
 \ds{That is fine, however, there should be milestones where testing will be performed 
 on a predetermined schedule.}

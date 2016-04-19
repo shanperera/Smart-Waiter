@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -13,6 +14,7 @@ import java.io.IOException;
 
 public class LoginActivity extends AppCompatActivity {
     static User user = new User();
+    Button signIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         setContentView(R.layout.activity_login);
+
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         Utils.makeStatusBarTranslucent(this, true);
     }
@@ -44,6 +47,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         } else {
             Toast.makeText(getApplicationContext(), "Please create user account", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+        signIn = (Button) findViewById(R.id.signup);
+        if (user != null && user.getPassword() != null && user.getSalt() != null){
+            signIn.setVisibility(View.GONE);
+        }
+        else{
+            signIn.setVisibility(View.VISIBLE);
         }
 
     }
