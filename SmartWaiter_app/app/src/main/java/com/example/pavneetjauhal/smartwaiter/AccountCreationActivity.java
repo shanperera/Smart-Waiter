@@ -6,10 +6,17 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+/*
+ * Class to create account for the application. The function implements the
+ * account creation activity, which extracts information from text boxes and
+ * stores information in the local database.
+ */
 public class AccountCreationActivity extends AppCompatActivity {
 
     User newUser;
 
+    /* Set activity title and content to the create account activity */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +24,15 @@ public class AccountCreationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account_creation);
     }
 
+    /*
+     * This function is used to create account and store it in the
+     * local instance of Couchbase Lite. The function incorporates
+     * basic sanity checks on the different fields as well.
+     *
+     * Input - View
+     * Output - None
+     *
+     * */
     public void createAccount(View button) throws Exception {
             EditText getFields = (EditText) findViewById(R.id.passwordEditText);
             String password = getFields.getText().toString();
@@ -47,7 +63,7 @@ public class AccountCreationActivity extends AppCompatActivity {
 
             getFields = (EditText) findViewById(R.id.phoneNumberEditText);
             String phoneNum = getFields.getText().toString();
-        /* Store Password */
+            /* Store Password */
             LocalAuth auth = LocalAuth.computeSaltedHash(password);
             newUser = new User(auth.salt, auth.password, firstName, lastName, address, postCode, phoneNum);
             LoginActivity.user = newUser;

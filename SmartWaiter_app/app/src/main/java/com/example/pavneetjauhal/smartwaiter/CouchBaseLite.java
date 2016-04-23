@@ -28,14 +28,19 @@ import java.util.Set;
 
 /**
  * Created by pavneetjauhal on 15-11-16.
+ *
+ * Couchbase Lite Class used to manage Orders, Usser Account and
+ * restaurant menus CouchBase instances on the device.
+ *
  */
 public class CouchBaseLite {
+    /* Define global variables to be used in the Couchbase Lite class */
     private static final String DB_NAME = "restaurant_menus";
     private static final String DB_ORDER = "local_orders";
     private static final String DB_USER = "user_data";
     private static final String TAG = "SmartWaiter";
     //private static final String HOST = "http://192.168.0.35";
-    private static final String HOST = "http://162.243.20.236";
+    private static final String HOST = "http://192.168.43.200";
     private static final String PORT = "4984";
     /* Key definitions for document */
     private static final String NAME = "Res_Name";
@@ -49,6 +54,14 @@ public class CouchBaseLite {
     Database database3 = null;
     User user = null;
 
+    /*
+    * Constructor to create the database instances.
+    * Creates a new instance of database if one does not exist.
+    * However, if an instance does exist, then simply returns
+    * instance
+    *
+    * Input - ActivityContext, User
+    */
     public CouchBaseLite(Context context, User user) throws IOException, CouchbaseLiteException {
         this.manager = new Manager(new AndroidContext(context), Manager.DEFAULT_OPTIONS);
         this.database = manager.getDatabase(DB_NAME);
@@ -58,6 +71,11 @@ public class CouchBaseLite {
         Log.d(TAG, "################ Create Couch Base Lite database ################");
     }
 
+    /*
+    * Returns the CouchBase Lite instance to the caller
+    *
+    * Input - ActivityContext, User
+    */
     public static CouchBaseLite getInstance(Context context, User user) {
         if (instance == null) {
             try {
@@ -70,20 +88,21 @@ public class CouchBaseLite {
         return instance;
     }
 
+    /* Returns Menu database to the caller */
     public Database getMenuDatabase() throws CouchbaseLiteException {
         if ((this.database == null) & (this.manager != null)) {
             this.database = manager.getDatabase(DB_NAME);
         }
         return database;
     }
-
+    /* Returns Orders database to the caller */
     public Database getOrderDatabase() throws CouchbaseLiteException {
         if ((this.database2 == null) & (this.manager != null)) {
             this.database2 = manager.getDatabase(DB_ORDER);
         }
         return database2;
     }
-
+    /* Return User database to the user */
     public Database getUserDatabase() throws CouchbaseLiteException {
         if ((this.database3 == null) & (this.manager != null)) {
             this.database3 = manager.getDatabase(DB_USER);
@@ -91,7 +110,10 @@ public class CouchBaseLite {
         return database3;
     }
 
-    /* Method to add all user information to local database */
+    /*
+    * Method to add all user information to local user database
+    * Input - User userData
+    */
     public void storeUserData(User userData) throws CouchbaseLiteException, NullPointerException {
         Document userdocument = this.getUserDatabase().getDocument("userData");
         Map<String, Object> properties = new HashMap<String, Object>();
@@ -112,6 +134,10 @@ public class CouchBaseLite {
         userdocument.putProperties(properties);
     }
 
+    /*
+     * Extracts the information from the database and loads
+     * it into memory.
+     */
     public void populateUserData() throws CouchbaseLiteException {
         Document userdocument = this.getUserDatabase().getDocument("userData");
         if (userdocument.getProperties() != null
@@ -134,16 +160,33 @@ public class CouchBaseLite {
         return restaurantMenu;
     }
 
+    /* Used for logging restaurant menu information in debug mode */
     public void outputContent(Document restaurantMenu) {
         Log.d(TAG, "###### Restaurant Menu Content ######" + restaurantMenu.getProperties());
     }
 
+    /*
+    * The function performs a database query by name and returns the
+    * resulting name if match found. Also used for logging restaurant name
+    * information in debug mode
+    *
+    * Input - Document restaurantMenu
+    * Output - String restaurantName
+    *  */
     public String getRestaurantName(Document restaurantMenu) {
         String restaurantName = (String) restaurantMenu.getProperty(this.NAME);
         Log.d(TAG, "###### Restaurant Name = " + restaurantName);
         return restaurantName;
     }
 
+    /*
+    * The function performs a database query by category and returns the
+    * resulting category list if match found. Also, used for logging restaurant name
+    * information in debug mode
+    *
+    * Input - Document restaurantMenu
+    * Output - ArrayList categories
+    *  */
     public ArrayList getCategoriesItems(Document restaurantMenu) {
         ArrayList category = new ArrayList();
         category = (ArrayList) restaurantMenu.getProperty(this.CATEGORY);
@@ -151,6 +194,14 @@ public class CouchBaseLite {
         return category;
     }
 
+    /*
+    * The function performs a database query for menu items and returns the
+    * resulting items list if match found. Also, used for logging restaurant name
+    * information in debug mode
+    *
+    * Input - Document restaurantMenu, String category
+    * Output - ArrayList items
+    *  */
     public ArrayList getMenuItems(Document restaurantMenu, String category) {
         ArrayList items = new ArrayList();
         items = (ArrayList) restaurantMenu.getProperty(category);
@@ -158,6 +209,14 @@ public class CouchBaseLite {
         return items;
     }
 
+    /*
+    * The function performs a database query for Category Names and returns the
+    * resulting items list if match found. Also, used for logging restaurant categories
+    * information in debug mode
+    *
+    * Input - ArrayList categoryItems
+    * Output - ArrayList ListOfCategories
+    *  */
     public List getCategoryNames(ArrayList categoryItems) {
         List<MenuCategories> menuList = new ArrayList<MenuCategories>();
         String categoryName = null;
@@ -194,6 +253,13 @@ public class CouchBaseLite {
         return menuList;
     }
 
+    /*
+    * The function performs a database query for extracting customizable information
+    * regarding menu items.
+    *
+    * Input - ArrayList categoryItems
+    * Output - ArrayList ListOfCategories
+    */
     public List getItemNames(ArrayList categoryItems) {
         List<MenuItems> itemList = new ArrayList<MenuItems>();
         String itemName = null;
@@ -229,16 +295,13 @@ public class CouchBaseLite {
                 if (me.getKey() == "toppings") {
                     ArrayList<Object> temp = new ArrayList();
                     temp.add(me.getValue());
-                    Log.d("work mofo", "HELLO MOFO" + temp.get(0));
                     itemToppings = (ArrayList) temp.get(0);
-                    //Log.d("work mofo2", "HELLO MOFO2"+ al1.get(0));
                 } else {
                     itemToppings = null;
                 }
                 if (me.getKey() == "sides") {
                     ArrayList<Object> temp2 = new ArrayList();
                     temp2.add(me.getValue());
-                    Log.d("work mofo", "HELLO MOFOSIDES" + temp2.get(0));
                     itemSides = (ArrayList) temp2.get(0);
                 }
             }
@@ -248,28 +311,6 @@ public class CouchBaseLite {
             Log.d(TAG, (String) itemList.get(x).getItemName());
         }
         return itemList;
-    }
-
-    public void getCategoryItems2(Document restaurantMenu, String categoryName) {
-        ArrayList listOfItems = new ArrayList();
-        listOfItems = (ArrayList) restaurantMenu.getProperty(categoryName);
-        Log.d(TAG, String.format("###### Section = %s = %s", categoryName, listOfItems));
-    }
-
-    public void getValuesFromList(ArrayList arrayItems) {
-        LinkedHashMap values_hash = new LinkedHashMap();
-        for (int i = 0; i < arrayItems.size(); i++) {
-            values_hash = (LinkedHashMap) arrayItems.get(i);
-            Set set = values_hash.entrySet();
-            // Get an iterator
-            Iterator j = set.iterator();
-            // Display elements
-            while (j.hasNext()) {
-                Map.Entry me = (Map.Entry) j.next();
-                //Log.d(TAG, (me.getKey() + ": "));
-                Log.d(TAG, (String) me.getValue());
-            }
-        }
     }
 
     /* Method used for testing for now. Can be used later to query all docs */
@@ -288,6 +329,12 @@ public class CouchBaseLite {
         }
     }
 
+    /*
+    * Method to construct URL to reach the cloud database
+    * Input - String host, String port, String database_name
+    * Output - Returns the constructed URL in string
+    *
+    */
     private URL createSyncURL(String host, String port, String db_name)
             throws MalformedURLException {
         URL syncURL = null;
@@ -295,6 +342,13 @@ public class CouchBaseLite {
         return syncURL;
     }
 
+    /*
+    * Method to populate the ordered items into the database instance
+     *
+    * Input - List userItems
+    * Output - List orderItems
+    *
+    */
     public List<OrderItems> populateOderitems(List<UserItems> userItems) {
         List<OrderItems> orderItems = new ArrayList<>();
         for (int i = 0; i < userItems.size(); i++) {
@@ -306,6 +360,12 @@ public class CouchBaseLite {
         return orderItems;
     }
 
+    /*
+     * Method to convert all user information into a record and send it off
+     * to the cloud database. Used to send orders to the cloud.
+     *
+     * Input - List UserItems
+     */
     public void createItem(List<UserItems> UserItems) throws Exception {
         /* Truncate barcode to extract the table number */
         String tableNumber = MainActivity.qrCode.substring(MainActivity.qrCode.indexOf('-') + 1,
@@ -330,6 +390,12 @@ public class CouchBaseLite {
         setpushfilter(timestamp);
     }
 
+    /*
+     * Method used to setup a continuous push filter, which will
+     * attempt to send the orders on a continuous bases
+     *
+     * Input - String timestamp
+     */
     public void setpushfilter(final String timestamp)
             throws CouchbaseLiteException, MalformedURLException {
         // Define a filter that matches only docs with a given "Current Time" property.
@@ -356,6 +422,13 @@ public class CouchBaseLite {
         push.setContinuous(true);
     }
 
+
+    /*
+     * Method used to setup a continuous pull filter, which will
+     * attempt to download menus from the remote database.
+     *
+     * Input - None
+     */
     public void startReplications() throws CouchbaseLiteException, MalformedURLException {
         final Replication pull =
                 this.getMenuDatabase().createPullReplication(this.createSyncURL(HOST, PORT, DB_NAME));
