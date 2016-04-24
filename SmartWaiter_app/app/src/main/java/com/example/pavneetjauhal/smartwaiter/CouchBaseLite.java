@@ -39,8 +39,9 @@ public class CouchBaseLite {
     private static final String DB_ORDER = "local_orders";
     private static final String DB_USER = "user_data";
     private static final String TAG = "SmartWaiter";
-    //private static final String HOST = "http://192.168.0.35";
-    private static final String HOST = "http://192.168.43.200";
+    private static final String HOST = "http://192.168.0.35";
+    //private static final String HOST = "http://192.168.43.200";
+    //private static final String HOST = "http://162.24.20.236";
     private static final String PORT = "4984";
     /* Key definitions for document */
     private static final String NAME = "Res_Name";

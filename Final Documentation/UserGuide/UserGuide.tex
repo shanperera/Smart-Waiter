@@ -60,13 +60,13 @@ February 29, 2016 & All sections complete \\
 \textbf{Date}  & \textbf{Changes Made} \\ \hline
 April 24, 2016 &  Reduced RAM system requirements. \\ 
 \hline
-February 27, 2016 & Create Account section complete. \\
+April 24, 2016 & Changed figures to use refs and labels. \\
 \hline
-February 28, 2016 & Account Setup complete \\
+April 24, 2016 & Updated screenshots of Smart-Waiter UI \\
 \hline
-February 28, 2016 & Placing an Order complete \\
+April 24, 2016 & Removed Edit Account settings section since it was not implemented \\
 \hline
-February 29, 2016 & All sections complete \\
+April 24, 2016 & Added Complete Installation Guide \\
 \hline
 \end{tabular}
 \caption{Changes made to documents in the final revision}
@@ -111,9 +111,9 @@ Recommended Requirements:
 \end{enumerate}
 
 \subsection{Installation Instructions}
-Instructions for installing Smart-Waiter with 3 different methods are presented below. Currently, the only way to install Smart-Waiter is through Android Studio. Once the final revision is complete, installation using the application APK or through the Play Store will be available.
+Instructions for installing Smart-Waiter with 3 different methods are presented below. Currently, the only way to install Smart-Waiter is through Android Studio and through the APK. Our Google Play developer account is currently pending, awaiting approval.
 
-\textbf{\newline Installation through the Play Store:}
+\textbf{\newline Installation through the Play Store (Currently Unavailable):}
 	\begin{enumerate}
 		\item Open the Play Store application on your device.
 		\item Press the Search Button
@@ -125,8 +125,8 @@ Instructions for installing Smart-Waiter with 3 different methods are presented 
 \textbf{\newline Installation with APK:}
 	\ds{You should mention they will need a file explorer on their device (does not come standard)}
 	\begin{enumerate}
-		\item Download the APK file from the Smart-Waiter Git Repository
-		\item Open your device's \emph{File Explorer} application
+		\item Download the APK file from the Smart-Waiter Git Repository root directory
+		\item Open your device's \emph{File Explorer} application: NOTE: If you do not have a file explorer application please refer to the \texttt{Installing a File Explorer Application} section below.
 		\item Navigate to the folder where the APK file was saved
 		\item Open the APK file using your device's \emph{File Explorer}
 		\item Press the \texttt{Install} button
@@ -145,23 +145,48 @@ Instructions for installing Smart-Waiter with 3 different methods are presented 
 		\item Press the \texttt{Run 'app'} button or a \texttt{Shift+F10}
 		\item Select your Android device from the \emph{Choose a running device} section
 		\begin{center}
-			\includegraphics[width=1.0\textwidth]{android-studio.png}
-			\linebreak Figure 1 \ds{Use captions and label figures descriptively.}
+		\begin{figure}
+					\label{fig:fig1}
+					\includegraphics[width=1.0\textwidth]{android-studio.png}
+			\linebreak \caption{Installing Smart-Waiter through Android Studio} \ds{Use captions and label figures descriptively.}
+		\end{figure}
 		\end{center}
 		\item Press the \texttt{OK} button		
 	\end{enumerate}
 You have successfully installed Smart-Waiter on your Android device.
 
+\textbf{\newline Installing a File Explorer Application:}
+	\begin{enumerate}
+		\item Open the Play Store application on your device
+		\item Press the \texttt{Search} button
+		\item Enter \texttt{ES File Explorer} into the search field.
+		\item Select \texttt{ES File Explorer File Manager} from the search results, ensure you are downloading the free version.
+		\item Press the \texttt{Install} button
+	\end{enumerate}
+	
+\textbf{\newline Navigating to your downloaded files:}
+	\begin{enumerate}
+		\item Open the \texttt{ES File Explorer} application
+		\item The application should bring you to your Android system root directory
+		\item The default location for your downloaded files should be in \texttt{Download}
+		\item Navigate to the \texttt{Download} folder
+		\item Click the \texttt{smart-waiter.apk} file.
+		\item Click the \texttt{Install} button.
+	\end{enumerate}	
+
+
 \section{Account Setup}
 \subsection{Creating an Account}
-If this is the first time that Smart-Waiter is launched, you will be asked to create an account. You will be brought to the Account Creation screen as soon as Smart-Waiter is initialized. Your screen will look similar to Figure 1 
+If this is the first time that Smart-Waiter is launched, you will be asked to create an account. You will be brought to the Account Creation screen as soon as Smart-Waiter is initialized. Your screen will look similar to Figure \ref{fig:fig1} 
 \ds{Figure 2. You should be using refs instead of manually typing figure names.}
 below. 
 
 \begin{center}
-\includegraphics[width=0.5\textwidth]{accountCreation.PNG} 
-	\ds{Your filename is accountCreation.PNG not .png, I've fixed it for now.}
-\linebreak Figure 2 
+	\begin{figure}
+	\includegraphics[width=0.5\textwidth]{accountCreation.PNG} 
+	\label{fig:fig2}
+	\linebreak \caption{The Create Account screen}
+	\end{figure}
 \end{center}
 
 The instructions to create an account are as follows: 
@@ -169,55 +194,13 @@ The instructions to create an account are as follows:
 	\item Choose a password between 2-5 characters long.
 	\item Enter your first name into the corresponding field.
 	\item Enter your last name into the corresponding field.
-	\item Enter the first line of your home address as it appears on your mail. Ex: \texttt{125 Royal Ave}
-	\item Enter your postal code in the following format: \texttt{L4H 3Y4}
-	\item Enter your phone number in the following format: \texttt{4165551911}
+	\item (OPTIONAL) Enter the first line of your home address as it appears on your mail. Ex: \texttt{125 Royal Ave}
+	\item (OPTIONAL) Enter your postal code in the following format: \texttt{L4H 3Y4}
+	\item (OPTIONAL) Enter your phone number in the following format: \texttt{4165551911}
 	\item Press the \texttt{Create Account} button.
 \end{enumerate}
 
 Your Smart-Waiter account has now been successfully created.
-\subsection{Accessing Account Settings}
-This feature is set to be implemented in our final revision. For the time being, a general walk-through is given using a generic android application settings module. To access your Account Settings in Smart-Waiter proceed with the following steps:
-
-\begin{enumerate}
-	\item Press the button with 3 horizontal white lines on the top right-hand corner of the screen to bring up the Navigation menu, as seen 			in Figure 2: 
-	\ds{All your figure numbers are wrong}
-	\begin{center}
-	\includegraphics[width=0.05\textwidth]{ui-fragment-button.png}
-	\linebreak Figure 3
-	\end{center}
-
-	\item Press the \texttt{Settings} button in the Navigation Menu as seen 	in Figure 3:
-
-	\begin{center}
-	\includegraphics[width=0.4\textwidth]{nav-menu.png}
-	\linebreak Figure 4
-	\end{center}
-
-\end{enumerate}
-
-From here you can edit your Account Settings. You can perform the following actions in the settings page: \texttt{Change Password} and \texttt{Edit Personal Details}.
-
-\textbf{Changing Your Password:}
-	\begin{enumerate}
-		\item Press the \texttt{Change Password} label.
-		\item Enter your current password into the corresponding field
-		\item Press the \texttt{Confirm} button
-		\item Enter a new password between 2-5 characters
-		\item Enter your new password again into the \texttt{Confirm Password} field
-		\item Press the \texttt{Update Password} button.
-	\end{enumerate}
-	
-\textbf{Editing Your Personal Details:}
-	\begin{enumerate}
-		\item Press the \texttt{Edit Personal Details} label.
-		\item Enter your updated information into the corresponding field
-		\begin{enumerate}
-			\item \textbf{NOTE:} If you leave a field blank, the 						information for the corresponding field will not be updated.
-		\end{enumerate}
-		\item Press the \texttt{Save Changes} button.
-	\end{enumerate}
-
 \section{View Restaurant Menu}
 The following section provides step by step process of how to access restaurant menu using Smart-Waiter. As well it provides a detail overview of menu layout.
 \subsection{Scanning Barcode}
@@ -246,14 +229,14 @@ After successfully scanning a barcode, the application will transition to the re
 \subsubsection{Menu Categories}
 The first section called upon is menu categories. This is a single page that displays category names of a restaurant menu. Each category contains a list of items available to order at the restaurant.
 
-\begin{center}\includegraphics[scale=0.15]{category.png}	\linebreak Figure 7\end{center}
+\begin{center}\includegraphics[scale=0.15]{main-menu.png}	\linebreak Figure 7\end{center}
 
 \noindent To view items of a category, tap on the name. This will transition the page to menu items section.
 
 \subsubsection{Menu Items}
 This section contains a single page that displays menu items specific to the category selected. To select an item, tap on the row. This will transition to the next section to allow customization of the selected item. 
 
-\begin{center}\includegraphics[scale=0.15]{items.png}\end{center}
+\begin{center}\includegraphics[scale=0.15]{appetizers.png}\end{center}
 
  
 \subsubsection{Customize Item}
@@ -285,7 +268,7 @@ Once complete, tap "Add to Cart" button on the bottom of the page. This will add
 \subsubsection{Menu Cart}
 
 Menu cart section contains all items selected to order. During any section after scanning the barcode, you can view your cart by tapping "Cart" on the title bar.
-\begin{center}\includegraphics[scale=0.15]{titlebar.png}	\linebreak Figure 11\end{center}
+\begin{center}\includegraphics[scale=0.75]{titlebar.png}	\linebreak Figure 11\end{center}
 
 \noindent Doing so will transition the page to cart page. Every item selected is presented in sequent rows on this page. Specifically, the item name, price, and custom details are provided for review. There are several options available on this page:
 
@@ -317,7 +300,7 @@ This section will walk-through how to add an item to your cart. In this case we 
 		
 		\item Given the selected item, the only means of customization is special instructions. Thus, enter any special instructions you may have for the menu 					item. Ex: \texttt{Easy on the salad dressing} - Refer to Figure 			6
 		\begin{center}
-			\includegraphics[width=0.5\textwidth]{special-instructions.png}
+			\includegraphics[width=0.5\textwidth]{instructions.png}
 			\linebreak Figure 15
 		\end{center}		
 	
@@ -408,8 +391,7 @@ Note:  \emph{Please follow section 5.1 before reporting any bugs.  In majority o
 	You can always change your account information through the settings gear icon on the barcode-scanning screen.
 	\item \emph{Can I place multiple orders from same table?}\\\\
 	Yes, you can place multiple orders from multiple devices from the same table. There are no extra fees associated with this. 
-	\item \emph{Why can't \ds{I? We? Someone?}
-	see some of the deals in the restaurant through the application?}\\\\
+	\item \emph{Why can't I see some of the deals in the restaurant through the application?}\\\\
 	This can occur if the restaurant has not uploaded their latest data to the application. Please be sure to report this bug and we will follow up on it.
 \end{enumerate}
 	
