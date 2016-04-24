@@ -1,0 +1,76 @@
+Structural Testing:
+Structural testing, also known as white box testing, focuses on the testing of a program's internal structure. It tests the program's non functional requirements and is more concerned about abnormal or extreme behaviour that the program exhibits when given unexpected or even expected inputs.
+
+
+
+
+Account Login
+Smart-Waiter must use accounts to keep track of a user's personal information. The account module has to provide a secure login service. 
+
+Test Type
+Manual, functional dynamic test
+
+Test Factors
+Correctness, data integrity
+
+Inputs
+A new user's credentials, with valid information: username, first name, last name, date of birth, email, address, credit card \\
+A new user's credentials, with valid information but a fake credit card \\
+A Google account \\
+A Facebook account \\
+
+Outputs
+A message M, containing either a success of failure message, depending on the account information given. \\
+My Account menu \\
+Add Credit Card menu \\
+
+Initial State
+Create account menu, empty
+
+Methods of testing
+Dynamic testing is used to ensure correctness and data integrity, and to observe the application behaviour when given incorrect information.
+
+Test Cases
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{accountTC.png}
+
+
+
+
+Order Transaction
+Smart-Waiter needs to ensure that a user can send in their order, and pay for their order easily and securely. Order transaction will be vigorously tested to ensure complete customer satisfaction.  
+
+Test Type:
+Manual, functional dynamic test 
+
+Test Factors
+Correctness, reliability, data integrity, data security, ease of use, 
+
+Inputs
+A set \texorpdfstring{n\textsubscript{i}}{ni} of 10 random orders consisting of different menu items, created manually, where i = 0, 1, 2 .. 9, where i = 0..4 are invalid orders with respect to the restaurant's policies and where i = 5..9 are valid orders. \\
+A valid credit card \\
+An expired credit card \\
+A fake credit card \\
+A VISA debit card \\
+A VISA gift card \\
+
+Outputs
+An order summary Oi, where i corresponds to the i-th order from the set of orders ni. \\
+A message M, containing either a success or failure message, depending on the card type used. 
+
+Initial State
+
+Order Test Cases: Restaurant menu module
+Credit Card Test Cases: Payment confirmation menu
+
+Methods of testing:
+Dynamic testing is used to ensure validity, record the number of successful tests given a sample.
+
+Test Cases
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{orderTransactionTC.png}
+
+
+
+
+
+
+

@@ -5,8 +5,8 @@
 \contentsline {subsection}{\numberline {1.4}Installation Instructions}{4}
 \contentsline {section}{\numberline {2}Account Setup}{6}
 \contentsline {subsection}{\numberline {2.1}Creating an Account}{6}
-\contentsline {section}{\numberline {3}View Restaurant Menu}{8}
-\contentsline {subsection}{\numberline {3.1}Scanning Barcode}{8}
+\contentsline {section}{\numberline {3}View Restaurant Menu}{7}
+\contentsline {subsection}{\numberline {3.1}Scanning Barcode}{7}
 \contentsline {subsection}{\numberline {3.2}Menu Layout}{10}
 \contentsline {subsubsection}{\numberline {3.2.1}Menu Categories}{10}
 \contentsline {subsubsection}{\numberline {3.2.2}Menu Items}{11}
