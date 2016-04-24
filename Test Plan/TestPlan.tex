@@ -26,10 +26,9 @@
 \begin{document}
 
 \title{Smart Waiter Test Plan} 
-\author{Meraj Patel (patelmu2) \\ Pavneet Jauhal (jauhalps)\\ Shan Perera (pererali)}
+\author{Meraj Patel \#1137491 \\ Pavneet Jauhal \#1149311\\ Shan Perera \#1150394}
 \date{\today}
 \maketitle
-\ds{Missing Student Numbers.}
 
 \pagebreak
 
@@ -51,10 +50,15 @@ April 16, 2016 &  Addressed more Dan's comments in regards to spelling and gramm
 
 \section{Document Changes}
 \begin{itemize}
- \item Added specific testing for item selection and customization
- \item Updated testing tables according to Dan's comments. As well, added more test cases
+ \item Updated testing tables according to Dan's comments. As well, added more test cases. This is seen in: 
+ \begin{itemize}
+ \item Section 6: Database testing
+ \item Section 7.1: Barcode Scanning (now includes deprecated barcodes)
+ \item Section 7.2: Account Sign up and Login
+ \item Section 7.3: Item Selection and Customization (new)
+ \end{itemize}
  \item Added table figure numbers.
- \item Added testing schedule
+ \item Added testing schedule (section 8)
  \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,8 +69,7 @@ April 16, 2016 &  Addressed more Dan's comments in regards to spelling and gramm
 
 \section{General Information}
 The following section provides an overview of the test plan 
-for Smart-Waiter.
- This section explains the purpose of this document, the scope of the system, and an overview of the following sections
+for Smart-Waiter.This section explains the purpose of this document, the scope of the system, and an overview of the following sections.
 
 %1.1 Purpose
 \subsection{Purpose}
@@ -79,9 +82,13 @@ This test plan is used to evaluate Smart Waiter functionality. Various plans are
 
 \subsection{Overview of Document }
 The following sections provide more detail about types of test that will be used. Information about the testing process is provided, and the software specifications
-that were discussed in the SRS document are stated. Testing processes is split up between system test for POC and the final demonstration. 
+that were discussed in the requirements document are stated. Testing processes are split up between system test for POC and the final demonstration. 
 
-\ds{Acronyms should be defined somewhere.}
+\subsection{Acronyms}
+\begin{description}
+\item[SRS] Software Requirements Specification
+\item[POC] Proof of concept demonstration
+\end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -91,15 +98,15 @@ that were discussed in the SRS document are stated. Testing processes is split u
 
 \section{Plan}
 This section provides a description of the software that is being tested, the team that will
-perform the testing, the milestones for the testing phase, and the budget allocated to the testing. 
+perform the testing, and milestones for the testing phase.
 
 %2.1 Software Description
 \subsection{Software Description}
-The software being tested is for Smart Waiter Solutions. The project aims to provide a solution that will allow users to order and pay through a mobile application at restaurants. 
+Smart-Waiter aims to provide a solution that will allow users to order and pay through a mobile application at restaurants. 
 
 %2.2 Test Team
 \subsection{Test Team} 
-The team that will execute the test cases, write and review Smart Waiter consists of:
+Team members who will write, review and execute test cases for Smart Waiter are: 
 
 \begin{itemize}
  \item Pavneet Jauhal
@@ -113,25 +120,22 @@ The team that will execute the test cases, write and review Smart Waiter consist
 
 %2.3.1 Location
 \subsubsection{Location}
-The location where the testing will be performed is Hamilton Ontario. Specifically, we will be performing the testing in McMaster University. 
+The location where testing will be performed is McMaster University, Hamilton Ontario.
 
 
 %2.3.1 Dates and Deadlines
 \subsubsection{Dates and Deadlines}
 
 Test Case Creation:
-Creation of POC test cases begin October 19, 2015 and is expected to end November 16, 2015. Proceeding, test cases for final demonstration will be created and is expected to be complete by February 1, 2016.
+Creation of POC test cases begin October 19, 2015, and is expected to end November 16, 2015. Proceeding, test cases for final demonstration will be created and finished by February 1, 2016.
 \newline
 \newline
 Test Case Implementation:
-Implementing test cases for POC system test is scheduled to begin November 15, 2015 is expected to be complete in approximately one week.
+Implementing test cases for POC system test is scheduled to begin November 15, 2015 and will be completed in approximately one week.
 \newline
 \newline
 Implementing test cases for Final Demonstration system test is scheduled to begin February 1, 2016, and will be completed in approximately three weeks. 
 
-
-\subsection{Budget}
-N/A
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -150,16 +154,21 @@ software is expected to complete, and the non-functional requirements the softwa
 \begin{itemize}
 \item The product shall scan a bar code to access the restaurant menu from a database
 \item The product shall allow the user to register an account for complete access to payment services
-\item The product shall allow the user to report bugs
+\item The product will allow users to add and customize items to cart
 \item The product will allow users to place their order
 \item The product will allow users to pay for their order using a credit card
 \end{itemize}  
 
 %3.2 Nonfunctional Requirements
 \subsection{Nonfunctional Requirements}
-Priority nonfunctional requirements are performance, ease of use, reliability, security and maintainability.
-
-
+Priority non functional requirements are:
+\begin{itemize}
+\item Performance
+\item Ease of use
+\item Reliability
+\item Security
+\item Maintainability
+\end{itemize} 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
 %	4.) Test Types
@@ -179,11 +188,11 @@ Testing of Smart Waiter will consist of various types of tests explained in the 
 
 % 4.1.2 Extent of Testing
 \subsubsection{Extent of Testing}
-The extent of testing will be end to end for the final demonstration. For POC, specific system tests will be conducted.
+The extent of testing will be end to end for the final demonstration. As for POC, specific system tests will be conducted.
 
 % 4.1.3 Test Tools
 \subsubsection{Test Tools}
-To avoid regressions and catch bugs quickly two main test tools will be used. Namely the following;
+To avoid regressions and catch bugs the following tool will be used:
 \begin{itemize}
 \item CodeReviewer \textemdash CodeReviewer will be used for code review process mandatory for all developers. This tool helps post code reviews and provides features such as annotations, diff viewers, easy communication and feedback. This tool will be used for static tests to produce high quality code with less defects
  \end{itemize}
@@ -195,28 +204,27 @@ N/A
 \subsection{Types of Tests}
 
 \subsubsection{Functional Testing}
-Functional testing is in place to uncover errors that occur in implementing requirements or design specifications. Concentration is on results rather then the internals functions of the program. This type of testing is very effective to evaluate functional requirements.
+Functional testing is in place to uncover errors that occur in implementing requirements or design specifications. Concentration is on results rather than internals functions of the program. This type of testing is very useful to evaluate functional requirements.
 
 \subsubsection{Structural Testing}
-Structural testing is in place to uncover errors during implementation of the application. Concentration is on evaluating structure of the application. This type of testing focuses on non functional requirements.  
+Structural testing is in place to uncover errors during the implementation of the application. Concentration is on evaluating the structure of the application. This type of testing focuses on nonfunctional requirements.   
 
 \subsubsection{Unit Testing}
-Unit testing refers to providing specific input to a system and verifying it evaluates to expected output.This process can be done manually or automated.
+Unit testing refers to providing specific input to a system and verifying it evaluates to expected output. This process can be done manually or can be automated.
 
 \subsubsection{Manual and Automatic Testing}
 Manual testing is done by people, while automatic is processed through scripts. 
 
 \subsubsection{Static Testing}
-Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-through
-will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure proper syntax is used thoroughly.This type of testing is crucial in design stage. \\
-Static testing will be enforced through out the development process. A code review process will be put into place to strictly manage the quality of the code. Specifically, developers will have to sign off on the quality of the code before it gets checked into the production repo.
+Static testing refers to testing techniques that simulate a dynamic environment. This does not involve program execution. Instead, a walk-through will be performed checking pre and post conditions evaluate to requirements specified. As well to make sure the proper syntax is used thoroughly. This type of testing is crucial in the design stage. \\
+Static testing will be enforced throughout the development process. A code review process will be put in place to manage the quality of the code. Specifically, developers will have to sign off on the quality of the code before it gets checked into the production repo.
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{review_process.png}
 \caption{Code Review Process}
 \label{fig:CodeReview}
 \end{figure}
 \\\\
-The reviewers will assess the code quality and critique the code in following criteria;\\
+The reviewers will assess the code quality and critique the code in following criteria:\\
 \begin{itemize}
  \item General Unit Testing performed. Did it pass?
  \item Comment and Coding Conventions followed consistently?
@@ -227,21 +235,21 @@ The reviewers will assess the code quality and critique the code in following cr
  \item Does code provide correct functionality?
  \item Is the code secure?
  \end{itemize}
-The reviewers will assess the code and mark issues found with severity. If any of the high severity issues found, then developer must fix code. For medium severity issues, developer can provide reasoning and try to convince reviewers. Low severity issues can possibly be dropped if they are nits. The reviewers will mark severity as follows;
+Reviewers will assess the code and mark issues found with severity. If high severity issues exist, then the developer must fix the system immediately. Medium and low severity issues can be addressed at a later time. The reviewers will mark severity as follows;
 \begin{itemize}
 \item Naming Conventions and Coding style considered low severity
-\item Control flow and Logical issues considered medium or high severity
-\item Redundant Code considered medium or high severity
-\item Performance Issues considered high severity
-\item Security Issues considered high severity
-\item Scalability Issues considered medium or high severity
-\item Functional Issues considered high severity
+\item Control flow and logical issues considered medium or high severity
+\item Redundant code considered medium or high severity
+\item Performance issues considered high severity
+\item Security issues considered high severity
+\item Scalability issues considered medium or high severity
+\item Functional issues considered high severity
 \item Error Handling considered high severity
 \item Reusability considered medium severity
 \end{itemize}
 
 \subsection{Dynamic Testing}
-On the contrary, dynamic testing refers to executing the program while running test cases to view expected behaviour. This is done to find and fix defects in the program. This will be performed after implementation phase. All of the tests performed in the following sections are dynamic. Specifically, different techniques are used to perform this testing such as automated and manual test cases. However, due to the nature of the application all other testing will be dynamic since the values are all dynamic.
+On the contrary, dynamic testing refers to executing the program while running test cases to view expected behavior. This is performed to locate and fix defects in the program. This will be performed after implementation phase. All of the tests completed in the following sections are dynamic. Specifically, different techniques are used to perform this testing such as automated and manual test cases. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -266,16 +274,15 @@ For database testing, the following test factors will be considered;
  \end{itemize}
  
 \subsubsection{Correctness}
-In this section of database testing, tester must verify that the application receives complete and correct data from the couchbase server. Automated unit tests will be written using Bash scripts to perform the following tests.
+In this section, the tester must verify that the application receives complete and correct data from the Couchbase server. Automated unit tests will be written using Bash scripts to perform the following tests.
 \subsubsection{Database Correctness Automated Tests }
-\break
 \begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{correctness_tests.png}
   \caption{Database Correctness}
   \label{tbl:excel-table}
 \end{table}
 \subsubsection{Performance}
-In this section of database testing, tester must verify that the data query is performed in a reasonable amount of time. The application should have a maximum loading period of 5 seconds to complete data queries. Moreover, considering the customer base and size of database our application, none of the following test cases should take more than 5 seconds.
+In this section, the tester must verify that the data query is performed in a reasonable amount of time. The application should have a maximum loading period of 1.5 seconds to complete data queries. Moreover, considering the customer base and size of database our application, none of the following test cases should take more than 1.5 seconds.
 
 \subsubsection{Database Performance Automated Tests }
 \begin{table}[h]
@@ -284,16 +291,16 @@ In this section of database testing, tester must verify that the data query is p
 \end{table}
 
 \subsubsection{Security}
-In this section of database query testing, tester must verify that database allows correct access control. Database penetration testing is not required because we will leverage couchbase security implementation, testing and certifications.
+In this section, the tester must verify that database allows correct access control. Database penetration testing is not required because we will leverage Couchbase security, testing and certifications.
 \subsubsection{Database Security Automated Tests }
-\pagebreak
+\break
 \begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{security_tests.png}
   \caption{Security Test}
 \end{table}
 
 \subsubsection{Reliability}
-In this section of database testing, we will test the robustness and reliability of the database.  This type of testing is essential the health of the database system. There should be no failures or downtimes on the backend side. 
+In this section, testing is performed to measure the robustness and reliability of the database.  This type of testing is essential the health of the database system. There should be no failures or downtimes on the back-end side. 
 \subsubsection{Database Reliability Automated Tests }
 \pagebreak
 \begin{table}[h]
@@ -304,7 +311,7 @@ In this section of database testing, we will test the robustness and reliability
 \section{Final Demonstration System Test Description}
 
 \subsection{Barcode Scanning}
-Smart-Waiter needs to ensure users are able to scan a barcode with minimal attempts. The number of expected attempts will be presented in the final SRS document.
+Smart-Waiter needs to ensure users can scan a barcode with minimal attempts. The number of expected attempts will be presented in the final SRS document.
 
 \subsubsection{Test Type}
 \begin{itemize}
@@ -364,16 +371,16 @@ Smart-Waiter must use accounts to keep track of a user's personal information. T
 
 
 \subsubsection{Methods of testing}
-Dynamic testing is used to ensure correctness and data integrity, and to observe the application behaviour when given incorrect information.
+Dynamic testing is used to ensure correctness and data integrity. As well to observe the application behaviour when given incorrect information.
 \subsubsection{Test Cases}
 \textbf{\textit{Dynamic Testing}}\newline
 \newline
 \textit{Summary}\newline
-Manual dynamic tests will be performed to evaluate the account creation module. This test will be in the form of structural testing. The tests being performed on the module are presented below. 
+Manual dynamic tests will be performed to evaluate the account creation module. This test will be in the form of structural testing. Tests performed on the module are presented below. 
 \pagebreak
 \begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{accountTC.png}
-  \caption{Account Signup and Login Test}
+  \caption{Account Sign up and Login Test}
 \end{table}
 \subsection{Item Selection and Customization}
 Smart-Waiter needs to ensure a user is able to select, customize and add item to cart. 
@@ -381,7 +388,7 @@ Smart-Waiter needs to ensure a user is able to select, customize and add item to
 \subsubsection{Test Type}
 \begin{itemize}
   \item Manual 
-  \item functional dynamic test 
+  \item Functional dynamic test 
  \end{itemize} 
  
 \subsubsection{Functional Test Factors}
@@ -494,23 +501,19 @@ The survey consists of seven questions. Participants are asked to give each ques
 \section{Testing Schedule}
 Active testing is necessary to build Smart-Waiter into a successful application. Therefore, complete system testing will be performed on these dates: 
 \begin{description}
-\item [November 16, 2015] POC System Test
-\item [February 1, 2016] Rev 0 System Test
-\item [April 16, 2016] Final Demo System Test
+\item [November 16, 2015] POC System Test at McMaster University
+\item [February 1, 2016] Rev 0 System Test at McMaster University
+\item [April 16, 2016] Final Demo System Test at McMaster University
 \end{description}
-Individual testing will be performed before any code is committed to the repository.
-\ds{That is fine, however, there should be milestones where testing will be performed 
-on a predetermined schedule.}
-Furthermore, as newer features and functions are being added and the development of Smart-Waiter progresses, the testing team and developers will be changing the test cases accordingly. 
-\ds{This last bit is unnecessary, as your test plan will be updated as you
-update your test cases.}
-\newline
-\ds{Who will be testing what and when?}
+Specifically the following people will perform testing on a particular component of the system: 
+\begin{description}
+\item [Pavneet Johal] Database testing
+\item [Meraj Patel] Barcode scanning and item selection/customization testing
+\item [Shan Perera] Account and order transactions testing
+\end{description}
+The following schedule is in place regarding test report.
 \newline
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{TestingSchedule.png}
 
-\ds{I did not mark all of your spelling and grammar mistakes. You should go 
-through the document and find them on your own. There are also many more possibilities
-for test cases that you have not yet considered.}
 
 \end{document}

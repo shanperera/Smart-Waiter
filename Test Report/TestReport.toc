@@ -1,0 +1,53 @@
+\contentsline {section}{\numberline {1}Changes Made}{3}
+\contentsline {section}{\numberline {2}Introduction}{3}
+\contentsline {subsection}{\numberline {2.1}Purpose of the Report}{3}
+\contentsline {subsection}{\numberline {2.2}Scope of Testing}{3}
+\contentsline {subsection}{\numberline {2.3}Organization}{4}
+\contentsline {section}{\numberline {3}System Testing}{4}
+\contentsline {subsection}{\numberline {3.1}Database Testing}{4}
+\contentsline {subsubsection}{\numberline {3.1.1}Purpose}{4}
+\contentsline {subsubsection}{\numberline {3.1.2}Structural Test}{4}
+\contentsline {subsubsection}{\numberline {3.1.3}Test Factors}{4}
+\contentsline {subsubsection}{\numberline {3.1.4}Correctness}{5}
+\contentsline {subsubsection}{\numberline {3.1.5}Correctness Tests Results}{5}
+\contentsline {subsubsection}{\numberline {3.1.6}Performance}{5}
+\contentsline {subsubsection}{\numberline {3.1.7}Performance Test Results}{5}
+\contentsline {subsubsection}{\numberline {3.1.8}Security}{6}
+\contentsline {subsubsection}{\numberline {3.1.9}Security Test Results}{6}
+\contentsline {subsubsection}{\numberline {3.1.10}Reliability}{7}
+\contentsline {subsubsection}{\numberline {3.1.11}Reliability Automated Test Results }{7}
+\contentsline {subsection}{\numberline {3.2}Barcode Scanning}{7}
+\contentsline {subsubsection}{\numberline {3.2.1}Purpose}{7}
+\contentsline {subsubsection}{\numberline {3.2.2}Test Factors}{7}
+\contentsline {subsubsection}{\numberline {3.2.3}Correctness, Performance and Ease of use}{8}
+\contentsline {subsubsection}{\numberline {3.2.4}Functional Test Factors}{8}
+\contentsline {subsubsection}{\numberline {3.2.5}Functional Unit Test}{8}
+\contentsline {subsubsection}{\numberline {3.2.6}Test Results}{8}
+\contentsline {subsection}{\numberline {3.3}Accounts}{9}
+\contentsline {subsubsection}{\numberline {3.3.1}Purpose}{9}
+\contentsline {subsubsection}{\numberline {3.3.2}Functional Dynamic Test}{9}
+\contentsline {subsubsection}{\numberline {3.3.3}Test Factors}{10}
+\contentsline {subsubsection}{\numberline {3.3.4}Correctness and Data Integrity}{10}
+\contentsline {subsubsection}{\numberline {3.3.5}Functional Test Factors}{10}
+\contentsline {subsubsection}{\numberline {3.3.6}Test Results}{10}
+\contentsline {subsection}{\numberline {3.4}Item Selection and Customization}{11}
+\contentsline {subsubsection}{\numberline {3.4.1}Dynamic Unit Test}{11}
+\contentsline {subsubsection}{\numberline {3.4.2}Test Factors}{12}
+\contentsline {subsubsection}{\numberline {3.4.3}Functional Test Factors}{12}
+\contentsline {subsubsection}{\numberline {3.4.4}Test Results}{12}
+\contentsline {subsection}{\numberline {3.5}Order Transactions}{13}
+\contentsline {subsubsection}{\numberline {3.5.1}Purpose}{13}
+\contentsline {subsubsection}{\numberline {3.5.2}Functional Dynamic Test}{13}
+\contentsline {subsubsection}{\numberline {3.5.3}Test Factors}{14}
+\contentsline {subsubsection}{\numberline {3.5.4}Correctness, Reliability, Data Integrity, Security and Ease of Use}{14}
+\contentsline {subsubsection}{\numberline {3.5.5}Functional Test Factors}{14}
+\contentsline {subsubsection}{\numberline {3.5.6}Test Results}{14}
+\contentsline {section}{\numberline {4}Usability Test}{15}
+\contentsline {subsection}{\numberline {4.1}Summary}{15}
+\contentsline {subsection}{\numberline {4.2}Methodology}{16}
+\contentsline {subsubsection}{\numberline {4.2.1}Tasks conducted}{16}
+\contentsline {subsubsection}{\numberline {4.2.2}Questionnaire}{16}
+\contentsline {subsection}{\numberline {4.3}Testing Results}{16}
+\contentsline {subsubsection}{\numberline {4.3.1}Questionnaire Results}{16}
+\contentsline {subsubsection}{\numberline {4.3.2}User Feedback}{17}
+\contentsline {subsection}{\numberline {4.4}Conclusion}{18}

@@ -46,26 +46,33 @@ March 21, 2016 & Order Transactions added \\
 \hline
 March 21, 2016 & Introduction Created \\
 \hline
+April 21, 2016 & Added test results for customization. Addressed Dan's comments \\
+\hline
 \end{tabular}
 \caption{Revision History Table}
 \end{table}
+\section{Changes Made}
+\begin{itemize}
+ \item Addressed all of Dan's comments
+ \item Added item selection and customization test results
+ \item Added traceability to functional requirements 
+ \item Added tables numbers
+ \item Modified account and order transaction test results
+ \end{itemize}
 
 \section{Introduction}
+\label{sec:Introduction}
 \subsection{Purpose of the Report}
 This section will provide an introduction and general outline of the Smart-Waiter test report. 
 
 \subsection{Scope of Testing}
-The test report primarily focuses on the overall correctness of the software with regard to the test cases provided. Many of the test cases provided are in the form of functional dynamic tests. Automatic testing for modules in Smart-Waiter were not feasible, as mentioned in the Test Plan.
-\ds{You should give a quick summary as to why it was not feasible here.}
-This plan is fairly exhaustive, further testing will be performed for the final revision to ensure a completely smooth and intuitive user experience.
+The test report primarily focuses on the overall correctness of the software with regard to the test cases provided. Many of the test cases provided are in the form of functional dynamic tests. This plan is fairly exhaustive, further testing will be performed for the final revision to ensure a completely smooth and intuitive user experience.
 
 \subsection{Organization}
-In section 1
-\ds{Use \LaTeX properly! Use refs!}
-we provide the introduction to the test report. In section 2 we outline and provide the results of the system testing, including but not limited to: Database security testing, order transactions testing, account testing. Section 3 describes the Usability tests that were conducted and carried out by the Smart-Waiter team.
+In section~\ref{sec:Introduction} we provide the introduction to the test report. In section~\ref{sec:System} we outline and provide the results of the system testing, including but not limited to: Database security testing, order transactions testing, account testing. Section~\ref{sec:Usability} describes the Usability tests that were conducted and carried out by the Smart-Waiter team.
  
 \section{System Testing} 
-
+\label{sec:System}
 
 \subsection{Database Testing}
 
@@ -74,10 +81,6 @@ Database testing is critical component in correlation with Smart Waiter applicat
 
 \subsubsection{Structural Test}
 Database testing was exclusively performed from structural testing point of view. The goal of this component of testing was to verify that the database queries always return valid and correct data, under all circumstances. Specifically, a separate database was created for testing purposes, because any failed test case could affect the state of the original database.\\\\
-\emph{Note: A mix of scripts and manual commands were required for database testing. The tests cannot be fully automated because it is not feasible, as mentioned in test plan.}
-
-\ds{Explain what you mean when you say they cannot be fully automated. 
-Are your scripts partial automation?}
 
 \subsubsection{Test Factors}
 As per test plan, the following test factors will be considered for database testing;
@@ -91,23 +94,35 @@ As per test plan, the following test factors will be considered for database tes
 \subsubsection{Correctness}
 In this section of database testing, tester had to verify that the application receives complete and correct data from the couchbase server.
 \subsubsection{Correctness Tests Results}
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{correctness_tests.png}
+  \caption{Correctness Test Results}
+\end{table}
 
 \subsubsection{Performance}
 In this section of database testing, tester had to verify that the data query was performed in a reasonable amount of time. 
 \subsubsection{Performance Test Results}
+\break
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{performance_tests.png}
+  \caption{Performance Test Results}
+\end{table}
 
 \subsubsection{Security}
 In this section of database query testing, tester had to verify that database allows correct access control. Database penetration testing was not required because we will leverage couchbase security implementation, testing and certifications.
 \subsubsection{Security Test Results}
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{security_tests.png}
+  \caption{Security Test Results}
+\end{table}
 
 \subsubsection{Reliability}
 In this section of database testing, we tested the robustness and reliability of the database. 
 \subsubsection{Reliability Automated Test Results }
+\begin{table}[h]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{reliability_tests.png}
-\ds{Test 2's result seems like it would be a major problem.}
+  \caption{Reliability Test Results}
+\end{table}
 
 \subsection{Barcode Scanning}
 
@@ -120,43 +135,88 @@ Barcode scanning tests were conducted to make sure users are able to scan a barc
  \item Performance
  \item Ease of use
  \end{itemize}
-
+ 
 \subsubsection{Correctness, Performance and Ease of use}
-Testing is performed to ensure barcode scanning provides correct results in an efficient and timely manner. As well to make sure 
-\ds{``the user"}
+Testing is performed to ensure barcode scanning provides correct results in an efficient and timely manner. As well to make sure the
 user is easily able to scan the barcode and is provided helpful messages in regards to errors encountered.
+
+\subsubsection{Functional Test Factors}
+Test cases were conducted to ensure the following functional requirements are met:
+\begin{itemize}
+ \item The product shall scan a QR code to access the restaurant’s menu.
+ \item The product shall provide error codes
+ \end{itemize}
 
 \subsubsection{Functional Unit Test}
 As per our test plan, functional unit tests were  conducted to assess test cases. Doing so replicates real world usage.
 
 \subsubsection{Test Results}
+\break
+\begin{table}[h]
 \includegraphics[width=1.2\textwidth]{barcodeTable.png}
+  \caption{Barcode Scanning Test Results}
+\end{table}
 
-\ds{What about scanning deprecated/obsolete barcodes?}
 
 \subsection{Accounts}
 \subsubsection{Purpose}
 Account creation and login tests were performed to ensure Smart-Waiter users are able to create an account quickly while still adhering to the account constraints set by Smart-Waiter. This is also to ensure proper error checking is implemented in the applications account related modules.
 \subsubsection{Functional Dynamic Test}
 As per our test plan, manual functional dynamic tests 
-\ds{``were"}
-we performed to assess the following test cases. This allows the system to be exhaustively tested which will minimize or completely erase errors in real world usage.
+were performed to assess the following test cases. This allows the system to be exhaustively tested which will minimize or completely erase errors in real world usage.
 \subsubsection{Test Factors}
-As per test plan, the following test factors will be considered for database testing;
-
-\ds{Weren't you just talking about accounts? Why are you bringing up databases?}
+As per test plan, the following test factors will be considered for Accounts testing;
 
 \begin{itemize}
  \item Correctness
  \item Data Integrity
- \end{itemize}
+ \end{itemize} 
+ 
 \subsubsection{Correctness and Data Integrity}
 In this section of Account testing, the tester had to verify that all data being passed is in the correct format and that the passwords were being stored properly so that user logins can be authenticated. 
 
-\subsubsection{Test Results}
-\includegraphics[width=1.2\textwidth]{accountTC.png}
+\subsubsection{Functional Test Factors}
+Test cases were conducted to ensure the following functional requirements are met:
+\begin{itemize}
+ \item The product shall allow the user to register an account for complete access to the products payment services.
+ \item The product shall provide error codes
+ \end{itemize}
 
-\ds{Why does this table have a different style than the others?}
+\subsubsection{Test Results}
+\break
+\begin{table}[h]
+\includegraphics[width=1.2\textwidth]{accountTC.png}
+  \caption{Accounts Test Results}
+\end{table}
+
+\subsection{Item Selection and Customization}
+Smart-Waiter needs to ensure a user is able to select, customize and add item to cart. 
+
+\subsubsection{Dynamic Unit Test}
+Manual black box tests will be performed to assess item customization and for the ability to add to cart. This test will be in the form of unit testing. Various test cases described below will be conducted. This is effective as it replicates real world usage and will provide a census of expected number of successful attempts to evaluate functional test factors.
+\subsubsection{Test Factors}
+\begin{itemize}
+  \item Correctness
+  \item Reliability
+  \item Ease of use
+ \end{itemize} 
+ 
+ \subsubsection{Functional Test Factors}
+Test cases were conducted to ensure the following functional requirements are met:
+\begin{itemize}
+ \item The product will allow the user to view their current order
+ \item The product shall provide error codes
+ \item The product will allow a user to request special instructions
+ \item The product will allow users to remove items from their order
+ \end{itemize}
+
+\subsubsection{Test Results}
+\break
+\begin{table}[h]
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{itemselection.png}
+  \caption{Item Selection and Customization Test Results}
+\end{table}
+
 
 \subsection{Order Transactions}
 
@@ -164,8 +224,7 @@ In this section of Account testing, the tester had to verify that all data being
 Order transactions are a critical part of Smart-Waiter, any unforeseen bugs or errors could effect the operations of the restaurant. Therefore, these modules of Smart-Waiter were rigorously tested to ensure no unexpected behaviour and a smooth and intuitive experience. Tests were performed to ensure Smart-Waiter users are able to order from the restaurants menu quickly without having to wait for a server to arrive. This is also to ensure proper error checking is implemented in the applications transaction related modules.
 
 \subsubsection{Functional Dynamic Test}
-As per our test plan, manual functional dynamic tests we performed to assess the following test cases. In a few of these test cases, manual testing for unexpected behaviour was performed by passing unexpected input. This is so any unexpected errors that may come up from unusual input is identified and fixed so that this does not add any extra work or effect the day-to-day operations of our restaurant partners. The two test cases that are performed to identify any unexpected behaviour is 6.2.1 and 6.2.7 in the table below. The 6.2.1 test is performed by rapidly clicking different sides that are available in the sides menu before the application transitions to the next activity. The 6.2.7 test is performed by selecting toppings for an entree menu item. Then editing the toppings using the function available in the order summary page, the toppings are changed and the side is changed and added to cart multiple times. These tests yielded no strange behaviour, and the application performed as expected. 
-
+As per our test plan, manual functional dynamic tests we performed to assess the following test cases. In a few of these test cases, manual testing for unexpected behaviour was performed by passing unexpected input.  
 
 \subsubsection{Test Factors}
 As per test plan, the following test factors will be considered for database testing;
@@ -173,15 +232,30 @@ As per test plan, the following test factors will be considered for database tes
  \item Correctness
  \item Reliability
  \item Data Integrity
+ \item Data security
+ \item Ease of use
  \end{itemize}
-\subsubsection{Correctness, Reliability and Data Integrity}
+\subsubsection{Correctness, Reliability, Data Integrity, Security and Ease of Use}
 In this section of Order Transaction testing, the tester had to verify that all data being passed is in the correct format and valid. Multiple tests to verify that the credit card information being passed is valid are performed. The tests are also used to check the reliability of the Stripe API and overall error testing. Some test cases check for unexpected behaviour in the Sides and Toppings module of the application by performing unexpected input. This is done to test the overall reliability of the Orders module.    
 
+ \subsubsection{Functional Test Factors}
+Test cases were conducted to ensure the following functional requirements are met:
+\begin{itemize}
+ \item The product will allow users to pay for their order using a credit card
+ \item The product shall provide error codes
+ \item The product will allow users to place their order.
+ \end{itemize}
+
 \subsubsection{Test Results}
+\break
+\begin{table}[h]
 \includegraphics[width=1.2\textwidth]{orderTransactionTC.png}
-\ds{Why aren't you creating your tables in \LaTeX{}? Your table is being cut off.}
+  \caption{Order Transaction Test Results}
+\end{table}
+
 
 \section{Usability Test}
+\label{sec:Usability}
 Usability tests are conducted to assess the user's ability to complete routine tasks, and acquire their impression of the application.
 \subsection{Summary}
 
@@ -219,8 +293,11 @@ Participants were asked to rate from 1 to 5 (1 - strongly disagree, 5 - strongly
 \subsection{Testing Results} 
 
 \subsubsection{Questionnaire Results}
-
+\break
+\begin{table}[h]
 \includegraphics[width=1.2\textwidth]{usabilityResults.png}
+  \caption{Questionnaire Results}
+\end{table}
 
 \subsubsection{User Feedback}
 
@@ -252,8 +329,4 @@ Conducting this usability test definitely helps our team in terms of adjusting r
 \end{itemize}
 After implementation of these additions, a second usability test will be conducted. New participants will be gathered in order to provide unbiased results. 
 
-\ds{To reiterate: Create your tables in \LaTeX{}, it will make things clearer. Also,
-why do none of your tables/figures have captions?}
-
-\ds{You have not explicitly traced your tests to your requirements or modules.}
 \end{document}

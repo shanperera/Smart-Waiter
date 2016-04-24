@@ -68,11 +68,19 @@ public class User {
     }
 
     ;
-
+    /*
+* Method used to get stripe token
+*
+* output - token
+*/
     public Token getToken() {
         return token;
     }
-
+    /*
+* Method used to set stripe token
+*
+* input - token
+*/
     public void setToken(Token token) {
         this.token = token;
     }
@@ -80,35 +88,67 @@ public class User {
     public String getCustomerID() {
         return customerID;
     }
-
+    /*
+* Method used to get username
+*
+* output - username
+*/
     public String getUsername() {
         return username;
     }
-
+    /*
+* Method used to set username
+*
+* input - username
+*/
     public void setUsername(String username) {
         this.username = username;
     }
-
+    /*
+* Method used to get password
+*
+* output - password
+*/
     public String getPassword() {
         return password;
     }
-
+    /*
+* Method used to set password
+*
+* input - password
+*/
     public void setPassword(String password) {
         this.password = password;
     }
-
+    /*
+* Method used to get hash salt name
+*
+* output - salt
+*/
     public String getSalt() {
         return salt;
     }
-
+    /*
+* Method used to set hash salt name
+*
+* input - salt
+*/
     public void setSalt(String salt) {
         this.salt = salt;
     }
-
+    /*
+* Method used to get first name
+*
+* output - first name
+*/
     public String getFirstName() {
         return firstName;
     }
-
+    /*
+* Method used to set first name
+*
+* input - first name
+*/
     public void setFirstName(String firstName) {
         if (firstName == null) {
             return;
@@ -116,11 +156,19 @@ public class User {
             this.firstName = firstName;
         }
     }
-
+    /*
+* Method used to get Last name
+*
+* output - last name
+*/
     public String getLastName() {
         return lastName;
     }
-
+    /*
+* Method used to set Last name
+*
+* input - last name
+*/
     public void setLastName(String lastName) {
         if (lastName == null) {
             return;
@@ -128,11 +176,19 @@ public class User {
             this.lastName = lastName;
         }
     }
-
+    /*
+* Method used to get billing address
+*
+* output - billing address
+*/
     public String getBillingAddress() {
         return billingAddress;
     }
-
+    /*
+* Method used to set billing address
+*
+* input - billing address
+*/
     public void setBillingAddress(String billingAddress) {
         if (billingAddress == null) {
             return;
@@ -140,21 +196,38 @@ public class User {
             this.billingAddress = billingAddress;
         }
     }
-
+    /*
+* Method used to get postal code
+*
+* output - post code
+*/
     public String getPostalCode() {
         return postalCode;
     }
 
+    /*
+* Method used to set postal code
+*
+* input - post code
+*/
     public void setPostalCode(String postalCode) {
         if (postalCode != null) {
             this.postalCode = postalCode;
         }
     }
-
+    /*
+ * Method used to get user phone number
+ *
+ * Output - phonenumber
+ */
     public String getPhoneNumber() {
         return phoneNumber;
     }
-
+    /*
+ * Method used to set user phone number
+ *
+ * input - phonenumber
+ */
     public void setPhoneNumber(String phoneNumber) {
         if (phoneNumber != null) {
             this.phoneNumber = phoneNumber;
