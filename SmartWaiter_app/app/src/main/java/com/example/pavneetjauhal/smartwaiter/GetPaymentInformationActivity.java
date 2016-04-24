@@ -159,13 +159,25 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
         String charset = "UTF-8";
         String name = "stripeToken";
         String pToken = token.toString();
-        String amount = "17000";
+        String sAmount = LoginActivity.user.getTotalPrice();
+
+        if(sAmount == null){
+            Toast.makeText(getApplicationContext(), "amount to pay is NULL", Toast.LENGTH_LONG)
+                    .show();
+            sAmount = "0";
+        }
+        else{
+            double amount = Double.parseDouble(sAmount);
+            amount = amount * 100; // amount in cents for stripe
+            sAmount = String.valueOf(amount);
+            Log.i("AMOUNT TAG", sAmount);
+        }
 
         try {
             String query = String.format("name=%s&pToken=%s&amount=%s",
                     URLEncoder.encode(name, charset),
                     URLEncoder.encode(pToken, charset),
-                    URLEncoder.encode(amount, charset));
+                    URLEncoder.encode(sAmount, charset));
 
             URLConnection connection = new URL(url).openConnection();
             connection.setDoOutput(true); // Triggers POST.
