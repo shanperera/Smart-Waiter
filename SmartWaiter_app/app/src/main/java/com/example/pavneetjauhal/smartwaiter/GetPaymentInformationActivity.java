@@ -30,7 +30,7 @@ import java.util.List;
 public class GetPaymentInformationActivity extends AppCompatActivity {
 
     public String restID = "00";
-    public String[] spk = new String[3]; //Stripe private keys
+    public String[] spk = new String[3]; //Stripe private keys for different restaurants
 
 
     @Override
@@ -42,12 +42,17 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
         populateSpinner();
     }
 
+    //Uses the same private key, this method is to demonstrate that
+    //unique stripe accounts can be used for each restaurant
+    //so that they get paid directly
     public void populatePrivateKeys(){
         spk[0] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
         spk[1] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
         spk[2] = "pk_test_YvxrNPpmntwiq44Rp4HkAYuT";
     }
 
+    //Method for populating the credit card expiry
+    //month and year spinner
     public void populateSpinner() {
         Spinner monthSpinner, yearSpinner;
 
@@ -69,6 +74,7 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
         yearSpinner.setAdapter(yAdapter);
     }
 
+    //Method for retrieve the credit card information to create a token
     public void getInfo(View button) {
         EditText getFields;
         Spinner spinner1, spinner2;
@@ -95,7 +101,9 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
         if (cardMonth == 0 || cardYear == 0 || cardNumber.isEmpty() || cardCVC.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Invalid card details", Toast.LENGTH_LONG)
                     .show();
-        } else if (!Utils.isOnline(this)) {
+        }
+        //Checks for a valid internet connection
+        else if (!Utils.isOnline(this)) {
             Toast.makeText(getApplicationContext(), "No internet Connection",
                     Toast.LENGTH_LONG).show();
         } else {
@@ -116,13 +124,15 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
                         stripe = new Stripe(spk[0]);
                         break;
                 }
-                //Stripe stripe = new Stripe("pk_test_YvxrNPpmntwiq44Rp4HkAYuT");
 
+                //Stripe method for Luhn check
                 if (card.validateCard()) {
                     stripe.createToken(
                             card,
-                            new TokenCallback() {
+                            new TokenCallback() { //TokenCallback contacts Stripe server for token
                                 public void onSuccess(Token token) {
+                                    //1-use token with credit card details returned from stripe server
+                                    //POST the token to our Heroku web server
                                     postToken(token);
                                     LoginActivity.user.setToken(token);
                                     try {
@@ -154,18 +164,31 @@ public class GetPaymentInformationActivity extends AppCompatActivity {
         }
     }
 
+    //Encode token as string to POST to Heroku webserver
     public void postToken(Token token) {
         String url = "http://charge-card-sw.herokuapp.com/";
         String charset = "UTF-8";
         String name = "stripeToken";
         String pToken = token.toString();
-        String amount = "17000";
+        String sAmount = LoginActivity.user.getTotalPrice();
+
+        if(sAmount == null){
+            Toast.makeText(getApplicationContext(), "amount to pay is NULL", Toast.LENGTH_LONG)
+                    .show();
+            sAmount = "0";
+        }
+        else{
+            double amount = Double.parseDouble(sAmount);
+            amount = amount * 100; // Stripe calculates payments in cents, convert amount to equivalent value in cents
+            sAmount = String.valueOf(amount);
+            Log.i("AMOUNT TAG", sAmount);
+        }
 
         try {
             String query = String.format("name=%s&pToken=%s&amount=%s",
                     URLEncoder.encode(name, charset),
                     URLEncoder.encode(pToken, charset),
-                    URLEncoder.encode(amount, charset));
+                    URLEncoder.encode(sAmount, charset));
 
             URLConnection connection = new URL(url).openConnection();
             connection.setDoOutput(true); // Triggers POST.
