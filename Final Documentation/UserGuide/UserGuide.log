@@ -1,0 +1,413 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.29)  24 APR 2016 12:37
+entering extended mode
+**UserGuide.tex
+(UserGuide.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files\LaTeX\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\LaTeX\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\LaTeX\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\LaTeX\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\LaTeX\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\LaTeX\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\LaTeX\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files\LaTeX\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count88
+\float@exts=\toks14
+\float@box=\box26
+\@float@everytoks=\toks15
+\@floatcapt=\box27
+)
+("C:\Program Files\LaTeX\tex\latex\caption\caption.sty"
+Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+
+("C:\Program Files\LaTeX\tex\latex\caption\caption3.sty"
+Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+
+("C:\Program Files\LaTeX\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\captionmargin=\dimen103
+\captionmargin@=\dimen104
+\captionwidth=\dimen105
+\caption@tempdima=\dimen106
+\caption@indent=\dimen107
+\caption@parindent=\dimen108
+\caption@hangindent=\dimen109
+)
+\c@ContinuedFloat=\count89
+Package caption Info: float package is loaded.
+)
+("C:\Program Files\LaTeX\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\LaTeX\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\LaTeX\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\LaTeX\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+)
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
+)
+("C:\Program Files\LaTeX\tex\latex\psnfss\courier.sty"
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("C:\Program Files\LaTeX\tex\latex\comment\comment.sty"
+\CommentStream=\write3
+
+Excluding comment 'comment') (UserGuide.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+
+("C:\Program Files\LaTeX\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count90
+\scratchdimen=\dimen112
+\scratchbox=\box28
+\nofMPsegments=\count91
+\nofMParguments=\count92
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count93
+\MPscratchDim=\dimen113
+\MPnumerator=\count94
+\makeMPintoPDFobject=\count95
+\everyMPtoPDFconversion=\toks18
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 31.
+ [1
+
+{C:/Users/Shan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(UserGuide.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
+\tf@toc=\write4
+ (UserGuide.lot)
+\tf@lot=\write5
+ [1] [2] [3]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 122.
+
+
+("C:\Program Files\LaTeX\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [4]
+<images/android-studio.png, id=22, 1927.2pt x 1044.90375pt>
+File: images/android-studio.png Graphic file (type png)
+
+<use images/android-studio.png>
+Package pdftex.def Info: images/android-studio.png used on input line 148.
+(pdftex.def)             Requested size: 390.0pt x 211.44835pt.
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 148--150
+ [] 
+ []
+
+[5 <./images/android-studio.png>]
+<images/accountCreation.PNG, id=28, 338.4645pt x 555.2745pt>
+File: images/accountCreation.PNG Graphic file (type png)
+
+<use images/accountCreation.PNG>
+Package pdftex.def Info: images/accountCreation.PNG used on input line 162.
+(pdftex.def)             Requested size: 195.0pt x 319.91582pt.
+ [6 <./images/accountCreation.PNG>]
+<images/ui-fragment-button.png, id=34, 122.4575pt x 122.4575pt>
+File: images/ui-fragment-button.png Graphic file (type png)
+
+<use images/ui-fragment-button.png>
+Package pdftex.def Info: images/ui-fragment-button.png used on input line 186.
+(pdftex.def)             Requested size: 19.50119pt x 19.50017pt.
+
+<images/nav-menu.png, id=35, 722.7pt x 1284.8pt>
+File: images/nav-menu.png Graphic file (type png)
+ <use images/nav-menu.png>
+Package pdftex.def Info: images/nav-menu.png used on input line 193.
+(pdftex.def)             Requested size: 155.99762pt x 277.32446pt.
+
+[7 <./images/ui-fragment-button.png>]
+Overfull \hbox (14.48114pt too wide) in paragraph at lines 199--200
+\OT1/cmr/m/n/12 low-ing ac-tions in the set-tings page: \OT1/pcr/m/n/12 Change 
+Password \OT1/cmr/m/n/12 and \OT1/pcr/m/n/12 Edit Personal
+ []
+
+[8 <./images/nav-menu.png (PNG copy)>]
+<images/qrcode.png, id=42, 1084.05pt x 1927.2pt>
+File: images/qrcode.png Graphic file (type png)
+ <use images/qrcode.png>
+Package pdftex.def Info: images/qrcode.png used on input line 226.
+(pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
+
+[9] <images/scan.png, id=46, 1927.2pt x 1084.05pt>
+File: images/scan.png Graphic file (type png)
+ <use images/scan.png>
+Package pdftex.def Info: images/scan.png used on input line 235.
+(pdftex.def)             Requested size: 289.06754pt x 162.60048pt.
+
+[10 <./images/qrcode.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
+
+ []
+
+<images/category.png, id=50, 1084.05pt x 1927.2pt>
+File: images/category.png Graphic file (type png)
+ <use images/category.png>
+Package pdftex.def Info: images/category.png used on input line 249.
+(pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
+
+[11 <./images/scan.png>] <images/items.png, id=54, 1084.05pt x 1927.2pt>
+File: images/items.png Graphic file (type png)
+
+<use images/items.png>
+Package pdftex.def Info: images/items.png used on input line 256.
+(pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
+ [12 <./images/category.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 268--273
+
+ []
+
+[13 <./images/items.png>] <images/toppings.png, id=62, 1084.05pt x 1927.2pt>
+File: images/toppings.png Graphic file (type png)
+
+<use images/toppings.png>
+Package pdftex.def Info: images/toppings.png used on input line 273.
+(pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
+ [14 <./images/toppings.png>]
+<images/sides.png, id=66, 1084.05pt x 1927.2pt>
+File: images/sides.png Graphic file (type png)
+ <use images/sides.png>
+Package pdftex.def Info: images/sides.png used on input line 278.
+(pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
+ [15 <./images/sides.png>] <images/instructions.png, id=70, 1084.05pt x 1927.2p
+t>
+File: images/instructions.png Graphic file (type png)
+
+<use images/instructions.png>
+Package pdftex.def Info: images/instructions.png used on input line 282.
+(pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
+
+<images/titlebar.png, id=71, 1082.0425pt x 388.45125pt>
+File: images/titlebar.png Graphic file (type png)
+
+<use images/titlebar.png>
+Package pdftex.def Info: images/titlebar.png used on input line 288.
+(pdftex.def)             Requested size: 162.29936pt x 58.26517pt.
+ [16 <./images/instructions.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 293.
+
+
+("C:\Program Files\LaTeX\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 293.
+
+<images/cart.png, id=75, 1084.05pt x 1927.2pt>
+File: images/cart.png Graphic file (type png)
+ <use images/cart.png>
+Package pdftex.def Info: images/cart.png used on input line 298.
+(pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
+ [17 <./images/titlebar.png> <./images/cart.png>]
+<images/main-menu.png, id=81, 550.055pt x 875.27pt>
+File: images/main-menu.png Graphic file (type png)
+ <use images/main-menu.png>
+Package pdftex.def Info: images/main-menu.png used on input line 308.
+(pdftex.def)             Requested size: 195.0pt x 310.28897pt.
+
+Overfull \hbox (5.87006pt too wide) in paragraph at lines 312--313
+[]\OT1/cmr/m/n/12 Press the la-bel for the menu item of your choice. Ex: \OT1/p
+cr/m/n/12 Autumn Spinach
+ []
+
+[18 <./images/main-menu.png>]
+<images/appetizers.png, id=86, 556.0775pt x 877.2775pt>
+File: images/appetizers.png Graphic file (type png)
+
+<use images/appetizers.png>
+Package pdftex.def Info: images/appetizers.png used on input line 314.
+(pdftex.def)             Requested size: 195.0pt x 307.64072pt.
+
+<images/special-instructions.png, id=87, 560.0925pt x 883.3pt>
+File: images/special-instructions.png Graphic file (type png)
+
+<use images/special-instructions.png>
+Package pdftex.def Info: images/special-instructions.png used on input line 320
+.
+(pdftex.def)             Requested size: 195.0pt x 307.5288pt.
+ [19 <./images/appetizers.png>]
+<images/confirm-order.png, id=91, 562.1pt x 882.29625pt>
+File: images/confirm-order.png Graphic file (type png)
+
+<use images/confirm-order.png>
+Package pdftex.def Info: images/confirm-order.png used on input line 334.
+(pdftex.def)             Requested size: 195.0pt x 306.07538pt.
+ [20 <./images/special-instructions.png>]
+[21 <./images/confirm-order.png>]
+<images/cc.png, id=98, 558.085pt x 919.435pt>
+File: images/cc.png Graphic file (type png)
+ <use images/cc.png>
+Package pdftex.def Info: images/cc.png used on input line 360.
+(pdftex.def)             Requested size: 195.0pt x 321.25992pt.
+ [22 <./images/cc.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 381--383
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+
+ []
+
+<images/bugReport.png, id=102, 122.859pt x 69.3792pt>
+File: images/bugReport.png Graphic file (type png)
+
+<use images/bugReport.png>
+Package pdftex.def Info: images/bugReport.png used on input line 386.
+(pdftex.def)             Requested size: 195.0pt x 110.13028pt.
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--401
+
+ []
+
+
+Overfull \hbox (17.00272pt too wide) in paragraph at lines 399--401
+\OT1/cmr/m/n/12 Contact our cus-tomer sup-port di-rectly at customer-service@sm
+artwaiter.ca
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
+
+ []
+
+[24 <./images/bugReport.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--407
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
+
+ []
+
+[25] (UserGuide.aux) ) 
+Here is how much of TeX's memory you used:
+ 2910 strings out of 493673
+ 43329 string characters out of 3145987
+ 107377 words of memory out of 3000000
+ 6241 multiletter control sequences out of 15000+200000
+ 9670 words of font info for 34 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 36i,8n,38p,555b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/LaTeX/fonts/enc/dvips/fontname/8r.enc}<
+C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/LaTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/LaTeX/font
+s/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/LaTeX/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Program Files/LaTeX/fonts/type1/public/amsfonts/cm/
+cmti12.pfb><C:/Program Files/LaTeX/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on UserGuide.pdf (26 pages, 4603279 bytes).
+PDF statistics:
+ 135 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -21,6 +21,7 @@
 \usepackage{graphicx}
 \usepackage{courier}
 \graphicspath{ {images/} }
+\usepackage{comment}
 
 \begin{document}
 
@@ -52,6 +53,25 @@ February 29, 2016 & All sections complete \\
 \caption{Revision History Table}
 \end{table}
 
+\begin{table}[H]
+\section*{Final Documentation Changes}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Date}  & \textbf{Changes Made} \\ \hline
+April 24, 2016 &  Reduced RAM system requirements. \\ 
+\hline
+February 27, 2016 & Create Account section complete. \\
+\hline
+February 28, 2016 & Account Setup complete \\
+\hline
+February 28, 2016 & Placing an Order complete \\
+\hline
+February 29, 2016 & All sections complete \\
+\hline
+\end{tabular}
+\caption{Changes made to documents in the final revision}
+\end{table}
+
 
 
 \section{Introduction}
@@ -63,6 +83,9 @@ This document describes how to use Smart-Waiter mobile application. For the scop
 
 \subsection{System Requirements}
 To use Smart-Waiter, your phone must be running Android's Ice Cream Sandwich (4.0.1) operating system or higher. Your device must also have at least 512MB of RAM. 
+
+The minimum and recommended requirements for RAM were chosen slightly higher than most applications because we want a smooth experience with our application. We believed that the application requires at least 128MB of RAM, but specified 512MB and 1GB to accommodate for Ice Cream Sandwich and Marshmallow Android background applications and system animations.
+
 \ds{That seems like a lot.}
 The minimum and recommended requirements for running Smart-Waiter are given below.
 Minimum Requirements:
@@ -82,7 +105,7 @@ Recommended Requirements:
 	\item Resolution: 1440 x 2560 pixels (~575 PPI pixel density)
 	\item Processor: Exynos 7420 Octacore (1.5 GHz Quad Core \& 2.1 GHz Quad Core)
 	\item Storage: 100MB
-	\item RAM: 3GB \ds{Have you actually done tests showing you need this much RAM?}
+	\item RAM: 1GB \ds{Have you actually done tests showing you need this much RAM?}
 	\item Camera: 16.0 MP Front Facing Camera
 	\item WLAN: WiFi 802.11 b/g/n OR LTE compatible data service	
 \end{enumerate}
