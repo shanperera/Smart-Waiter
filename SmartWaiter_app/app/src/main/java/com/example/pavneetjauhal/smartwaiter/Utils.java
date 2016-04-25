@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 public class Utils {
     public static HashMap<String, Integer> categoryImage;
-
+    //set images for menu
     static {
         categoryImage = new HashMap<>();
         categoryImage.put("appetizers", R.drawable.appetizers);

@@ -17,14 +17,14 @@ import android.widget.TextView;
 
 public class DisplayCategoriesActivity extends AppCompatActivity {
 
-    MainActivity mainObject;
+    MainActivity mainObject;//object to refer to MainActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
-        this.setTitle(mainObject.restarauntName);
-        onDisplayCategoryList();
+        this.setTitle(mainObject.restarauntName);//set restarauntName
+        onDisplayCategoryList();//display category names
 
     }
 
@@ -32,19 +32,21 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
         popualteCategoriesListView();
 
         ListView list = (ListView) findViewById(R.id.menuList);
+        //set listener for category name click
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-                MenuCategories list = mainObject.menuCategoryList.get(position);
+                MenuCategories list = mainObject.menuCategoryList.get(position);//get category items
                 mainObject.currentCategory = mainObject.menuCategoryList.get(position).getCategory();
-                mainObject.menuItemList = list.categoryItems;
+                mainObject.menuItemList = list.categoryItems;//get items in category
                 Intent intent = new Intent(DisplayCategoriesActivity.this, DisplayItemsActivity.class);
-                startActivity(intent);
+                startActivity(intent);//call DisplayItemsActivity
             }
         });
     }
 
+    //populate list with Category names
     public void popualteCategoriesListView() {
         CategoryListAdapter adapter = new CategoryListAdapter();
         ListView list = (ListView) findViewById(R.id.menuList);
@@ -58,26 +60,26 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //check if cart button pressed
         if (id == R.id.action_cart) {
             Intent intent = new Intent(this, CartActivity.class);
-            startActivity(intent);
+            startActivity(intent);//call CartActivity
         }
 
         return super.onOptionsItemSelected(item);
     }
 
     @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setMessage("Are you sure you want to exit?")
+    public void onBackPressed() {//check if back button pressed
+        new AlertDialog.Builder(this)//throw alert box indicating quitting action
+                .setMessage("Are you sure you want to exit?")//confirmation message
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                    public void onClick(DialogInterface dialogInterface, int i) {//display yes button
                         finish();
                     }
-                }).setNegativeButton("No", null).show();
+                }).setNegativeButton("No", null).show();//display no button
     }
 
     private class CategoryListAdapter extends ArrayAdapter<MenuCategories> {
@@ -98,9 +100,9 @@ public class DisplayCategoriesActivity extends AppCompatActivity {
             //Make text view
             TextView makeText = (TextView) itemView.findViewById(R.id.txtCategory);
             ImageView imgCategory = (ImageView) itemView.findViewById(R.id.imgCategory);
-            makeText.setText(currentItem.getCategory());
-            Log.d("categories", currentItem.getCategory());
-            imgCategory.setImageResource(Utils.categoryImage.get(currentItem.getCategory().toLowerCase()));
+            makeText.setText(currentItem.getCategory());//display category name
+            //Log.d("categories", currentItem.getCategory());
+            imgCategory.setImageResource(Utils.categoryImage.get(currentItem.getCategory().toLowerCase()));//display category image
             return itemView;
         }
     }

@@ -14,31 +14,34 @@ public class ConfirmOrderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_confirm_order);
-        setTitle("Confirm Order");
-        popualteCartListView();
-        displayTotal();
+        setContentView(R.layout.content_confirm_order);//set view
+        setTitle("Confirm Order");//set title
+        popualteCartListView();//populate cart items to order
+        displayTotal();//display grand total
     }
 
+    //display items in cart
     public void popualteCartListView() {
-        ArrayAdapter<UserItems> adapter = new CategoryListAdapter();
+        ArrayAdapter<UserItems> adapter = new ConfirmOrderAdapter();
         ListView list = (ListView) findViewById(R.id.confirmOrderList);
         list.setAdapter(adapter);
     }
 
+    //display grand total
     public void displayTotal() {
         TextView t = new TextView(this);
         t = (TextView) findViewById(R.id.totalPrice);
-        t.setText(Utils.formatCurrency(LoginActivity.user.getTotalPrice()));
+        t.setText(Utils.formatCurrency(LoginActivity.user.getTotalPrice()));//display total price
     }
 
+    //button for confirm payment
     public void proceedPayment(View view) throws Exception {
         Intent intent = new Intent(this, GetPaymentInformationActivity.class);
-        startActivity(intent);
+        startActivity(intent);//go to GetPaymentInformationActivity
     }
-
-    private class CategoryListAdapter extends ArrayAdapter<UserItems> {
-        public CategoryListAdapter() {
+    //populate confirm order list with cart items
+    private class ConfirmOrderAdapter extends ArrayAdapter<UserItems> {
+        public ConfirmOrderAdapter() {
             super(ConfirmOrderActivity.this, R.layout.confirm_order_view,
                     LoginActivity.user.userItems);
         }
@@ -52,12 +55,13 @@ public class ConfirmOrderActivity extends AppCompatActivity {
 
             //Find the menu item to work with
             UserItems currentItem = LoginActivity.user.userItems.get(position);
-            //Make text view
+            //create text view for item name
             TextView makeText = (TextView) itemView.findViewById(R.id.txtItemName);
-            makeText.setText(currentItem.getItemName());
+            makeText.setText(currentItem.getItemName());//display item name
 
-            TextView makeText2 = (TextView) itemView.findViewById(R.id.txtitemTopping);
-            makeText2.setText(Utils.formatCurrency(currentItem.getItemPrice()));
+            //create text view for item price
+            TextView price = (TextView) itemView.findViewById(R.id.txtitemTopping);
+            price.setText(Utils.formatCurrency(currentItem.getItemPrice()));//display item price
 
             return itemView;
         }

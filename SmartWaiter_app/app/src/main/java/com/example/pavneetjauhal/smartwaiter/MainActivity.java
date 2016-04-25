@@ -22,16 +22,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    public static final int MY_PERMISSIONS_REQUEST_CAMERA = 42;
-    public static CouchBaseLite local_database;
-    public static String qrCode;
-    static List<MenuCategories> menuCategoryList = new ArrayList<MenuCategories>();
-    static List<MenuItems> menuItemList = new ArrayList<MenuItems>();
-    static String currentCategory = "";
-    static String restarauntName = "";
-    private Button scanButton;
-    private boolean isGranted;
-    public int failCount = 0;
+    public static final int MY_PERMISSIONS_REQUEST_CAMERA = 42;//set camera premession
+    public static CouchBaseLite local_database;//create local databse
+    public static String qrCode;//String to store qrcode scanned
+    static List<MenuCategories> menuCategoryList = new ArrayList<MenuCategories>();//list to store menu category names
+    static List<MenuItems> menuItemList = new ArrayList<MenuItems>();//list to store menu items
+    static String currentCategory = "";//string to store current category
+    static String restarauntName = "";//string to store current restaraunt name
+    private Button scanButton;//button for intiate scan
+    private boolean isGranted;//access granted
+    public int failCount = 0;//scan failure count
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         local_database = CouchBaseLite.getInstance(this, LoginActivity.user);
-        scanButton = (Button) findViewById(R.id.scanCodeButton);
+        scanButton = (Button) findViewById(R.id.scanCodeButton);//set scan button
 
         // check Android 6 permission
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)//check if camera action is permitted
                 == PackageManager.PERMISSION_GRANTED) {
             isGranted = true;
 
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     MY_PERMISSIONS_REQUEST_CAMERA);
         }
 
+        //listen for scan barcode button click
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,28 +95,29 @@ public class MainActivity extends AppCompatActivity {
             }
 
             Intent intent = new Intent(this, DisplayCategoriesActivity.class);
-            startActivity(intent);
+            startActivity(intent);//call camera
         } catch (Exception e) {
             Log.d("code", String.valueOf(e));
             failCount ++;
-            if (failCount < 3) {
-                Toast.makeText(getApplicationContext(), "Error - Please try again", Toast.LENGTH_LONG)
+            if (failCount < 3) {//check if scan failed 3 times
+                Toast.makeText(getApplicationContext(), "Error - Please try again", Toast.LENGTH_LONG)//throw common error if less then 3
                         .show();
             }
             else{
-                Toast.makeText(getApplicationContext(), "Error - Please contact host", Toast.LENGTH_LONG)
+                Toast.makeText(getApplicationContext(), "Error - Please contact host", Toast.LENGTH_LONG)//throw error prompting to contact host
                         .show();
             }
         }
     }
 
+    //called when qrcode scanned
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanResult =
                 IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-        if (scanResult != null && isGranted) {
-            qrCode = scanResult.getContents();
+        if (scanResult != null && isGranted) {//check if result is non null and access granted
+            qrCode = scanResult.getContents();//store scan result
             //Log.d("code", qrCode);
-            if (qrCode != null) {
+            if (qrCode != null) {//check if result is not null
                 onPopulateMenu(qrCode);
             }
         }

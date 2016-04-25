@@ -18,13 +18,13 @@ import java.util.ArrayList;
 
 public class SpecialInstrunctionsActivity extends AppCompatActivity {
 
-    ArrayList<String> itemToppingsToAdd = new ArrayList<String>();
-    String sideOrder;
-    MenuItems selectedItem;
-    UserItems modifyItem;
-    int index;
+    ArrayList<String> itemToppingsToAdd = new ArrayList<String>();//store item toppings to add
+    String sideOrder;//store side order
+    MenuItems selectedItem;//store selected item info
+    UserItems modifyItem;//store item to modify
+    int index;//store index of item selected
     FloatingActionButton cartButton;
-    EditText et;
+    EditText et;//text field for special instructions
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,30 +32,31 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
         setContentView(R.layout.content_special_instrunctions);
 
         Intent intent = getIntent();
-        selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");
-        itemToppingsToAdd = (ArrayList<String>) intent.getSerializableExtra("itemToppings");
-        sideOrder = (String) intent.getSerializableExtra("sideOrder");
-        modifyItem = (UserItems) intent.getSerializableExtra("modifyOrder");
+        selectedItem = (MenuItems) intent.getSerializableExtra("selectedItem");//get selected item
+        itemToppingsToAdd = (ArrayList<String>) intent.getSerializableExtra("itemToppings");//get item toppings to add
+        sideOrder = (String) intent.getSerializableExtra("sideOrder");//get side order to add
+        modifyItem = (UserItems) intent.getSerializableExtra("modifyOrder");//get item to modify from CartActivity
         Bundle b = getIntent().getExtras();
-        index = b.getInt("index");
+        index = b.getInt("index");//get index of selected item
         et = (EditText) findViewById(R.id.specialInstructions);
 
-        cartButton = (FloatingActionButton) findViewById(R.id.addCart);
+        cartButton = (FloatingActionButton) findViewById(R.id.addCart);//set add to cart button
 
-        if (modifyItem != null) {
-            selectedItem = modifyItem.getMenuItem();
-            et.setText(modifyItem.getSpecialInstrucitons());
+        if (modifyItem != null) {//check if item to modify from CartActivity
+            selectedItem = modifyItem.getMenuItem();//get modify item info
+            et.setText(modifyItem.getSpecialInstrucitons());//store special instructions from modifyItem
         }
-        setTitle(selectedItem.getItemName());
+        setTitle(selectedItem.getItemName());//set title to item name
 
         TextView itemDescriptionText = (TextView) findViewById(R.id.txtItemDes);
-        itemDescriptionText.setText(selectedItem.getItemDetail());
+        itemDescriptionText.setText(selectedItem.getItemDetail());//set item description
 
         TextView itemPriceText = (TextView) findViewById(R.id.txtitemTopping);
-        itemPriceText.setText(Utils.formatCurrency(selectedItem.getItemPrice()));
+        itemPriceText.setText(Utils.formatCurrency(selectedItem.getItemPrice()));//set item price
 
         et = (EditText) findViewById(R.id.specialInstructions);
 
+        //listen for activity in special instrucitons text bot
         et.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             /**
              * This listens for the user to press the enter button on
@@ -76,18 +77,20 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
 
     }
 
+    //called when check mark is clicked to add item to cart
     public void addToCart(View view) {
-        String specialInstructions = et.getText().toString();
-        if (modifyItem == null) {
+        String specialInstructions = et.getText().toString();//store special instrucitons from text field
+        if (modifyItem == null) {//check new item to be added
+            //create new item
             LoginActivity.user.createUserItem(selectedItem.getItemName(), selectedItem.getItemPrice(), itemToppingsToAdd, sideOrder, selectedItem, specialInstructions);
             Toast.makeText(getApplicationContext(), "Added Item to cart",
                     Toast.LENGTH_LONG).show();
-        } else {
+        } else {//modify already added item
             LoginActivity.user.userItems.remove(index);
             LoginActivity.user.userItems.add(index, modifyItem);
-            LoginActivity.user.userItems.get(index).setItemToppings(itemToppingsToAdd);
-            LoginActivity.user.userItems.get(index).setSideOrder(sideOrder);
-            LoginActivity.user.userItems.get(index).setSpecialInstructions(specialInstructions);
+            LoginActivity.user.userItems.get(index).setItemToppings(itemToppingsToAdd);//set new item toppings
+            LoginActivity.user.userItems.get(index).setSideOrder(sideOrder);//set new side order
+            LoginActivity.user.userItems.get(index).setSpecialInstructions(specialInstructions);//set new special instructions
 
         }
         Log.d("Item Name", LoginActivity.user.userItems.get(LoginActivity.user.userItems.size() - 1).getItemName());
@@ -95,26 +98,26 @@ public class SpecialInstrunctionsActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        if (selectedItem.getItemSides() != null) {
+    public void onBackPressed() {//called when back button pressed
+        if (selectedItem.getItemSides() != null) {//check if item sides avialbe for selected item
             Intent intent = new Intent(this, CustomSideActivity.class);
-            intent.putExtra("selectedItem", selectedItem);
-            intent.putExtra("itemToppings", itemToppingsToAdd);
+            intent.putExtra("selectedItem", selectedItem);//pass selected item
+            intent.putExtra("itemToppings", itemToppingsToAdd);//pass item toppings to add
             intent.putExtra("modifyOrder", modifyItem);
             Bundle b = new Bundle();
             b.putInt("index", index); //Your id
             intent.putExtras(b);
-            startActivity(intent);
+            startActivity(intent);//call CustomSideActivity
             finish();
-        } else if (selectedItem.getItemToppings() != null) {
+        } else if (selectedItem.getItemToppings() != null) {//check if item toppings availble for selected item
             Intent intent = new Intent(this, CustomToppingsActivity.class);
-            intent.putExtra("selectedItem", selectedItem);
-            intent.putExtra("itemToppings", itemToppingsToAdd);
+            intent.putExtra("selectedItem", selectedItem);//pass selected item
+            intent.putExtra("itemToppings", itemToppingsToAdd);//pass item toppings to add
             intent.putExtra("modifyOrder", modifyItem);
             Bundle b = new Bundle();
             b.putInt("index", index); //Your id
             intent.putExtras(b);
-            startActivity(intent);
+            startActivity(intent);//call CustomToppingsActivity
             intent.putExtra("selectedItem", selectedItem);
             startActivity(intent);
             finish();

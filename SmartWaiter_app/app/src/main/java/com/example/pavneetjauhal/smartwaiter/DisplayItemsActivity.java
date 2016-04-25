@@ -13,42 +13,43 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class DisplayItemsActivity extends AppCompatActivity {
-    MainActivity mainObject;
+    MainActivity mainObject;//refer to MainActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
-        setTitle(mainObject.currentCategory);
-        onDisplayItemList();
+        setTitle(mainObject.currentCategory);//set category name
+        onDisplayItemList();//display items in category
     }
 
     public void onDisplayItemList() {
-        popualteItemsListView();
+        popualteItemsListView();//populat list view with item names
         ListView list = (ListView) findViewById(R.id.menuList);
+        //listen for item press
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-                MenuItems object = mainObject.menuItemList.get(position);
-                if (object.getItemToppings() != null) {
+                MenuItems object = mainObject.menuItemList.get(position);//get selected item
+                if (object.getItemToppings() != null) {//check if toppings availble to add
                     Intent intent = new Intent(DisplayItemsActivity.this, CustomToppingsActivity.class);
-                    intent.putExtra("selectedItem", object);
-                    startActivity(intent);
+                    intent.putExtra("selectedItem", object);//pass selected item
+                    startActivity(intent);//call CustomToppingsActivity
 
-                } else if (object.getItemSides() != null) {
+                } else if (object.getItemSides() != null) {//check if item sides avaible to add
                     Intent intent = new Intent(DisplayItemsActivity.this, CustomSideActivity.class);
-                    intent.putExtra("selectedItem", object);
-                    startActivity(intent);
+                    intent.putExtra("selectedItem", object);//pass selected item
+                    startActivity(intent);//call CustomSideActivity
                 } else {
                     Intent intent = new Intent(DisplayItemsActivity.this, SpecialInstrunctionsActivity.class);
-                    intent.putExtra("selectedItem", object);
-                    startActivity(intent);
+                    intent.putExtra("selectedItem", object);//pass selected item
+                    startActivity(intent);//call SpecialInstructionsActivity
                 }
             }
         });
     }
-
+    //populate list view with item names
     public void popualteItemsListView() {
         ArrayAdapter<MenuItems> adapter = new ItemListAdapter();
         ListView list = (ListView) findViewById(R.id.menuList);
@@ -66,10 +67,10 @@ public class DisplayItemsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //check if cart button pressed
         if (id == R.id.action_cart) {
             Intent intent = new Intent(this, CartActivity.class);
-            startActivity(intent);
+            startActivity(intent);//call CartActivity
         }
 
         return super.onOptionsItemSelected(item);
@@ -92,13 +93,13 @@ public class DisplayItemsActivity extends AppCompatActivity {
 
             //Make text view
             TextView nameText = (TextView) itemView.findViewById(R.id.txtItemName);
-            nameText.setText(currentItem.getItemName());
+            nameText.setText(currentItem.getItemName());//display item name
 
             TextView descriptionText = (TextView) itemView.findViewById(R.id.txtItemDescription);
-            descriptionText.setText(currentItem.getItemDetail());
+            descriptionText.setText(currentItem.getItemDetail());//display item description
 
             TextView priceText = (TextView) itemView.findViewById(R.id.txtitemTopping);
-            priceText.setText(Utils.formatCurrency(currentItem.getItemPrice()));
+            priceText.setText(Utils.formatCurrency(currentItem.getItemPrice()));//display item price
             return itemView;
         }
 

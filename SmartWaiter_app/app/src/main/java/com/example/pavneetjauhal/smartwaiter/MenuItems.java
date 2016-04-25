@@ -7,12 +7,13 @@ import java.util.ArrayList;
  * Created by meraj0 on 2015-11-22.
  */
 public class MenuItems implements Serializable {
-    private String itemName;
-    private String itemPrice;
-    private String itemDetail;
-    private ArrayList<String> itemToppings = new ArrayList<String>();
-    private ArrayList<String> itemSides = new ArrayList<String>();
+    private String itemName;//store item name
+    private String itemPrice;//store item price
+    private String itemDetail;//store item information
+    private ArrayList<String> itemToppings = new ArrayList<String>();//store item toppings avaible
+    private ArrayList<String> itemSides = new ArrayList<String>();//store item sides avaible
 
+    //constructor
     public MenuItems(String itemName, String itemPrice, String itemDetail, ArrayList<String> itemToppings, ArrayList<String> itemSides) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
@@ -21,43 +22,25 @@ public class MenuItems implements Serializable {
         this.itemSides = itemSides;
     }
 
+    //get item toppings
     public ArrayList<String> getItemToppings() {
         return itemToppings;
     }
-
-    public void setItemToppings(ArrayList<String> itemToppings) {
-        this.itemToppings = itemToppings;
-    }
-
+    //get item sides
     public ArrayList<String> getItemSides() {
         return itemSides;
     }
-
-    public void setItemSides(ArrayList<String> itemSides) {
-        this.itemSides = itemSides;
-    }
-
+    //get item name
     public String getItemName() {
         return itemName;
     }
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-
+    //get item description
     public String getItemDetail() {
         return itemDetail;
     }
-
-    public void setItemDetail(String itemDetail) {
-        this.itemDetail = itemDetail;
-    }
-
+    //get item price
     public String getItemPrice() {
         return itemPrice;
     }
 
-    public void setItemPrice(String itemPrice) {
-        this.itemPrice = itemPrice;
-    }
 }

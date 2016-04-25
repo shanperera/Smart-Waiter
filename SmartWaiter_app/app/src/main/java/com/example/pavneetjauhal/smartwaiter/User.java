@@ -20,7 +20,7 @@ import java.util.List;
 
 public class User {
     //methods for adding menu items to cart
-    List<UserItems> userItems = new ArrayList<UserItems>();
+    List<UserItems> userItems = new ArrayList<UserItems>();//IMPORTANT - items user wants to order
     private String salt;
     private String username;
     private String password; //storing the password in plain text for now

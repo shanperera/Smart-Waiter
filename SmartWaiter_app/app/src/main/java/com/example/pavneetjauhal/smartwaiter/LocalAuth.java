@@ -25,10 +25,8 @@ public class LocalAuth {
 
     /* Check if user input matches stored password.*/
     public static boolean checkPassword(String password, String stored, String salt) throws Exception {
-        // Log.d("FACKKK2", salt);
         byte[] decodedPass = Base64.decode(salt, Base64.DEFAULT);
         String text = new String(decodedPass, "UTF-8");
-        Log.d("FACKKK2-C", stored);
         return password.equals(stored);
     }
 
@@ -39,8 +37,6 @@ public class LocalAuth {
         //length of salt
         byte[] pass = password.getBytes("UTF-8");
         String base64 = Base64.encodeToString(pass, Base64.DEFAULT);
-        Log.d("FACKKK2-P", base64);
-        //Log.d("FACKKK2-P", );
         return new LocalAuth(password, base64);
     }
 
