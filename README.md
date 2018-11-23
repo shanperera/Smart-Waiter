@@ -3,6 +3,8 @@ Repo is for 4ZP6 Capstone project. The app we're building is named Smart Waiter
 
 An Android application that allows users to enter a dine-in or takeout restaurant and order from their menu using their smartphone.
 
+This application uses the Stripe API and the ZXing barcode scanning library for Android
+
 **FEATURES:**
 
 *Browse the menu:*
